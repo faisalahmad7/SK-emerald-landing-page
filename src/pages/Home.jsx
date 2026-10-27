@@ -11,8 +11,6 @@ const ld = {
   address: { '@type': 'PostalAddress', streetAddress: 'Shop No. 226, First Floor, Unitas Fashion Centre Mall, Parge Nagar, Kondhwa Khurd', addressLocality: 'Pune', addressRegion: 'Maharashtra', postalCode: '411048', addressCountry: 'IN' },
 }
 
-// Collection mosaic. `area` maps to a grid area in styles.css (.t-a … .t-f); `ratio` is the phone/tablet crop,
-// desktop proportions come from the grid itself. Images, focal points and captions come from collections.js.
 const TILES = [
   { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0 },
   { slug: 'modular-kitchens', area: 'b', ratio: '4/5', delay: 1 },
@@ -25,12 +23,13 @@ const TILES = [
 function Tile({ slug, area, ratio, delay }) {
   const c = COLLECTIONS.find((x) => x.slug === slug)
   return (
-    <Link to={`/collections/${slug}`} className={`tile t-${area}`} aria-label={`${c.name}: ${c.tag}`} style={{ '--d': delay }}>
+    <Link to={`/collections/${slug}`} className={`tile t-${area} editorial-tile`} aria-label={`${c.name}: ${c.tag}`} style={{ '--d': delay }}>
       <Photo id={c.tile} ratio={ratio} pos={c.tilePos} reveal sizes="(min-width: 900px) 50vw, 100vw" />
       <span className="tile-cap">
+        <span className="tile-number">0{TILES.findIndex((t) => t.slug === slug) + 1}</span>
         <span className="tile-name">{c.name}</span>
         <span className="tile-tag">{c.tag}</span>
-        <span className="tile-go">View range</span>
+        <span className="tile-go">Explore range</span>
       </span>
     </Link>
   )
@@ -41,92 +40,113 @@ export default function Home() {
     <>
       <Seo path="/" description="Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune." ld={ld} />
 
-      <section className="hero">
-        <div className="hero-text wrap">
-          <p className="vert" aria-hidden="true">Kondhwa, Pune</p>
-          <h1 className="rv" style={{ '--d': 0 }}>Furniture made to the measure of your home</h1>
-          <p className="lead rv" style={{ '--d': 1 }}>{BUSINESS.name} makes and sells sofas, kitchens, wardrobes, beds and TV units to your size, fabric and finish. Visit the showroom in Kondhwa, Pune.</p>
-          <div className="actions rv" style={{ '--d': 2 }}>
-            <Link to="/collections" className="btn">Explore collections</Link>
-            <a className="btn ghost" href={waLink('Hello SK Emerald Interior, I would like a quotation.')} target="_blank" rel="noopener noreferrer">Request a quotation</a>
+      <section className="hero editorial-hero">
+        <div className="hero-text editorial-hero-copy">
+          <p className="editorial-eyebrow"><span /> Furniture, thoughtfully made <span className="eyebrow-city">Kondhwa · Pune</span></p>
+          <h1>Make room for <em>living.</em></h1>
+          <p className="lead">Furniture and interiors shaped around the way you live — measured for your home, finished to your taste, and specified clearly before the work begins.</p>
+          <div className="actions">
+            <Link to="/collections" className="btn editorial-btn">Discover the collections <span aria-hidden="true">↗</span></Link>
+            <a className="editorial-text-link" href={waLink('Hello SK Emerald Interior, I would like a quotation.')} target="_blank" rel="noopener noreferrer">Start a conversation <span aria-hidden="true">↗</span></a>
           </div>
+          <div className="hero-proof"><span>01</span><p>Made around your measurements.<br />Not the other way around.</p><span className="hero-proof-rule" /></div>
         </div>
-        <div className="hero-img">
-          <Photo id={SLOTS.hero} ratio="4/3" pos="42% 50%" eager reveal sizes="(min-width: 900px) 62vw, 100vw" />
-          <p className="hero-note">Sofa set, living room</p>
+        <div className="hero-img editorial-hero-image">
+          <Photo id={SLOTS.hero} ratio="4/5" pos="48% 50%" eager reveal sizes="(min-width: 900px) 58vw, 100vw" />
+          <div className="hero-image-caption"><span>SK EMERALD INTERIOR</span><span>Living, in a deeper shade of green</span></div>
+          <div className="hero-inset">
+            <Photo id={SLOTS.intro[0]} ratio="4/5" pos="center" reveal alt="Detail of a made-to-measure sofa" />
+            <div><span>Made for your space</span><span className="inset-line" /></div>
+          </div>
+          <span className="hero-image-index" aria-hidden="true">01 / 06</span>
         </div>
-        <nav className="hero-index wrap" aria-label="Collections">
-          {COLLECTIONS.map((c) => <Link key={c.slug} to={`/collections/${c.slug}`}>{c.name}</Link>)}
+        <nav className="hero-index editorial-hero-index wrap" aria-label="Explore furniture ranges">
+          {COLLECTIONS.map((c, i) => <Link key={c.slug} to={`/collections/${c.slug}`}><span>0{i + 1}</span>{c.name}</Link>)}
         </nav>
       </section>
 
-      <section className="wrap intro">
-        <div className="intro-copy rv">
-          <h2>Made for the room it will live in</h2>
-          <p className="lead">Every piece starts with your measurements. We show you finishes and fabrics, write the specification into a quotation, and then make the piece to that size.</p>
-          <Link to="/about" className="textlink">How we work</Link>
-        </div>
-        <div className="overlap">
-          <Photo id={SLOTS.intro[0]} ratio="4/3" className="a" reveal />
+      <div className="editorial-marquee" aria-label="Made to measure. Made to belong.">
+        <div className="marquee-track"><span>Made to measure</span><i>✳</i><span>Made to belong</span><i>✳</i><span>Made for living</span><i>✳</i><span>Made to measure</span><i>✳</i><span>Made to belong</span><i>✳</i></div>
+      </div>
+
+      <section className="wrap intro editorial-intro">
+        <div className="overlap editorial-intro-visual">
+          <Photo id={SLOTS.intro[0]} ratio="4/5" className="a" reveal />
           <Photo id={SLOTS.intro[1]} ratio="1/1" className="b" reveal />
+          <span className="editorial-image-index">A home is made in the details.</span>
+        </div>
+        <div className="intro-copy rv editorial-intro-copy">
+          <p className="editorial-eyebrow"><span /> A considered approach</p>
+          <h2>Not just furniture. <em>A feeling.</em></h2>
+          <p className="lead">A room comes together when the proportions feel right, the materials work hard, and every finish belongs. We help you make those choices with confidence.</p>
+          <p>Start with a room, a measurement or an idea you saved. We will work through size, fabric, finish and specification with you — so the piece feels considered before it ever arrives home.</p>
+          <Link to="/about" className="editorial-underlink">Our approach <span aria-hidden="true">↗</span></Link>
+          <div className="editorial-quote"><span>“</span><p>Good design makes everyday life feel a little more extraordinary.</p></div>
         </div>
       </section>
 
-      <section className="wrap showcase" aria-labelledby="coll-h">
-        <div className="sec-head">
-          <div>
-            <h2 id="coll-h">Six ranges, drawn to your room</h2>
-            <p className="muted">Pick a range to see what can be changed: size, fabric, finish and fittings.</p>
-          </div>
-          <Link to="/collections" className="textlink">Explore all collections</Link>
+      <section className="showcase editorial-showcase" aria-labelledby="coll-h">
+        <div className="wrap sec-head editorial-section-head">
+          <div><p className="editorial-eyebrow"><span /> Find your starting point</p><h2 id="coll-h">The pieces that shape a room.</h2><p className="muted">Explore the range, then make it yours — from proportions and upholstery to storage and finish.</p></div>
+          <Link to="/collections" className="editorial-underlink">View all collections <span aria-hidden="true">↗</span></Link>
         </div>
-        <div className="mosaic">
+        <div className="mosaic editorial-mosaic">
           {TILES.map((t) => <Tile key={t.slug} {...t} />)}
         </div>
       </section>
 
-      <section className="green materials-band"><div className="wrap split">
-        <div className="rv">
-          <h2>Know what is inside before you pay</h2>
-          <p>Frame, foam, board, laminate and hardware differ from one piece to the next. We name them in your quotation, so the price you are given matches what is built.</p>
-          <Dim parts={['Frame', 'Foam', 'Fabric']} />
-          <Link to="/materials" className="btn light">Materials and care</Link>
+      <section className="green materials-band editorial-materials">
+        <div className="wrap split">
+          <div className="editorial-materials-copy rv">
+            <p className="editorial-eyebrow"><span /> Beauty, with substance</p>
+            <h2>Details you can see. Materials you can understand.</h2>
+            <p>Frame, foam, board, laminate and hardware can change the feel and life of a piece. We explain the choices and include the agreed specification in your quotation, so you know what you are paying for.</p>
+            <Dim parts={['Frame', 'Foam', 'Fabric', 'Finish']} />
+            <Link to="/materials" className="btn light">Explore materials <span aria-hidden="true">↗</span></Link>
+            <p className="editorial-small-note">The right details make the difference.</p>
+          </div>
+          <div className="mat-stack editorial-material-stack">
+            <Photo id={SLOTS.materials[0]} ratio="4/5" pos="center" reveal className="m-main" />
+            <Photo id={SLOTS.materials[1]} ratio="4/3" reveal className="m-a" />
+            <Photo id={SLOTS.materials[2]} ratio="4/3" reveal className="m-b" />
+            <span className="material-index">MATERIAL STUDY / 01</span>
+          </div>
         </div>
-        <div className="mat-stack">
-          <Photo id={SLOTS.materials[0]} ratio="16/10" pos="center 70%" reveal className="m-main" />
-          <Photo id={SLOTS.materials[1]} ratio="4/3" reveal className="m-a" />
-          <Photo id={SLOTS.materials[2]} ratio="4/3" reveal className="m-b" />
-        </div>
-      </div></section>
+      </section>
 
-      <section className="wrap rooms-home">
-        <div className="sec-head">
-          <div><h2>Planned room by room</h2><p className="muted">Sofa, kitchen or storage: pieces for one room are made to match in size, colour and finish.</p></div>
-          <Link to="/interiors" className="textlink">Interior solutions</Link>
+      <section className="wrap rooms-home editorial-rooms">
+        <div className="sec-head editorial-section-head">
+          <div><p className="editorial-eyebrow"><span /> One home, many possibilities</p><h2>Bring the whole room together.</h2><p className="muted">From the first impression in the living room to the everyday rhythm of a kitchen, each element can be planned around your space.</p></div>
+          <Link to="/interiors" className="editorial-underlink">Explore interiors <span aria-hidden="true">↗</span></Link>
         </div>
-        <div className="triptych">
+        <div className="triptych editorial-triptych">
           {[['Living room', 'sofas'], ['Kitchen', 'modular-kitchens'], ['Storage', 'wardrobes']].map(([t, slug], i) => (
-            <Link key={t} to={`/collections/${slug}`} className="tri">
+            <Link key={t} to={`/collections/${slug}`} className={`tri tri-${i + 1}`}>
               <Photo id={SLOTS.rooms[i]} ratio={i === 1 ? '4/5' : '3/4'} reveal />
               <span>{t}</span>
             </Link>
           ))}
         </div>
-        <p className="muted note"><Link to="/gallery" className="textlink">Open the gallery</Link> for more photographs of our furniture, and design inspiration.</p>
+        <p className="muted note editorial-gallery-note"><Link to="/gallery" className="editorial-underlink">Step inside the gallery <span aria-hidden="true">↗</span></Link> for furniture photographs and design inspiration.</p>
       </section>
 
-      <section className="wrap process">
-        <h2>From first message to fitted</h2>
-        <ol>{PROCESS.map(([t, d], i) => <li key={t} className="rv" style={{ '--d': i }}><span className="step">{i + 1}</span><h3>{t}</h3><p>{d}</p></li>)}</ol>
+      <section className="editorial-process-band">
+        <div className="wrap process editorial-process">
+          <div className="editorial-process-intro"><p className="editorial-eyebrow"><span /> From idea to everyday</p><h2>A thoughtful process. A better fit.</h2><p>Clear choices at each step, from the first conversation to the final installation.</p></div>
+          <ol>{PROCESS.map(([t, d], i) => <li key={t} className="rv" style={{ '--d': i }}><span className="step">0{i + 1}</span><h3>{t}</h3><p>{d}</p></li>)}</ol>
+        </div>
       </section>
 
-      <section className="wrap visit">
-        <h2>Visit the showroom</h2>
-        <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
-        <p className="muted">Please call or message first to confirm visiting times.</p>
-        <div className="actions"><a className="btn" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions</a><Link className="btn ghost" to="/contact">Contact details</Link></div>
+      <section className="wrap visit editorial-visit">
+        <div className="editorial-visit-heading"><p className="editorial-eyebrow"><span /> Come see it in person</p><h2>Let's make your space feel like home.</h2></div>
+        <div className="editorial-visit-details">
+          <p>See finishes, compare fabrics and talk through your measurements at our showroom in Kondhwa, Pune.</p>
+          <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
+          <p className="muted">Please call or message first to confirm visiting times.</p>
+          <div className="actions"><a className="btn" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a><Link className="editorial-underlink" to="/contact">Contact the showroom <span aria-hidden="true">↗</span></Link></div>
+        </div>
       </section>
-      <Enquire />
+      <Enquire title="Your room, your way." text="Send a photo, share a few measurements or tell us what you have in mind. Let's explore what will work for your home." />
     </>
   )
 }
