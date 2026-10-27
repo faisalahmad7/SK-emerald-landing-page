@@ -62,15 +62,14 @@ p{max-width:68ch}
 
 /* ── photo, frames, motion ────────────────────────────────────────────────── */
 .photo{position:relative;margin:0;overflow:hidden;background:var(--plat);width:100%}
-.photo img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s,transform 1.4s var(--ease)}
+.photo img{width:100%;height:100%;object-fit:cover;opacity:1;transition:transform 1.4s var(--ease)}
 .photo.ready img{opacity:1}
 .photo figcaption{position:absolute;left:0;bottom:0;background:var(--ivory);color:var(--ink2);font-size:.78rem;padding:7px 16px 5px 0}
 .photo.ph{display:grid;place-items:center;background:linear-gradient(135deg,var(--plat),var(--lime));border:1px solid var(--silver);color:var(--ink2);font-size:.82rem}
 .js .rv{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease) calc(var(--d,0)*.1s),transform .9s var(--ease) calc(var(--d,0)*.1s)}
 .js .rv[data-in]{opacity:1;transform:none}
-.js .rv.rv-mask{opacity:1;transform:none;clip-path:inset(0 0 100% 0);transition:clip-path 1.2s cubic-bezier(.65,0,.15,1) calc(var(--d,0)*.12s)}
-.js .rv.rv-mask[data-in]{clip-path:inset(0)}
-.js .rv-mask img{transform:scale(1.1)}.js .rv-mask[data-in] img{transform:none}
+.js .rv.rv-mask{opacity:1;transform:none;clip-path:none;transition:none}
+.js .rv-mask img{transform:none}
 a:hover>.photo img{transform:scale(1.03)}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
