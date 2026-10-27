@@ -1,7 +1,7 @@
 /* SK Emerald — art-directed editorial system. Composition, typography and motion are intentionally restrained. */
 /* Keep photography visible while decoding; the former opacity gate made image boxes look like missing-image placeholders. */
 .photo img, .photo.loading img { opacity: 1; }
-.photo img { transition: opacity .24s ease, transform 1s var(--ease); }
+.photo img { transition: transform 1s var(--ease); }
 
 /* Image reveal: twice as fast as before. Once a reveal has finished the clip-path is removed entirely,
    otherwise it keeps clipping the gold outlines and shadows drawn around photographs. */
