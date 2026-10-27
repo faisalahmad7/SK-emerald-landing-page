@@ -3,7 +3,7 @@ import { Link, NavLink, useRouter } from '../router'
 import { BUSINESS, waLink, telLink } from '../data/business'
 import { COLLECTIONS } from '../data/collections'
 
-const NAV = [['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/materials', 'Materials'], ['/about', 'About']]
+const NAV = [['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/materials', 'Materials'], ['/about', 'About'], ['/faq', 'FAQs']]
 const logo = `${import.meta.env.BASE_URL}images/logo.png`
 
 // Sets data-in on every .rv element as it scrolls into view (an attribute, because React rewrites className when a photo
@@ -82,7 +82,7 @@ export function Header() {
       </div>
       <div id="drawer" ref={drawer} className={`drawer${open ? ' open' : ''}`} hidden={!open}>
         <nav aria-label="Mobile">
-          {[...NAV, ['/faq', 'FAQs'], ['/contact', 'Contact and showroom']].map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
+          {[...NAV, ['/contact', 'Contact and showroom']].map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
         </nav>
         <a className="btn" href={waLink('Hello SK Emerald Interior, I would like a quotation.')} target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
       </div>
