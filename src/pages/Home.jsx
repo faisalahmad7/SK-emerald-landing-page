@@ -66,7 +66,10 @@ export default function Home() {
       </section>
 
       <div className="editorial-marquee" aria-label="Made to measure. Made to belong.">
-        <div className="marquee-track"><span>Made to measure</span><i>✳</i><span>Made to belong</span><i>✳</i><span>Made for living</span><i>✳</i><span>Made to measure</span><i>✳</i><span>Made to belong</span><i>✳</i></div>
+        <div className="marquee-track">
+          <div className="marquee-group"><span>Made to measure</span><i aria-hidden="true">✳</i><span>Made to belong</span><i aria-hidden="true">✳</i><span>Made for living</span><i aria-hidden="true">✳</i></div>
+          <div className="marquee-group" aria-hidden="true"><span>Made to measure</span><i>✳</i><span>Made to belong</span><i>✳</i><span>Made for living</span><i>✳</i></div>
+        </div>
       </div>
 
       <section className="wrap intro editorial-intro">
