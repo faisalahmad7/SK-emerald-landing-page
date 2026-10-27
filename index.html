@@ -1,22 +1,641 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-    <title>SK Emerald Interior | Furniture and interiors in Kondhwa, Pune</title>
-    <meta name="description" content="Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune." />
-    <meta name="theme-color" content="#F7F4EC" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="SK Emerald Interior" />
-    <link rel="icon" href="/favicon.png" />
-    <link rel="preload" as="image" href="/images/13.webp" imagesrcset="/images/13-800.webp 800w, /images/13.webp 1500w" imagesizes="(min-width: 900px) 58vw, 100vw" fetchpriority="high" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <noscript><p style="padding:40px;text-align:center">SK Emerald Interior, Kondhwa, Pune. Call 90118 31169 or email emeraldfurniturepune@gmail.com. Please enable JavaScript to browse the site.</p></noscript>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>urbané — Genuine Footwear and Clothing, Kausar Baugh Pune</title>
+  <meta name="description"
+    content="Genuine branded footwear and clothing in Kausar Baugh, Pune. 1-year footwear warranty, flat 50% off, GST billed. Walk in, try on, take home.">
+  <meta name="theme-color" content="#000000">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+
+<body>
+  <!-- loader -->
+  <div class="loader" aria-hidden="true">
+    <img src="/logo.webp" alt="" width="512" height="512">
+  </div>
+  <!-- header -->
+  <header class="hd" id="hd">
+    <a class="logo" href="#top" data-go aria-label="urbané home">
+      <img src="/logo.webp" alt="" width="512" height="512" aria-hidden="true" decoding="async">
+      <span>urbané</span>
+    </a>
+    <a class="pill y" href="#visit" data-go>Visit us</a>
+    <button class="burger" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <i></i><i></i>
+    </button>
+  </header>
+  <div class="scrim" id="scrim"></div>
+  <!-- side menu -->
+  <aside class="menu" id="menu" aria-label="Menu" aria-hidden="true">
+    <div class="mh">
+      <a class="logo" href="#top" data-go aria-label="urbané home">
+        <img src="/logo.webp" alt="" width="512" height="512" aria-hidden="true" decoding="async">
+        <span>urbané</span>
+      </a>
+      <button class="xbtn" data-close>Close</button>
+    </div>
+    <p class="mtag">Footwear | Clothing | Apparel</p>
+    <nav>
+      <a href="#why" data-go><span style="--i:0">Why urbané</span></a>
+      <a href="#footwear" data-go><span style="--i:1">Footwear</span></a>
+      <a href="#clothing" data-go><span style="--i:2">Clothing</span></a>
+      <a href="#store" data-go><span style="--i:3">Inside the store</span></a>
+      <a href="#care" data-go><span style="--i:4">Shoe care</span></a>
+      <a href="#reviews" data-go><span style="--i:5">Reviews</span></a>
+      <a href="#visit" data-go><span style="--i:6">Visit</span></a>
+    </nav>
+    <div class="ct">
+      <span>Kausar Baugh, Pune 411048</span>
+      <a href="tel:+919096664198">090966 64198</a>
+      <a href="https://www.instagram.com/urbanespot/" target="_blank" rel="noopener">@urbanespot on Instagram</a>
+    </div>
+  </aside>
+  <main id="top">
+    <!-- hero -->
+    <section class="hero" id="hero">
+      <div class="hbg">
+        <img data-i="15" alt="The urbané storefront in Kausar Baugh, Pune">
+        <video id="heroVideo" muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"
+          data-src-d="/videos/hero.mp4" data-src-m="/videos/hero-m.mp4"></video>
+      </div>
+      <div class="hcopy">
+        <p class="eyebrow"><i></i>Walk-in store, Kausar Baugh</p>
+        <h1 aria-label="Genuine brands. Real savings.">
+          <span class="ln"><span style="--i:0">Genuine brands.</span></span>
+          <span class="ln y"><span style="--i:1">Real savings.</span></span>
+        </h1>
+        <div class="cta">
+          <a class="btn y" href="#visit" data-go>Visit the store</a>
+          <ul class="deals">
+            <li class="off"><b>Flat 50% off</b><small></small></li>
+            <li><b>1-year warranty</b><small>on footwear</small></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- brands -->
+    <section class="brands" aria-label="Brands in store">
+      <div class="bh">
+        <h2>The big names, <em>all on one platform.</em></h2>
+        <p>Discover premium footwear and apparel from the world's leading brands.</p>
+      </div>
+      <div class="bm" aria-hidden="true">
+        <div class="tr" id="bm"></div>
+      </div>
+      <ul class="vh">
+        <li>Nike</li>
+        <li>adidas</li>
+        <li>Puma</li>
+        <li>Reebok</li>
+        <li>Fila</li>
+        <li>New Balance</li>
+        <li>Skechers</li>
+        <li>Crocs</li>
+      </ul>
+    </section>
+    <!-- crossing ribbons -->
+    <div class="rbs" aria-hidden="true">
+      <div class="rb rb1">
+        <div class="tr" id="rb1"></div>
+      </div>
+      <div class="rb rb2">
+        <div class="tr" id="rb2"></div>
+      </div>
+    </div>
+    <!-- why urbané -->
+    <section id="why" class="sec">
+      <div class="wrap">
+        <div class="why-head">
+          <div class="head2">
+            <p class="why-eyebrow rv"><i></i>6 years of happy customers</p>
+            <h2 class="why-title rv" style="--d:.06s">Why people walk in, <em>and come back.</em></h2>
+            <p class="lead rv" style="--d:.12s">
+              Shop the brands you love, with confidence in every purchase and a 1-year warranty on all footwear.
+            </p>
+            <ul class="why-chips rv" style="--d:.18s">
+              <li>Genuine brands</li>
+              <li>GST billed</li>
+              <li>Try before you buy</li>
+              <li>Warm, honest service</li>
+            </ul>
+          </div>
+          <div class="seal rv" style="--d:.2s" role="img" aria-label="Six years of happy customers">
+            <svg class="ring" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+              <defs>
+                <path id="sealPath" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" />
+              </defs>
+              <text>
+                <textPath href="#sealPath" textLength="496" lengthAdjust="spacing">SIX YEARS OF HAPPY CUSTOMERS • GENUINE BRANDS • WARM SERVICE •</textPath>
+              </text>
+            </svg>
+            <div class="core"><b>6</b><span>years</span></div>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat rv">
+            <span class="k"><b>01</b>Authenticity</span>
+            <div class="num word">Authentic</div>
+            <h2>ALWAYS.</h2>
+            <p>Genuine brands, chosen with care.</p>
+          </div>
+          <div class="stat y rv" style="--d:.08s">
+            <span class="k"><b>02</b>Assurance</span>
+            <div class="num"><span data-count="1">1</span><small>year</small></div>
+            <h3>warranty on all footwear</h3>
+            <p>Peace of mind after you buy.</p>
+          </div>
+          <div class="stat hl rv" style="--d:.16s">
+            <span class="k"><b>03</b>Value</span>
+            <div class="num"><small class="fl">flat</small><span data-count="50">50</span>%<small class="fl">off</small>
+            </div>
+            <h3>365 days a year</h3>
+            <p>Real savings, every single day.</p>
+          </div>
+          <div class="stat rv" style="--d:.24s">
+            <span class="k"><b>04</b>Trust</span>
+            <div class="num"><span data-count="4.5" data-dec="1">4.5</span><small>/ 5</small></div>
+            <div class="stars" aria-hidden="true"><i></i><i></i><i></i><i></i><i class="half"></i></div>
+            <h3>on Google reviews</h3>
+            <p>Loved by the people we serve.</p>
+          </div>
+        </div>
+        <div class="wall">
+          <figure class="wf rv" style="margin-left:0;margin-right:0">
+            <div class="main">
+              <img data-i="1" alt="Sneaker wall under the Original Guarantee sign">
+              <!-- brighter, sharper layer, clipped to the Original Guarantee sign only -->
+              <img class="sign-lift" data-i="1" alt="" aria-hidden="true">
+              <span class="sign-shine" aria-hidden="true"></span>
+              <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+                <filter id="signSharpen" color-interpolation-filters="sRGB">
+                  <feConvolveMatrix order="3" kernelMatrix="0 -0.7 0 -0.7 3.8 -0.7 0 -0.7 0" edgeMode="duplicate"
+                    preserveAlpha="true" />
+                </filter>
+              </svg>
+            </div>
+            <span class="cap">Photo from our store</span>
+            <div class="sub">
+              <img data-i="2" alt="Sports shoe wall with the 1-Year Warranty sign above">
+            </div>
+          </figure>
+          <div class="wt rv" style="--d:.1s">
+            <h3>It’s written on our wall.</h3>
+            <p>
+              At Urbane, quality comes first. We bring you stylish footwear and clothing that combine comfort, lasting
+              value, and a shopping experience worth coming back for.
+            </p>
+            <ul class="ticks">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Top brands in footwear and fashion
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Quality you can see and feel
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>1-year warranty on all branded footwear
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+                  stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" />
+                </svg>Styles for every occasion
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footwear and clothing -->
+    <section id="range" class="sec range">
+      <div class="wrap">
+        <div class="head2">
+          <h2 class="big rv">One-Stop Shop for Footwear & Fashion</h2>
+          <p class="lead rv" style="--d:.1s">
+            Walk the walls. Everything is on display, so you can pick it up, try it on and decide.
+          </p>
+        </div>
+        <div class="split">
+          <article class="pan rv" id="footwear">
+            <img data-i="8" alt="Wall of sneakers at urbané">
+            <div class="pc">
+              <p class="no">01</p>
+              <h3>Footwear</h3>
+              <p>
+                Walls of sneakers, sports shoes, sliders and everyday shoes from genuine brands.
+                Try every pair on before you decide.
+              </p>
+              <ul class="chips2">
+                <li>Sneakers</li>
+                <li>Sports shoes</li>
+                <li>Sliders and flip-flops</li>
+                <li>Casual and formal</li>
+              </ul>
+              <button class="btn y sm" data-lbset="foot">See the footwear wall</button>
+            </div>
+          </article>
+          <article class="pan rv" id="clothing" style="--d:.1s">
+            <img data-i="10" alt="Jackets and polos at urbané">
+            <div class="pc">
+              <p class="no">02</p>
+              <h3>Clothing</h3>
+              <p>
+                Tees, polos, jackets, joggers and more, hung on the rails and ready to try.
+                Genuine brands, priced to make you look twice.
+              </p>
+              <ul class="chips2">
+                <li>Tees and polos</li>
+                <li>Jackets</li>
+                <li>Joggers and trousers</li>
+                <li>Sweaters</li>
+              </ul>
+              <button class="btn y sm" data-lbset="cloth">See the clothing rails</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- inside the store -->
+    <section id="store" class="sec flush">
+      <div class="wrap">
+        <div class="head2" style="margin-bottom:0">
+          <h2 class="big rv">Inside urbané.</h2>
+          <p class="lead rv" style="--d:.1s">
+            Photos from the shop floor. Tap any photo to look closer.
+          </p>
+        </div>
+      </div>
+      <div class="strips" id="strips">
+        <div class="strip" id="strip1"></div>
+        <div class="strip rv2" id="strip2"></div>
+      </div>
+    </section>
+    <!-- shoe care -->
+    <section id="care" class="sec">
+      <div class="wrap care">
+        <div>
+          <span class="excl">Exclusive to urbané</span>
+          <h2 class="big">
+            Premium shoe care, <span class="y">hard to find anywhere else.</span>
+          </h2>
+          <p class="lead">
+            Most stores sell you the pair and stop there. We also look after premium shoes with
+            careful cleaning and restoration you won’t find at other shoe stores around here. Drag
+            the slider to see the difference.
+          </p>
+          <ul>
+            <li>Deep cleaning for premium pairs</li>
+            <li>Repair and restoration</li>
+            <li>Just drop it at the store</li>
+          </ul>
+          <a class="btn y" id="careWa" href="#" target="_blank" rel="noopener">
+            Ask about shoe care
+          </a>
+        </div>
+        <div class="ba" id="ba" style="--p:50%">
+          <div class="lay" id="baClean"></div>
+          <div class="lay dirty" id="baDirty"></div>
+          <span class="tag l">Before</span>
+          <span class="tag r">After</span>
+          <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Before and after slider">
+          <div class="hdl"></div>
+        </div>
+      </div>
+    </section>
+    <!-- reviews -->
+    <section id="reviews" class="sec rev">
+      <div class="wrap">
+        <div class="rvh">
+          <p class="rvh-k rv">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" />
+            </svg>Feedback from Our Valued Customers
+          </p>
+          <h2 class="rvh-tag rv" style="--d:.08s">
+            Valued by you. <span class="mk">Honoured to serve you.</span>
+          </h2>
+          <p class="rvh-sub rv" style="--d:.16s">
+            Every kind word from our customers means the world to us. Thank you for trusting urbané.
+          </p>
+        </div>
+      </div>
+      <div class="rrow" id="r1"></div>
+      <div class="rrow rrev" id="r2"></div>
+      <div class="wrap rvall">
+        <a class="btn k"
+          href="https://www.google.com/search?sxsrf=APpeQnui0nQNRzdR-w1o0rrI6V3Rr_NLlw:1791917362031&amp;si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_5T9_fyQgZqZRI_BSocSgAyvmx5vhY9X38SzGIo53PyBDsupO3dP_2NNlkwhEQFt7Hat7R2QRevuCtz0gQm12LnRihwI&amp;q=urban%C3%A9+Reviews"
+          target="_blank" rel="noopener">
+          View all reviews on Google
+        </a>
+      </div>
+    </section>
+    <!-- faq -->
+
+    <!-- Good to know / FAQ -->
+    <section id="faq" class="sec">
+      <div class="wrap faq-layout">
+        <div class="faq-intro">
+          <h2 class="big rv">Good to know.</h2>
+          <a class="btn k" href="https://wa.me/919096664198" target="_blank" rel="noopener">
+            Ask a Question
+          </a>
+        </div>
+
+        <div class="faq rv">
+          <details>
+            <summary>
+              Are the products genuine?
+              <span class="pm"></span>
+            </summary>
+            <p>
+              Yes. We offer a carefully selected range of leading brands, bringing you quality, style, and confidence
+              with every purchase.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Is there a warranty?
+              <span class="pm"></span>
+            </summary>
+            <p>
+              All footwear comes with a 1-year warranty, giving you added peace of mind with every purchase. Visit us
+              in-store for more details on warranty coverage and terms.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Do you sell online?
+              <span class="pm"></span>
+            </summary>
+            <p>
+              No. urbané is a walk-in store, so you can see,
+              touch and try everything before you buy. Call or
+              WhatsApp us with a question, then come visit.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Do you clean and repair shoes?
+              <span class="pm"></span>
+            </summary>
+            <p>
+              Premium shoe care is exclusive to urbané and hard
+              to find at other shoe stores. Drop your pair at
+              the store and ask Aman.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              Where are you and when are you open?
+              <span class="pm"></span>
+            </summary>
+            <p>
+              No. 3, opposite Zam Zam Hotel, Sahil Residency,
+              Kausar Baugh Rd, behind Sana Hospital, Pune 411048.
+              We're open until 10:30 pm.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- visit -->
+    <section id="visit" class="sec">
+      <div class="wrap visit">
+        <div>
+          <h2 class="big">Walk in.</h2>
+          <p class="lead">Try it on, ask anything. The team will help you find the right size.</p>
+          <dl>
+            <div>
+              <dt>Address</dt>
+              <dd>
+                No. 3, Opposite Zam Zam Hotel, Sahil Residency, Kausar Baugh Rd, behind Sana
+                Hospital, Pune 411048
+              </dd>
+            </div>
+            <div>
+              <dt>Email</dt>
+              <dd><a href="mailto:support@urbane.in">support@urbane.in</a></dd>
+            </div>
+            <div>
+              <dt>Hours</dt>
+              <dd>Open until 10:30 pm (per our Google listing)</dd>
+            </div>
+          </dl>
+          <div class="acts">
+            <a class="btn y"
+              href="https://www.google.com/maps/search/?api=1&query=urban%C3%A9%20Shoe%20store%20Kausar%20Baugh%20Pune"
+              target="_blank" rel="noopener">
+              Get directions
+            </a>
+            <a class="btn o" href="tel:+919096664198">Call the store</a>
+          </div>
+        </div>
+        <div class="map">
+          <svg viewBox="0 0 600 520" preserveAspectRatio="xMidYMid slice">
+            <rect width="600" height="520" fill="#141414" />
+            <g fill="#1d1d1d">
+              <rect x="40" y="40" width="190" height="130" rx="14" />
+              <rect x="40" y="210" width="130" height="150" rx="14" />
+              <rect x="380" y="30" width="190" height="160" rx="14" />
+              <rect x="420" y="320" width="150" height="160" rx="14" />
+              <rect x="60" y="400" width="240" height="90" rx="14" />
+            </g>
+            <path d="M-20 430 C140 380 260 300 340 250 S520 130 640 90" fill="none" stroke="#3a3a3a" stroke-width="34"
+              stroke-linecap="round" />
+            <path d="M-20 430 C140 380 260 300 340 250 S520 130 640 90" fill="none" stroke="#6a6a6a" stroke-width="2"
+              stroke-dasharray="14 12" />
+            <path d="M330 255 L400 500" stroke="#2c2c2c" stroke-width="20" stroke-linecap="round" />
+            <path d="M250 -10 L300 190" stroke="#2c2c2c" stroke-width="18" stroke-linecap="round" />
+            <g font-family="Bricolage Grotesque, sans-serif" font-size="15" fill="#a9a9a9">
+              <text x="70" y="115">Sana Hospital</text>
+              <text x="430" y="115">Zam Zam Hotel</text>
+              <text x="90" y="300" transform="rotate(-19 90 300)">Kausar Baugh Rd</text>
+            </g>
+            <circle class="pulse" cx="345" cy="250" r="26" fill="#FFC20E" />
+            <image href="/logo.webp" x="317" y="222" width="56" height="56" />
+            <text x="300" y="300" font-family="Outfit, sans-serif" font-weight="600" font-size="18"
+              fill="#fff">urbané</text>
+          </svg>
+          <iframe title="urbané on Google Maps"
+            src="https://maps.google.com/maps?q=urban%C3%A9%20Shoe%20store%20Kausar%20Baugh%20Pune&z=17&hl=en&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          <a class="mapbtn btn y sm"
+            href="https://www.google.com/maps/search/?api=1&query=urban%C3%A9%20Shoe%20store%20Kausar%20Baugh%20Pune"
+            target="_blank" rel="noopener">
+            Open in Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div class="ft">
+        <div class="fb">
+          <div class="big-u"><img src="/logo.webp" alt="" width="512" height="512" aria-hidden="true" decoding="async">
+            urbané</div>
+          <p>
+            Footwear | Clothing | Apparel. Genuine branded products, billed with GST, with a
+            1-year warranty on footwear. Walk in and see for yourself.
+          </p>
+          <div class="acts">
+            <a class="btn y sm" href="https://wa.me/919096664198?text=Hi%20urban%C3%A9%21" target="_blank"
+              rel="noopener">
+              <svg class="bi" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+              </svg>WhatsApp us
+            </a>
+            <a class="btn o sm" href="tel:+919096664198">
+              <svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+              </svg>Call
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4>Visit us</h4>
+          <div class="cr">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg>
+            <address>No. 3, Opposite Zam Zam Hotel,<br>Sahil Residency, Kausar Baugh Rd,<br>behind Sana
+              Hospital,<br>Pune, Maharashtra 411048</address>
+          </div>
+          <a class="cr fl2"
+            href="https://www.google.com/maps/search/?api=1&query=urban%C3%A9%20Shoe%20store%20Kausar%20Baugh%20Pune"
+            target="_blank" rel="noopener">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg><span>Get directions</span>
+          </a>
+          <div class="cr hrs">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+            <span>Open until 10:30 pm (per Google listing)</span>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a class="cr" href="tel:+919096664198">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" />
+            </svg><span>90966 64198</span>
+          </a>
+          <a class="cr" href="https://wa.me/919096664198" target="_blank" rel="noopener">
+            <svg class="ci" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg><span>WhatsApp chat</span>
+          </a>
+          <a class="cr" href="mailto:support@urbane.in">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2.5" />
+              <path d="M3.5 7l8.5 6 8.5-6" />
+            </svg><span>support@urbane.in</span>
+          </a>
+          <a class="cr" href="https://www.instagram.com/urbanespot/" target="_blank" rel="noopener">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg><span>@urbanespot on Instagram</span>
+          </a>
+          <a class="cr"
+            href="https://www.google.com/search?sxsrf=APpeQnui0nQNRzdR-w1o0rrI6V3Rr_NLlw:1791917362031&amp;si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_5T9_fyQgZqZRI_BSocSgAyvmx5vhY9X38SzGIo53PyBDsupO3dP_2NNlkwhEQFt7Hat7R2QRevuCtz0gQm12LnRihwI&amp;q=urban%C3%A9+Reviews"
+            target="_blank" rel="noopener">
+            <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" />
+            </svg><span>Google reviews</span>
+          </a>
+        </div>
+        <nav aria-label="Footer">
+          <h4>Explore</h4>
+          <a href="#why" data-go>Why urbané</a>
+          <a href="#footwear" data-go>Footwear</a>
+          <a href="#clothing" data-go>Clothing</a>
+          <a href="#store" data-go>Inside the store</a>
+          <a href="#care" data-go>Shoe care</a>
+          <a href="#visit" data-go>Visit</a>
+        </nav>
+      </div>
+      <div class="fbt">
+        <span>&copy; urbané, Pune</span>
+        <span>All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+  <a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+  </a>
+  <!-- photo viewer -->
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" aria-hidden="true">
+    <button class="x" id="lbX" aria-label="Close photo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+        aria-hidden="true">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </svg>
+    </button>
+    <button class="pv" id="lbP" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <path d="M15 5l-7 7 7 7" />
+      </svg>
+    </button>
+    <button class="nx" id="lbN" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"
+        stroke-linejoin="round" aria-hidden="true">
+        <path d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+    <figure>
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <div class="cnt2" id="lbCount"></div>
+  </div>
+  <div class="ring" id="ring"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
