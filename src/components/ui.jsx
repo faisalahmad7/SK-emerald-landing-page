@@ -3,14 +3,14 @@ import { Link } from '../router'
 import { BUSINESS, waLink } from '../data/business'
 import { img } from '../data/images'
 
-// Photo: reserves its ratio (no layout shift), fades in, and falls back to a placeholder if a file is missing.
-// `reveal` adds the clip-path entrance (see .rv-mask in styles.css); `caption` is a neutral editorial caption.
+// Photo: reserves its ratio (no layout shift) and falls back to a placeholder if a file is missing.
+// Images render immediately without load, clip-mask, or scale-in animations; `caption` is neutral editorial text.
 export function Photo({ id, ratio = '4/3', pos = 'center', eager = false, caption, className = '', sizes, reveal = false, alt }) {
   const im = img(id)
   const [state, setState] = useState('loading')
   if (!im || state === 'error') return <Placeholder ratio={ratio} label={alt || im?.alt} className={className} />
   return (
-    <figure className={`photo ${state} ${reveal ? 'rv rv-mask' : ''} ${className}`} style={{ aspectRatio: ratio }}>
+    <figure className={`photo ${state} ${className}`} style={{ aspectRatio: ratio }}>
       <img src={im.src} srcSet={im.srcSet} sizes={im.srcSet ? sizes || '(min-width: 900px) 50vw, 100vw' : undefined} alt={alt ?? im.alt}
         loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined}
         decoding="async" style={{ objectPosition: pos }}
