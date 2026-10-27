@@ -38,7 +38,7 @@ export function About() {
       <Seo path="/about" title="About" description="SK Emerald Interior is a furniture manufacturer and retailer in Kondhwa, Pune, making sofas, kitchens, wardrobes, beds and TV units to measure." />
       <PageHead crumbs={[['Home', '/'], ['About']]} title="About SK Emerald Interior" lead="A furniture manufacturer and retailer in Kondhwa, Pune, also known as Emerald Furniture." />
       <section className="wrap about">
-        <div className="about-img"><Photo id={SLOTS.aboutMain} ratio="4/3" reveal /><Photo id={SLOTS.aboutInset} ratio="1/1" className="b" reveal /></div>
+        <div className="about-img"><Photo id={SLOTS.aboutMain} ratio="4/3" reveal eager sizes="(min-width: 800px) 48vw, 90vw" /><Photo id={SLOTS.aboutInset} ratio="1/1" className="b" reveal eager sizes="(min-width: 800px) 18vw, 34vw" /></div>
         <div>
           <p>We make sofas, recliners, beds, wardrobes, kitchens and TV units, and take on wooden doors, wood polishing and furniture for offices and institutions. Customers come from Pune and from other parts of Maharashtra.</p>
           <p>Because the pieces are made to order, the size, fabric and finish can change before anything is cut. Our promise is on the logo: <i>{BUSINESS.tagline}</i>.</p>
