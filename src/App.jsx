@@ -1,5 +1,6 @@
 import { Router, useRouter } from './router'
-import { Header, Footer, WhatsAppFab, RevealObserver } from './components/Layout'
+import { Header, Footer, WhatsAppFab } from './components/Layout'
+import GsapReveals from './components/GsapReveals'
 import Home from './pages/Home'
 import { Collections, Collection } from './pages/Collections'
 import Gallery from './pages/Gallery'
@@ -29,7 +30,7 @@ export default function App() {
     <Router>
       <Header />
       <main id="main" tabIndex={-1}><Routes /></main>
-      <RevealObserver />
+      <GsapReveals />
       <Footer />
       <WhatsAppFab />
     </Router>
