@@ -52,25 +52,13 @@ export default function Home() {
           <div className="hero-proof"><span>01</span><p>Made around your measurements.<br />Not the other way around.</p><span className="hero-proof-rule" /></div>
         </div>
         <div className="hero-img editorial-hero-image">
-          <Photo id={SLOTS.hero} ratio="4/5" pos="48% 50%" eager reveal sizes="(min-width: 900px) 58vw, 100vw" />
+          <Photo id={SLOTS.hero} ratio="4/5" pos="48% 50%" eager sizes="(min-width: 900px) 58vw, 100vw" alt="Dark emerald living room with coordinated sofa furniture" />
           <div className="hero-image-caption"><span>SK EMERALD INTERIOR</span><span>Living, in a deeper shade of green</span></div>
-          <div className="hero-inset">
-            <Photo id={SLOTS.intro[0]} ratio="4/5" pos="center" reveal alt="Detail of a made-to-measure sofa" />
-            <div><span>Made for your space</span><span className="inset-line" /></div>
-          </div>
-          <span className="hero-image-index" aria-hidden="true">01 / 06</span>
         </div>
         <nav className="hero-index editorial-hero-index wrap" aria-label="Explore furniture ranges">
           {COLLECTIONS.map((c, i) => <Link key={c.slug} to={`/collections/${c.slug}`}><span>0{i + 1}</span>{c.name}</Link>)}
         </nav>
       </section>
-
-      <div className="editorial-marquee" aria-label="Made to measure. Made to belong.">
-        <div className="marquee-track">
-          <div className="marquee-group"><span>Made to measure</span><i aria-hidden="true">✳</i><span>Made to belong</span><i aria-hidden="true">✳</i><span>Made for living</span><i aria-hidden="true">✳</i></div>
-          <div className="marquee-group" aria-hidden="true"><span>Made to measure</span><i>✳</i><span>Made to belong</span><i>✳</i><span>Made for living</span><i>✳</i></div>
-        </div>
-      </div>
 
       <section className="wrap intro editorial-intro">
         <div className="overlap editorial-intro-visual">
