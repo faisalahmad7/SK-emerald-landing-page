@@ -1,4 +1,6 @@
 /* SK Emerald — art-directed editorial system. Composition, typography and motion are intentionally restrained. */
+/* Keep photography visible while decoding; the former opacity gate made image boxes look like missing-image placeholders. */
+.photo img, .photo.loading img { opacity: 1; }
 .photo img { transition: opacity .24s ease, transform 1s var(--ease); }
 /* About page: a deliberate two-column composition instead of a long, unbalanced stack. */
 .about {
