@@ -3,7 +3,7 @@ import { Link, NavLink, useRouter } from '../router'
 import { BUSINESS, waLink, telLink } from '../data/business'
 import { COLLECTIONS } from '../data/collections'
 
-const NAV = [['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/materials', 'Materials'], ['/about', 'About'], ['/faq', 'FAQs']]
+const NAV = [['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/materials', 'Materials'], ['/about', 'About'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
 const logo = `${import.meta.env.BASE_URL}images/logo.png`
 
 // Sets data-in on every .rv element as it scrolls into view (an attribute, because React rewrites className when a photo
@@ -65,9 +65,9 @@ export function Header() {
     return () => document.removeEventListener('keydown', key)
   }, [open])
   return (
-    <header className="site-header">
+    <header className="site-header header-ribbon-contact">
       <a className="skip" href="#main" onClick={(e) => { e.preventDefault(); document.getElementById('main')?.focus() }}>Skip to content</a>
-      <div className="bar wrap">
+      <div className="bar wrap header-ribbon-contact-inner">
         <Link to="/" className="brand" aria-label={`${BUSINESS.name}, home`}>
           <img src={logo} alt="" width="40" height="40" />
           <span><b>SK Emerald</b><i>Interior</i></span>
@@ -82,7 +82,7 @@ export function Header() {
       </div>
       <div id="drawer" ref={drawer} className={`drawer${open ? ' open' : ''}`} hidden={!open}>
         <nav aria-label="Mobile">
-          {[...NAV, ['/contact', 'Contact and showroom']].map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
+          {NAV.map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
         </nav>
         <a className="btn" href={waLink('Hello SK Emerald Interior, I would like a quotation.')} target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
       </div>
