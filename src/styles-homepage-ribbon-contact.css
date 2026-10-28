@@ -1022,3 +1022,100 @@
     );
   }
 }
+
+
+/* USER REFINEMENTS — remove all background rules that run through process copy,
+   open up compressed heading leading, and move the materials glow to two corners. */
+
+/* No central divider or horizontal rule field behind the process heading.
+   Replace it with a quiet concentric detail cropped into the bottom-right corner. */
+.homepage-ribbon-pass .editorial-process-band {
+  background:
+    radial-gradient(circle at 0% 0%, #F1EBDD 0%, transparent 29%),
+    radial-gradient(circle at 100% 100%, #D6CCBB 0%, transparent 36%),
+    #E7E3D8;
+}
+.homepage-ribbon-pass .editorial-process-band::before {
+  inset: auto -150px -205px auto;
+  width: 520px;
+  height: 520px;
+  opacity: .12;
+  background-image: radial-gradient(circle,
+    transparent 0 106px,
+    #A18A5A 107px 108px,
+    transparent 109px 139px,
+    #A18A5A 140px 141px,
+    transparent 142px 174px,
+    #A18A5A 175px 176px,
+    transparent 177px 209px,
+    #A18A5A 210px 211px,
+    transparent 212px
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  mask-image: none;
+}
+
+/* The previous display headings used unusually compressed leading, which made
+   Cormorant's tall ascenders/descenders visually collide when a heading wrapped.
+   Keep the editorial scale while giving each line enough breathing room. */
+.homepage-ribbon-pass .editorial-hero h1 {
+  line-height: .96;
+  text-wrap: balance;
+}
+.homepage-ribbon-pass .editorial-intro-copy h2,
+.homepage-ribbon-pass .editorial-section-head h2,
+.homepage-ribbon-pass .editorial-materials h2,
+.homepage-ribbon-pass .editorial-process-intro h2,
+.homepage-ribbon-pass .editorial-visit-heading h2,
+.homepage-ribbon-pass .enquire h2 {
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.homepage-ribbon-pass .editorial-process li h3 {
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+/* Two separate circular pools of light are anchored to the copy's upper-left
+   and lower-right corners. Neither gradient sits in the centre of the headline. */
+.homepage-ribbon-pass .editorial-materials {
+  background:
+    radial-gradient(circle 370px at 5% 13%, #42644B 0%, #315342 35%, transparent 100%),
+    radial-gradient(circle 310px at 43% 88%, #294B39 0%, #244433 38%, transparent 100%),
+    #17382B;
+}
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-process-band::before {
+    inset: auto -245px -265px auto;
+    width: 420px;
+    height: 420px;
+    opacity: .065;
+  }
+  .homepage-ribbon-pass .editorial-materials {
+    background:
+      radial-gradient(circle 245px at 7% 9%, #3C5B45 0%, #315342 36%, transparent 100%),
+      radial-gradient(circle 210px at 91% 89%, #294B39 0%, #244433 38%, transparent 100%),
+      #17382B;
+  }
+  .homepage-ribbon-pass .editorial-hero h1 {
+    line-height: .98;
+  }
+  .homepage-ribbon-pass .editorial-intro-copy h2,
+  .homepage-ribbon-pass .editorial-section-head h2,
+  .homepage-ribbon-pass .editorial-materials h2,
+  .homepage-ribbon-pass .editorial-process-intro h2,
+  .homepage-ribbon-pass .editorial-visit-heading h2,
+  .homepage-ribbon-pass .enquire h2 {
+    line-height: 1.04;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-ribbon-pass .editorial-process-band::before {
+    animation: none !important;
+    transform: none !important;
+  }
+}
