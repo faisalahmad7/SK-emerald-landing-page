@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Link } from '../router'
 import { Photo, Seo, Dim, Enquire } from '../components/ui'
 import { BUSINESS, waLink, mapsLink } from '../data/business'
@@ -21,14 +22,22 @@ const TILES = [
 ]
 
 const REVIEWS = [
-  { name: 'Misbah Shaikh', meta: '1 review · 9 months ago', text: 'Very authentic and original shop to purchase furniture. Best and budget friendly place for home interiors. They are very professional. Starting from frame of sofa and foam everything is well explained and various colour options. I will definitely suggest purchasing from this store.' },
-  { name: 'Iqbal Shaikh', meta: '7 reviews · 3 months ago', text: 'I had ordered a TV unit, sofa, and kitchen unit, and I am extremely happy with the overall experience. Everything was delivered on time, exactly as promised. The quality of the workmanship and materials exceeded my expectations.' },
-  { name: 'SIDD GAMER', meta: '3 reviews · 4 months ago', text: 'Very satisfied with my purchase. Good quality furniture, reasonable prices, and excellent customer service.' },
-  { name: 'Arshad Shaikh', meta: '1 review · 4 months ago', text: 'S K Emerald Interior — best quality furniture products and best quality materials used.' },
-  { name: 'Naaz Shaikh', meta: '2 reviews · 9 months ago', text: 'Their furniture and interior work are excellent. Very attractive collection. We roamed a lot but did not find quality items like SK Emerald Interior. Really satisfied with the quality and service.' },
-  { name: 'Sachin Lonkar', meta: '1 review · 1 photo · 1 month ago', text: 'Wishing you continued success with all your future orders.' },
-  { name: 'Iqra Khan', meta: '1 review · 9 months ago', text: 'Their furniture quality must be appreciated. They use such great quality materials. Their sofa collections are really nice, and their kitchen trolley, interior designs and trending wardrobes are awesome.' },
-  { name: 'Abul Shaikh', meta: 'Local Guide · 35 reviews · 2 months ago', text: 'I recently got my kitchen cabinets designed and installed by this interior design shop, and I am very happy with the final outcome. The finish is sleek, modern, and premium-looking, with excellent attention to detail.' },
+  { name: 'Misbah Shaikh', meta: '1 review · 9 months ago', ageMonths: 9, rating: 5, topics: ['sofas', 'interiors'], text: 'Very authentic and original shop to purchase furniture. Best and budget friendly place for home interiors. They are very professional. Starting from frame of sofa and foam everything is well explained and various colour options. I will definitely suggest purchasing from this store.' },
+  { name: 'Iqbal Shaikh', meta: '7 reviews · 3 months ago', ageMonths: 3, rating: 5, topics: ['sofas', 'kitchens'], text: 'I had ordered a TV unit, sofa, and kitchen unit, and I am extremely happy with the overall experience. Everything was delivered on time, exactly as promised. The quality of the workmanship and materials exceeded my expectations.' },
+  { name: 'SIDD GAMER', meta: '3 reviews · 4 months ago', ageMonths: 4, rating: 5, topics: ['quality'], text: 'Very satisfied with my purchase. Good quality furniture, reasonable prices, and excellent customer service.' },
+  { name: 'Arshad Shaikh', meta: '1 review · 4 months ago', ageMonths: 4, rating: 5, topics: ['quality'], text: 'S K Emerald Interior — best quality furniture products and best quality materials used.' },
+  { name: 'Naaz Shaikh', meta: '2 reviews · 9 months ago', ageMonths: 9, rating: 5, topics: ['interiors'], text: 'Their furniture and interior work are excellent. Very attractive collection. We roamed a lot but did not find quality items like SK Emerald Interior. Really satisfied with the quality and service.' },
+  { name: 'Sachin Lonkar', meta: '1 review · 1 photo · 1 month ago', ageMonths: 1, rating: 5, topics: [], text: 'Wishing you continued success with all your future orders.' },
+  { name: 'Iqra Khan', meta: '1 review · 9 months ago', ageMonths: 9, rating: 5, topics: ['sofas'], text: 'Their furniture quality must be appreciated. They use such great quality materials. Their sofa collections are really nice, and their kitchen trolley, interior designs and trending wardrobes are awesome.' },
+  { name: 'Abul Shaikh', meta: 'Local Guide · 35 reviews · 2 months ago', ageMonths: 2, rating: 5, topics: ['kitchens'], text: 'I recently got my kitchen cabinets designed and installed by this interior design shop, and I am very happy with the final outcome. The finish is sleek, modern, and premium-looking, with excellent attention to detail.' },
+]
+
+const REVIEW_TOPICS = [
+  { key: 'all', label: 'All', count: 8 },
+  { key: 'sofas', label: 'Sofa', count: 3 },
+  { key: 'kitchens', label: 'Kitchen cabinets', count: 2 },
+  { key: 'interiors', label: 'Home interiors', count: 2 },
+  { key: 'quality', label: 'Product quality', count: 2 },
 ]
 
 function Tile({ slug, area, ratio, delay }) {
@@ -48,6 +57,17 @@ function Tile({ slug, area, ratio, delay }) {
 }
 
 export default function Home() {
+  const [reviewTopic, setReviewTopic] = useState('all')
+  const [reviewSort, setReviewSort] = useState('relevant')
+  const visibleReviews = REVIEWS
+    .filter((review) => reviewTopic === 'all' || review.topics.includes(reviewTopic))
+    .slice()
+    .sort((a, b) => {
+      if (reviewSort === 'newest') return a.ageMonths - b.ageMonths
+      if (reviewSort === 'highest') return b.rating - a.rating
+      if (reviewSort === 'lowest') return a.rating - b.rating
+      return 0
+    })
   return (
     <div className="homepage-ribbon-pass">
       <Seo path="/" description="Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune." ld={ld} />
@@ -155,11 +175,26 @@ export default function Home() {
               <p>Based on <strong>8 reviews</strong></p>
             </div>
           </div>
-          <div className="editorial-review-topics" aria-label="Review topics">
-            <span className="topic-active">All reviews</span><span>Sofas <b>3</b></span><span>Kitchen cabinets <b>2</b></span><span>Home interiors <b>2</b></span><span>Product quality <b>2</b></span><span>+4 more</span>
+          <div className="editorial-review-tools">
+            <div className="editorial-review-topics" aria-label="Filter review topics">
+              {REVIEW_TOPICS.map((topic) => (
+                <button key={topic.key} type="button" className={reviewTopic === topic.key ? 'topic-active' : ''} aria-pressed={reviewTopic === topic.key} onClick={() => setReviewTopic(topic.key)}>
+                  {topic.label} <b>{topic.count}</b>
+                </button>
+              ))}
+              <span className="editorial-review-more">+4 more</span>
+            </div>
+            <label className="editorial-review-sort">Sort by
+              <select value={reviewSort} onChange={(event) => setReviewSort(event.target.value)}>
+                <option value="relevant">Most relevant</option>
+                <option value="newest">Newest</option>
+                <option value="highest">Highest</option>
+                <option value="lowest">Lowest</option>
+              </select>
+            </label>
           </div>
           <div className="editorial-review-rail" aria-label="Customer review excerpts" tabIndex={0}>
-            {REVIEWS.map((review) => (
+            {visibleReviews.map((review) => (
               <article className="editorial-review-card" key={review.name}>
                 <div className="editorial-review-card-top"><span className="editorial-review-stars" aria-label="5 out of 5 stars">★★★★★</span><span className="editorial-review-mark" aria-label="Google review">G</span></div>
                 <blockquote>“{review.text}”</blockquote>
