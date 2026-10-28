@@ -23,7 +23,7 @@ const TILES = [
 function Tile({ slug, area, ratio, delay }) {
   const c = COLLECTIONS.find((x) => x.slug === slug)
   return (
-    <Link to={`/collections/${slug}`} className={`tile t-${area} editorial-tile`} aria-label={`${c.name}: ${c.tag}`} style={{ '--d': delay }}>
+    <Link to={`/collections/${slug}`} className={`tile t-${area} editorial-tile rv`} aria-label={`${c.name}: ${c.tag}`} style={{ '--d': delay }}>
       <Photo id={c.tile} ratio={ratio} pos={c.tilePos} reveal sizes="(min-width: 900px) 50vw, 100vw" />
       <span className="tile-cap">
         <span className="tile-number">0{TILES.findIndex((t) => t.slug === slug) + 1}</span>
