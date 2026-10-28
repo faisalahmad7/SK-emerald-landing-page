@@ -33,11 +33,11 @@ const REVIEWS = [
 ]
 
 const REVIEW_TOPICS = [
-  { key: 'all', label: 'All', count: 8 },
-  { key: 'sofas', label: 'Sofa', count: 3 },
-  { key: 'kitchens', label: 'Kitchen cabinets', count: 2 },
-  { key: 'interiors', label: 'Home interiors', count: 2 },
-  { key: 'quality', label: 'Product quality', count: 2 },
+  { key: 'all', label: 'All' },
+  { key: 'sofas', label: 'Sofa' },
+  { key: 'kitchens', label: 'Kitchen cabinets' },
+  { key: 'interiors', label: 'Home interiors' },
+  { key: 'quality', label: 'Product quality' },
 ]
 
 function Tile({ slug, area, ratio, delay, imageId }) {
@@ -179,7 +179,7 @@ export default function Home() {
             <div className="editorial-review-topics" aria-label="Filter review topics">
               {REVIEW_TOPICS.map((topic) => (
                 <button key={topic.key} type="button" className={reviewTopic === topic.key ? 'topic-active' : ''} aria-pressed={reviewTopic === topic.key} onClick={() => setReviewTopic(topic.key)}>
-                  {topic.label} <b>{topic.count}</b>
+                  {topic.label}
                 </button>
               ))}
             </div>
