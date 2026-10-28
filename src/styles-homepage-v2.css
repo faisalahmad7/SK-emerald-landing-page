@@ -1,0 +1,350 @@
+/* SK Emerald — homepage v2 visual direction.
+   Strictly scoped to .homepage-v2: no shared pages, global tokens or navigation changes. */
+
+.homepage-v2 {
+  background: var(--ed-paper-light);
+  overflow: clip;
+}
+
+/* The hero photograph stays mapped to SLOTS.hero (ID 13). Only its presentation changes. */
+.homepage-v2 .editorial-hero {
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+  grid-template-rows: minmax(max(620px, 76vh), auto) auto;
+  background: var(--ed-paper-light);
+  color: var(--ed-green);
+}
+
+.homepage-v2 .editorial-hero-copy {
+  background: var(--ed-paper-light);
+  color: var(--ed-green);
+  padding: clamp(42px, 5vw, 76px) clamp(28px, 4.5vw, 68px) clamp(38px, 4vw, 60px)
+    max(var(--gut), calc((100vw - 1220px) / 2 + 28px));
+}
+
+.homepage-v2 .editorial-hero-copy .editorial-eyebrow {
+  color: #5D665F;
+}
+
+.homepage-v2 .editorial-hero-copy .eyebrow-city {
+  color: #65736A;
+}
+
+.homepage-v2 .editorial-hero h1 {
+  max-width: 7.9ch;
+  color: #17382B;
+  font-size: clamp(4.5rem, 7.25vw, 7.7rem);
+  line-height: .79;
+  letter-spacing: -.065em;
+}
+
+.homepage-v2 .editorial-hero h1 em {
+  display: inline-block;
+  color: #9C8150;
+  font-style: italic;
+}
+
+.homepage-v2 .editorial-hero .lead {
+  color: #5D665F;
+  max-width: 36ch;
+  font-size: clamp(1rem, 1.24vw, 1.13rem);
+  line-height: 1.85;
+}
+
+.homepage-v2 .editorial-hero .actions {
+  gap: 20px;
+}
+
+.homepage-v2 .editorial-hero .editorial-btn {
+  background: #17382B;
+  border-color: #17382B;
+  color: #FBF8F1;
+  box-shadow: 0 10px 26px #17382B16;
+}
+
+.homepage-v2 .editorial-hero .editorial-btn:hover {
+  background: #254B39;
+  border-color: #254B39;
+  color: #FFFDF8;
+}
+
+.homepage-v2 .editorial-text-link {
+  color: #17382B;
+  border-bottom-color: #C6A66B;
+}
+
+.homepage-v2 .hero-proof {
+  color: #5D665F;
+}
+
+.homepage-v2 .hero-proof > span:first-child {
+  color: #9C8150;
+}
+
+.homepage-v2 .hero-proof-rule {
+  background: #C6A66B;
+}
+
+.homepage-v2 .editorial-hero-image {
+  padding: 24px 24px 68px 0;
+  min-height: 620px;
+  background: #17382B;
+}
+
+.homepage-v2 .editorial-hero-image > .photo {
+  inset: 24px 24px 68px 0;
+  box-shadow: 0 22px 70px #10281F26;
+}
+
+.homepage-v2 .editorial-hero-image::after {
+  inset: 13px 12px 59px 10px;
+  border-color: #C6A66B;
+}
+
+.homepage-v2 .hero-image-caption {
+  bottom: 27px;
+  border-color: #C6A66B99;
+  color: #F4F0E7;
+}
+
+.homepage-v2 .hero-image-caption span:last-child {
+  color: #D4DCCF;
+}
+
+/* Collection index: a confident dark footer to the hero composition. */
+.homepage-v2 .editorial-hero-index {
+  background: #17382B;
+  border-top: 1px solid #C6A66B;
+  border-bottom: 1px solid #C6A66B;
+  box-shadow: none;
+}
+
+.homepage-v2 .editorial-hero-index a {
+  color: #FBF8F1;
+  border-right-color: #FFFFFF30;
+  transition: color .25s, background .25s;
+}
+
+.homepage-v2 .editorial-hero-index a span {
+  color: #D3B981;
+}
+
+.homepage-v2 .editorial-hero-index a:hover {
+  color: #F0D7A5;
+  background: #FFFFFF0A;
+}
+
+/* Moving collection ribbon gives the page a distinctive, tactile editorial beat. */
+.home-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 17px 0 15px;
+  border-bottom: 1px solid #C9C4B6;
+  background: #E9E3D7;
+  color: #17382B;
+}
+
+.home-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: sk-home-marquee 34s linear infinite;
+  will-change: transform;
+}
+
+.home-marquee-track span {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 40px);
+  padding-right: clamp(18px, 3vw, 40px);
+  white-space: nowrap;
+  font: 600 .65rem/1.5 var(--ed-sans);
+  letter-spacing: .19em;
+}
+
+.home-marquee-track i {
+  color: #A88B52;
+  font-style: normal;
+  font-size: .9rem;
+}
+
+@keyframes sk-home-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* A softer architectural gallery stage contrasts with the deep-green materials chapter. */
+.homepage-v2 .editorial-showcase {
+  background: #F0ECE3;
+}
+
+.homepage-v2 .editorial-section-head h2 {
+  color: #17382B;
+}
+
+.homepage-v2 .editorial-mosaic .tile {
+  outline: 1px solid #D7D0C2;
+  outline-offset: 0;
+}
+
+.homepage-v2 .editorial-mosaic .tile-cap {
+  background: linear-gradient(0deg, #0A2018ED 0%, #0A20188C 44%, #0A201800 100%);
+}
+
+.homepage-v2 .editorial-mosaic .tile-visual-note {
+  box-shadow: 0 3px 10px #08190F24;
+}
+
+.homepage-v2 .editorial-mosaic .tile:hover .photo img,
+.homepage-v2 .editorial-mosaic .tile:focus-visible .photo img {
+  transform: scale(1.055);
+}
+
+/* Inspiration captions are deliberately visible on concept renders. */
+.homepage-v2 .photo figcaption {
+  padding: 7px 11px 6px;
+  border-top: 1px solid #C6A66B;
+  font: 700 .55rem/1.4 var(--ed-sans);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #17382B;
+  background: #FBF8F1F2;
+}
+
+.homepage-v2 .editorial-intro-visual .a {
+  outline-color: #C6A66B;
+  box-shadow: 0 24px 72px #10281F1D;
+}
+
+.homepage-v2 .editorial-intro-visual .b {
+  border-color: #F4F0E7;
+}
+
+.homepage-v2 .editorial-rooms {
+  background: #FBF8F1;
+}
+
+.homepage-v2 .editorial-triptych .tri .photo {
+  outline-color: #C6A66B;
+  box-shadow: 0 20px 54px #10281F15;
+}
+
+.homepage-v2 .editorial-gallery-note {
+  padding-top: 17px;
+  border-top: 1px solid #D5CDBD;
+}
+
+/* Large copy remains fluid and wraps naturally on smaller laptops. */
+@media (max-width: 1050px) {
+  .homepage-v2 .editorial-hero {
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+    grid-template-rows: minmax(max(570px, 68vh), auto) auto;
+  }
+  .homepage-v2 .editorial-hero-copy {
+    padding-right: 26px;
+  }
+  .homepage-v2 .editorial-hero h1 {
+    font-size: clamp(3.7rem, 7vw, 6.2rem);
+  }
+}
+
+@media (max-width: 760px) {
+  .homepage-v2 .editorial-hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    background: #FBF8F1;
+  }
+  .homepage-v2 .editorial-hero-copy {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 42px var(--gut) 35px;
+  }
+  .homepage-v2 .editorial-hero .editorial-eyebrow {
+    margin-bottom: 25px;
+  }
+  .homepage-v2 .editorial-hero h1 {
+    max-width: 8ch;
+    font-size: clamp(3.4rem, 13vw, 5rem);
+    line-height: .83;
+  }
+  .homepage-v2 .editorial-hero .lead {
+    max-width: 37ch;
+    margin-top: 21px;
+    font-size: .98rem;
+  }
+  .homepage-v2 .editorial-hero .actions {
+    gap: 18px;
+    margin-top: 24px;
+  }
+  .homepage-v2 .editorial-hero .editorial-btn {
+    width: 100%;
+    min-height: 52px;
+  }
+  .homepage-v2 .hero-proof {
+    margin-top: 28px;
+  }
+  .homepage-v2 .editorial-hero-image {
+    grid-column: 1;
+    grid-row: 2;
+    height: clamp(390px, 112vw, 610px);
+    min-height: 0;
+    padding: 0;
+    background: #17382B;
+  }
+  .homepage-v2 .editorial-hero-image > .photo {
+    inset: 22px 22px 63px;
+  }
+  .homepage-v2 .editorial-hero-image::after {
+    inset: 12px 12px 55px;
+  }
+  .homepage-v2 .hero-image-caption {
+    bottom: 20px;
+    left: 22px;
+    right: 22px;
+    font-size: .5rem;
+  }
+  .homepage-v2 .editorial-hero-index {
+    grid-row: 3;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: var(--gut);
+  }
+  .homepage-v2 .editorial-hero-index a {
+    min-height: 60px;
+    padding-inline: 10px;
+    border-right: 1px solid #FFFFFF30;
+    border-top: 1px solid #FFFFFF24;
+    font-size: .97rem;
+  }
+  .homepage-v2 .editorial-hero-index a:nth-child(2n) {
+    border-right: 0;
+  }
+  .homepage-v2 .editorial-hero-index a:nth-child(-n+2) {
+    border-top: 0;
+  }
+  .home-marquee {
+    padding-block: 14px 12px;
+  }
+  .home-marquee-track span {
+    font-size: .58rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .homepage-v2 .editorial-hero h1 {
+    font-size: 3.25rem;
+  }
+  .homepage-v2 .editorial-hero .editorial-text-link {
+    font-size: .76rem;
+  }
+  .homepage-v2 .editorial-hero-index a {
+    font-size: .9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-marquee-track {
+    animation: none;
+    transform: none;
+  }
+  .homepage-v2 .editorial-mosaic .tile .photo img {
+    transition: none;
+  }
+}
