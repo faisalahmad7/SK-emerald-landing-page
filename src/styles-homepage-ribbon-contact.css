@@ -1209,50 +1209,168 @@
   line-height: 1.82;
 }
 
-/* A considered reveal for collection imagery: the card rises into place while
-   its photograph eases from a close crop to full frame. Each tile is observed
-   by the existing IntersectionObserver; no animation library is added. */
+
+/* CALM REVEALS — keep the photography itself still while the card arrives. */
 .js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv {
   opacity: 0;
-  transform: translate3d(0, 28px, 0) scale(.99);
-  clip-path: inset(0 0 7% 0);
-  transition:
-    opacity .9s cubic-bezier(.2,.65,.25,1),
-    transform 1.15s cubic-bezier(.2,.65,.25,1),
-    clip-path 1.15s cubic-bezier(.2,.65,.25,1);
-  will-change: opacity, transform, clip-path;
+  transform: translate3d(0, 14px, 0);
+  clip-path: none;
+  transition: none;
+  will-change: opacity, transform;
 }
 .js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv[data-in] {
   opacity: 1;
-  transform: translate3d(0, 0, 0) scale(1);
-  clip-path: inset(0);
+  transform: none;
+  clip-path: none;
 }
 .homepage-ribbon-pass .editorial-mosaic .editorial-tile .photo img {
-  transform: scale(1.075);
-  transition: transform 1.5s cubic-bezier(.2,.65,.25,1), filter .8s ease;
+  transform: none;
+  transition: transform .8s cubic-bezier(.2,.65,.25,1);
 }
-.homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv[data-in] .photo img {
-  transform: scale(1);
-}
-.homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv[data-in]:hover .photo img {
-  transform: scale(1.035);
-}
-.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(2) {
-  transition-delay: .08s, .08s, .08s;
-}
-.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(3) {
-  transition-delay: .16s, .16s, .16s;
-}
-.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(4) {
-  transition-delay: .24s, .24s, .24s;
-}
-.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(5) {
-  transition-delay: .32s, .32s, .32s;
-}
-.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(6) {
-  transition-delay: .40s, .40s, .40s;
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:hover .photo img,
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:focus-visible .photo img {
+  transform: scale(1.025);
 }
 
+/* FIXED, SOLID HEADER — no blur/transparent layers while scrolling on phones. */
+.site-header.header-ribbon-contact,
+.site-header.header-ribbon-contact.menu-open {
+  position: fixed;
+  inset: 0 0 auto;
+  width: 100%;
+  z-index: 100;
+  background: #F8F5EE;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid #C9CECC;
+  box-shadow: 0 5px 18px #17271E0A;
+}
+.site-header.header-ribbon-contact + main {
+  padding-top: 81px;
+}
+@media (max-width: 979px) {
+  .site-header.header-ribbon-contact + main {
+    padding-top: 69px;
+  }
+}
+@media (max-width: 979px) {
+  .site-header.header-ribbon-contact .drawer-backdrop {
+    top: 68px;
+    height: calc(100vh - 68px);
+    height: calc(100dvh - 68px);
+  }
+  .site-header.header-ribbon-contact .drawer {
+    inset: 68px 0 0;
+    max-height: calc(100vh - 68px);
+    max-height: calc(100dvh - 68px);
+    padding-bottom: calc(28px + env(safe-area-inset-bottom));
+    overscroll-behavior: contain;
+  }
+}
+
+/* INTRO: a warm linen card floats against muted stone-coloured side panels on wide screens. */
+.homepage-ribbon-pass .editorial-intro {
+  background: #FBF8F1;
+}
+.homepage-ribbon-pass .editorial-intro-sidefield {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    #E5DFD2 0,
+    #E5DFD2 max(0px, calc((100vw - 1316px) / 2)),
+    transparent max(0px, calc((100vw - 1316px) / 2)),
+    transparent min(100vw, calc((100vw + 1316px) / 2)),
+    #E5DFD2 min(100vw, calc((100vw + 1316px) / 2)),
+    #E5DFD2 100%
+  );
+}
+@media (max-width: 1399px) {
+  .homepage-ribbon-pass .editorial-intro-sidefield {
+    background: transparent;
+  }
+}
+@media (min-width: 900px) {
+  .homepage-ribbon-pass .editorial-intro {
+    box-shadow: 0 1px 0 #C6A66B24;
+  }
+}
+
+/* Keep the heading elegant at phone width; never force it into one oversized line. */
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-visit-heading h2 {
+    max-width: 11.5ch;
+    width: 100%;
+    font-size: clamp(2.35rem, 10vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -.035em;
+    text-wrap: balance;
+  }
+  .homepage-ribbon-pass .editorial-visit .actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    align-items: stretch;
+  }
+  .homepage-ribbon-pass .editorial-visit .actions > .btn,
+  .homepage-ribbon-pass .editorial-visit .actions > .editorial-showroom-link {
+    width: 100%;
+    min-height: 54px;
+    margin: 0;
+    justify-content: space-between;
+  }
+}
+.homepage-ribbon-pass .editorial-showroom-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  margin-top: 0;
+  padding: 13px 17px;
+  border: 1px solid #C6A66B;
+  border-bottom: 1px solid #C6A66B;
+  background: #FFFDF8;
+  color: #17382B;
+  box-shadow: 0 5px 18px #10281F0A;
+  text-decoration: none;
+  transition: background .25s, border-color .25s, box-shadow .25s;
+}
+.homepage-ribbon-pass .editorial-showroom-link:hover {
+  background: #F1EADB;
+  border-color: #A88B52;
+  box-shadow: 0 7px 20px #10281F10;
+}
+
+/* Larger, more visible botanical linework on mobile, still behind the copy and imagery. */
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-intro::before,
+  .homepage-ribbon-pass .editorial-intro::after {
+    width: clamp(175px, 53vw, 230px);
+    height: clamp(260px, 77vw, 330px);
+    opacity: .23;
+  }
+  .homepage-ribbon-pass .editorial-intro::before {
+    top: 0;
+    left: -25px;
+  }
+  .homepage-ribbon-pass .editorial-intro::after {
+    right: -25px;
+    bottom: -2px;
+  }
+  .homepage-ribbon-pass h2 {
+    line-height: 1.11;
+  }
+}
+
+/* Keep the warm-gold active navigation cue on desktop and in the mobile drawer. */
 @media (min-width: 1121px) {
   .site-header.header-ribbon-contact .nav {
     gap: clamp(13px, 1.25vw, 20px);
@@ -1280,38 +1398,17 @@
   background: linear-gradient(90deg, #C6A66B12, transparent 80%);
 }
 
-@media (max-width: 760px) {
-  .homepage-ribbon-pass .editorial-intro::before,
-  .homepage-ribbon-pass .editorial-intro::after {
-    width: 105px;
-    height: 175px;
-    opacity: .14;
-  }
-  .homepage-ribbon-pass .editorial-intro::before {
-    top: 2px;
-    left: -22px;
-  }
-  .homepage-ribbon-pass .editorial-intro::after {
-    right: -18px;
-    bottom: 0;
-  }
-  .homepage-ribbon-pass h2 {
-    line-height: 1.11;
-  }
-  .homepage-ribbon-pass .editorial-visit-heading h2 {
-    line-height: 1.12;
-  }
-  .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv {
-    transform: translate3d(0, 20px, 0) scale(.995);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv,
+  .js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv,
+  .js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv[data-in] {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    will-change: auto;
+  }
   .homepage-ribbon-pass .editorial-mosaic .editorial-tile .photo img {
     transition: none !important;
     transform: none !important;
-    clip-path: none !important;
   }
   .homepage-ribbon-pass .editorial-intro::before,
   .homepage-ribbon-pass .editorial-intro::after {
