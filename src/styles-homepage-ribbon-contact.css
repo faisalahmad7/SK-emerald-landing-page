@@ -2111,6 +2111,10 @@
 }
 
 
+.site-footer .footer-mobile-accordions {
+  display: none;
+}
+
 /* ──────────────────────────────────────────────────────────────────────────
    RESPONSIVE POLISH — mobile width containment and footer compression. */
 html {
