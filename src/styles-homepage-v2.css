@@ -3,7 +3,6 @@
 
 .homepage-v2 {
   background: var(--ed-paper-light);
-  overflow: clip;
 }
 
 /* The hero photograph stays mapped to SLOTS.hero (ID 13). Only its presentation changes. */
