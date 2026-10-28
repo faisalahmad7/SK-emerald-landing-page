@@ -71,7 +71,7 @@ export default function GsapReveals() {
         const exitY = [-78, 68, 90]
         const exitX = [-18, 0, 20]
         const enterAt = [0, 0.045, 0.09]
-        const exitAt = [0.75, 0.78, 0.81]
+        const exitAt = [0.60, 0.63, 0.66]
 
         sceneMedia = gsap.matchMedia()
         sceneMedia.add('(min-width: 900px) and (prefers-reduced-motion: no-preference)', () => {
@@ -80,7 +80,7 @@ export default function GsapReveals() {
             scrollTrigger: {
               trigger: roomScene,
               start: 'center center',
-              end: () => '+=' + Math.round(window.innerHeight * 1.42),
+              end: () => '+=' + Math.round(window.innerHeight * 1.12),
               pin: true,
               pinSpacing: true,
               scrub: 0.62,
