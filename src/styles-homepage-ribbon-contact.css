@@ -1091,3 +1091,29 @@
     transform: none !important;
   }
 }
+
+
+/* Layout tune: keep the process eyebrow full-width, then balance the heading
+   against its supporting sentence. Avoid a central divider in the linen field. */
+@media (min-width: 1200px) {
+  .homepage-ribbon-pass .editorial-process-intro .editorial-eyebrow {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .homepage-ribbon-pass .editorial-process-intro h2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .homepage-ribbon-pass .editorial-process-intro > p:last-child {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .homepage-ribbon-pass .editorial-process-band::before {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent 0 76px,
+      #A99B7E 77px 78px,
+      transparent 79px 152px
+    );
+  }
+}
