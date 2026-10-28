@@ -33,6 +33,32 @@ export default function GsapReveals() {
         })
       })
 
+      // Homepage intro animation. The hero photograph remains the same asset and mapping.
+      if (path === '/') {
+        const heroCopy = document.querySelector('.editorial-hero-copy')
+        if (heroCopy) {
+          const entranceItems = heroCopy.querySelectorAll('.editorial-eyebrow, h1, .lead, .actions, .hero-proof')
+          gsap.fromTo(entranceItems, { autoAlpha: 0, y: 24 }, {
+            autoAlpha: 1, y: 0,
+            duration: 0.85,
+            stagger: 0.11,
+            delay: 0.08,
+            ease: 'power3.out',
+            overwrite: 'auto',
+          })
+        }
+        const heroFrame = document.querySelector('.editorial-hero-image')
+        if (heroFrame) {
+          gsap.fromTo(heroFrame, { clipPath: 'inset(0 0 0 8%)' }, {
+            clipPath: 'inset(0 0 0 0)',
+            duration: 1.15,
+            delay: 0.12,
+            ease: 'power2.inOut',
+            overwrite: 'auto',
+          })
+        }
+      }
+
       // Homepage-only motion: staggered editorial entrances and restrained scroll-linked drift.
       // The existing hero photo and its mapping are deliberately untouched.
       if (path === '/') {
