@@ -784,3 +784,97 @@
     padding-inline: 15px;
   }
 }
+
+
+/* QUIET-LUXURY ATMOSPHERE
+   Two home-page-only material details: a fine botanical sketch in the intro,
+   and restrained wood-grain contour lines behind the materials story.
+   Both are decorative, low contrast, and motion-safe. */
+.homepage-ribbon-pass .editorial-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.homepage-ribbon-pass .editorial-intro > .editorial-intro-visual,
+.homepage-ribbon-pass .editorial-intro > .editorial-intro-copy {
+  position: relative;
+  z-index: 1;
+}
+.homepage-ribbon-pass .editorial-intro::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: clamp(-20px, 1vw, 18px);
+  top: 8%;
+  width: clamp(108px, 15vw, 190px);
+  height: min(78%, 390px);
+  pointer-events: none;
+  opacity: .15;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 280 420' fill='none' stroke='%23798D78' stroke-width='1.15' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 407 C56 348 79 305 88 252 C100 183 160 123 257 19'/%3E%3Cpath d='M47 360 C25 356 10 337 13 315 C35 323 49 339 47 360Z'/%3E%3Cpath d='M53 348 C76 348 94 331 96 310 C74 316 58 331 53 348Z'/%3E%3Cpath d='M73 301 C51 292 43 270 52 250 C70 266 78 283 73 301Z'/%3E%3Cpath d='M83 282 C105 278 119 260 116 239 C97 250 85 265 83 282Z'/%3E%3Cpath d='M99 237 C77 228 69 207 79 187 C96 203 104 220 99 237Z'/%3E%3Cpath d='M109 219 C130 215 143 197 139 177 C121 188 110 202 109 219Z'/%3E%3Cpath d='M135 174 C115 161 112 140 125 123 C139 141 143 158 135 174Z'/%3E%3Cpath d='M146 157 C168 154 182 138 180 117 C161 127 149 141 146 157Z'/%3E%3Cpath d='M178 119 C161 103 164 82 180 68 C189 88 189 105 178 119Z'/%3E%3Cpath d='M191 102 C211 99 225 83 223 63 C205 73 194 87 191 102Z'/%3E%3Cpath d='M221 63 C207 47 212 27 229 15 C235 34 232 50 221 63Z'/%3E%3Cpath d='M235 47 C253 43 263 30 261 13'/%3E%3Cpath d='M43 366 C35 350 25 333 13 315 M70 305 C68 286 61 268 52 250 M96 241 C97 223 89 204 79 187 M133 179 C137 161 131 141 125 123 M175 124 C185 106 184 86 180 68'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-origin: 82% 84%;
+  animation: sk-botanical-drift 19s ease-in-out infinite alternate;
+}
+@keyframes sk-botanical-drift {
+  from { transform: translate3d(0, 0, 0) rotate(-.7deg); }
+  to { transform: translate3d(-5px, -7px, 0) rotate(.8deg); }
+}
+
+/* Fine timber-ring linework gives the dark materials band a little depth without
+   adding another photograph, card, dependency, or high-contrast texture. */
+.homepage-ribbon-pass .editorial-materials {
+  isolation: isolate;
+}
+.homepage-ribbon-pass .editorial-materials::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 3%;
+  right: -4%;
+  width: min(62vw, 670px);
+  height: 93%;
+  pointer-events: none;
+  opacity: .13;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 620 560' fill='none' stroke='%23D5BE8A' stroke-width='1.25'%3E%3Cpath d='M630 18 C500 8 375 36 335 108 C293 184 376 228 481 211 C556 199 603 226 594 281 C584 342 478 360 381 335 C257 304 176 327 163 399 C150 471 254 526 382 515 C477 507 559 463 625 425'/%3E%3Cpath d='M633 39 C516 30 405 53 367 115 C330 177 397 205 478 194 C543 185 581 211 575 258 C568 309 478 333 389 312 C277 285 199 314 186 379 C174 441 264 496 376 490 C471 484 549 449 619 408'/%3E%3Cpath d='M636 62 C531 52 432 73 399 124 C367 174 416 186 476 177 C530 169 559 194 555 237 C550 281 479 306 397 289 C297 265 224 300 210 360 C198 414 277 465 371 465 C465 465 542 432 612 390'/%3E%3Cpath d='M638 85 C548 77 458 93 430 134 C404 172 435 169 475 161 C517 154 538 178 535 216 C532 254 479 279 405 266 C318 247 248 284 235 341 C224 389 292 439 367 440 C457 442 532 413 602 373'/%3E%3Cpath d='M641 108 C566 101 486 113 462 145 C442 171 454 153 476 145 C504 139 517 161 516 194 C514 225 480 252 413 243 C337 228 273 267 259 321 C248 365 306 412 363 414 C448 419 521 392 591 355'/%3E%3Cpath d='M645 132 C584 126 517 132 496 152 C481 166 474 155 479 133'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform-origin: 70% 50%;
+  animation: sk-grain-drift 27s ease-in-out infinite alternate;
+}
+.homepage-ribbon-pass .editorial-materials > .wrap {
+  position: relative;
+  z-index: 1;
+}
+@keyframes sk-grain-drift {
+  from { transform: translate3d(0, 0, 0) rotate(-.3deg); }
+  to { transform: translate3d(-7px, 4px, 0) rotate(.35deg); }
+}
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-intro::after {
+    top: auto;
+    right: -22px;
+    bottom: 7%;
+    width: 102px;
+    height: 220px;
+    opacity: .11;
+  }
+  .homepage-ribbon-pass .editorial-materials::before {
+    top: 18%;
+    right: -30%;
+    width: 88%;
+    height: 65%;
+    opacity: .075;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-ribbon-pass .editorial-intro::after,
+  .homepage-ribbon-pass .editorial-materials::before {
+    animation: none !important;
+    transform: none !important;
+  }
+}
