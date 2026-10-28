@@ -20,11 +20,23 @@ const TILES = [
   { slug: 'recliners', area: 'f', ratio: '1/1', delay: 0 },
 ]
 
+const REVIEWS = [
+  { name: 'Misbah Shaikh', meta: '1 review · 9 months ago', text: 'Very authentic and original shop to purchase furniture. Best and budget friendly place for home interiors. They are very professional. Starting from frame of sofa and foam everything is well explained and various colour options. I will definitely suggest purchasing from this store.' },
+  { name: 'Iqbal Shaikh', meta: '7 reviews · 3 months ago', text: 'I had ordered a TV unit, sofa, and kitchen unit, and I am extremely happy with the overall experience. Everything was delivered on time, exactly as promised. The quality of the workmanship and materials exceeded my expectations.' },
+  { name: 'SIDD GAMER', meta: '3 reviews · 4 months ago', text: 'Very satisfied with my purchase. Good quality furniture, reasonable prices, and excellent customer service.' },
+  { name: 'Arshad Shaikh', meta: '1 review · 4 months ago', text: 'S K Emerald Interior — best quality furniture products and best quality materials used.' },
+  { name: 'Naaz Shaikh', meta: '2 reviews · 9 months ago', text: 'Their furniture and interior work are excellent. Very attractive collection. We roamed a lot but did not find quality items like SK Emerald Interior. Really satisfied with the quality and service.' },
+  { name: 'Sachin Lonkar', meta: '1 review · 1 photo · 1 month ago', text: 'Wishing you continued success with all your future orders.' },
+  { name: 'Iqra Khan', meta: '1 review · 9 months ago', text: 'Their furniture quality must be appreciated. They use such great quality materials. Their sofa collections are really nice, and their kitchen trolley, interior designs and trending wardrobes are awesome.' },
+  { name: 'Abul Shaikh', meta: 'Local Guide · 35 reviews · 2 months ago', text: 'I recently got my kitchen cabinets designed and installed by this interior design shop, and I am very happy with the final outcome. The finish is sleek, modern, and premium-looking, with excellent attention to detail.' },
+]
+
 function Tile({ slug, area, ratio, delay }) {
   const c = COLLECTIONS.find((x) => x.slug === slug)
   return (
-    <Link to={`/collections/${slug}`} className={`tile t-${area} editorial-tile rv`} aria-label={`${c.name}: ${c.tag}`} style={{ '--d': delay }}>
-      <Photo id={c.tile} ratio={ratio} pos={c.tilePos} reveal sizes="(min-width: 900px) 50vw, 100vw" />
+    <Link to={`/collections/${slug}`} className={`tile t-${area} editorial-tile`} aria-label={`${c.name}: ${c.tag}`} style={{ '--d': delay }}>
+      <Photo id={c.tile} ratio={ratio} pos={c.tilePos} className="tile-photo-reveal" sizes="(min-width: 900px) 50vw, 100vw" />
+      <span className="tile-reveal-rule" aria-hidden="true" />
       <span className="tile-cap">
         <span className="tile-number">0{TILES.findIndex((t) => t.slug === slug) + 1}</span>
         <span className="tile-name">{c.name}</span>
@@ -120,13 +132,43 @@ export default function Home() {
         </div>
         <div className="triptych editorial-triptych">
           {[['Living room', 'sofas'], ['Kitchen', 'modular-kitchens'], ['Storage', 'wardrobes']].map(([t, slug], i) => (
-            <Link key={t} to={`/collections/${slug}`} className={`tri tri-${i + 1} rv tri-reveal tri-reveal-${i + 1}`}>
+            <Link key={t} to={`/collections/${slug}`} className={`tri tri-${i + 1} tri-scroll-image tri-scroll-image-${i + 1}`}>
               <Photo id={SLOTS.rooms[i]} ratio={i === 1 ? '4/5' : '3/4'} caption={i < 2 ? 'Design inspiration · illustrative concept' : undefined} reveal />
               <span>{t}</span>
             </Link>
           ))}
         </div>
         <p className="muted note editorial-gallery-note"><Link to="/gallery" className="editorial-underlink">Step inside the gallery <span aria-hidden="true">↗</span></Link> for furniture photographs and design inspiration.</p>
+      </section>
+
+      <section className="customer-reviews editorial-reviews" aria-labelledby="reviews-heading">
+        <div className="wrap editorial-reviews-inner">
+          <div className="editorial-reviews-heading">
+            <div className="editorial-reviews-copy">
+              <p className="editorial-eyebrow"><span /> Kind words from our customers</p>
+              <h2 id="reviews-heading">Good work speaks for itself.</h2>
+              <p className="muted">Real feedback about the furniture, workmanship and service that make a house feel like home.</p>
+            </div>
+            <div className="editorial-review-score" aria-label="Google review summary: 5.0 out of 5, based on 8 reviews">
+              <span className="editorial-google-wordmark"><b>G</b>oogle <span>reviews</span></span>
+              <div className="editorial-review-score-line"><strong>5.0</strong><span className="editorial-review-stars" aria-label="5 out of 5 stars">★★★★★</span></div>
+              <p>Based on <strong>8 reviews</strong></p>
+            </div>
+          </div>
+          <div className="editorial-review-topics" aria-label="Review topics">
+            <span className="topic-active">All reviews</span><span>Sofas <b>3</b></span><span>Kitchen cabinets <b>2</b></span><span>Home interiors <b>2</b></span><span>Product quality <b>2</b></span><span>+4 more</span>
+          </div>
+          <div className="editorial-review-rail" aria-label="Customer review excerpts" tabindex="0">
+            {REVIEWS.map((review) => (
+              <article className="editorial-review-card" key={review.name}>
+                <div className="editorial-review-card-top"><span className="editorial-review-stars" aria-label="5 out of 5 stars">★★★★★</span><span className="editorial-review-mark" aria-label="Google review">G</span></div>
+                <blockquote>“{review.text}”</blockquote>
+                <div className="editorial-review-author"><span className="editorial-review-avatar" aria-hidden="true">{review.name.charAt(0)}</span><span className="editorial-review-author-copy"><strong>{review.name}</strong><small>{review.meta}</small></span></div>
+              </article>
+            ))}
+          </div>
+          <p className="editorial-reviews-note">Selected excerpts from customer reviews shared with SK Emerald Interior.</p>
+        </div>
       </section>
 
       <section className="editorial-process-band">
