@@ -158,7 +158,7 @@ export default function Home() {
           <div className="editorial-review-topics" aria-label="Review topics">
             <span className="topic-active">All reviews</span><span>Sofas <b>3</b></span><span>Kitchen cabinets <b>2</b></span><span>Home interiors <b>2</b></span><span>Product quality <b>2</b></span><span>+4 more</span>
           </div>
-          <div className="editorial-review-rail" aria-label="Customer review excerpts" tabindex="0">
+          <div className="editorial-review-rail" aria-label="Customer review excerpts" tabIndex={0}>
             {REVIEWS.map((review) => (
               <article className="editorial-review-card" key={review.name}>
                 <div className="editorial-review-card-top"><span className="editorial-review-stars" aria-label="5 out of 5 stars">★★★★★</span><span className="editorial-review-mark" aria-label="Google review">G</span></div>
