@@ -18,7 +18,7 @@ const TILES = [
   { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0 },
   { slug: 'tv-units', area: 'd', ratio: '16/10', delay: 0 },
   { slug: 'beds', area: 'e', ratio: '16/10', delay: 1 },
-  { slug: 'recliners', area: 'f', ratio: '1/1', delay: 0 },
+  { slug: 'recliners', area: 'f', ratio: '1/1', delay: 0, imageId: 'recliner-editorial' },
 ]
 
 const REVIEWS = [
@@ -40,11 +40,11 @@ const REVIEW_TOPICS = [
   { key: 'quality', label: 'Product quality', count: 2 },
 ]
 
-function Tile({ slug, area, ratio, delay }) {
+function Tile({ slug, area, ratio, delay, imageId }) {
   const c = COLLECTIONS.find((x) => x.slug === slug)
   return (
     <Link to={`/collections/${slug}`} className={`tile t-${area} editorial-tile`} aria-label={`${c.name}: ${c.tag}`} style={{ '--d': delay }}>
-      <Photo id={c.tile} ratio={ratio} pos={c.tilePos} className="tile-photo-reveal" sizes="(min-width: 900px) 50vw, 100vw" />
+      <Photo id={imageId || c.tile} ratio={ratio} pos={imageId ? '50% 46%' : c.tilePos} className="tile-photo-reveal" sizes="(min-width: 900px) 50vw, 100vw" />
       <span className="tile-reveal-rule" aria-hidden="true" />
       <span className="tile-cap">
         <span className="tile-number">0{TILES.findIndex((t) => t.slug === slug) + 1}</span>
@@ -102,7 +102,7 @@ export default function Home() {
       <section className="wrap intro editorial-intro">
         <div className="editorial-intro-sidefield" aria-hidden="true" />
         <div className="overlap editorial-intro-visual">
-          <Photo id={27} ratio="4/5" className="a" caption="Design inspiration · illustrative concept" reveal />
+          <Photo id={27} ratio="4/5" className="a" />
           <Photo id={SLOTS.intro[1]} ratio="1/1" className="b" reveal />
           <span className="editorial-image-index">A home is made in the details.</span>
         </div>
@@ -153,7 +153,7 @@ export default function Home() {
         <div className="triptych editorial-triptych">
           {[['Living room', 'sofas'], ['Kitchen', 'modular-kitchens'], ['Storage', 'wardrobes']].map(([t, slug], i) => (
             <Link key={t} to={`/collections/${slug}`} className={`tri tri-${i + 1} tri-scroll-image tri-scroll-image-${i + 1}`}>
-              <Photo id={SLOTS.rooms[i]} ratio={i === 1 ? '4/5' : '3/4'} caption={i < 2 ? 'Design inspiration · illustrative concept' : undefined} reveal />
+              <Photo id={SLOTS.rooms[i]} ratio={i === 1 ? '4/5' : '3/4'} />
               <span>{t}</span>
             </Link>
           ))}
@@ -169,10 +169,10 @@ export default function Home() {
               <h2 id="reviews-heading">Good work speaks for itself.</h2>
               <p className="muted">Real feedback about the furniture, workmanship and service that make a house feel like home.</p>
             </div>
-            <div className="editorial-review-score" aria-label="Google review summary: 5.0 out of 5, based on 8 reviews">
+            <div className="editorial-review-score" aria-label="Google review summary: 5.0 out of 5">
               <span className="editorial-google-wordmark"><b>G</b>oogle <span>reviews</span></span>
               <div className="editorial-review-score-line"><strong>5.0</strong><span className="editorial-review-stars" aria-label="5 out of 5 stars">★★★★★</span></div>
-              <p>Based on <strong>8 reviews</strong></p>
+              <p>Customer experiences, shared in their own words.</p>
             </div>
           </div>
           <div className="editorial-review-tools">
@@ -182,7 +182,6 @@ export default function Home() {
                   {topic.label} <b>{topic.count}</b>
                 </button>
               ))}
-              <span className="editorial-review-more">+4 more</span>
             </div>
             <label className="editorial-review-sort">Sort by
               <select value={reviewSort} onChange={(event) => setReviewSort(event.target.value)}>
@@ -208,7 +207,7 @@ export default function Home() {
 
       <section className="editorial-process-band">
         <div className="wrap process editorial-process">
-          <div className="editorial-process-intro"><p className="editorial-eyebrow"><span /> From idea to everyday</p><h2>A thoughtful process. A better fit.</h2><p>Clear choices at each step, from the first conversation to the final installation.</p></div>
+          <div className="editorial-process-intro"><p className="editorial-eyebrow"><span /> From idea to everyday</p><h2>A thoughtful process.<br className="process-heading-break" /> A better fit.</h2><p>Clear choices at each step, from the first conversation to the final installation.</p></div>
           <ol>{PROCESS.map(([t, d], i) => <li key={t} className="rv" style={{ '--d': i }}><span className="step">0{i + 1}</span><h3>{t}</h3><p>{d}</p></li>)}</ol>
         </div>
       </section>
@@ -222,7 +221,7 @@ export default function Home() {
           <div className="actions"><a className="btn" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a><Link className="editorial-underlink editorial-showroom-link" to="/contact">Contact the showroom <span aria-hidden="true">↗</span></Link></div>
         </div>
       </section>
-      <Enquire title="Your room, your way." text="Send a photo, share a few measurements or tell us what you have in mind. Let's explore what will work for your home." />
+      <Enquire title={<>Your room,<br /><span className="enquire-title-indent">your way.</span></>} text="Send a photo, share a few measurements or tell us what you have in mind. Let's explore what will work for your home." />
     </div>
   )
 }
