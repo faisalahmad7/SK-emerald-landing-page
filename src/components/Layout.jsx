@@ -118,7 +118,7 @@ export function Footer() {
         </div>
         <p className="legal">Specifications, finishes and prices are confirmed in your written quotation. Interior views shown as inspiration are illustrative and are not completed SK Emerald projects. <Link to="/privacy">Privacy policy</Link></p>
       </div>
-      <div className="f-mark" aria-hidden="true">SK Emerald</div>
+      <div className="f-mark footer-wordmark" aria-hidden="true">SK Emerald</div>
     </footer>
   )
 }

@@ -9,59 +9,120 @@ import Contact from './pages/Contact'
 import { Interiors, About, Materials, Faq, Privacy, NotFound } from './pages/Info'
 import { bySlug } from './data/collections'
 
-function playWelcomeChime() {
+let introSoundPlayed = false
+
+// A restrained, cinematic tonal swell: warm low harmonics, a slow airy rise and a soft release.
+// It is attempted on arrival; browsers that block autoplay may allow it after an early user gesture.
+function playWelcomeSoundAutomatically() {
   const AudioContextClass = window.AudioContext || window.webkitAudioContext
-  if (!AudioContextClass) return
+  if (!AudioContextClass || introSoundPlayed) return () => {}
   let context
+  let cancelled = false
+  let started = false
+  let gestureTimer
+  const listeners = ['pointerdown', 'keydown', 'touchstart']
+  const removeListeners = () => listeners.forEach((name) => document.removeEventListener(name, resumeAndPlay, true))
+
+  const createSound = () => {
+    if (cancelled || started || !context || context.state !== 'running' || introSoundPlayed) return
+    started = true
+    introSoundPlayed = true
+    removeListeners()
+    const now = context.currentTime + 0.045
+    const master = context.createGain()
+    master.gain.setValueAtTime(0.0001, now)
+    master.gain.exponentialRampToValueAtTime(0.42, now + 0.34)
+    master.gain.setValueAtTime(0.42, now + 1.05)
+    master.gain.exponentialRampToValueAtTime(0.0001, now + 2.65)
+    master.connect(context.destination)
+
+    const filter = context.createBiquadFilter()
+    filter.type = 'lowpass'
+    filter.Q.setValueAtTime(0.35, now)
+    filter.frequency.setValueAtTime(520, now)
+    filter.frequency.exponentialRampToValueAtTime(1750, now + 0.9)
+    filter.frequency.exponentialRampToValueAtTime(920, now + 2.5)
+    filter.connect(master)
+
+    const voices = [
+      { frequency: 73.42, level: 0.042, detune: -2 },
+      { frequency: 146.83, level: 0.052, detune: 0 },
+      { frequency: 220.00, level: 0.030, detune: 2 },
+      { frequency: 293.66, level: 0.018, detune: -1 },
+      { frequency: 440.00, level: 0.004, detune: 1 },
+    ]
+    voices.forEach(({ frequency, level, detune }) => {
+      const oscillator = context.createOscillator()
+      const envelope = context.createGain()
+      oscillator.type = 'sine'
+      oscillator.detune.setValueAtTime(detune, now)
+      oscillator.frequency.setValueAtTime(frequency * 0.988, now)
+      oscillator.frequency.exponentialRampToValueAtTime(frequency, now + 0.72)
+      envelope.gain.setValueAtTime(0.0001, now)
+      envelope.gain.exponentialRampToValueAtTime(level, now + 0.42)
+      envelope.gain.setValueAtTime(level * 0.72, now + 1.05)
+      envelope.gain.exponentialRampToValueAtTime(0.0001, now + 2.6)
+      oscillator.connect(envelope)
+      envelope.connect(filter)
+      oscillator.start(now)
+      oscillator.stop(now + 2.72)
+    })
+
+    // A very soft low-frequency bloom adds body on headphones without a sharp impact.
+    const bloom = context.createOscillator()
+    const bloomGain = context.createGain()
+    bloom.type = 'sine'
+    bloom.frequency.setValueAtTime(54, now)
+    bloom.frequency.exponentialRampToValueAtTime(42, now + 0.5)
+    bloomGain.gain.setValueAtTime(0.0001, now)
+    bloomGain.gain.exponentialRampToValueAtTime(0.028, now + 0.035)
+    bloomGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.78)
+    bloom.connect(bloomGain)
+    bloomGain.connect(master)
+    bloom.start(now)
+    bloom.stop(now + 0.82)
+    window.setTimeout(() => context?.close().catch(() => {}), 3150)
+  }
+
+  const resumeAndPlay = () => {
+    if (!context || cancelled || started) return
+    try {
+      const result = context.resume()
+      result.then(createSound).catch(() => {})
+      if (context.state === 'running') createSound()
+    } catch {
+      // Audio is optional; visual intro continues even if audio is unavailable.
+    }
+  }
+
   try {
     context = new AudioContextClass()
-    const now = context.currentTime + 0.025
-    const notes = [
-      { frequency: 1318.51, delay: 0, duration: 0.54, level: 0.065 },
-      { frequency: 1760.00, delay: 0.075, duration: 0.62, level: 0.038 },
-      { frequency: 2637.02, delay: 0.15, duration: 0.42, level: 0.016 },
-    ]
-    notes.forEach(({ frequency, delay, duration, level }) => {
-      const tone = context.createOscillator()
-      const envelope = context.createGain()
-      tone.type = 'sine'
-      tone.frequency.setValueAtTime(frequency, now + delay)
-      envelope.gain.setValueAtTime(0.0001, now + delay)
-      envelope.gain.exponentialRampToValueAtTime(level, now + delay + 0.018)
-      envelope.gain.exponentialRampToValueAtTime(0.0001, now + delay + duration)
-      tone.connect(envelope)
-      envelope.connect(context.destination)
-      tone.start(now + delay)
-      tone.stop(now + delay + duration + 0.04)
-    })
-    window.setTimeout(() => context?.close().catch(() => {}), 1200)
+    listeners.forEach((name) => document.addEventListener(name, resumeAndPlay, { once: true, capture: true, passive: name === 'touchstart' }))
+    gestureTimer = window.setTimeout(removeListeners, 1950)
+    resumeAndPlay()
   } catch {
     context?.close().catch(() => {})
   }
-}
 
+  return () => {
+    cancelled = true
+    if (gestureTimer) window.clearTimeout(gestureTimer)
+    removeListeners()
+    if (context && !started) context.close().catch(() => {})
+  }
+}
 function IntroLoader() {
   const [phase, setPhase] = useState('showing')
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    // Play on entry only when this browser already permits audio; otherwise the
-    // visible chime control provides a user-gesture fallback without surprise audio.
-    const AudioContextClass = window.AudioContext || window.webkitAudioContext
-    if (AudioContextClass) {
-      let probe
-      try {
-        probe = new AudioContextClass()
-        if (probe.state === 'running') {
-          probe.close().catch(() => {})
-          playWelcomeChime()
-        } else probe.close().catch(() => {})
-      } catch {
-        probe?.close().catch(() => {})
-      }
-    }
+    const stopAudioAttempt = playWelcomeSoundAutomatically()
     const opening = window.setTimeout(() => setPhase('opening'), reduceMotion ? 80 : 1320)
     const finished = window.setTimeout(() => setPhase('gone'), reduceMotion ? 220 : 2180)
-    return () => { window.clearTimeout(opening); window.clearTimeout(finished) }
+    return () => {
+      window.clearTimeout(opening)
+      window.clearTimeout(finished)
+      stopAudioAttempt?.()
+    }
   }, [])
   if (phase === 'gone') return null
   return (
@@ -70,10 +131,6 @@ function IntroLoader() {
         <div className="sk-loader-mark"><img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="" width="76" height="76" /></div>
         <p className="sk-loader-wordmark">SK EMERALD <span>INTERIOR</span></p>
         <p className="sk-loader-caption">Thoughtfully made for living.</p>
-        <button className="sk-loader-sound" type="button" onClick={playWelcomeChime} aria-label="Play the welcome chime">
-          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 8v4h3l4 3V5L6 8H3Z" /><path d="M13 7.2c1.8 1.6 1.8 4 0 5.6M15 5c3 2.6 3 7.4 0 10" /></svg>
-          <span>Play welcome chime</span>
-        </button>
       </div>
     </div>
   )

@@ -1608,3 +1608,504 @@
   .sk-loader-mark::before,
   .sk-loader-mark::after { animation: none !important; opacity: .35; }
 }
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   EDITORIAL STORY PASS — scroll-woven photography, customer voices and footer.
+   Inspired by the restrained visual storytelling of award-featured studio sites. */
+
+/* A photographic curtain reveal: no zooming picture, no card bobbing. */
+.homepage-ribbon-pass .editorial-mosaic .tile-photo-reveal {
+  clip-path: inset(0 0 0 0);
+  will-change: clip-path;
+}
+.homepage-ribbon-pass .editorial-mosaic .tile-reveal-rule {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #F0D7A0 12%, #C6A66B 80%, transparent);
+  box-shadow: 0 0 10px #C6A66B42;
+  transform: scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .homepage-ribbon-pass .editorial-mosaic .tile-cap {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:hover .tile-photo-reveal img,
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:focus-visible .tile-photo-reveal img {
+  transform: scale(1.018);
+  transition: transform .7s cubic-bezier(.2,.65,.25,1);
+}
+
+/* The room triptych gets its own pinned viewport scene. The text stays editorial;
+   only the images are pinned, land at the centre focus, then leave with the scroll. */
+.homepage-ribbon-pass .editorial-triptych {
+  position: relative;
+  isolation: isolate;
+}
+.homepage-ribbon-pass .editorial-triptych .tri-scroll-image {
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+}
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .homepage-ribbon-pass .editorial-triptych {
+    min-height: clamp(390px, 55vh, 630px);
+    align-items: stretch;
+    gap: clamp(18px, 2.2vw, 32px);
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image {
+    align-self: stretch;
+    min-width: 0;
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image .photo {
+    height: clamp(340px, 49vh, 560px);
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image-2 {
+    margin-top: 0;
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image > span {
+    margin-top: 10px;
+  }
+}
+
+/* Customer reviews — a warm stone gallery with an unmistakable green and gold scorecard. */
+.homepage-ribbon-pass .editorial-reviews {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(68px, 9vw, 124px);
+  border-top: 1px solid #C6A66B5C;
+  border-bottom: 1px solid #C6A66B5C;
+  background:
+    radial-gradient(ellipse at 100% 0%, #D8D0BF 0%, transparent 47%),
+    linear-gradient(180deg, #EEE9DF 0%, #E6E0D4 100%);
+}
+.homepage-ribbon-pass .editorial-reviews::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: max(var(--gut), calc((100vw - 1220px) / 2));
+  width: 64px;
+  height: 2px;
+  background: #B99A60;
+}
+.homepage-ribbon-pass .editorial-reviews-inner {
+  position: relative;
+  z-index: 1;
+}
+.homepage-ribbon-pass .editorial-reviews-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 280px);
+  align-items: end;
+  gap: clamp(28px, 6vw, 86px);
+  margin-bottom: 32px;
+}
+.homepage-ribbon-pass .editorial-reviews-copy h2 {
+  max-width: 10ch;
+  margin-top: 15px;
+  color: #17382B;
+  font-size: clamp(2.7rem, 5vw, 4.9rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+.homepage-ribbon-pass .editorial-reviews-copy > p:last-child {
+  max-width: 44ch;
+  margin-top: 18px;
+  line-height: 1.8;
+}
+.homepage-ribbon-pass .editorial-review-score {
+  padding: 23px 25px 22px;
+  border: 1px solid #B99A6080;
+  background: #17382B;
+  color: #F7F3E9;
+  box-shadow: 0 12px 32px #12271D12;
+}
+.homepage-ribbon-pass .editorial-google-wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font: 600 .96rem/1.4 var(--ed-sans);
+  letter-spacing: -.02em;
+}
+.homepage-ribbon-pass .editorial-google-wordmark > b {
+  color: #D8BD83;
+  font-size: 1.2rem;
+}
+.homepage-ribbon-pass .editorial-google-wordmark > span {
+  color: #D2D9CF;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+}
+.homepage-ribbon-pass .editorial-review-score-line {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 12px;
+}
+.homepage-ribbon-pass .editorial-review-score-line > strong {
+  font: 500 3.2rem/.95 var(--ed-serif);
+  color: #FFFDF7;
+  letter-spacing: -.04em;
+}
+.homepage-ribbon-pass .editorial-review-stars {
+  color: #D8BD83;
+  font-size: .82rem;
+  letter-spacing: .11em;
+  white-space: nowrap;
+}
+.homepage-ribbon-pass .editorial-review-score > p {
+  margin-top: 9px;
+  color: #D2D9CF;
+  font-size: .72rem;
+  letter-spacing: .035em;
+}
+.homepage-ribbon-pass .editorial-review-score > p strong {
+  color: #FFFDF7;
+  font-weight: 600;
+}
+.homepage-ribbon-pass .editorial-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.homepage-ribbon-pass .editorial-review-topics > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 6px 11px;
+  border: 1px solid #C6BDAA;
+  color: #4A584F;
+  background: #FBF8F1A6;
+  font: 600 .64rem/1.3 var(--ed-sans);
+  letter-spacing: .02em;
+}
+.homepage-ribbon-pass .editorial-review-topics > span b {
+  color: #917447;
+  font-size: .6rem;
+}
+.homepage-ribbon-pass .editorial-review-topics > .topic-active {
+  color: #FBF8F1;
+  border-color: #17382B;
+  background: #17382B;
+}
+.homepage-ribbon-pass .editorial-review-rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, calc((100% - 38px) / 3));
+  gap: 19px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 3px 2px 19px;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 2px;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #B99A60 #D5CEC0;
+  -webkit-overflow-scrolling: touch;
+}
+.homepage-ribbon-pass .editorial-review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  min-width: 0;
+  min-height: 340px;
+  padding: 24px 23px 22px;
+  border: 1px solid #D0C6B3;
+  background: #FBF8F1;
+  box-shadow: 0 12px 30px #17382B09;
+  scroll-snap-align: start;
+}
+.homepage-ribbon-pass .editorial-review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.homepage-ribbon-pass .editorial-review-mark {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #C6A66B6B;
+  border-radius: 50%;
+  color: #8E774B;
+  font: 600 .8rem/1 var(--ed-sans);
+}
+.homepage-ribbon-pass .editorial-review-card blockquote {
+  position: relative;
+  max-width: none;
+  flex: 1;
+  color: #39463E;
+  font: 500 1.12rem/1.65 var(--ed-serif);
+  letter-spacing: -.005em;
+}
+.homepage-ribbon-pass .editorial-review-author {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-top: 17px;
+  border-top: 1px solid #DDD5C6;
+}
+.homepage-ribbon-pass .editorial-review-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #C6A66B;
+  border-radius: 50%;
+  background: #F2EBDC;
+  color: #17382B;
+  font: 500 1.25rem/1 var(--ed-serif);
+}
+.homepage-ribbon-pass .editorial-review-author-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.homepage-ribbon-pass .editorial-review-author-copy strong {
+  color: #17382B;
+  font: 600 .73rem/1.3 var(--ed-sans);
+}
+.homepage-ribbon-pass .editorial-review-author-copy small {
+  color: #737C71;
+  font: 500 .61rem/1.5 var(--ed-sans);
+}
+.homepage-ribbon-pass .editorial-reviews-note {
+  margin-top: 7px;
+  color: #6C746A;
+  font: 500 .64rem/1.5 var(--ed-sans);
+  letter-spacing: .025em;
+}
+
+/* Footer: deep emerald, fine brass separators, and a large, fading typographic signature. */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+  border-top: 1px solid #B99A60;
+  background:
+    radial-gradient(ellipse at 15% 0%, #2B4A39 0%, transparent 55%),
+    linear-gradient(150deg, #18382A 0%, #102A20 100%);
+  color: #EDE9DE;
+}
+.site-footer::before {
+  left: max(var(--gut), calc((100vw - 1220px) / 2));
+  width: clamp(58px, 7vw, 94px);
+  height: 2px;
+  background: linear-gradient(90deg, #DCC58D, #9B8050);
+}
+.site-footer .grid {
+  position: relative;
+  z-index: 1;
+  row-gap: clamp(32px, 4vw, 54px);
+  padding-top: clamp(54px, 8vw, 100px);
+  padding-bottom: clamp(28px, 4vw, 46px);
+}
+.site-footer h2 {
+  margin-bottom: 16px;
+  color: #D8BD83;
+  font: 600 .67rem/1.4 var(--ed-sans);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.site-footer a {
+  color: #D8DDD3;
+  transition: color .25s, text-decoration-color .25s;
+}
+.site-footer a:hover {
+  color: #F2D9A2;
+  text-decoration-color: #D8BD83;
+}
+.site-footer .fname {
+  color: #F7F3E9;
+  font-size: 1.75rem;
+}
+.site-footer .muted,
+.site-footer address,
+.site-footer .legal {
+  color: #C2CDBF;
+}
+.site-footer .legal {
+  border-top-color: #D8BD8338;
+  font-size: .72rem;
+  line-height: 1.85;
+}
+.site-footer .f-mark,
+.site-footer .footer-wordmark {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: -.02em;
+  padding-inline: 1.5vw;
+  text-align: center;
+  font-size: clamp(3.4rem, 13.8vw, 15rem);
+  line-height: .79;
+  letter-spacing: -.065em;
+  background: linear-gradient(90deg, #617969 0%, #D3BC86 48%, #617969 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0;
+  opacity: .38;
+  white-space: nowrap;
+  user-select: none;
+}
+@media (max-width: 899px) {
+  .homepage-ribbon-pass .editorial-reviews-heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .homepage-ribbon-pass .editorial-reviews-copy h2 {
+    max-width: 12ch;
+    font-size: clamp(2.5rem, 10.5vw, 3.8rem);
+  }
+  .homepage-ribbon-pass .editorial-review-score {
+    max-width: 320px;
+  }
+  .homepage-ribbon-pass .editorial-review-rail {
+    grid-auto-columns: minmax(78vw, 1fr);
+    gap: 13px;
+  }
+  .homepage-ribbon-pass .editorial-review-card {
+    min-height: 330px;
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image {
+    will-change: auto;
+  }
+  .site-footer .grid {
+    padding-top: 53px;
+  }
+  .site-footer .f-mark,
+  .site-footer .footer-wordmark {
+    font-size: clamp(3.15rem, 12.6vw, 7rem);
+    line-height: .87;
+    letter-spacing: -.055em;
+  }
+}
+@media (max-width: 380px) {
+  .homepage-ribbon-pass .editorial-review-card {
+    min-height: 360px;
+    padding: 22px 19px 20px;
+  }
+  .homepage-ribbon-pass .editorial-review-card blockquote {
+    font-size: 1.03rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .homepage-ribbon-pass .editorial-mosaic .tile-photo-reveal {
+    clip-path: none !important;
+    will-change: auto;
+  }
+  .homepage-ribbon-pass .editorial-mosaic .tile-reveal-rule {
+    display: none;
+  }
+  .homepage-ribbon-pass .editorial-mosaic .tile-cap {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
+/* Review controls are real filters/sorting controls, styled as quiet editorial chips. */
+.homepage-ribbon-pass .editorial-review-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+.homepage-ribbon-pass .editorial-review-topics {
+  margin-bottom: 0;
+}
+.homepage-ribbon-pass .editorial-review-topics > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 6px 11px;
+  border: 1px solid #C6BDAA;
+  border-radius: 0;
+  color: #4A584F;
+  background: #FBF8F1A6;
+  font: 600 .64rem/1.3 var(--ed-sans);
+  letter-spacing: .02em;
+  cursor: pointer;
+  transition: color .22s, border-color .22s, background .22s;
+}
+.homepage-ribbon-pass .editorial-review-topics > button:hover {
+  border-color: #A88B52;
+  background: #F7F0E2;
+}
+.homepage-ribbon-pass .editorial-review-topics > button.topic-active,
+.homepage-ribbon-pass .editorial-review-topics > button[aria-pressed="true"] {
+  color: #FBF8F1;
+  border-color: #17382B;
+  background: #17382B;
+}
+.homepage-ribbon-pass .editorial-review-topics > button b {
+  color: #917447;
+  font-size: .6rem;
+}
+.homepage-ribbon-pass .editorial-review-topics > button[aria-pressed="true"] b {
+  color: #D8BD83;
+}
+.homepage-ribbon-pass .editorial-review-topics > .editorial-review-more {
+  border: 0;
+  background: transparent;
+  color: #6D7569;
+  padding-inline: 5px;
+  font-size: .62rem;
+}
+.homepage-ribbon-pass .editorial-review-sort {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 9px;
+  color: #687166;
+  font: 600 .65rem/1.3 var(--ed-sans);
+  white-space: nowrap;
+}
+.homepage-ribbon-pass .editorial-review-sort select {
+  width: auto;
+  min-width: 140px;
+  min-height: 38px;
+  padding: 7px 30px 7px 11px;
+  border-color: #C6BDAA;
+  background-color: #FBF8F1;
+  color: #263B30;
+  font: 600 .68rem/1.3 var(--ed-sans);
+  cursor: pointer;
+}
+@media (max-width: 899px) {
+  .homepage-ribbon-pass .editorial-review-tools {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .homepage-ribbon-pass .editorial-review-topics {
+    margin-bottom: 0;
+  }
+  .homepage-ribbon-pass .editorial-review-sort {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image {
+    transition: none !important;
+  }
+}
