@@ -790,12 +790,6 @@
    The previous leaf and right-side grain treatments are deliberately removed.
    Visual cues: quiet furniture-editorial layouts, measured negative space,
    broad material texture, and thin architectural rules. */
-.homepage-ribbon-pass .editorial-intro::after {
-  content: none !important;
-  background: none !important;
-  animation: none !important;
-}
-
 /* 1) COLLECTIONS: a whole-section contour field, not a small ornament in one
    text column. It sits behind the complete horizontal section, including the
    whitespace around the mosaic, and uses a low-contrast mineral palette. */
