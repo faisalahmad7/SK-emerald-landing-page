@@ -2305,3 +2305,34 @@ body {
     margin-top: 26px;
   }
 }
+
+
+/* Desktop hero: let the statement breathe across two intentional lines. */
+.homepage-ribbon-pass .hero-desktop-break {
+  display: none;
+}
+@media (min-width: 1051px) {
+  .homepage-ribbon-pass .editorial-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  }
+  .homepage-ribbon-pass .editorial-hero-copy {
+    padding-left: max(var(--gut), calc((100vw - 1220px) / 2 + 10px));
+    padding-right: clamp(20px, 3.2vw, 48px);
+  }
+  .homepage-ribbon-pass .editorial-hero h1 {
+    width: 100%;
+    max-width: none;
+    font-size: clamp(3.7rem, 6.2vw, 7rem);
+    line-height: .93;
+    letter-spacing: -.05em;
+    text-wrap: initial;
+  }
+  .homepage-ribbon-pass .hero-desktop-break {
+    display: block;
+  }
+}
+@media (min-width: 1500px) {
+  .homepage-ribbon-pass .editorial-hero-copy {
+    padding-left: max(var(--gut), calc((100vw - 1380px) / 2 - 10px));
+  }
+}
