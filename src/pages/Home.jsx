@@ -2,7 +2,7 @@ import { Link } from '../router'
 import { Photo, Seo, Dim, Enquire } from '../components/ui'
 import { BUSINESS, waLink, mapsLink } from '../data/business'
 import { COLLECTIONS } from '../data/collections'
-import { SLOTS, img } from '../data/images'
+import { SLOTS } from '../data/images'
 import { PROCESS } from '../data/content'
 
 const ld = {
@@ -12,23 +12,21 @@ const ld = {
 }
 
 const TILES = [
-  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 27 },
-  { slug: 'modular-kitchens', area: 'b', ratio: '4/5', delay: 1, imageId: 33 },
-  { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0, imageId: 18 },
-  { slug: 'tv-units', area: 'd', ratio: '16/10', delay: 0, imageId: 23 },
-  { slug: 'beds', area: 'e', ratio: '16/10', delay: 1, imageId: 19 },
-  { slug: 'recliners', area: 'f', ratio: '1/1', delay: 0, imageId: 39 },
+  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0 },
+  { slug: 'modular-kitchens', area: 'b', ratio: '4/5', delay: 1 },
+  { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0 },
+  { slug: 'tv-units', area: 'd', ratio: '16/10', delay: 0 },
+  { slug: 'beds', area: 'e', ratio: '16/10', delay: 1 },
+  { slug: 'recliners', area: 'f', ratio: '1/1', delay: 0 },
 ]
 
-function Tile({ slug, area, ratio, delay, imageId }) {
+function Tile({ slug, area, ratio, delay }) {
   const c = COLLECTIONS.find((x) => x.slug === slug)
-  const image = img(imageId ?? c.tile)
   return (
     <Link to={`/collections/${slug}`} className={`tile t-${area} editorial-tile`} aria-label={`${c.name}: ${c.tag}`} style={{ '--d': delay }}>
-      <Photo id={imageId ?? c.tile} ratio={ratio} pos={c.tilePos} alt={image?.alt} reveal sizes="(min-width: 900px) 50vw, 100vw" />
+      <Photo id={c.tile} ratio={ratio} pos={c.tilePos} reveal sizes="(min-width: 900px) 50vw, 100vw" />
       <span className="tile-cap">
         <span className="tile-number">0{TILES.findIndex((t) => t.slug === slug) + 1}</span>
-        {image?.kind === 'inspiration' && <span className="tile-visual-note">Design inspiration</span>}
         <span className="tile-name">{c.name}</span>
         <span className="tile-tag">{c.tag}</span>
         <span className="tile-go">Explore range</span>
@@ -86,7 +84,6 @@ export default function Home() {
         <div className="mosaic editorial-mosaic">
           {TILES.map((t) => <Tile key={t.slug} {...t} />)}
         </div>
-        <p className="editorial-image-disclosure">Images marked “Design inspiration” are illustrative room concepts, not completed SK Emerald projects. <Link to="/gallery">Explore the gallery</Link> to distinguish furniture photographs from inspiration.</p>
       </section>
 
       <section className="green materials-band editorial-materials">
