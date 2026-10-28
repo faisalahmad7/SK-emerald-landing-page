@@ -37,7 +37,7 @@ function Tile({ slug, area, ratio, delay }) {
 
 export default function Home() {
   return (
-    <>
+    <div className="homepage-ribbon-pass">
       <Seo path="/" description="Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune." ld={ld} />
 
       <section className="hero editorial-hero">
@@ -60,9 +60,16 @@ export default function Home() {
         </nav>
       </section>
 
+      <div className="home-marquee" aria-label="Furniture collections and made-to-measure furniture">
+        <div className="home-marquee-track" aria-hidden="true">
+          <span>SOFAS <i>✳</i> MODULAR KITCHENS <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> RECLINERS <i>✳</i> MADE TO MEASURE <i>✳</i></span>
+          <span>SOFAS <i>✳</i> MODULAR KITCHENS <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> RECLINERS <i>✳</i> MADE TO MEASURE <i>✳</i></span>
+        </div>
+      </div>
+
       <section className="wrap intro editorial-intro">
         <div className="overlap editorial-intro-visual">
-          <Photo id={SLOTS.intro[0]} ratio="4/5" className="a" reveal />
+          <Photo id={27} ratio="4/5" className="a" caption="Design inspiration · illustrative concept" reveal />
           <Photo id={SLOTS.intro[1]} ratio="1/1" className="b" reveal />
           <span className="editorial-image-index">A home is made in the details.</span>
         </div>
@@ -113,7 +120,7 @@ export default function Home() {
         <div className="triptych editorial-triptych">
           {[['Living room', 'sofas'], ['Kitchen', 'modular-kitchens'], ['Storage', 'wardrobes']].map(([t, slug], i) => (
             <Link key={t} to={`/collections/${slug}`} className={`tri tri-${i + 1}`}>
-              <Photo id={SLOTS.rooms[i]} ratio={i === 1 ? '4/5' : '3/4'} reveal />
+              <Photo id={SLOTS.rooms[i]} ratio={i === 1 ? '4/5' : '3/4'} caption={i < 2 ? 'Design inspiration · illustrative concept' : undefined} reveal />
               <span>{t}</span>
             </Link>
           ))}
@@ -138,6 +145,6 @@ export default function Home() {
         </div>
       </section>
       <Enquire title="Your room, your way." text="Send a photo, share a few measurements or tell us what you have in mind. Let's explore what will work for your home." />
-    </>
+    </div>
   )
 }
