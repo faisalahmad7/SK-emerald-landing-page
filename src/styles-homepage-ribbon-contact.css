@@ -784,3 +784,338 @@
     padding-inline: 15px;
   }
 }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   ATMOSPHERE PASS 02 — full-bleed, architectural rather than botanical.
+   The previous leaf and right-side grain treatments are deliberately removed.
+   Visual cues: quiet furniture-editorial layouts, measured negative space,
+   broad material texture, and thin architectural rules. */
+.homepage-ribbon-pass .editorial-intro::after {
+  content: none !important;
+  background: none !important;
+  animation: none !important;
+}
+
+/* 1) COLLECTIONS: a whole-section contour field, not a small ornament in one
+   text column. It sits behind the complete horizontal section, including the
+   whitespace around the mosaic, and uses a low-contrast mineral palette. */
+.homepage-ribbon-pass .editorial-showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 14% 7%, #F6F1E7 0%, transparent 44%),
+    radial-gradient(ellipse at 91% 76%, #DCD5C7 0%, transparent 42%),
+    #E9E5DA;
+}
+.homepage-ribbon-pass .editorial-showcase::before {
+  content: "";
+  position: absolute;
+  inset: -1.5% -1%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .25;
+  background-image:
+    repeating-radial-gradient(ellipse 74% 58% at 5% 5%,
+      transparent 0 64px, #9C8D70 65px 66px, transparent 67px 92px),
+    repeating-radial-gradient(ellipse 69% 70% at 97% 95%,
+      transparent 0 79px, #9C8D70 80px 81px, transparent 82px 111px);
+  transform: translate3d(0, 0, 0);
+  animation: sk-showcase-contours 38s ease-in-out infinite alternate;
+}
+.homepage-ribbon-pass .editorial-showcase > .wrap,
+.homepage-ribbon-pass .editorial-showcase > .editorial-mosaic {
+  position: relative;
+  z-index: 1;
+}
+@keyframes sk-showcase-contours {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-8px, 5px, 0) scale(1.012); }
+}
+
+/* 2) MATERIALS: soft, continuous timber lines cross the ENTIRE forest-green
+   band from edge to edge. This is a background surface, not a right-hand card. */
+.homepage-ribbon-pass .editorial-materials {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 16% 42%, #315342 0%, transparent 46%),
+    #17382B;
+}
+.homepage-ribbon-pass .editorial-materials::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: .095;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1100' preserveAspectRatio='none' fill='none' stroke='%23D8C392' stroke-width='1.35'%3E%3Cpath d='M-80 75 C190 8 292 168 518 126 S822 20 1040 88 S1360 195 1680 76'/%3E%3Cpath d='M-80 115 C180 49 302 204 527 165 S827 60 1049 128 S1361 232 1680 118'/%3E%3Cpath d='M-80 157 C172 91 311 242 535 205 S833 101 1057 170 S1365 273 1680 159'/%3E%3Cpath d='M-80 199 C169 133 320 280 543 246 S840 142 1064 212 S1368 314 1680 202'/%3E%3Cpath d='M-80 340 C185 270 312 420 541 388 S840 282 1067 350 S1370 455 1680 341'/%3E%3Cpath d='M-80 382 C180 311 324 462 549 429 S845 324 1074 392 S1374 495 1680 384'/%3E%3Cpath d='M-80 424 C175 355 333 505 557 470 S852 365 1080 433 S1378 537 1680 426'/%3E%3Cpath d='M-80 466 C170 397 343 546 566 513 S858 406 1087 476 S1383 578 1680 468'/%3E%3Cpath d='M-80 625 C177 552 316 706 544 671 S844 567 1070 634 S1374 741 1680 627'/%3E%3Cpath d='M-80 667 C173 594 329 747 553 712 S850 608 1078 675 S1378 782 1680 669'/%3E%3Cpath d='M-80 709 C168 636 342 789 561 754 S856 649 1085 717 S1383 824 1680 711'/%3E%3Cpath d='M-80 751 C165 678 354 831 570 796 S864 691 1092 759 S1389 866 1680 753'/%3E%3Cpath d='M-80 910 C185 842 316 986 548 955 S846 850 1074 917 S1381 1022 1680 912'/%3E%3Cpath d='M-80 952 C178 884 329 1028 557 997 S853 892 1081 959 S1385 1064 1680 954'/%3E%3Cpath d='M-80 994 C172 926 340 1070 565 1039 S860 934 1088 1001 S1390 1105 1680 996'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: sk-timber-drift 42s ease-in-out infinite alternate;
+}
+.homepage-ribbon-pass .editorial-materials > .wrap {
+  position: relative;
+  z-index: 1;
+}
+@keyframes sk-timber-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-5px, 3px, 0); }
+}
+
+/* 3) PROCESS: on wide screens, let the five steps become a single editorial
+   timeline across the whole content width. The fine gold rule draws in when
+   the steps enter view; the circles keep the line intentional, not decorative. */
+.homepage-ribbon-pass .editorial-process-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 100% 10%, #F2EDE2 0%, transparent 54%),
+    #E7E3D8;
+}
+.homepage-ribbon-pass .editorial-process-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .16;
+  background-image:
+    linear-gradient(90deg, transparent 0%, #C6A66B 49.9%, transparent 50.1%),
+    repeating-linear-gradient(0deg, transparent 0 74px, #A99B7E 75px 76px, transparent 77px 148px);
+  background-size: 100% 100%, 100% 100%;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 24%, #000 80%, transparent 100%);
+}
+.homepage-ribbon-pass .editorial-process {
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 1200px) {
+  .homepage-ribbon-pass .editorial-process {
+    display: block;
+  }
+  .homepage-ribbon-pass .editorial-process-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    align-items: end;
+    gap: clamp(48px, 7vw, 110px);
+    margin-bottom: clamp(38px, 5vw, 66px);
+  }
+  .homepage-ribbon-pass .editorial-process-intro h2 {
+    max-width: 12ch;
+  }
+  .homepage-ribbon-pass .editorial-process-intro > p:last-child {
+    max-width: 40ch;
+    margin: 0 0 5px;
+  }
+  .homepage-ribbon-pass .editorial-process ol {
+    position: relative;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: clamp(16px, 2vw, 30px);
+    align-items: stretch;
+  }
+  .homepage-ribbon-pass .editorial-process ol::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 17px;
+    left: 17px;
+    right: 17px;
+    height: 1px;
+    background: #B59A61;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 1.5s cubic-bezier(.2,.65,.25,1);
+  }
+  .homepage-ribbon-pass .editorial-process ol:has(li[data-in])::before {
+    transform: scaleX(1);
+  }
+  .homepage-ribbon-pass .editorial-process li,
+  .homepage-ribbon-pass .editorial-process li:last-child {
+    grid-column: auto;
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+    padding: 0 14px 24px 0;
+    border-top: 0;
+    border-bottom: 1px solid #B9B9AC;
+    background: transparent;
+  }
+  .homepage-ribbon-pass .editorial-process .step {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    margin: 0 0 23px;
+    border: 1px solid #B59A61;
+    border-radius: 50%;
+    background: #E7E3D8;
+    color: #826A3F;
+    font-size: .62rem;
+  }
+  .homepage-ribbon-pass .editorial-process li h3 {
+    max-width: 14ch;
+    margin-top: 0;
+    font-size: clamp(1.32rem, 1.65vw, 1.8rem);
+    line-height: 1.05;
+  }
+  .homepage-ribbon-pass .editorial-process li p {
+    max-width: 28ch;
+  }
+}
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-showcase::before {
+    opacity: .15;
+    background-size: 155% 112%, 140% 118%;
+    animation-duration: 52s;
+  }
+  .homepage-ribbon-pass .editorial-materials::before {
+    opacity: .055;
+    animation-duration: 60s;
+  }
+  .homepage-ribbon-pass .editorial-process-band::before {
+    opacity: .08;
+    background-image: repeating-linear-gradient(0deg, transparent 0 86px, #A99B7E 87px 88px, transparent 89px 172px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-ribbon-pass .editorial-showcase::before,
+  .homepage-ribbon-pass .editorial-materials::before,
+  .homepage-ribbon-pass .editorial-process ol::before {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+
+/* Layout tune: keep the process eyebrow full-width, then balance the heading
+   against its supporting sentence. Avoid a central divider in the linen field. */
+@media (min-width: 1200px) {
+  .homepage-ribbon-pass .editorial-process-intro .editorial-eyebrow {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .homepage-ribbon-pass .editorial-process-intro h2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .homepage-ribbon-pass .editorial-process-intro > p:last-child {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .homepage-ribbon-pass .editorial-process-band::before {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent 0 76px,
+      #A99B7E 77px 78px,
+      transparent 79px 152px
+    );
+  }
+}
+
+
+/* USER REFINEMENTS — remove all background rules that run through process copy,
+   open up compressed heading leading, and move the materials glow to two corners. */
+
+/* No central divider or horizontal rule field behind the process heading.
+   Replace it with a quiet concentric detail cropped into the bottom-right corner. */
+.homepage-ribbon-pass .editorial-process-band {
+  background:
+    radial-gradient(circle at 0% 0%, #F1EBDD 0%, transparent 29%),
+    radial-gradient(circle at 100% 100%, #D6CCBB 0%, transparent 36%),
+    #E7E3D8;
+}
+.homepage-ribbon-pass .editorial-process-band::before {
+  inset: auto -150px -205px auto;
+  width: 520px;
+  height: 520px;
+  opacity: .12;
+  background-image: radial-gradient(circle,
+    transparent 0 106px,
+    #A18A5A 107px 108px,
+    transparent 109px 139px,
+    #A18A5A 140px 141px,
+    transparent 142px 174px,
+    #A18A5A 175px 176px,
+    transparent 177px 209px,
+    #A18A5A 210px 211px,
+    transparent 212px
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  mask-image: none;
+}
+
+/* The previous display headings used unusually compressed leading, which made
+   Cormorant's tall ascenders/descenders visually collide when a heading wrapped.
+   Keep the editorial scale while giving each line enough breathing room. */
+.homepage-ribbon-pass .editorial-hero h1 {
+  line-height: .96;
+  text-wrap: balance;
+}
+.homepage-ribbon-pass .editorial-intro-copy h2,
+.homepage-ribbon-pass .editorial-section-head h2,
+.homepage-ribbon-pass .editorial-materials h2,
+.homepage-ribbon-pass .editorial-process-intro h2,
+.homepage-ribbon-pass .editorial-visit-heading h2,
+.homepage-ribbon-pass .enquire h2 {
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.homepage-ribbon-pass .editorial-process li h3 {
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+/* Two separate circular pools of light are anchored to the copy's upper-left
+   and lower-right corners. Neither gradient sits in the centre of the headline. */
+.homepage-ribbon-pass .editorial-materials {
+  background:
+    radial-gradient(circle 370px at 5% 13%, #42644B 0%, #315342 35%, transparent 100%),
+    radial-gradient(circle 310px at 43% 88%, #294B39 0%, #244433 38%, transparent 100%),
+    #17382B;
+}
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-process-band::before {
+    inset: auto -245px -265px auto;
+    width: 420px;
+    height: 420px;
+    opacity: .065;
+  }
+  .homepage-ribbon-pass .editorial-materials {
+    background:
+      radial-gradient(circle 245px at 7% 9%, #3C5B45 0%, #315342 36%, transparent 100%),
+      radial-gradient(circle 210px at 91% 89%, #294B39 0%, #244433 38%, transparent 100%),
+      #17382B;
+  }
+  .homepage-ribbon-pass .editorial-hero h1 {
+    line-height: .98;
+  }
+  .homepage-ribbon-pass .editorial-intro-copy h2,
+  .homepage-ribbon-pass .editorial-section-head h2,
+  .homepage-ribbon-pass .editorial-materials h2,
+  .homepage-ribbon-pass .editorial-process-intro h2,
+  .homepage-ribbon-pass .editorial-visit-heading h2,
+  .homepage-ribbon-pass .enquire h2 {
+    line-height: 1.04;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-ribbon-pass .editorial-process-band::before {
+    animation: none !important;
+    transform: none !important;
+  }
+}
