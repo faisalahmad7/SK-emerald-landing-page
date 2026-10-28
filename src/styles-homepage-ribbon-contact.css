@@ -1,0 +1,219 @@
+/* SK Emerald — precise homepage ribbon + header alignment pass.
+   No global typography, routing or hero image changes. */
+
+.header-ribbon-contact .header-ribbon-contact-inner,
+.site-header.header-ribbon-contact .bar.wrap {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: clamp(18px, 3vw, 48px);
+  gap: clamp(10px, 1.35vw, 22px);
+}
+
+.site-header.header-ribbon-contact .brand {
+  flex: 0 0 auto;
+  margin-right: 0;
+}
+
+.site-header.header-ribbon-contact .nav {
+  margin-left: auto;
+  gap: clamp(11px, 1.15vw, 18px);
+  flex: 0 1 auto;
+  white-space: nowrap;
+}
+
+.site-header.header-ribbon-contact .nav a {
+  font-size: clamp(.78rem, .85vw, .88rem);
+}
+
+.site-header.header-ribbon-contact .quote {
+  flex: 0 0 auto;
+  margin-left: clamp(4px, .7vw, 12px);
+  padding-inline: clamp(12px, 1.35vw, 19px);
+  white-space: nowrap;
+}
+
+/* If a narrower desktop cannot fit all navigation items, keep them usable
+   in the mobile drawer instead of allowing the header to collide. */
+@media (min-width: 980px) and (max-width: 1120px) {
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    gap: 10px;
+  }
+  .site-header.header-ribbon-contact .nav {
+    gap: 10px;
+  }
+  .site-header.header-ribbon-contact .nav a {
+    font-size: .75rem;
+  }
+  .site-header.header-ribbon-contact .quote {
+    padding-inline: 10px;
+    font-size: .75rem;
+  }
+}
+
+/* The six category links become the confident green ribbon seen in the preview. */
+.homepage-ribbon-pass .editorial-hero-index {
+  background: #17382B;
+  border-top: 1px solid #C6A66B;
+  border-bottom: 1px solid #C6A66B;
+  box-shadow: none;
+}
+
+.homepage-ribbon-pass .editorial-hero-index a {
+  color: #FBF8F1;
+  border-right-color: #FFFFFF30;
+  min-width: 0;
+  transition: color .25s, background .25s;
+}
+
+.homepage-ribbon-pass .editorial-hero-index a span {
+  color: #D3B981;
+}
+
+.homepage-ribbon-pass .editorial-hero-index a:hover {
+  color: #F0D7A5;
+  background: #FFFFFF0A;
+}
+
+.homepage-ribbon-pass .editorial-hero-index a:focus-visible {
+  outline-color: #D3B981;
+}
+
+.home-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 17px 0 15px;
+  border-bottom: 1px solid #C9C4B6;
+  background: #E9E3D7;
+  color: #17382B;
+}
+
+.home-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: sk-home-marquee 34s linear infinite;
+  will-change: transform;
+}
+
+.home-marquee-track span {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 40px);
+  padding-right: clamp(18px, 3vw, 40px);
+  white-space: nowrap;
+  font: 600 .65rem/1.5 var(--ed-sans);
+  letter-spacing: .19em;
+}
+
+.home-marquee-track i {
+  color: #A88B52;
+  font-style: normal;
+  font-size: .9rem;
+}
+
+@keyframes sk-home-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.homepage-ribbon-pass .editorial-intro {
+  background: #FBF8F1;
+}
+
+.homepage-ribbon-pass .editorial-intro-visual .a {
+  outline: 1px solid #C6A66B;
+  outline-offset: 10px;
+  box-shadow: 0 24px 72px #10281F1D;
+}
+
+.homepage-ribbon-pass .editorial-intro-visual .b {
+  border-color: #F4F0E7;
+}
+
+.homepage-ribbon-pass .editorial-triptych .tri .photo {
+  outline-color: #C6A66B;
+  box-shadow: 0 20px 54px #10281F15;
+}
+
+.homepage-ribbon-pass .photo figcaption {
+  padding: 7px 11px 6px;
+  border-top: 1px solid #C6A66B;
+  font: 700 .55rem/1.4 var(--ed-sans);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #17382B;
+  background: #FBF8F1F2;
+}
+
+@media (max-width: 1120px) {
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    padding-inline: clamp(18px, 2.5vw, 30px);
+  }
+}
+
+@media (max-width: 979px) {
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    padding-inline: clamp(18px, 4vw, 28px);
+  }
+  .site-header.header-ribbon-contact .nav,
+  .site-header.header-ribbon-contact .quote {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-inline: var(--gut);
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(3n) {
+    border-right: 0;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(n+4) {
+    border-top: 1px solid #FFFFFF24;
+  }
+}
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: var(--gut);
+  }
+  .homepage-ribbon-pass .editorial-hero-index a {
+    min-height: 60px;
+    padding-inline: 10px;
+    border-right: 1px solid #FFFFFF30;
+    border-top: 1px solid #FFFFFF24;
+    font-size: .97rem;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(2n) {
+    border-right: 0;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(-n+2) {
+    border-top: 0;
+  }
+  .home-marquee {
+    padding-block: 14px 12px;
+  }
+  .home-marquee-track span {
+    font-size: .58rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .homepage-ribbon-pass .editorial-hero-index a {
+    font-size: .9rem;
+    gap: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-marquee-track {
+    animation: none;
+    transform: none;
+  }
+  .home-marquee-track,
+  .homepage-ribbon-pass .photo figcaption {
+    transition: none !important;
+  }
+}
