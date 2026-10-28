@@ -2289,3 +2289,15 @@ body {
     height: clamp(340px, 49vh, 560px);
   }
 }
+
+
+/* Keep the photo story large without adding a long dead zone after it. */
+@media (min-width: 900px) {
+  .homepage-ribbon-pass .editorial-rooms {
+    padding-top: clamp(72px, 8vw, 112px);
+    padding-bottom: clamp(42px, 5vw, 72px);
+  }
+  .homepage-ribbon-pass .editorial-gallery-note {
+    margin-top: 26px;
+  }
+}
