@@ -97,9 +97,9 @@ function playWelcomeSoundAutomatically() {
 
   try {
     context = new AudioContextClass()
-    resumeAndPlay()
     listeners.forEach((name) => document.addEventListener(name, resumeAndPlay, { once: true, capture: true, passive: name === 'touchstart' }))
     gestureTimer = window.setTimeout(removeListeners, 1950)
+    resumeAndPlay()
   } catch {
     context?.close().catch(() => {})
   }
