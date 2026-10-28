@@ -21,6 +21,7 @@ export default function GsapReveals() {
       return
     }
 
+    let sceneMedia
     const ctx = gsap.context(() => {
       // Keep copy reveals understated. Photographs have their own editorial wipe below.
       elements.forEach((el, index) => {
@@ -72,8 +73,8 @@ export default function GsapReveals() {
         const enterAt = [0, 0.045, 0.09]
         const exitAt = [0.75, 0.78, 0.81]
 
-        const mm = gsap.matchMedia()
-        mm.add('(min-width: 900px) and (prefers-reduced-motion: no-preference)', () => {
+        sceneMedia = gsap.matchMedia()
+        sceneMedia.add('(min-width: 900px) and (prefers-reduced-motion: no-preference)', () => {
           gsap.set(roomCards, { autoAlpha: 0 })
           const focusTimeline = gsap.timeline({
             scrollTrigger: {
@@ -112,7 +113,7 @@ export default function GsapReveals() {
           })
           return () => focusTimeline.scrollTrigger?.kill()
         })
-        mm.add('(max-width: 899px) and (prefers-reduced-motion: no-preference)', () => {
+        sceneMedia.add('(max-width: 899px) and (prefers-reduced-motion: no-preference)', () => {
           const reveals = roomCards.map((card, i) => gsap.fromTo(card,
             { autoAlpha: 0, y: i === 0 ? -28 : i === 1 ? 30 : 35, rotation: i === 0 ? -1 : i === 2 ? 1 : 0 },
             {
@@ -138,6 +139,7 @@ export default function GsapReveals() {
     })
 
     return () => {
+      sceneMedia?.revert()
       ctx.revert()
       document.querySelectorAll('.gsap-managed').forEach((el) => el.classList.remove('gsap-managed'))
     }
