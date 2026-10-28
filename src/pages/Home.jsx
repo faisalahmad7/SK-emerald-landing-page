@@ -75,7 +75,7 @@ export default function Home() {
       <section className="hero editorial-hero">
         <div className="hero-text editorial-hero-copy">
           <p className="editorial-eyebrow"><span /> Furniture, thoughtfully made <span className="eyebrow-city">Kondhwa · Pune</span></p>
-          <h1>Make room for <em>living.</em></h1>
+          <h1>Make room for<br className="hero-desktop-break" /> <em>living.</em></h1>
           <p className="lead">Furniture and interiors shaped around the way you live — measured for your home, finished to your taste, and specified clearly before the work begins.</p>
           <div className="actions">
             <Link to="/collections" className="btn editorial-btn">Discover the collections <span aria-hidden="true">↗</span></Link>
