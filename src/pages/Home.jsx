@@ -68,6 +68,7 @@ export default function Home() {
       </div>
 
       <section className="wrap intro editorial-intro">
+        <div className="editorial-intro-sidefield" aria-hidden="true" />
         <div className="overlap editorial-intro-visual">
           <Photo id={27} ratio="4/5" className="a" caption="Design inspiration · illustrative concept" reveal />
           <Photo id={SLOTS.intro[1]} ratio="1/1" className="b" reveal />
@@ -119,7 +120,7 @@ export default function Home() {
         </div>
         <div className="triptych editorial-triptych">
           {[['Living room', 'sofas'], ['Kitchen', 'modular-kitchens'], ['Storage', 'wardrobes']].map(([t, slug], i) => (
-            <Link key={t} to={`/collections/${slug}`} className={`tri tri-${i + 1}`}>
+            <Link key={t} to={`/collections/${slug}`} className={`tri tri-${i + 1} rv tri-reveal tri-reveal-${i + 1}`}>
               <Photo id={SLOTS.rooms[i]} ratio={i === 1 ? '4/5' : '3/4'} caption={i < 2 ? 'Design inspiration · illustrative concept' : undefined} reveal />
               <span>{t}</span>
             </Link>
@@ -141,7 +142,7 @@ export default function Home() {
           <p>See finishes, compare fabrics and talk through your measurements at our showroom in Kondhwa, Pune.</p>
           <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
           <p className="muted">Please call or message first to confirm visiting times.</p>
-          <div className="actions"><a className="btn" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a><Link className="editorial-underlink" to="/contact">Contact the showroom <span aria-hidden="true">↗</span></Link></div>
+          <div className="actions"><a className="btn" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a><Link className="editorial-underlink editorial-showroom-link" to="/contact">Contact the showroom <span aria-hidden="true">↗</span></Link></div>
         </div>
       </section>
       <Enquire title="Your room, your way." text="Send a photo, share a few measurements or tell us what you have in mind. Let's explore what will work for your home." />
