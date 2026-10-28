@@ -665,3 +665,122 @@
     transition: none !important;
   }
 }
+
+
+/* PHONE-ONLY POLISH: right-align menu, give both hero actions a button shape,
+   and make the made-to-measure note feel integrated with the light page section. */
+@media (max-width: 760px) {
+  /* Keep the wordmark against the left edge and push the menu control to the right. */
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    justify-content: space-between;
+  }
+
+  .site-header.header-ribbon-contact .brand {
+    flex: 0 1 auto;
+    min-width: 0;
+    margin-right: auto !important;
+  }
+
+  .site-header.header-ribbon-contact .burger {
+    flex: 0 0 48px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  /* Give both calls to action a clear silhouette against the cream page background. */
+  .homepage-ribbon-pass .editorial-hero .actions {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 54px;
+    padding: 14px 18px;
+    border: 1px solid #17382B;
+    background: #17382B;
+    color: #FBF8F1;
+    box-shadow: 0 4px 12px #17382B18;
+    text-decoration: none;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-btn span {
+    color: #D9C18D;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-text-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 52px;
+    padding: 13px 18px;
+    border: 1px solid #C6A66B;
+    background: #F4EFE4;
+    color: #17382B;
+    box-shadow: inset 0 0 0 1px #FFFFFFA0;
+    font-size: .84rem;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-text-link span {
+    flex: 0 0 auto;
+    color: #8D713F;
+  }
+
+  /* Hide only the proof number on phones; desktop keeps its original number. */
+  .homepage-ribbon-pass .editorial-hero .hero-proof {
+    display: block;
+    margin: 12px var(--gut) 26px;
+    padding: 15px 17px 14px;
+    border: 0;
+    border-left: 2px solid #B99A60;
+    background: #F0EBDD;
+    color: #334B3B;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .hero-proof > span:first-child {
+    display: none;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .hero-proof p {
+    color: #334B3B;
+    font: italic 500 1.02rem/1.5 var(--ed-serif);
+    letter-spacing: -.005em;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .hero-proof-rule {
+    display: block;
+    width: 38px;
+    height: 1px;
+    margin-top: 11px;
+    background: #B99A60;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    gap: 8px;
+  }
+
+  .site-header.header-ribbon-contact .brand {
+    gap: 8px;
+  }
+
+  .site-header.header-ribbon-contact .brand b {
+    font-size: clamp(1.1rem, 5vw, 1.28rem);
+  }
+
+  .site-header.header-ribbon-contact .burger {
+    width: 46px;
+    min-width: 46px;
+    flex-basis: 46px;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-text-link,
+  .homepage-ribbon-pass .editorial-hero .editorial-btn {
+    padding-inline: 15px;
+  }
+}
