@@ -1119,3 +1119,209 @@
     transform: none !important;
   }
 }
+
+
+/* ──────────────────────────────────────────────────────────────────────────
+   REQUESTED HOME PAGE DETAILS — symmetric process rings, warm botanical
+   linework in the intro, roomier editorial leading, and premium scroll reveals. */
+
+/* Keep the process section's circular detail balanced: one ring field at each
+   diagonal corner, both behind the content and outside the heading area. */
+.homepage-ribbon-pass .editorial-process-band::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: -235px;
+  left: -235px;
+  width: 520px;
+  height: 520px;
+  pointer-events: none;
+  opacity: .10;
+  background-image: radial-gradient(circle,
+    transparent 0 106px,
+    #A18A5A 107px 108px,
+    transparent 109px 139px,
+    #A18A5A 140px 141px,
+    transparent 142px 174px,
+    #A18A5A 175px 176px,
+    transparent 177px 209px,
+    #A18A5A 210px 211px,
+    transparent 212px
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+/* The intro's botanical branches are drawn as fine, warm wood/sage line art.
+   They sit at opposite corners, behind the photographs and copy—not over them. */
+.homepage-ribbon-pass .editorial-intro {
+  position: relative;
+  isolation: isolate;
+}
+.homepage-ribbon-pass .editorial-intro::before,
+.homepage-ribbon-pass .editorial-intro::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: clamp(130px, 16vw, 220px);
+  height: clamp(205px, 23vw, 310px);
+  pointer-events: none;
+  opacity: .20;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.homepage-ribbon-pass .editorial-intro::before {
+  top: 12px;
+  left: -6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 340' fill='none' stroke='%23978058' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 330 C40 276 60 223 91 174 C120 127 160 83 225 12'/%3E%3Cpath d='M40 278 C17 275 7 253 16 232 C36 243 45 260 40 278Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M47 265 C70 267 89 249 91 226 C68 233 52 247 47 265Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M71 213 C48 207 39 185 50 165 C69 181 77 198 71 213Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M82 195 C104 191 118 173 115 151 C96 162 84 178 82 195Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M112 151 C92 138 91 116 105 100 C119 118 120 135 112 151Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M125 133 C146 130 160 112 157 92 C139 102 128 117 125 133Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M154 96 C138 79 143 58 160 46 C166 65 164 82 154 96Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M166 80 C186 76 199 61 198 42 C180 51 169 65 166 80Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M195 45 C184 30 190 15 205 7 C209 22 205 36 195 45Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3C/svg%3E");
+  transform: rotate(-3deg);
+}
+.homepage-ribbon-pass .editorial-intro::after {
+  right: -4px;
+  bottom: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 340' fill='none' stroke='%23978058' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 330 C40 276 60 223 91 174 C120 127 160 83 225 12'/%3E%3Cpath d='M40 278 C17 275 7 253 16 232 C36 243 45 260 40 278Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M47 265 C70 267 89 249 91 226 C68 233 52 247 47 265Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M71 213 C48 207 39 185 50 165 C69 181 77 198 71 213Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M82 195 C104 191 118 173 115 151 C96 162 84 178 82 195Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M112 151 C92 138 91 116 105 100 C119 118 120 135 112 151Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M125 133 C146 130 160 112 157 92 C139 102 128 117 125 133Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M154 96 C138 79 143 58 160 46 C166 65 164 82 154 96Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M166 80 C186 76 199 61 198 42 C180 51 169 65 166 80Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M195 45 C184 30 190 15 205 7 C209 22 205 36 195 45Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3C/svg%3E");
+  transform: rotate(177deg);
+}
+.homepage-ribbon-pass .editorial-intro > .editorial-intro-visual,
+.homepage-ribbon-pass .editorial-intro > .editorial-intro-copy {
+  position: relative;
+  z-index: 1;
+}
+
+/* More comfortable leading for the display headings and the short supporting
+   lines throughout the homepage; keep the type sizes and section structure. */
+.homepage-ribbon-pass h2 {
+  line-height: 1.09;
+}
+.homepage-ribbon-pass h3 {
+  line-height: 1.2;
+}
+.homepage-ribbon-pass .editorial-hero h1 {
+  line-height: .98;
+}
+.homepage-ribbon-pass .editorial-visit-heading h2 {
+  line-height: 1.1;
+}
+.homepage-ribbon-pass .editorial-section-head .muted,
+.homepage-ribbon-pass .editorial-intro-copy .lead,
+.homepage-ribbon-pass .editorial-intro-copy > p:not(.lead):not(.editorial-eyebrow),
+.homepage-ribbon-pass .editorial-materials-copy > p:not(.editorial-eyebrow):not(.editorial-small-note),
+.homepage-ribbon-pass .editorial-process-intro > p:last-child,
+.homepage-ribbon-pass .editorial-visit-details > p:first-child,
+.homepage-ribbon-pass .editorial-visit-details .muted,
+.homepage-ribbon-pass .enquire .wrap > p {
+  line-height: 1.82;
+}
+
+/* A considered reveal for collection imagery: the card rises into place while
+   its photograph eases from a close crop to full frame. Each tile is observed
+   by the existing IntersectionObserver; no animation library is added. */
+.js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(.99);
+  clip-path: inset(0 0 7% 0);
+  transition:
+    opacity .9s cubic-bezier(.2,.65,.25,1),
+    transform 1.15s cubic-bezier(.2,.65,.25,1),
+    clip-path 1.15s cubic-bezier(.2,.65,.25,1);
+  will-change: opacity, transform, clip-path;
+}
+.js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv[data-in] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  clip-path: inset(0);
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile .photo img {
+  transform: scale(1.075);
+  transition: transform 1.5s cubic-bezier(.2,.65,.25,1), filter .8s ease;
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv[data-in] .photo img {
+  transform: scale(1);
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv[data-in]:hover .photo img {
+  transform: scale(1.035);
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(2) {
+  transition-delay: .08s, .08s, .08s;
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(3) {
+  transition-delay: .16s, .16s, .16s;
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(4) {
+  transition-delay: .24s, .24s, .24s;
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(5) {
+  transition-delay: .32s, .32s, .32s;
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:nth-child(6) {
+  transition-delay: .40s, .40s, .40s;
+}
+
+@media (min-width: 1121px) {
+  .site-header.header-ribbon-contact .nav {
+    gap: clamp(13px, 1.25vw, 20px);
+  }
+  .site-header.header-ribbon-contact .nav a::after {
+    height: 1.5px;
+    bottom: 1px;
+  }
+  .site-header.header-ribbon-contact .nav a.on::after {
+    height: 2px;
+    transform: scaleX(1);
+  }
+}
+.site-header.header-ribbon-contact .nav a.on {
+  color: #17382B;
+}
+.site-header.header-ribbon-contact .nav a.on::after {
+  background: #B99A60;
+  box-shadow: 0 1px 0 #B99A6020;
+}
+.site-header.header-ribbon-contact .drawer nav a.on {
+  color: #D5BE8A;
+  border-left: 1px solid #C6A66B;
+  padding-left: 12px;
+  background: linear-gradient(90deg, #C6A66B12, transparent 80%);
+}
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-intro::before,
+  .homepage-ribbon-pass .editorial-intro::after {
+    width: 105px;
+    height: 175px;
+    opacity: .14;
+  }
+  .homepage-ribbon-pass .editorial-intro::before {
+    top: 2px;
+    left: -22px;
+  }
+  .homepage-ribbon-pass .editorial-intro::after {
+    right: -18px;
+    bottom: 0;
+  }
+  .homepage-ribbon-pass h2 {
+    line-height: 1.11;
+  }
+  .homepage-ribbon-pass .editorial-visit-heading h2 {
+    line-height: 1.12;
+  }
+  .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv {
+    transform: translate3d(0, 20px, 0) scale(.995);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv,
+  .homepage-ribbon-pass .editorial-mosaic .editorial-tile .photo img {
+    transition: none !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+  .homepage-ribbon-pass .editorial-intro::before,
+  .homepage-ribbon-pass .editorial-intro::after {
+    animation: none !important;
+    transform: none !important;
+  }
+}
