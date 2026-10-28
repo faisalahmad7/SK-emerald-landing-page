@@ -65,7 +65,7 @@ export function Header() {
     return () => document.removeEventListener('keydown', key)
   }, [open])
   return (
-    <header className="site-header header-ribbon-contact">
+    <header className={`site-header header-ribbon-contact${open ? ' menu-open' : ''}`}>
       <a className="skip" href="#main" onClick={(e) => { e.preventDefault(); document.getElementById('main')?.focus() }}>Skip to content</a>
       <div className="bar wrap header-ribbon-contact-inner">
         <Link to="/" className="brand" aria-label={`${BUSINESS.name}, home`}>
@@ -76,10 +76,18 @@ export function Header() {
           {NAV.map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
         </nav>
         <Link to="/contact" className="btn small quote">Get a quotation</Link>
-        <button ref={btn} className="burger" aria-expanded={open} aria-controls="drawer" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen(!open)}>
+        <button ref={btn} className="burger" aria-expanded={open} aria-controls="drawer" aria-label={open ? 'Close menu' : 'Open menu'} onClick={() => setOpen((value) => !value)}>
           <span /><span />
         </button>
       </div>
+      <button
+        type="button"
+        className="drawer-backdrop"
+        aria-label="Close navigation menu"
+        tabIndex={-1}
+        hidden={!open}
+        onClick={() => { setOpen(false); btn.current?.focus() }}
+      />
       <div id="drawer" ref={drawer} className={`drawer${open ? ' open' : ''}`} hidden={!open}>
         <nav aria-label="Mobile">
           {NAV.map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
