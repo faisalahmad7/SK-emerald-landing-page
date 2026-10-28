@@ -44,6 +44,21 @@ function IntroLoader() {
   const [phase, setPhase] = useState('showing')
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    // Play on entry only when this browser already permits audio; otherwise the
+    // visible chime control provides a user-gesture fallback without surprise audio.
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext
+    if (AudioContextClass) {
+      let probe
+      try {
+        probe = new AudioContextClass()
+        if (probe.state === 'running') {
+          probe.close().catch(() => {})
+          playWelcomeChime()
+        } else probe.close().catch(() => {})
+      } catch {
+        probe?.close().catch(() => {})
+      }
+    }
     const opening = window.setTimeout(() => setPhase('opening'), reduceMotion ? 80 : 1320)
     const finished = window.setTimeout(() => setPhase('gone'), reduceMotion ? 220 : 2180)
     return () => { window.clearTimeout(opening); window.clearTimeout(finished) }
