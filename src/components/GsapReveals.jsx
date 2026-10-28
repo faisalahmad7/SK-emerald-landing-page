@@ -32,6 +32,53 @@ export default function GsapReveals() {
           onComplete: () => el.setAttribute('data-in', ''),
         })
       })
+
+      // Homepage-only motion: staggered editorial entrances and restrained scroll-linked drift.
+      // The existing hero photo and its mapping are deliberately untouched.
+      if (path === '/') {
+        const tiles = [...document.querySelectorAll('.editorial-mosaic .editorial-tile')]
+        tiles.forEach((el, index) => {
+          gsap.fromTo(el, { autoAlpha: 0, y: 30 }, {
+            autoAlpha: 1, y: 0,
+            duration: 0.9,
+            delay: (index % 3) * 0.055,
+            ease: 'power3.out',
+            overwrite: 'auto',
+            scrollTrigger: { trigger: el, start: 'top 92%', once: true },
+          })
+        })
+
+        const roomCards = [...document.querySelectorAll('.editorial-triptych .tri')]
+        roomCards.forEach((el, index) => {
+          gsap.fromTo(el, { autoAlpha: 0, y: 24 }, {
+            autoAlpha: 1, y: 0,
+            duration: 0.85,
+            delay: index * 0.07,
+            ease: 'power3.out',
+            overwrite: 'auto',
+            scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+          })
+        })
+
+        const introVisual = document.querySelector('.editorial-intro-visual')
+        if (introVisual) {
+          gsap.fromTo(introVisual, { y: 16 }, {
+            y: -12,
+            ease: 'none',
+            scrollTrigger: { trigger: introVisual, start: 'top bottom', end: 'bottom top', scrub: 0.7 },
+          })
+        }
+
+        const materialStack = document.querySelector('.editorial-material-stack')
+        if (materialStack) {
+          gsap.fromTo(materialStack, { y: 20 }, {
+            y: -18,
+            ease: 'none',
+            scrollTrigger: { trigger: '.editorial-materials', start: 'top bottom', end: 'bottom top', scrub: 0.8 },
+          })
+        }
+      }
+
       ScrollTrigger.refresh()
     })
 
