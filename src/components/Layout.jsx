@@ -108,15 +108,25 @@ export function Footer() {
           <p className="muted">{BUSINESS.altName} &middot; <i>{BUSINESS.tagline}</i></p>
           <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
         </div>
-        <div><h2>Collections</h2>{COLLECTIONS.map((c) => <Link key={c.slug} to={`/collections/${c.slug}`}>{c.name}</Link>)}<Link to="/collections">All collections</Link></div>
-        <div><h2>Explore</h2><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/about">About</Link><Link to="/faq">FAQs</Link></div>
-        <div><h2>Contact</h2>
+        <div className="footer-desktop-column"><h2>Collections</h2>{COLLECTIONS.map((c) => <Link key={c.slug} to={`/collections/${c.slug}`}>{c.name}</Link>)}<Link to="/collections">All collections</Link></div>
+        <div className="footer-desktop-column"><h2>Explore</h2><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/about">About</Link><Link to="/faq">FAQs</Link></div>
+        <div className="footer-desktop-column"><h2>Contact</h2>
           {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
           <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
           <a href={waLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a>
           <Link to="/contact">Showroom and directions</Link>
         </div>
-        <p className="legal">Specifications, finishes and prices are confirmed in your written quotation. Interior views shown as inspiration are illustrative and are not completed SK Emerald projects. <Link to="/privacy">Privacy policy</Link></p>
+        <div className="footer-mobile-accordions" aria-label="Footer navigation">
+          <details><summary>Collections</summary><div className="footer-accordion-links">{COLLECTIONS.map((c) => <Link key={c.slug} to={`/collections/${c.slug}`}>{c.name}</Link>)}<Link to="/collections">All collections</Link></div></details>
+          <details><summary>Explore</summary><div className="footer-accordion-links"><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/about">About</Link><Link to="/faq">FAQs</Link></div></details>
+          <details><summary>Contact</summary><div className="footer-accordion-links">
+            {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
+            <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
+            <a href={waLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <Link to="/contact">Showroom and directions</Link>
+          </div></details>
+        </div>
+        <p className="legal">Specifications, finishes and prices are confirmed in your written quotation. Interior inspiration is for reference only. <Link to="/privacy">Privacy policy</Link></p>
       </div>
       <div className="f-mark footer-wordmark" aria-hidden="true">SK Emerald</div>
     </footer>

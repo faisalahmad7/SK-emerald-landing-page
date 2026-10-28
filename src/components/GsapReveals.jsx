@@ -66,12 +66,12 @@ export default function GsapReveals() {
       const roomScene = document.querySelector('.editorial-triptych')
       const roomCards = roomScene ? gsap.utils.toArray(roomScene.querySelectorAll('.tri-scroll-image')) : []
       if (roomScene && roomCards.length === 3) {
-        const enterY = [-132, 148, 124]
-        const enterRotation = [-2.4, 1.6, 2.2]
-        const exitY = [-78, 68, 90]
-        const exitX = [-18, 0, 20]
-        const enterAt = [0, 0.045, 0.09]
-        const exitAt = [0.60, 0.63, 0.66]
+        const enterY = [-118, 138, 112]
+        const enterRotation = [-2.1, 1.35, 1.8]
+        const exitY = [-64, 62, 78]
+        const exitX = [-12, 0, 14]
+        const enterAt = [0.015, 0.055, 0.095]
+        const exitAt = [0.74, 0.77, 0.80]
 
         sceneMedia = gsap.matchMedia()
         sceneMedia.add('(min-width: 900px) and (prefers-reduced-motion: no-preference)', () => {
@@ -79,36 +79,39 @@ export default function GsapReveals() {
           const focusTimeline = gsap.timeline({
             scrollTrigger: {
               trigger: roomScene,
-              start: 'center center',
-              end: () => '+=' + Math.round(window.innerHeight * 1.12),
-              pin: true,
-              pinSpacing: true,
-              scrub: 0.62,
-              anticipatePin: 1,
+              // Start as the photo row enters the viewport; no pin-spacing gap.
+              // All motion is scrubbed to the visitor's scroll, so reversing scroll
+              // naturally reverses the entrance and the long, soft exit.
+              start: 'top 92%',
+              end: 'bottom 16%',
+              scrub: 0.72,
               invalidateOnRefresh: true,
-              snap: {
-                snapTo: [0, 0.47, 1],
-                delay: 0.12,
-                duration: { min: 0.18, max: 0.5 },
-                ease: 'power2.inOut',
-              },
             },
           })
           roomCards.forEach((card, i) => {
-            gsap.set(card, { y: enterY[i], x: i === 0 ? -12 : i === 2 ? 12 : 0, rotation: enterRotation[i], scale: 0.965 })
+            gsap.set(card, {
+              y: enterY[i],
+              x: i === 0 ? -10 : i === 2 ? 10 : 0,
+              rotation: enterRotation[i],
+              scale: 0.975,
+            })
             focusTimeline.to(card, {
               autoAlpha: 1, y: 0, x: 0, rotation: 0, scale: 1,
-              duration: 0.32, ease: 'power2.out',
+              duration: 0.30, ease: 'power2.out',
             }, enterAt[i])
           })
-          focusTimeline.addLabel('focus', 0.47)
+          // Hold the complete composition through the section midpoint, then ease it
+          // away gradually as the row approaches the end of its viewport journey.
+          focusTimeline.addLabel('focus', 0.53)
           roomCards.forEach((card, i) => {
             focusTimeline.to(card, {
-              autoAlpha: 0, y: exitY[i], x: exitX[i],
-              rotation: i === 0 ? -1.3 : i === 2 ? 1.4 : 0,
-              scale: 0.985,
-              duration: 0.19,
-              ease: 'power1.in',
+              autoAlpha: 0,
+              y: exitY[i],
+              x: exitX[i],
+              rotation: i === 0 ? -1.1 : i === 2 ? 1.2 : 0,
+              scale: 0.99,
+              duration: 0.24,
+              ease: 'power2.inOut',
             }, exitAt[i])
           })
           return () => focusTimeline.scrollTrigger?.kill()

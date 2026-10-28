@@ -2109,3 +2109,199 @@
     transition: none !important;
   }
 }
+
+
+.site-footer .footer-mobile-accordions {
+  display: none;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   RESPONSIVE POLISH — mobile width containment and footer compression. */
+html {
+  overflow-x: clip !important;
+  max-width: 100%;
+}
+body {
+  max-width: 100%;
+  overflow-x: clip !important;
+}
+@media (max-width: 760px) {
+  .homepage-ribbon-pass {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  .homepage-ribbon-pass .editorial-showcase {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* The full section used to scale its contours against a very tall mobile
+     canvas. Re-size the pattern to a short tile, then repeat it cleanly. */
+  .homepage-ribbon-pass .editorial-showcase::before {
+    inset: 0;
+    opacity: .13;
+    background-size: min(100vw, 420px) 430px, min(100vw, 420px) 470px;
+    background-repeat: repeat, repeat;
+    background-position: left top, right bottom;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* A concise accordion replaces the stacked desktop navigation columns. */
+  .site-footer .grid {
+    gap: 0;
+    padding-top: 28px;
+    padding-bottom: 18px;
+  }
+  .site-footer .grid > .footer-desktop-column {
+    display: none !important;
+  }
+  .site-footer .footer-mobile-accordions {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: 0;
+    margin-top: 11px;
+    border-top: 1px solid #D8BD8338;
+    border-bottom: 1px solid #D8BD8338;
+  }
+  .site-footer .footer-mobile-accordions details {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #D8BD8338;
+  }
+  .site-footer .footer-mobile-accordions details:first-child {
+    border-top: 0;
+  }
+  .site-footer .footer-mobile-accordions summary {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 10px 32px 10px 0;
+    color: #D8BD83;
+    font: 600 .69rem/1.35 var(--ed-sans);
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+  .site-footer .footer-mobile-accordions summary::after {
+    top: 10px;
+    right: 3px;
+    color: #D8BD83;
+    font: 400 1rem/1.4 var(--ed-sans);
+  }
+  .site-footer .footer-mobile-accordions details[open] summary {
+    border-bottom: 1px solid #D8BD8325;
+  }
+  .site-footer .footer-mobile-accordions .footer-accordion-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 16px;
+    padding: 8px 0 13px;
+  }
+  .site-footer .footer-mobile-accordions .footer-accordion-links a {
+    min-width: 0;
+    padding: 7px 0;
+    font-size: .77rem;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+  .site-footer .f-brand img {
+    width: 43px;
+    height: 43px;
+  }
+  .site-footer .fname {
+    margin-top: 9px;
+    font-size: 1.32rem;
+    line-height: 1.1;
+  }
+  .site-footer .f-brand .muted {
+    display: none;
+  }
+  .site-footer .f-brand address {
+    margin-top: 8px;
+    font-size: .76rem;
+    line-height: 1.48;
+  }
+  .site-footer .legal {
+    grid-column: 1 / -1;
+    margin-top: 16px;
+    padding-top: 13px;
+    font-size: .66rem;
+    line-height: 1.6;
+  }
+  .site-footer .f-mark,
+  .site-footer .footer-wordmark {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 0;
+    font-size: clamp(2.65rem, 10.5vw, 4rem);
+    line-height: .9;
+    letter-spacing: -.075em;
+    white-space: normal;
+    overflow-wrap: normal;
+  }
+}
+
+/* Line spacing and hierarchy: enough air around Cormorant's tall letterforms. */
+.homepage-ribbon-pass .editorial-reviews-copy h2 {
+  max-width: 12ch;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+.homepage-ribbon-pass .editorial-process-intro h2 {
+  max-width: none;
+  font-size: clamp(2.6rem, 4.3vw, 4.4rem);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.process-heading-break { display: none; }
+@media (min-width: 900px) {
+  .homepage-ribbon-pass .editorial-process-intro h2 {
+    max-width: none;
+  }
+  .process-heading-break {
+    display: block;
+  }
+}
+.homepage-ribbon-pass .enquire h2 .enquire-title-indent {
+  display: block;
+  margin-left: clamp(.7em, 2vw, 1.15em);
+}
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-reviews-copy h2 {
+    line-height: 1.13;
+  }
+  .homepage-ribbon-pass .editorial-process-intro h2 {
+    max-width: 15ch;
+    font-size: clamp(2.35rem, 9vw, 3rem);
+    line-height: 1.1;
+  }
+  .homepage-ribbon-pass .editorial-rooms,
+  .homepage-ribbon-pass .editorial-showcase {
+    padding-bottom: 58px;
+  }
+}
+
+/* Pinned image scene: keep the same large image dimensions but give the
+   approach, resting point and exit more space to breathe. */
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .homepage-ribbon-pass .editorial-triptych {
+    min-height: clamp(390px, 55vh, 630px);
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image .photo {
+    height: clamp(340px, 49vh, 560px);
+  }
+}
+
+
+/* Keep the photo story large without adding a long dead zone after it. */
+@media (min-width: 900px) {
+  .homepage-ribbon-pass .editorial-rooms {
+    padding-top: clamp(72px, 8vw, 112px);
+    padding-bottom: clamp(42px, 5vw, 72px);
+  }
+  .homepage-ribbon-pass .editorial-gallery-note {
+    margin-top: 26px;
+  }
+}

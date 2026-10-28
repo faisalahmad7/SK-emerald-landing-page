@@ -60,6 +60,8 @@ const list = [
   f(38, 'White L-shaped kitchen variation', 'inspiration', ['kitchens']),
   f(39, 'Three-seat recliner sofa in brown', 'work', ['recliners']),
   // purpose crops (derived from the photographs above; see scripts/make-images.mjs)
+  // Editorial homepage image: Costa Live, available under the Unsplash License.
+  f('recliner-editorial', 'Beige recliner in a calm minimalist home interior', 'inspiration', ['recliners'], { derived: true, src: 'https://images.unsplash.com/photo-1759722666961-8068c5ad61ab?auto=format&fit=crop&fm=jpg&q=80&w=1400', srcSet: undefined }),
   f('collection-sofas', 'Cream L-shaped corner sofa with slim gold-tone legs', 'work', ['sofas'], { derived: true }),
   f('collection-recliners', 'Aqua recliner with cup-holder arm and extended footrest', 'work', ['recliners'], { derived: true }),
   f('collection-beds', 'Storage bed with warm LED lighting along its base', 'work', ['beds'], { derived: true }),
