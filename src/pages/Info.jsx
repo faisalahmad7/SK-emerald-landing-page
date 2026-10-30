@@ -1,6 +1,6 @@
 import { Link } from '../router'
 import { Photo, Seo, PageHead, Enquire, Dim } from '../components/ui'
-import { BUSINESS, waLink } from '../data/business'
+import { BUSINESS, waLink, mapsLink, telLink } from '../data/business'
 import { SLOTS } from '../data/images'
 import { PROCESS, MATERIALS, CARE, FAQS } from '../data/content'
 
@@ -10,15 +10,16 @@ export function Interiors() {
     ['Bedroom', 'A storage bed, wardrobe and matching pieces sized to the room.', 'beds'],
     ['Kitchen', 'Units drawn to your floor plan, with finishes and hardware agreed in writing.', 'modular-kitchens'],
     ['Storage', 'Wardrobes and lofts that use the full wall, with drawers and shelves where you need them.', 'wardrobes'],
+    ['Office spaces', 'Reception counters, workstations, meeting tables and storage planned around the way your team works.', 'office-spaces'],
   ]
   return (
     <>
-      <Seo path="/interiors" title="Interior solutions" description="Coordinated furniture for living rooms, bedrooms, kitchens and storage, made to measure in Pune." />
+      <Seo path="/interiors" title="Interior solutions" description="Made-to-measure furniture for living rooms, bedrooms, kitchens, storage and office spaces in Pune." />
       <PageHead crumbs={[['Home', '/'], ['Interiors']]} title="Interior solutions" lead="Furniture that is planned as a set for one room, so the pieces match in size, colour and finish. We make and fit furniture. We do not offer structural or architectural services." />
       <section className="wrap rooms">
         {rooms.map(([t, d, slug], i) => { const id = SLOTS.interiors[i][0]; return (
           <article key={t} className={i % 2 ? 'flip' : ''}>
-            <Photo id={id} ratio={i === 0 || i === 2 ? '4/3' : '4/5'} reveal />
+            <Photo id={id} ratio={i === 0 || i === 2 || i === 4 ? '4/3' : '4/5'} reveal />
             <div><h2>{t}</h2><p>{d}</p><Link className="textlink" to={`/collections/${slug}`}>See the range</Link></div>
           </article>
         ) })}
@@ -43,7 +44,24 @@ export function About() {
           <p>We make sofas, recliners, beds, wardrobes, kitchens and TV units, and take on wooden doors, wood polishing and furniture for offices and institutions. Customers come from Pune and from other parts of Maharashtra.</p>
           <p>Because the pieces are made to order, the size, fabric and finish can change before anything is cut. Our promise is on the logo: <i>{BUSINESS.tagline}</i>.</p>
           <p>Visit the showroom at Unitas Fashion Centre, Kondhwa Khurd, to see finishes in person.</p>
-          <Link className="btn" to="/contact">Showroom and contact</Link>
+          <Link className="btn about-contact-desktop" to="/contact">Showroom and contact</Link>
+          <a className="btn about-contact-mobile" href="#mobile-contact">Showroom and contact</a>
+        </div>
+      </section>
+      <section className="mobile-contact-merge" id="mobile-contact">
+        <div className="wrap mobile-contact-card">
+          <div>
+            <p className="editorial-eyebrow"><span /> Visit or get in touch</p>
+            <h2>Talk through what you need.</h2>
+            <p>Share a photo, rough measurements or a room idea. We can help you choose the next step.</p>
+          </div>
+          <address>{BUSINESS.showroom.lines.map((line) => <span key={line}>{line}</span>)}</address>
+          <div className="mobile-contact-actions">
+            {BUSINESS.phones.map((phone) => <a className="mobile-contact-call" href={telLink(phone)} key={phone.tel}>Call {phone.display}</a>)}
+            <a className="btn" href={waLink('Hello SK Emerald Interior, I would like to discuss a furniture or interior enquiry.')} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+            <a className="mobile-contact-directions" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions ↗</a>
+          </div>
+          <p className="mobile-contact-email"><a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a></p>
         </div>
       </section>
       <section className="green"><div className="wrap principles">

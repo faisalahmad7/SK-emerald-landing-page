@@ -4,6 +4,7 @@ import { BUSINESS, waLink, telLink } from '../data/business'
 import { COLLECTIONS } from '../data/collections'
 
 const NAV = [['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/materials', 'Materials'], ['/about', 'About'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
+const MOBILE_NAV = [['/collections', 'Collections'], ['/gallery', 'Our work'], ['/about', 'About'], ['/faq', 'FAQs']]
 const logo = `${import.meta.env.BASE_URL}images/logo.png`
 
 // Sets data-in on every .rv element as it scrolls into view (an attribute, because React rewrites className when a photo
@@ -90,7 +91,7 @@ export function Header() {
       />
       <div id="drawer" ref={drawer} className={`drawer${open ? ' open' : ''}`} hidden={!open}>
         <nav aria-label="Mobile">
-          {NAV.map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
+          {MOBILE_NAV.map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
         </nav>
         <a className="btn" href={waLink('Hello SK Emerald Interior, I would like a quotation.')} target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
       </div>
@@ -118,12 +119,11 @@ export function Footer() {
         </div>
         <div className="footer-mobile-accordions" aria-label="Footer navigation">
           <details><summary>Collections</summary><div className="footer-accordion-links">{COLLECTIONS.map((c) => <Link key={c.slug} to={`/collections/${c.slug}`}>{c.name}</Link>)}<Link to="/collections">All collections</Link></div></details>
-          <details><summary>Explore</summary><div className="footer-accordion-links"><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/about">About</Link><Link to="/faq">FAQs</Link></div></details>
-          <details><summary>Contact</summary><div className="footer-accordion-links">
+          <details><summary>Explore</summary><div className="footer-accordion-links"><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/faq">FAQs</Link></div></details>
+          <details><summary>About & contact</summary><div className="footer-accordion-links"><Link to="/about">About SK Emerald</Link>
             {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
             <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
             <a href={waLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <Link to="/contact">Showroom and directions</Link>
           </div></details>
         </div>
         <p className="legal">Specifications, finishes and prices are confirmed in your written quotation. Interior inspiration is for reference only. <Link to="/privacy">Privacy policy</Link></p>

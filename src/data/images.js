@@ -60,25 +60,38 @@ const list = [
   f(38, 'White L-shaped kitchen variation', 'inspiration', ['kitchens']),
   f(39, 'Three-seat recliner sofa in brown', 'work', ['recliners']),
   // purpose crops (derived from the photographs above; see scripts/make-images.mjs)
-  // Editorial homepage image: Costa Live, available under the Unsplash License.
-  f('recliner-editorial', 'Beige recliner in a calm minimalist home interior', 'inspiration', ['recliners'], { derived: true, src: 'https://images.unsplash.com/photo-1759722666961-8068c5ad61ab?auto=format&fit=crop&fm=jpg&q=80&w=1400', srcSet: undefined }),
+  // Additional sourced styling and configuration images for the expanded catalogue.
+  f('recliner-editorial', 'Three-seat fabric recliner with extended footrests', 'inspiration', ['recliners'], { derived: true, src: 'https://www.furniturebazaar.com.au/cdn/shop/files/MB-R358_7_4196x2800.jpg?v=1740298104', srcSet: undefined }),
   f('collection-sofas', 'Cream L-shaped corner sofa with slim gold-tone legs', 'work', ['sofas'], { derived: true }),
-  f('collection-recliners', 'Aqua recliner with cup-holder arm and extended footrest', 'work', ['recliners'], { derived: true }),
+  f('collection-recliners', 'Contemporary fabric reclining sofa with extended footrests', 'inspiration', ['recliners'], { derived: true, src: 'https://www.furniturebazaar.com.au/cdn/shop/files/MB-R358_7_4196x2800.jpg?v=1740298104', srcSet: undefined }),
   f('collection-beds', 'Storage bed with warm LED lighting along its base', 'work', ['beds'], { derived: true }),
   f('detail-gold-leg', 'Grey velvet sofa arm with a perforated panel and gold-tone leg', 'work', ['sofas'], { derived: true }),
   f('detail-glass-cabinet', 'Glass-front overhead kitchen cabinets with a warm strip light beneath', 'work', ['kitchens'], { derived: true }),
   f('detail-fluted-panel', 'Fluted wall panel with gold-tone rules', 'work', ['tv'], { derived: true }),
+  // Curated, high-clarity configuration photography used to show layout variety.
+  f('sofa-321', 'Beige three plus two plus one sofa arrangement', 'inspiration', ['sofas'], { derived: true, src: 'https://torqueindia.co/cdn/shop/files/JETT-3_2_1-BLUE-1.jpg?v=1740470964&width=1946', srcSet: undefined }),
+  f('sofa-pair', 'Two coordinated beige sofas in a bright living room', 'inspiration', ['sofas'], { derived: true, src: 'https://images.unsplash.com/photo-1771577067936-680c2f795e5f?auto=format&fit=crop&fm=jpg&q=82&w=1500', srcSet: undefined }),
+  f('sofa-sectional', 'Large contemporary sectional sofa with reclining seats', 'inspiration', ['sofas', 'recliners'], { derived: true, src: 'https://assets.wfcdn.com/im/77284163/compr-r85/3291/329175310/Modern%2BLinen%2BL%2B-%2Bshaped%2BSectional%2BSofa%2Bfor%2BLiving%2BRoom.jpg', srcSet: undefined }),
+  f('bed-storage', 'Upholstered hydraulic storage bed in a bright bedroom', 'inspiration', ['beds'], { derived: true, src: 'https://media.adeo.com/mkp/eb909d0b797052f83b467d57327cdb72/media.jpg?fit=bounds&format=jpg&height=1800&quality=82&width=1800', srcSet: undefined }),
+  f('kitchen-u', 'Modern U-shaped modular kitchen with warm wood cabinetry', 'inspiration', ['kitchens'], { derived: true, src: 'https://coohom-biz-sg-s3.coohom.com/ins/static/article/hyderabad-mod-kitchen-1773591881640300900.jpg', srcSet: undefined }),
+  f('wardrobe-sliding', 'Modern white sliding wardrobe with open storage', 'inspiration', ['wardrobes'], { derived: true, src: 'https://img.interiorcompany.com/interior/webproduct/105638695221872143881.png?aio=w-1080%3B', srcSet: undefined }),
+  f('office-reception', 'Modern office reception with visitor seating and work desk', 'inspiration', ['office'], { derived: true, src: 'https://static.levocdn.com/WC39KELV/ReceptionDeskDesign7-6HghxPOJHYr7.jpg', srcSet: undefined }),
+  f('tv-feature-wall', 'Contemporary TV wall with floating console and sofa', 'inspiration', ['tv'], { derived: true, src: 'https://superpharmstorage.blob.core.windows.net/hybris/products/desktop/large/8681506229427.jpg', srcSet: undefined }),
+  f('recliner-chair', 'Single-seat upholstered electric recliner with footrest', 'inspiration', ['recliners'], { derived: true, src: 'https://divano.com.au/cdn/shop/files/San-Fino-1-Seater-Electric-Recliner-Fabric-Sofa-Lounge-Grey-VOL-DREA-08-pic-2.jpg?v=1760939845&width=1200', srcSet: undefined }),
+  f('office-workstation', 'Open-plan office desk workstations and storage', 'inspiration', ['office'], { derived: true, src: 'https://cdn.prod.website-files.com/642f23e5f54b794300ac12a6/699f72a10577fc102d30b860_vHLLaNn0tyUikJI-XmqCttvsmNLG6R4T8FKntrs7H48.webp', srcSet: undefined }),
+  f('office-meeting', 'Contemporary office meeting table and chairs', 'inspiration', ['office'], { derived: true, src: 'https://static.wixstatic.com/media/a9ed88_1e14de8d5493484f8cfe41d5e2912712~mv2.png/v1/fill/w_1000%2Ch_670%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01/a9ed88_1e14de8d5493484f8cfe41d5e2912712~mv2.png', srcSet: undefined }),
+  f('office-storage', 'Modern office storage cabinets and shelves', 'inspiration', ['office'], { derived: true, src: 'https://cdn.shopify.com/s/files/1/0491/2165/6981/articles/modern-office-storage-trends--style-meets-function.png?v=1748327979', srcSet: undefined }),
 ]
 export const IMAGES = Object.fromEntries(list.map((i) => [i.id, i]))
 export const img = (id) => IMAGES[id]
-export const GALLERY_IMAGES = list.filter((i) => !i.derived)
+export const GALLERY_IMAGES = list.filter((i) => !i.derived && !i.tags.includes('recliners'))
 
 // Where each editorial placement on the site gets its picture. Change a value here to re-skin a section.
 export const SLOTS = {
   hero: 13,                               // home hero (living room, dark-green sofa set)
   intro: [3, 'detail-gold-leg'],          // home "made for the room" overlap
   materials: [2, 'detail-glass-cabinet', 'detail-fluted-panel'],
-  rooms: [34, 33, 18],                    // home "planned room by room" triptych: living, kitchen, storage
+  rooms: ['sofa-pair', 'bed-storage', 'kitchen-u'], // home room sequence: living, bedroom, kitchen
   aboutMain: 11, aboutInset: 'detail-gold-leg',
   materialsPage: [
     ['detail-glass-cabinet', 'Glass-front units and gloss shutters'],
@@ -86,5 +99,5 @@ export const SLOTS = {
     ['detail-fluted-panel', 'Fluted panel with gold-tone rules'],
     ['collection-beds', 'LED strip lighting on a storage bed'],
   ],
-  interiors: [[12, 'Living room'], [19, 'Bedroom'], [33, 'Kitchen'], [18, 'Storage']],
+  interiors: [['sofa-pair', 'Living room'], ['bed-storage', 'Bedroom'], ['kitchen-u', 'Kitchen'], ['wardrobe-sliding', 'Storage'], ['office-reception', 'Office spaces']],
 }

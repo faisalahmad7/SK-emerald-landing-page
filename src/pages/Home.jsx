@@ -13,12 +13,12 @@ const ld = {
 }
 
 const TILES = [
-  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0 },
-  { slug: 'modular-kitchens', area: 'b', ratio: '4/5', delay: 1 },
-  { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0 },
-  { slug: 'tv-units', area: 'd', ratio: '16/10', delay: 0 },
-  { slug: 'beds', area: 'e', ratio: '16/10', delay: 1 },
-  { slug: 'recliners', area: 'f', ratio: '1/1', delay: 0, imageId: 'recliner-editorial' },
+  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 'sofa-321' },
+  { slug: 'modular-kitchens', area: 'b', ratio: '4/5', delay: 1, imageId: 'kitchen-u' },
+  { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0, imageId: 'wardrobe-sliding' },
+  { slug: 'tv-units', area: 'd', ratio: '16/10', delay: 0, imageId: 'tv-feature-wall' },
+  { slug: 'beds', area: 'e', ratio: '16/10', delay: 1, imageId: 'bed-storage' },
+  { slug: 'office-spaces', area: 'f', ratio: '1/1', delay: 0, imageId: 'office-reception' },
 ]
 
 const REVIEWS = [
@@ -70,7 +70,7 @@ export default function Home() {
     })
   return (
     <div className="homepage-ribbon-pass">
-      <Seo path="/" description="Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune." ld={ld} />
+      <Seo path="/" description="Sofas, beds, wardrobes, modular kitchens, TV units and office furniture, made to measure in Kondhwa, Pune." ld={ld} />
 
       <section className="hero editorial-hero">
         <div className="hero-text editorial-hero-copy">
@@ -94,10 +94,26 @@ export default function Home() {
 
       <div className="home-marquee" aria-label="Furniture collections and made-to-measure furniture">
         <div className="home-marquee-track" aria-hidden="true">
-          <span>SOFAS <i>✳</i> MODULAR KITCHENS <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> RECLINERS <i>✳</i> MADE TO MEASURE <i>✳</i></span>
-          <span>SOFAS <i>✳</i> MODULAR KITCHENS <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> RECLINERS <i>✳</i> MADE TO MEASURE <i>✳</i></span>
+          <span>SOFAS <i>✳</i> MODULAR KITCHENS <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> OFFICE FURNITURE <i>✳</i> MADE TO MEASURE <i>✳</i></span>
+          <span>SOFAS <i>✳</i> MODULAR KITCHENS <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> OFFICE FURNITURE <i>✳</i> MADE TO MEASURE <i>✳</i></span>
         </div>
       </div>
+
+      <section className="home-offers" aria-labelledby="home-offers-title">
+        <div className="wrap home-offers-inner">
+          <div className="home-offers-heading">
+            <p className="editorial-eyebrow"><span /> More value, thoughtfully planned</p>
+            <h2 id="home-offers-title">Good choices. Better combinations.</h2>
+            <p>Ask about current prices on selected sets and coordinated room combinations. We confirm the exact products, finishes and final amount before an order is placed.</p>
+            <Link to="/collections" className="editorial-underlink">Explore the range <span aria-hidden="true">↗</span></Link>
+          </div>
+          <div className="home-offer-cards">
+            <article className="rv"><span>01 / SETS</span><h3>Sofa combinations</h3><p>Compare 3+2, 3+2+1 and sectional layouts for your room.</p></article>
+            <article className="rv"><span>02 / SPACES</span><h3>Room combinations</h3><p>Bring matching furniture, storage and finishes together in one plan.</p></article>
+            <article className="rv"><span>03 / CURRENT OFFERS</span><h3>Ask what’s on</h3><p>Check current combo pricing and any limited-period offers available.</p></article>
+          </div>
+        </div>
+      </section>
 
       <section className="wrap intro editorial-intro">
         <div className="editorial-intro-sidefield" aria-hidden="true" />
@@ -148,17 +164,31 @@ export default function Home() {
       <section className="wrap rooms-home editorial-rooms">
         <div className="sec-head editorial-section-head">
           <div><p className="editorial-eyebrow"><span /> One home, many possibilities</p><h2>Bring the whole room together.</h2><p className="muted">From the first impression in the living room to the everyday rhythm of a kitchen, each element can be planned around your space.</p></div>
-          <Link to="/interiors" className="editorial-underlink">Explore interiors <span aria-hidden="true">↗</span></Link>
+          <Link to="/collections" className="editorial-underlink">Explore spaces & furniture <span aria-hidden="true">↗</span></Link>
         </div>
         <div className="triptych editorial-triptych">
-          {[['Living room', 'sofas'], ['Kitchen', 'modular-kitchens'], ['Storage', 'wardrobes']].map(([t, slug], i) => (
+          {[['Living room', 'sofas'], ['Bedroom', 'beds'], ['Kitchen', 'modular-kitchens']].map(([t, slug], i) => (
             <Link key={t} to={`/collections/${slug}`} className={`tri tri-${i + 1} tri-scroll-image tri-scroll-image-${i + 1}`}>
-              <Photo id={SLOTS.rooms[i]} ratio={i === 1 ? '4/5' : '3/4'} />
+              <Photo id={SLOTS.rooms[i]} ratio="4/3" />
               <span>{t}</span>
             </Link>
           ))}
         </div>
-        <p className="muted note editorial-gallery-note"><Link to="/gallery" className="editorial-underlink">Step inside the gallery <span aria-hidden="true">↗</span></Link> for furniture photographs and design inspiration.</p>
+        <div className="editorial-room-additions">
+          <Link to="/collections/wardrobes" className="editorial-room-card rv">
+            <Photo id="wardrobe-sliding" ratio="16/10" />
+            <span><b>Storage & wardrobes</b><i>Made around your wall space ↗</i></span>
+          </Link>
+          <Link to="/collections/office-spaces" className="editorial-room-card">
+            <Photo id="office-reception" ratio="16/10" />
+            <span><b>Office spaces</b><i>Reception, desks and work areas ↗</i></span>
+          </Link>
+        </div>
+        <div className="editorial-room-promise">
+          <span>ONE COORDINATED SPACE · OR ONE MADE-TO-MEASURE PIECE</span>
+          <p>We can plan the furniture and finishes for an entire room, or make a single custom piece to fit the space you already have.</p>
+        </div>
+        <p className="muted note editorial-gallery-note"><Link to="/gallery" className="editorial-underlink">Step inside the gallery <span aria-hidden="true">↗</span></Link> for more furniture and room ideas.</p>
       </section>
 
       <section className="customer-reviews editorial-reviews" aria-labelledby="reviews-heading">
