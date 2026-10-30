@@ -2336,3 +2336,637 @@ body {
     padding-left: max(var(--gut), calc((100vw - 1380px) / 2 - 10px));
   }
 }
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   CUSTOMER-FIRST PASS — clearer choices, stronger type and easier browsing.
+   Desktop navigation remains separate; phone routes combine the related pages. */
+
+.brand img {
+  box-shadow: none !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.sk-loader-mark {
+  width: 164px;
+  height: 164px;
+}
+.sk-loader-mark img {
+  width: 152px;
+  height: 152px;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+@media (min-width: 980px) {
+  .site-header.header-ribbon-contact {
+    background: #F8F5EE;
+    border-bottom: 1px solid #C6A66B90;
+    box-shadow: 0 8px 28px #17271E0A;
+  }
+  .site-header.header-ribbon-contact .nav {
+    gap: clamp(5px, .55vw, 10px);
+  }
+  .site-header.header-ribbon-contact .nav a {
+    padding: 12px clamp(9px, .8vw, 14px);
+    border-radius: 4px;
+    color: #254535;
+    font-size: clamp(.84rem, .9vw, .96rem);
+    font-weight: 700;
+    letter-spacing: .015em;
+    transition: background .22s ease, color .22s ease, transform .22s ease;
+  }
+  .site-header.header-ribbon-contact .nav a:hover {
+    color: #17382B;
+    background: #EAE3D5;
+    transform: translateY(-1px);
+  }
+  .site-header.header-ribbon-contact .nav a.on {
+    color: #FFFDF8;
+    background: #17382B;
+    border-bottom: 0;
+    box-shadow: inset 0 -2px 0 #C6A66B;
+  }
+  .site-header.header-ribbon-contact .quote {
+    min-height: 46px;
+    padding-inline: 20px;
+    border: 1px solid #C6A66B;
+    background: #17382B;
+    color: #FFFDF8;
+    font-weight: 750;
+    letter-spacing: .01em;
+    box-shadow: 0 7px 18px #17382B20;
+  }
+}
+
+/* Slightly more readable body copy without scaling the whole layout system. */
+body { font-size: 17px; }
+.lead { font-size: clamp(1.02rem, 1.15vw, 1.14rem); }
+.catalog .cat p,
+.cd-side .lead,
+.variant-card p,
+.editorial-room-promise p,
+.home-offers-heading > p:not(.editorial-eyebrow) {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Home value / combination offer band. Prices are always confirmed by enquiry. */
+.home-offers {
+  position: relative;
+  padding: clamp(54px, 7vw, 92px) 0;
+  color: #17382B;
+  background: #F5F0E6;
+  border-bottom: 1px solid #C6A66B80;
+  overflow: hidden;
+}
+.home-offers::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #C6A66B 18%, #C6A66B 82%, transparent);
+}
+.home-offers-inner {
+  display: grid;
+  grid-template-columns: minmax(240px, .82fr) minmax(0, 1.18fr);
+  gap: clamp(32px, 5vw, 76px);
+  align-items: center;
+}
+.home-offers-heading h2 {
+  max-width: 11ch;
+  margin-top: 12px;
+  font: 500 clamp(2.55rem, 4.6vw, 4.5rem)/.98 var(--ed-serif);
+  letter-spacing: -.045em;
+}
+.home-offers-heading > p:not(.editorial-eyebrow) {
+  max-width: 43ch;
+  margin-top: 18px;
+  color: #56645B;
+}
+.home-offer-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.home-offer-cards article {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px 19px;
+  border: 1px solid #C8B990;
+  background: linear-gradient(145deg, #FFFDF8, #ECE5D8);
+  box-shadow: 0 12px 28px #17271E08;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.home-offer-cards article:hover {
+  transform: translateY(-5px);
+  border-color: #A98C52;
+  box-shadow: 0 18px 36px #17271E15;
+}
+.home-offer-cards article > span {
+  margin-bottom: auto;
+  color: #8D7549;
+  font: 700 .61rem/1.3 var(--ed-sans);
+  letter-spacing: .14em;
+}
+.home-offer-cards h3 {
+  margin-top: 26px;
+  color: #17382B;
+  font: 600 1.25rem/1.1 var(--ed-serif);
+}
+.home-offer-cards p {
+  margin-top: 9px;
+  color: #59645C;
+  font-size: .83rem;
+  line-height: 1.58;
+}
+
+/* Expanded room discovery: three lead spaces plus storage and office spaces. */
+.homepage-ribbon-pass .editorial-triptych .tri .photo {
+  aspect-ratio: 4 / 3 !important;
+}
+.editorial-room-additions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 36px);
+  margin-top: clamp(26px, 4vw, 50px);
+}
+.editorial-room-card {
+  min-width: 0;
+  color: #17382B;
+  text-decoration: none;
+}
+.editorial-room-card .photo {
+  aspect-ratio: 16 / 10 !important;
+  overflow: hidden;
+  outline: 1px solid #C6A66B;
+  outline-offset: -8px;
+  box-shadow: 0 18px 40px #17271E12;
+}
+.editorial-room-card .photo img {
+  transition: transform .65s cubic-bezier(.2,.65,.25,1), filter .45s ease;
+}
+.editorial-room-card:hover .photo img,
+.editorial-room-card:focus-visible .photo img {
+  transform: scale(1.035);
+}
+.editorial-room-card > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #C6A66B;
+}
+.editorial-room-card b {
+  font: 600 clamp(1.35rem, 2vw, 2rem)/1.08 var(--ed-serif);
+}
+.editorial-room-card i {
+  color: #667268;
+  font: 600 .73rem/1.45 var(--ed-sans);
+  font-style: normal;
+  text-align: right;
+}
+.editorial-room-promise {
+  display: grid;
+  grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
+  align-items: center;
+  gap: 22px;
+  margin-top: 34px;
+  padding: 22px 26px;
+  border-left: 3px solid #C6A66B;
+  background: #F1EDE4;
+}
+.editorial-room-promise > span {
+  color: #806B42;
+  font: 750 .62rem/1.5 var(--ed-sans);
+  letter-spacing: .12em;
+}
+.editorial-room-promise p {
+  color: #46564B;
+}
+
+/* Clear, image-first configurations on every product detail page. */
+.collections-subhead {
+  margin-bottom: clamp(22px, 3vw, 38px);
+}
+.collections-subhead .editorial-eyebrow { margin-bottom: 12px; }
+.collections-subhead h2 {
+  color: #17382B;
+  font: 500 clamp(2.25rem, 4vw, 3.5rem)/1 var(--ed-serif);
+  letter-spacing: -.035em;
+}
+.collections-subhead > p:last-child {
+  max-width: 55ch;
+  margin-top: 10px;
+  color: #5D665F;
+  line-height: 1.7;
+}
+.collection-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+.collection-quick-actions .textlink { margin-top: 0; }
+.product-variants {
+  padding-block: clamp(48px, 7vw, 86px);
+  border-top: 1px solid #C9CECC;
+}
+.variant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+.variant-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #D3CCBD;
+  background: #FFFDF8;
+  box-shadow: 0 10px 28px #17271E08;
+  transition: transform .32s ease, box-shadow .32s ease, border-color .32s ease;
+}
+.variant-card:hover {
+  transform: translateY(-5px);
+  border-color: #B99A60;
+  box-shadow: 0 19px 36px #17271E14;
+}
+.variant-card .photo {
+  aspect-ratio: 4 / 3 !important;
+  background: #E5E0D6;
+}
+.variant-card .photo img {
+  transition: transform .65s cubic-bezier(.2,.65,.25,1);
+}
+.variant-card:hover .photo img { transform: scale(1.035); }
+.variant-card-copy { padding: 19px 20px 21px; }
+.variant-card-copy > span {
+  color: #987B49;
+  font: 750 .6rem/1.4 var(--ed-sans);
+  letter-spacing: .14em;
+}
+.variant-card h3 {
+  margin-top: 8px;
+  color: #17382B;
+  font: 600 1.45rem/1.12 var(--ed-serif);
+}
+.variant-card p {
+  min-height: 4.7em;
+  margin-top: 9px;
+  color: #5C665E;
+}
+.variant-card a {
+  display: inline-flex;
+  margin-top: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #C6A66B;
+  color: #17382B;
+  font-size: .82rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+/* One clear space-first route joins Interiors and Collections on phones. */
+.collections-phone-spaces { display: none; }
+.collections-offer-band {
+  padding-block: 34px;
+  background: #17382B;
+  color: #FFFDF8;
+}
+.collections-offer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.collections-offer-inner > div { max-width: 760px; }
+.collections-offer-inner .editorial-eyebrow { color: #D9D0BC; }
+.collections-offer-inner h2 {
+  margin-top: 8px;
+  color: #FFFDF8;
+  font: 500 clamp(1.8rem, 3.3vw, 2.8rem)/1.05 var(--ed-serif);
+}
+.collections-offer-inner p:not(.editorial-eyebrow) {
+  margin-top: 9px;
+  color: #D8E0D8;
+  line-height: 1.65;
+}
+.collections-offer-inner .btn {
+  flex: 0 0 auto;
+  background: #D7BE8B;
+  border-color: #D7BE8B;
+  color: #17382B;
+  font-weight: 750;
+}
+.collections-space-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+.collections-space-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #D7D0C2;
+  background: #FFFDF8;
+  color: #17382B;
+  text-decoration: none;
+  box-shadow: 0 8px 22px #17271E08;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.collections-space-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px #17271E12;
+}
+.collections-space-card .photo {
+  aspect-ratio: 16 / 10 !important;
+  background: #E4DED2;
+}
+.collections-space-card > span {
+  display: grid;
+  gap: 4px;
+  padding: 12px 13px 14px;
+}
+.collections-space-card b { font: 650 1.06rem/1.1 var(--ed-serif); }
+.collections-space-card i { color: #627066; font: 500 .74rem/1.4 var(--ed-sans); font-style: normal; }
+.mobile-contact-merge { display: none; }
+
+@media (max-width: 760px) {
+  /* A calm measured-grid detail replaces the oversized abstract contour field. */
+  .homepage-ribbon-pass .editorial-showcase::before {
+    inset: 0;
+    opacity: .13;
+    background-image:
+      linear-gradient(90deg, #9C8D7024 1px, transparent 1px),
+      linear-gradient(0deg, #9C8D7024 1px, transparent 1px),
+      radial-gradient(ellipse 180px 120px at 100% 0%, transparent 68%, #9C8D7030 69%, transparent 70%);
+    background-size: 42px 42px, 42px 42px, 100% 100%;
+    background-repeat: repeat, repeat, no-repeat;
+    background-position: 0 0, 0 0, right top;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .home-offers { padding-block: 44px 48px; }
+  .home-offers-inner {
+    display: block;
+  }
+  .home-offers-heading h2 {
+    max-width: 13ch;
+    font-size: clamp(2.35rem, 10vw, 3rem);
+  }
+  .home-offers-heading > p:not(.editorial-eyebrow) {
+    margin-top: 12px;
+    font-size: .94rem;
+    line-height: 1.65;
+  }
+  .home-offer-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 9px;
+    margin-top: 22px;
+  }
+  .home-offer-cards article {
+    min-height: 0;
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: 105px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 12px;
+  }
+  .home-offer-cards article > span {
+    grid-row: 1 / 3;
+    margin: 0;
+    align-self: start;
+    padding-top: 3px;
+    font-size: .56rem;
+  }
+  .home-offer-cards h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .home-offer-cards p {
+    margin-top: 5px;
+    font-size: .78rem;
+  }
+
+  .editorial-room-additions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+  }
+  .editorial-room-card .photo {
+    aspect-ratio: 16 / 9 !important;
+    outline-offset: -7px;
+  }
+  .editorial-room-card > span {
+    align-items: flex-start;
+    padding-top: 12px;
+  }
+  .editorial-room-card b { font-size: 1.55rem; }
+  .editorial-room-card i { font-size: .74rem; }
+  .editorial-room-promise {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 16px 17px;
+  }
+  .editorial-room-promise p { font-size: .91rem; line-height: 1.65; }
+
+  .product-variants {
+    padding-block: 38px 44px;
+  }
+  .variant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .variant-card-copy { padding: 13px 12px 15px; }
+  .variant-card-copy > span { font-size: .52rem; }
+  .variant-card h3 { font-size: 1.08rem; line-height: 1.13; }
+  .variant-card p {
+    min-height: 0;
+    margin-top: 6px;
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+  .variant-card a {
+    margin-top: 9px;
+    font-size: .73rem;
+  }
+
+  .collections-phone-spaces {
+    display: block;
+    padding-block: 30px 34px;
+    background: #EEE9DE;
+  }
+  .collections-phone-spaces .collections-subhead {
+    margin-bottom: 18px;
+  }
+  .collections-phone-spaces .collections-subhead h2 {
+    font-size: 2.1rem;
+  }
+  .collections-phone-spaces .collections-subhead > p:last-child {
+    margin-top: 7px;
+    font-size: .9rem;
+  }
+  .collections-space-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .collections-space-card > span { padding: 10px 10px 12px; }
+  .collections-space-card b { font-size: 1rem; }
+  .collections-space-card i { font-size: .69rem; }
+  .collections-offer-band { padding-block: 23px; }
+  .collections-offer-inner {
+    display: grid;
+    gap: 16px;
+  }
+  .collections-offer-inner h2 { font-size: 1.85rem; }
+  .collections-offer-inner p:not(.editorial-eyebrow) {
+    font-size: .88rem;
+    line-height: 1.55;
+  }
+  .collections-offer-inner .btn { width: 100%; justify-content: space-between; }
+
+  /* Product catalogue cards become compact, clear choices rather than long panels. */
+  .catalog {
+    gap: 16px;
+    padding-bottom: 54px;
+  }
+  .catalog > .collections-subhead {
+    margin-bottom: 5px;
+  }
+  .catalog .cat {
+    display: grid;
+    grid-template-columns: minmax(104px, 34%) minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #D5CEBF;
+    background: #FFFDF8;
+  }
+  .catalog .cat > a {
+    display: block;
+    min-width: 0;
+  }
+  .catalog .cat > a .photo {
+    aspect-ratio: 4 / 5 !important;
+    height: auto;
+  }
+  .catalog .cat > div { min-width: 0; }
+  .catalog .cat h2 { font-size: 1.28rem; line-height: 1.08; }
+  .catalog .cat p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 6px;
+    font-size: .79rem;
+    line-height: 1.5;
+  }
+  .catalog .cat .dim { display: none; }
+  .catalog .cat .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    margin-top: 10px;
+  }
+  .catalog .cat .actions .btn {
+    min-height: 38px;
+    padding: 8px 10px;
+    justify-content: center;
+    font-size: .74rem;
+  }
+
+  .mobile-contact-merge {
+    display: block;
+    padding-block: 30px 36px;
+    background: #EEE9DE;
+  }
+  .mobile-contact-card {
+    display: grid;
+    gap: 13px;
+    padding: 21px;
+    border: 1px solid #C9B98F;
+    background: #FFFDF8;
+    box-shadow: 0 12px 28px #17271E0C;
+  }
+  .mobile-contact-card h2 {
+    margin-top: 8px;
+    color: #17382B;
+    font: 500 2rem/1.03 var(--ed-serif);
+  }
+  .mobile-contact-card p {
+    margin-top: 8px;
+    color: #56645B;
+    font-size: .9rem;
+    line-height: 1.6;
+  }
+  .mobile-contact-card address {
+    display: grid;
+    gap: 3px;
+    padding: 12px 0 12px 14px;
+    border-left: 2px solid #C6A66B;
+    color: #3E5045;
+    font-size: .86rem;
+    font-style: normal;
+    line-height: 1.5;
+  }
+  .mobile-contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+  .mobile-contact-actions > a {
+    min-height: 43px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 13px;
+    border: 1px solid #BDAA7B;
+    color: #17382B;
+    font-size: .78rem;
+    font-weight: 750;
+    text-decoration: none;
+  }
+  .mobile-contact-actions > .btn {
+    background: #17382B;
+    color: #FFFDF8;
+    border-color: #17382B;
+  }
+  .mobile-contact-email a {
+    color: #17382B;
+    overflow-wrap: anywhere;
+    font-weight: 650;
+  }
+}
+
+@media (max-width: 420px) {
+  .variant-grid { gap: 8px; }
+  .catalog .cat {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 11px;
+    padding: 10px;
+  }
+  .catalog .cat h2 { font-size: 1.18rem; }
+  .catalog .cat p { font-size: .76rem; }
+  .collections-space-grid { gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .variant-card,
+  .collections-space-card,
+  .editorial-room-card,
+  .home-offer-cards article {
+    transition: none !important;
+  }
+  .variant-card:hover,
+  .collections-space-card:hover,
+  .home-offer-cards article:hover {
+    transform: none !important;
+  }
+}
