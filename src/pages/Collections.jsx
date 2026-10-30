@@ -14,14 +14,14 @@ const SPACE_LINKS = [
 export function Collections() {
   return (
     <>
-      <Seo path="/collections" title="Furniture and spaces" description="Explore made-to-measure furniture, room combinations and office furniture by SK Emerald Interior, Pune." />
-      <PageHead crumbs={[['Home', '/'], ['Collections']]} title="Furniture, by piece or by space" lead="Choose a furniture type, or start with the room you want to bring together. We can plan a complete space or make one custom piece to fit." />
+      <Seo path="/collections" title="Furniture collections" description="Browse furniture by room or choose a particular piece, with made-to-measure options from SK Emerald Interior, Pune." />
+      <PageHead crumbs={[['Home', '/'], ['Collections']]} title="Furniture collections" lead="Browse by room or choose a particular piece. Start with the space you are furnishing, then explore the furniture, sizes and finishes that suit it." />
       <section className="collections-phone-spaces" aria-labelledby="space-links-title">
         <div className="wrap">
           <div className="collections-subhead">
-            <p className="editorial-eyebrow"><span /> Start with a room</p>
-            <h2 id="space-links-title">What are you furnishing?</h2>
-            <p>Choose a space to see the furniture that can bring it together.</p>
+            <p className="editorial-eyebrow"><span /> Start with the room</p>
+            <h2 id="space-links-title">Which room are you furnishing?</h2>
+            <p>Choose a room to see the furniture that can bring it together. You can also browse the individual ranges below.</p>
           </div>
           <div className="collections-space-grid">
             {SPACE_LINKS.map((space) => (
