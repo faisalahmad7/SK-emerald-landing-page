@@ -12,7 +12,7 @@ const ld = {
 }
 
 const TILES = [
-  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 'sofa-321' },
+  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 'sofa-premium' },
   { slug: 'modular-kitchens', area: 'b', ratio: '4/5', delay: 1, imageId: 'kitchen-u' },
   { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0, imageId: 'wardrobe-sliding' },
   { slug: 'tv-units', area: 'd', ratio: '16/10', delay: 0, imageId: 'tv-feature-wall' },
