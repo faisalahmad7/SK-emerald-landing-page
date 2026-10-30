@@ -25,7 +25,7 @@ export function Collections() {
           </div>
           <div className="collections-space-grid">
             {SPACE_LINKS.map((space) => (
-              <Link to={`/collections/${space.slug}`} className="collections-space-card" key={space.name}>
+              <Link to={`/collections/${space.slug}`} className="collections-space-card rv" key={space.name}>
                 <Photo id={space.image} ratio="16/10" />
                 <span><b>{space.name}</b><i>{space.description}</i></span>
               </Link>
@@ -46,7 +46,7 @@ export function Collections() {
           <p>Each range includes different layouts, sizes and finishes to discuss.</p>
         </div>
         {COLLECTIONS.map((c, i) => (
-          <article key={c.slug} className={`cat ${i % 2 ? 'flip' : ''}`}>
+          <article key={c.slug} className={`cat rv ${i % 2 ? 'flip' : ''}`}>
             <Link to={`/collections/${c.slug}`} aria-label={c.name}><Photo id={c.hero} ratio={c.layout === 'tall' ? '4/5' : '4/3'} reveal pos={c.tilePos} /></Link>
             <div>
               <h2>{c.name}</h2>
@@ -100,7 +100,7 @@ export function Collection({ slug }) {
         </div>
         <div className="variant-grid">
           {(c.variants || []).map((variant, i) => (
-            <article className="variant-card" key={variant.name}>
+            <article className="variant-card rv" key={variant.name}>
               <Photo id={variant.image} ratio="4/3" alt={variant.name} />
               <div className="variant-card-copy">
                 <span>OPTION 0{i + 1}</span>
