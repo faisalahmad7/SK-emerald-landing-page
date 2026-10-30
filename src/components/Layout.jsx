@@ -4,7 +4,7 @@ import { BUSINESS, waLink, telLink } from '../data/business'
 import { COLLECTIONS } from '../data/collections'
 
 const NAV = [['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/materials', 'Materials'], ['/about', 'About'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
-const MOBILE_NAV = [['/collections', 'Collections'], ['/gallery', 'Our work'], ['/about', 'About'], ['/faq', 'FAQs']]
+const MOBILE_NAV = [['/collections', 'Collections'], ['/gallery', 'Our work'], ['/about', 'About'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
 const logo = `${import.meta.env.BASE_URL}images/logo.png`
 
 // Sets data-in on every .rv element as it scrolls into view (an attribute, because React rewrites className when a photo
