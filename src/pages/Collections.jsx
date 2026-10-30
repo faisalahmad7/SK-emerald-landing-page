@@ -4,7 +4,7 @@ import { waLink } from '../data/business'
 import { COLLECTIONS, ALSO_MADE, bySlug } from '../data/collections'
 
 const SPACE_LINKS = [
-  { name: 'Living room', description: 'Sofas, seating and TV units', slug: 'sofas', image: 'sofa-pair' },
+  { name: 'Living room', description: 'Sofas, seating and TV units', slug: 'sofas', image: 'sofa-premium' },
   { name: 'Bedroom', description: 'Beds and matching furniture', slug: 'beds', image: 'bed-storage' },
   { name: 'Kitchen', description: 'Modular layouts and storage', slug: 'modular-kitchens', image: 'kitchen-u' },
   { name: 'Storage', description: 'Wardrobes and fitted units', slug: 'wardrobes', image: 'wardrobe-sliding' },
