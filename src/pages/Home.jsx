@@ -108,9 +108,9 @@ export default function Home() {
             <Link to="/collections" className="editorial-underlink">Explore the range <span aria-hidden="true">↗</span></Link>
           </div>
           <div className="home-offer-cards">
-            <article><span>01 / SETS</span><h3>Sofa combinations</h3><p>Compare 3+2, 3+2+1 and sectional layouts for your room.</p></article>
-            <article><span>02 / SPACES</span><h3>Room combinations</h3><p>Bring matching furniture, storage and finishes together in one plan.</p></article>
-            <article><span>03 / CURRENT OFFERS</span><h3>Ask what’s on</h3><p>Check current combo pricing and any limited-period offers available.</p></article>
+            <article className="rv"><span>01 / SETS</span><h3>Sofa combinations</h3><p>Compare 3+2, 3+2+1 and sectional layouts for your room.</p></article>
+            <article className="rv"><span>02 / SPACES</span><h3>Room combinations</h3><p>Bring matching furniture, storage and finishes together in one plan.</p></article>
+            <article className="rv"><span>03 / CURRENT OFFERS</span><h3>Ask what’s on</h3><p>Check current combo pricing and any limited-period offers available.</p></article>
           </div>
         </div>
       </section>
@@ -175,7 +175,7 @@ export default function Home() {
           ))}
         </div>
         <div className="editorial-room-additions">
-          <Link to="/collections/wardrobes" className="editorial-room-card">
+          <Link to="/collections/wardrobes" className="editorial-room-card rv">
             <Photo id="wardrobe-sliding" ratio="16/10" />
             <span><b>Storage & wardrobes</b><i>Made around your wall space ↗</i></span>
           </Link>
