@@ -12,7 +12,7 @@ const ld = {
 }
 
 const TILES = [
-  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 'sofa-321' },
+  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 'sofa-premium' },
   { slug: 'modular-kitchens', area: 'b', ratio: '4/5', delay: 1, imageId: 'kitchen-u' },
   { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0, imageId: 'wardrobe-sliding' },
   { slug: 'tv-units', area: 'd', ratio: '16/10', delay: 0, imageId: 'tv-feature-wall' },
@@ -126,7 +126,7 @@ export default function Home() {
           <h2>Not just furniture. <em>A feeling.</em></h2>
           <p className="lead">A room comes together when the proportions feel right, the materials work hard, and every finish belongs. We help you make those choices with confidence.</p>
           <p>Start with a room, a measurement or an idea you saved. We will work through size, fabric, finish and specification with you — so the piece feels considered before it ever arrives home.</p>
-          <Link to="/#thoughtful-process" className="editorial-underlink">How we work <span aria-hidden="true">↗</span></Link>
+          <Link to="/#about-us" className="editorial-underlink">About SK Emerald <span aria-hidden="true">↗</span></Link>
           <div className="editorial-quote"><span>“</span><p>Good design makes everyday life feel a little more extraordinary.</p></div>
         </div>
       </section>
@@ -234,20 +234,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="editorial-process-band" id="thoughtful-process">
-        <div className="wrap process editorial-process">
-          <div className="editorial-process-intro">
-            <p className="editorial-eyebrow"><span /> A little about SK Emerald</p>
-            <h2>A thoughtful process.<br className="process-heading-break" /> A better fit.</h2>
-            <p>We are a furniture maker and showroom in Kondhwa, Pune. We make and supply furniture for homes, offices and institutions, serving customers across Pune and other parts of Maharashtra.</p>
-            <Link to="/contact" className="editorial-underlink">Visit or contact the showroom <span aria-hidden="true">↗</span></Link>
+      <section className="editorial-about-band" id="about-us" aria-labelledby="about-us-title">
+        <div className="wrap editorial-about-inner">
+          <div className="editorial-about-heading">
+            <p className="editorial-eyebrow"><span /> A little about us</p>
+            <h2 id="about-us-title">About SK Emerald Interior.</h2>
           </div>
-          <ol className="editorial-about-points">
-            <li className="rv"><span className="step">01</span><h3>Made and supplied by us</h3><p>From sofas, recliners, beds, wardrobes, kitchens and TV units to wooden doors, wood polishing and furniture for offices and institutions. You can speak directly with our showroom team about your order.</p></li>
-            <li className="rv"><span className="step">02</span><h3>Made to fit your room</h3><p>Choose the size, layout, fabric and finish that suit your space. We discuss the options with you before anything is made.</p></li>
-            <li className="rv"><span className="step">03</span><h3>Clear specifications</h3><p>We explain the materials and details, then record the agreed specification and price in a written quotation before you confirm the order.</p></li>
-            <li className="rv"><span className="step">04</span><h3>See finishes in person</h3><p>Visit us at Unitas Fashion Centre, Kondhwa Khurd, Pune to see finishes and talk through your requirements. Please call or message first to confirm visiting times.</p></li>
-          </ol>
+          <div className="editorial-about-copy">
+            <p>We are a furniture maker and showroom in Kondhwa, Pune, creating made-to-measure furniture for homes, offices and institutions.</p>
+            <p>From sofas, recliners and beds to wardrobes, modular kitchens and TV units, we help you choose the right size, materials and finish, with the agreed details set out clearly in your quotation.</p>
+            <div className="editorial-about-actions">
+              <Link to="/contact" className="btn">Visit or contact the showroom <span aria-hidden="true">↗</span></Link>
+              <Link to="/collections" className="editorial-underlink">Explore our collections <span aria-hidden="true">↗</span></Link>
+            </div>
+          </div>
         </div>
       </section>
 
