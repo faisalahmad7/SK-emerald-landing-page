@@ -87,7 +87,7 @@ export const SLOTS = {
   hero: 13,                               // home hero (living room, dark-green sofa set)
   intro: [3, 'detail-gold-leg'],          // home "made for the room" overlap
   materials: [2, 'detail-glass-cabinet', 'detail-fluted-panel'],
-  rooms: ['sofa-pair', 'kitchen-u', 'bed-storage'], // home room sequence: living, kitchen, bedroom
+  rooms: ['sofa-pair', 'bed-storage', 'kitchen-u'], // home room sequence: living, bedroom, kitchen
   aboutMain: 11, aboutInset: 'detail-gold-leg',
   materialsPage: [
     ['detail-glass-cabinet', 'Glass-front units and gloss shutters'],
