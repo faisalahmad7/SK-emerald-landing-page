@@ -19,10 +19,10 @@ export const COLLECTIONS = [
     intro: 'Single recliners and multi-seat recliner sofas for a living room or home theatre, upholstered in plush fabric in the colour you choose.',
     features: ['Single-seat recliners and multi-seat sofas', 'Manual or powered mechanisms where available', 'Cup-holder arms on selected designs', 'Fabric and colour selected for your room'],
     variants: [
-      { name: 'Single-seat recliner', detail: 'A comfortable individual seat for a reading corner or living room.', image: 'collection-recliners' },
+      { name: 'Single-seat recliner', detail: 'A comfortable individual seat for a reading corner or living room.', image: 'recliner-chair' },
       { name: 'Two-seat recliner sofa', detail: 'A compact two-seat option for shared everyday comfort.', image: 'recliner-editorial' },
-      { name: 'Three-seat recliner sofa', detail: 'A wider family option with individual reclining seats on selected models.', image: 'sofa-sectional' },
-      { name: 'Home-theatre seating', detail: 'A coordinated seating row planned around the room layout.', image: 'recliner-editorial' },
+      { name: 'Three-seat recliner sofa', detail: 'A wider family option with individual reclining seats on selected models.', image: 'collection-recliners' },
+      { name: 'Home-theatre seating', detail: 'A coordinated seating row planned around the room layout.', image: 'collection-recliners' },
     ],
     options: [['Seating', 'One recliner, a pair, or a full set for the room.'], ['Fabric', 'Colours such as aqua, charcoal and brown have been made.'], ['Arms', 'Cup-holder arms and padded headrests on selected designs.'], ['Fit', 'Share your wall length and we plan the set around it.']],
     materials: 'Mechanism and fabric depend on the model and are confirmed in your quotation.',
