@@ -10,8 +10,8 @@ export const BUSINESS = {
   whatsapp: '919011831169', // VERIFY: which number should receive WhatsApp enquiries
   email: 'emeraldfurniturepune@gmail.com',
   showroom: {
-    lines: ['Shop No. 226, First Floor', 'Unitas Fashion Centre Mall', 'Parge Nagar, Ambedkar Nagar', 'Kondhwa Khurd, Pune, Maharashtra 411048'], // VERIFY
-    oneLine: 'Shop No. 226, First Floor, Unitas Fashion Centre Mall, Parge Nagar, Ambedkar Nagar, Kondhwa Khurd, Pune, Maharashtra 411048',
+    lines: ['Shop No. 226, First Floor', 'Unitas Fashion Centre Mall', 'Parge Nagar', 'Kondhwa Khurd, Pune, Maharashtra 411048'], // VERIFY
+    oneLine: 'Shop No. 226, First Floor, Unitas Fashion Centre Mall, Parge Nagar, Kondhwa Khurd, Pune, Maharashtra 411048',
   },
   // Sources disagree on hours (10 AM-9 PM vs 9 AM-9:30 PM), so none are published. VERIFY then set `hours`.
   hours: null,
