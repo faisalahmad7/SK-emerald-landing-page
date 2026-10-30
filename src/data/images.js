@@ -60,7 +60,7 @@ const list = [
   f(38, 'White L-shaped kitchen variation', 'inspiration', ['kitchens']),
   f(39, 'Three-seat recliner sofa in brown', 'work', ['recliners']),
   // purpose crops (derived from the photographs above; see scripts/make-images.mjs)
-  // Editorial homepage image: Costa Live, available under the Unsplash License.
+  // Additional sourced styling and configuration images for the expanded catalogue.
   f('recliner-editorial', 'Three-seat fabric recliner with extended footrests', 'inspiration', ['recliners'], { derived: true, src: 'https://www.furniturebazaar.com.au/cdn/shop/files/MB-R358_7_4196x2800.jpg?v=1740298104', srcSet: undefined }),
   f('collection-sofas', 'Cream L-shaped corner sofa with slim gold-tone legs', 'work', ['sofas'], { derived: true }),
   f('collection-recliners', 'Contemporary fabric reclining sofa with extended footrests', 'inspiration', ['recliners'], { derived: true, src: 'https://www.furniturebazaar.com.au/cdn/shop/files/MB-R358_7_4196x2800.jpg?v=1740298104', srcSet: undefined }),
