@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import { Collections, Collection } from './pages/Collections'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
-import { Interiors, About, Materials, Faq, Privacy, NotFound } from './pages/Info'
+import { Interiors, Materials, Faq, Privacy, NotFound } from './pages/Info'
 import { bySlug } from './data/collections'
 
 let introSoundPlayed = false
@@ -138,10 +138,6 @@ function IntroLoader() {
 
 function Routes() {
   const { path } = useRouter()
-  const isPhone = window.matchMedia?.('(max-width: 760px)').matches
-  // Phone navigation keeps each merged destination to one simple page.
-  if (isPhone && path === '/interiors') return <Collections />
-  if (isPhone && path === '/contact') return <About />
   const m = path.match(/^\/collections\/([^/]+)$/)
   if (m) return bySlug(m[1]) ? <Collection slug={m[1]} /> : <NotFound />
   switch (path) {
@@ -149,7 +145,6 @@ function Routes() {
     case '/collections': return <Collections />
     case '/interiors': return <Interiors />
     case '/gallery': return <Gallery />
-    case '/about': return <About />
     case '/materials': return <Materials />
     case '/contact': return <Contact />
     case '/faq': return <Faq />

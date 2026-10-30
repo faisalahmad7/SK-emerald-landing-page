@@ -3,8 +3,8 @@ import { Link, NavLink, useRouter } from '../router'
 import { BUSINESS, waLink, telLink } from '../data/business'
 import { COLLECTIONS } from '../data/collections'
 
-const NAV = [['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/materials', 'Materials'], ['/about', 'About'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
-const MOBILE_NAV = [['/collections', 'Collections'], ['/gallery', 'Our work'], ['/about', 'About'], ['/faq', 'FAQs']]
+const NAV = [['/', 'Home'], ['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
+const MOBILE_NAV = [['/', 'Home'], ['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
 const logo = `${import.meta.env.BASE_URL}images/logo.png`
 
 // Sets data-in on every .rv element as it scrolls into view (an attribute, because React rewrites className when a photo
@@ -110,7 +110,7 @@ export function Footer() {
           <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
         </div>
         <div className="footer-desktop-column"><h2>Collections</h2>{COLLECTIONS.map((c) => <Link key={c.slug} to={`/collections/${c.slug}`}>{c.name}</Link>)}<Link to="/collections">All collections</Link></div>
-        <div className="footer-desktop-column"><h2>Explore</h2><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/about">About</Link><Link to="/faq">FAQs</Link></div>
+        <div className="footer-desktop-column"><h2>Explore</h2><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/faq">FAQs</Link></div>
         <div className="footer-desktop-column"><h2>Contact</h2>
           {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
           <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
@@ -120,7 +120,7 @@ export function Footer() {
         <div className="footer-mobile-accordions" aria-label="Footer navigation">
           <details><summary>Collections</summary><div className="footer-accordion-links">{COLLECTIONS.map((c) => <Link key={c.slug} to={`/collections/${c.slug}`}>{c.name}</Link>)}<Link to="/collections">All collections</Link></div></details>
           <details><summary>Explore</summary><div className="footer-accordion-links"><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/faq">FAQs</Link></div></details>
-          <details><summary>About & contact</summary><div className="footer-accordion-links"><Link to="/about">About SK Emerald</Link>
+          <details><summary>Contact</summary><div className="footer-accordion-links">
             {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
             <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
             <a href={waLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a>
