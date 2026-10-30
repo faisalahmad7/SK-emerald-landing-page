@@ -2336,3 +2336,31 @@ body {
     padding-left: max(var(--gut), calc((100vw - 1380px) / 2 - 10px));
   }
 }
+
+
+/* PHONE ONLY — make the showcase contour field read as a fine, intentional
+   architectural drawing. The desktop topographic treatment remains untouched. */
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-showcase::before {
+    inset: 0;
+    opacity: .15;
+    background-image:
+      repeating-radial-gradient(
+        ellipse 42% 30% at 12% 22%,
+        transparent 0 17px,
+        #9C8D70 18px 19px,
+        transparent 20px 29px
+      ),
+      repeating-radial-gradient(
+        ellipse 44% 32% at 88% 82%,
+        transparent 0 19px,
+        #9C8D70 20px 21px,
+        transparent 22px 33px
+      );
+    background-size: 100% 440px, 100% 440px;
+    background-repeat: repeat-y, repeat-y;
+    background-position: left top, right bottom;
+    transform: none !important;
+    animation: none !important;
+  }
+}
