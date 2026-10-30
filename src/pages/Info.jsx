@@ -44,10 +44,11 @@ export function About() {
           <p>We make sofas, recliners, beds, wardrobes, kitchens and TV units, and take on wooden doors, wood polishing and furniture for offices and institutions. Customers come from Pune and from other parts of Maharashtra.</p>
           <p>Because the pieces are made to order, the size, fabric and finish can change before anything is cut. Our promise is on the logo: <i>{BUSINESS.tagline}</i>.</p>
           <p>Visit the showroom at Unitas Fashion Centre, Kondhwa Khurd, to see finishes in person.</p>
-          <Link className="btn" to="/contact">Showroom and contact</Link>
+          <Link className="btn about-contact-desktop" to="/contact">Showroom and contact</Link>
+          <a className="btn about-contact-mobile" href="#mobile-contact">Showroom and contact</a>
         </div>
       </section>
-      <section className="mobile-contact-merge">
+      <section className="mobile-contact-merge" id="mobile-contact">
         <div className="wrap mobile-contact-card">
           <div>
             <p className="editorial-eyebrow"><span /> Visit or get in touch</p>
