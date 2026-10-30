@@ -18,7 +18,7 @@ export function Interiors() {
       <PageHead crumbs={[['Home', '/'], ['Interiors']]} title="Plan a room" lead="Bring the furniture in a room together. We help you plan the main pieces, storage, sizes and finishes as one coordinated space. We make and fit furniture; we do not offer structural or architectural services." />
       <section className="wrap rooms">
         {rooms.map(([t, d, slug], i) => { const id = SLOTS.interiors[i][0]; return (
-          <article key={t} className={i % 2 ? 'flip' : ''}>
+          <article key={t} className={i % 2 ? 'flip rv' : 'rv'}>
             <Photo id={id} ratio={i === 0 || i === 2 || i === 4 ? '4/3' : '4/5'} reveal />
             <div><h2>{t}</h2><p>{d}</p><Link className="textlink" to={`/collections/${slug}`}>See the range</Link></div>
           </article>
