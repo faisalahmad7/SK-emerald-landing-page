@@ -3005,3 +3005,10 @@ body { font-size: 17px; }
     border-right: 0;
   }
 }
+
+
+.about-contact-mobile { display: none !important; }
+@media (max-width: 760px) {
+  .about-contact-desktop { display: none !important; }
+  .about-contact-mobile { display: inline-flex !important; }
+}
