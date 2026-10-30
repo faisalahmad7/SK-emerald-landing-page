@@ -3316,3 +3316,129 @@ body { font-size: 17px; }
   }
 }
 
+/* COMPACT ABOUT SECTION — replaces the former process feature on the homepage. */
+.homepage-ribbon-pass .editorial-about-band {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(38px, 5vw, 64px);
+  border-block: 1px solid #C6A66B70;
+  background:
+    radial-gradient(circle at 100% 0%, #DDD5C6 0%, transparent 40%),
+    #EEE9DE;
+}
+.homepage-ribbon-pass .editorial-about-inner {
+  display: grid;
+  grid-template-columns: minmax(220px, .78fr) minmax(0, 1.22fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+}
+.homepage-ribbon-pass .editorial-about-heading h2 {
+  max-width: 10ch;
+  margin-top: 13px;
+  color: #17382B;
+  font: 500 clamp(2.25rem, 4.2vw, 3.8rem)/1.08 var(--ed-serif);
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.homepage-ribbon-pass .editorial-about-copy p {
+  max-width: 66ch;
+  color: #4F5D53;
+  font-size: .94rem;
+  line-height: 1.72;
+}
+.homepage-ribbon-pass .editorial-about-copy p + p {
+  margin-top: 12px;
+}
+.homepage-ribbon-pass .editorial-about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  margin-top: 20px;
+}
+.homepage-ribbon-pass .editorial-about-actions .btn {
+  min-height: 48px;
+}
+.homepage-ribbon-pass .editorial-about-actions .editorial-underlink {
+  margin-top: 0;
+}
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-about-band {
+    padding-block: 34px 38px;
+  }
+  .homepage-ribbon-pass .editorial-about-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+  .homepage-ribbon-pass .editorial-about-heading h2 {
+    max-width: 14ch;
+    font-size: clamp(2.1rem, 9vw, 2.8rem);
+  }
+  .homepage-ribbon-pass .editorial-about-copy p {
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+  .homepage-ribbon-pass .editorial-about-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin-top: 17px;
+  }
+  .homepage-ribbon-pass .editorial-about-actions > a {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Centre every numbered collection link on every screen size. Keep Office spaces
+   centred on its own final row instead of leaving it aligned to the left. */
+.homepage-ribbon-pass .editorial-hero-index {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.homepage-ribbon-pass .editorial-hero-index a {
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  white-space: normal;
+}
+@media (max-width: 1050px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 34%;
+    border-right: 0;
+  }
+}
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .homepage-ribbon-pass .editorial-hero-index a {
+    justify-content: center;
+    text-align: center;
+    gap: 7px;
+    padding-inline: 8px;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+    border-right: 0;
+  }
+}
+@media (max-width: 420px) {
+  .homepage-ribbon-pass .editorial-hero-index a:last-child {
+    width: 62%;
+  }
+}
+
+/* Remove the pale halo/shadow around the header mark; leave the logo artwork alone. */
+.site-header.header-ribbon-contact .brand img {
+  box-shadow: none !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
