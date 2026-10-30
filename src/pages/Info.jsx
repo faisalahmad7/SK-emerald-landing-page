@@ -1,6 +1,6 @@
 import { Link } from '../router'
 import { Photo, Seo, PageHead, Enquire, Dim } from '../components/ui'
-import { BUSINESS, waLink, mapsLink, telLink } from '../data/business'
+import { BUSINESS, waLink } from '../data/business'
 import { SLOTS } from '../data/images'
 import { PROCESS, MATERIALS, CARE, FAQS } from '../data/content'
 
@@ -44,24 +44,7 @@ export function About() {
           <p>We make sofas, recliners, beds, wardrobes, kitchens and TV units, and take on wooden doors, wood polishing and furniture for offices and institutions. Customers come from Pune and from other parts of Maharashtra.</p>
           <p>Because the pieces are made to order, the size, fabric and finish can change before anything is cut. Our promise is on the logo: <i>{BUSINESS.tagline}</i>.</p>
           <p>Visit the showroom at Unitas Fashion Centre, Kondhwa Khurd, to see finishes in person.</p>
-          <Link className="btn about-contact-desktop" to="/contact">Showroom and contact</Link>
-          <a className="btn about-contact-mobile" href="#mobile-contact">Showroom and contact</a>
-        </div>
-      </section>
-      <section className="mobile-contact-merge" id="mobile-contact">
-        <div className="wrap mobile-contact-card">
-          <div>
-            <p className="editorial-eyebrow"><span /> Visit or get in touch</p>
-            <h2>Talk through what you need.</h2>
-            <p>Share a photo, rough measurements or a room idea. We can help you choose the next step.</p>
-          </div>
-          <address>{BUSINESS.showroom.lines.map((line) => <span key={line}>{line}</span>)}</address>
-          <div className="mobile-contact-actions">
-            {BUSINESS.phones.map((phone) => <a className="mobile-contact-call" href={telLink(phone)} key={phone.tel}>Call {phone.display}</a>)}
-            <a className="btn" href={waLink('Hello SK Emerald Interior, I would like to discuss a furniture or interior enquiry.')} target="_blank" rel="noopener noreferrer">WhatsApp us</a>
-            <a className="mobile-contact-directions" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions ↗</a>
-          </div>
-          <p className="mobile-contact-email"><a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a></p>
+          <Link className="btn" to="/contact">Contact the showroom</Link>
         </div>
       </section>
       <section className="green"><div className="wrap principles">
