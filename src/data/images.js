@@ -69,16 +69,18 @@ const list = [
   f('detail-glass-cabinet', 'Glass-front overhead kitchen cabinets with a warm strip light beneath', 'work', ['kitchens'], { derived: true }),
   f('detail-fluted-panel', 'Fluted wall panel with gold-tone rules', 'work', ['tv'], { derived: true }),
   // Curated, high-clarity configuration photography used to show layout variety.
-  f('sofa-321', 'Beige three plus two plus one sofa arrangement', 'inspiration', ['sofas'], { derived: true, src: 'https://torqueindia.co/cdn/shop/files/JETT-3_2_1-BLUE-1.jpg?v=1740470964&width=1946', srcSet: undefined }),
-  f('sofa-pair', 'Two coordinated beige sofas in a bright living room', 'inspiration', ['sofas'], { derived: true, src: 'https://images.unsplash.com/photo-1771577067936-680c2f795e5f?auto=format&fit=crop&fm=jpg&q=82&w=1500', srcSet: undefined }),
-  f('sofa-sectional', 'Large contemporary sectional sofa with reclining seats', 'inspiration', ['sofas', 'recliners'], { derived: true, src: 'https://assets.wfcdn.com/im/77284163/compr-r85/3291/329175310/Modern%2BLinen%2BL%2B-%2Bshaped%2BSectional%2BSofa%2Bfor%2BLiving%2BRoom.jpg', srcSet: undefined }),
-  f('bed-storage', 'Neutral upholstered bed in a modern bedroom, inspiration image', 'inspiration', ['beds'], { derived: true, src: 'https://images.unsplash.com/photo-1737712374342-da1db894a397?auto=format&fit=crop&w=1600&q=85', srcSet: undefined }),
-  f('bedroom-pexels', 'Blush upholstered bed in a modern bedroom, inspiration image', 'inspiration', ['beds'], { derived: true, src: 'https://images.pexels.com/photos/36482942/pexels-photo-36482942.jpeg?auto=compress&cs=tinysrgb&w=1600', srcSet: undefined }),
-  f('bedroom-soft-neutral', 'Grey upholstered bed with soft contemporary styling, inspiration image', 'inspiration', ['beds'], { derived: true, src: 'https://images.pexels.com/photos/6920600/pexels-photo-6920600.jpeg?auto=compress&cs=tinysrgb&w=1600', srcSet: undefined }),
+  f('sofa-321', 'Three plus two plus one beige sofa set, inspiration image', 'inspiration', ['sofas'], { derived: true, src: 'https://mk-kabbanifurniture.com/cdn/shop/files/Untitled-1_2cd143ce-1c6c-4f2f-9799-33aeb1717164_1200x1200.jpg?v=1783011645', srcSet: undefined }),
+  f('sofa-pair', 'Original SK Emerald sofa arrangement with centre table', 'work', ['sofas'], { derived: true, src: `${base}images/12.webp`, srcSet: undefined }),
+  f('sofa-sectional', 'Original grey velvet sectional sofa', 'work', ['sofas'], { derived: true, src: `${base}images/2.webp`, srcSet: undefined }),
+  f('bed-storage', 'Hydraulic storage bed shown open, inspiration image', 'inspiration', ['beds'], { derived: true, src: 'https://www.cdiscount.com/pdt2/1/8/7/1/700x700/aachj13187/rw/lit-coffre-hydraulique-140x190.jpg', srcSet: undefined }),
+  f('bedroom-pexels', 'Grey single upholstered bed in a modern bedroom, inspiration image', 'inspiration', ['beds'], { derived: true, src: 'https://media.homecentre.com/i/homecentre/168122945-168122945-HC21072025_01-2100.jpg?%24prodimg-d-sqr-pdp%24=&%24quality-standard%24=&fmt=auto&sm=c', srcSet: undefined }),
+  f('bedroom-soft-neutral', 'Minimal upholstered platform bed with rounded headboard, inspiration image', 'inspiration', ['beds'], { derived: true, src: 'https://studioobliq.co/cdn/shop/files/Bliss_Bed_02_v1.jpg?v=1762870125&width=1200', srcSet: undefined }),
+  f('bed-marbella', 'Beige tufted upholstered bed with matching nightstands, inspiration image', 'inspiration', ['beds'], { derived: true, src: 'https://dunepine.com/cdn/shop/files/Marbella-Luxe-Bed_1080x1080.jpg?v=1765194803', srcSet: undefined }),
+  f('sofa-premium', 'Premium cream boucle sofa set in a bright living room, inspiration image', 'inspiration', ['sofas', 'living'], { derived: true, src: 'https://www.idealhomeqatar.com/cdn/shop/files/lucas.png?v=1775896820', srcSet: undefined }),
   f('kitchen-u', 'Modern U-shaped modular kitchen with warm wood cabinetry', 'inspiration', ['kitchens'], { derived: true, src: 'https://coohom-biz-sg-s3.coohom.com/ins/static/article/hyderabad-mod-kitchen-1773591881640300900.jpg', srcSet: undefined }),
   f('wardrobe-sliding', 'Modern white sliding wardrobe with open storage', 'inspiration', ['wardrobes'], { derived: true, src: 'https://img.interiorcompany.com/interior/webproduct/105638695221872143881.png?aio=w-1080%3B', srcSet: undefined }),
   f('office-reception', 'Modern office reception with visitor seating and work desk', 'inspiration', ['office'], { derived: true, src: 'https://static.levocdn.com/WC39KELV/ReceptionDeskDesign7-6HghxPOJHYr7.jpg', srcSet: undefined }),
-  f('tv-feature-wall', 'Contemporary TV wall with floating console and sofa', 'inspiration', ['tv'], { derived: true, src: 'https://superpharmstorage.blob.core.windows.net/hybris/products/desktop/large/8681506229427.jpg', srcSet: undefined }),
+  f('tv-feature-wall', 'Original stone-look TV wall with lit shelves', 'inspiration', ['tv'], { derived: true, src: `${base}images/25.webp`, srcSet: undefined }),
   f('recliner-chair', 'Aqua single-seat recliner, original showroom photograph', 'work', ['recliners'], { derived: true, src: `${base}images/6.webp`, srcSet: undefined }),
   f('office-workstation', 'Open-plan office desk workstations and storage', 'inspiration', ['office'], { derived: true, src: 'https://cdn.prod.website-files.com/642f23e5f54b794300ac12a6/699f72a10577fc102d30b860_vHLLaNn0tyUikJI-XmqCttvsmNLG6R4T8FKntrs7H48.webp', srcSet: undefined }),
   f('office-meeting', 'Contemporary office meeting table and chairs', 'inspiration', ['office'], { derived: true, src: 'https://static.wixstatic.com/media/a9ed88_1e14de8d5493484f8cfe41d5e2912712~mv2.png/v1/fill/w_1000%2Ch_670%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01/a9ed88_1e14de8d5493484f8cfe41d5e2912712~mv2.png', srcSet: undefined }),
@@ -93,7 +95,7 @@ export const SLOTS = {
   hero: 13,                               // home hero (living room, dark-green sofa set)
   intro: [3, 'detail-gold-leg'],          // home "made for the room" overlap
   materials: [2, 'detail-glass-cabinet', 'detail-fluted-panel'],
-  rooms: ['sofa-pair', 'bed-storage', 'kitchen-u'], // home room sequence: living, bedroom, kitchen
+  rooms: ['sofa-premium', 'bedroom-soft-neutral', 'kitchen-u'], // home room sequence: living, bedroom, kitchen
   aboutMain: 11, aboutInset: 'detail-gold-leg',
   materialsPage: [
     ['detail-glass-cabinet', 'Glass-front units and gloss shutters'],
@@ -101,5 +103,5 @@ export const SLOTS = {
     ['detail-fluted-panel', 'Fluted panel with gold-tone rules'],
     [19, 'LED strip lighting on a storage bed'],
   ],
-  interiors: [['sofa-pair', 'Living room'], ['bed-storage', 'Bedroom'], ['kitchen-u', 'Kitchen'], ['wardrobe-sliding', 'Storage'], ['office-reception', 'Office spaces']],
+  interiors: [['sofa-premium', 'Living room'], ['bedroom-soft-neutral', 'Bedroom'], ['kitchen-u', 'Kitchen'], ['wardrobe-sliding', 'Storage'], ['office-reception', 'Office spaces']],
 }
