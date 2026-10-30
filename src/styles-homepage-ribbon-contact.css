@@ -2970,3 +2970,18 @@ body { font-size: 17px; }
     transform: none !important;
   }
 }
+
+
+/* Seven product links: preserve a single, even row on wide desktop screens. */
+@media (min-width: 1051px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
+
+/* Stronger type hierarchy on the product and room catalogue pages. */
+@media (min-width: 761px) {
+  .pagehead h1 { font-size: clamp(2.7rem, 4vw, 4.1rem); }
+  .catalog .cat h2 { font-size: clamp(1.85rem, 2.6vw, 2.6rem); }
+  .variant-card h3 { font-size: clamp(1.4rem, 1.65vw, 1.8rem); }
+}
