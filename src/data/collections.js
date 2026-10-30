@@ -87,9 +87,9 @@ export const COLLECTIONS = [
     options: [['Workspace', 'Reception, individual desks, shared workstations or meeting areas.'], ['Storage', 'Pedestals, cabinets, shelving and document storage.'], ['Finish', 'Choose practical surface finishes and coordinated colours.'], ['Layout', 'Share a floor plan or measurements to plan the available space.']],
     variants: [
       { name: 'Reception area', detail: 'A welcoming front desk with visitor seating and practical storage.', image: 'office-reception' },
-      { name: 'Workstation desks', detail: 'Individual or shared desks planned to use the office floor space well.', image: 'office-reception' },
-      { name: 'Meeting room', detail: 'Conference tables and supporting storage for team discussions.', image: 'office-reception' },
-      { name: 'Office storage', detail: 'Cabinets, shelves and storage units made to suit the workspace.', image: 'office-reception' },
+      { name: 'Workstation desks', detail: 'Individual or shared desks planned to use the office floor space well.', image: 'office-workstation' },
+      { name: 'Meeting room', detail: 'Conference tables and supporting storage for team discussions.', image: 'office-meeting' },
+      { name: 'Office storage', detail: 'Cabinets, shelves and storage units made to suit the workspace.', image: 'office-storage' },
     ],
     materials: 'Board, laminate, hardware and dimensions are selected to suit the use of the workspace and confirmed in the quotation.',
     wa: 'Hello SK Emerald Interior, I am interested in office furniture and workspace solutions.', related: ['tv-units', 'wardrobes'] },
