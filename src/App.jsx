@@ -141,7 +141,6 @@ function Routes() {
   const isPhone = window.matchMedia?.('(max-width: 760px)').matches
   // Phone navigation keeps each merged destination to one simple page.
   if (isPhone && path === '/interiors') return <Collections />
-  if (isPhone && path === '/contact') return <About />
   const m = path.match(/^\/collections\/([^/]+)$/)
   if (m) return bySlug(m[1]) ? <Collection slug={m[1]} /> : <NotFound />
   switch (path) {
