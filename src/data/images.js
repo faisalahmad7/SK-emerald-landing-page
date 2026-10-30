@@ -61,22 +61,25 @@ const list = [
   f(39, 'Three-seat recliner sofa in brown', 'work', ['recliners']),
   // purpose crops (derived from the photographs above; see scripts/make-images.mjs)
   // Editorial homepage image: Costa Live, available under the Unsplash License.
-  f('recliner-editorial', 'Contemporary reclining sectional in a bright living room', 'inspiration', ['recliners'], { derived: true, src: 'https://images.unsplash.com/photo-1743059199976-b709ec1e35f8?auto=format&fit=crop&fm=jpg&q=82&w=1500', srcSet: undefined }),
+  f('recliner-editorial', 'Contemporary reclining sectional in a bright living room', 'inspiration', ['recliners'], { derived: true, src: 'https://assets.wfcdn.com/im/77284163/compr-r85/3291/329175310/Modern%2BLinen%2BL%2B-%2Bshaped%2BSectional%2BSofa%2Bfor%2BLiving%2BRoom.jpg', srcSet: undefined }),
   f('collection-sofas', 'Cream L-shaped corner sofa with slim gold-tone legs', 'work', ['sofas'], { derived: true }),
-  f('collection-recliners', 'Contemporary reclining sectional in a bright living room', 'inspiration', ['recliners'], { derived: true, src: 'https://images.unsplash.com/photo-1743059199976-b709ec1e35f8?auto=format&fit=crop&fm=jpg&q=82&w=1500', srcSet: undefined }),
+  f('collection-recliners', 'Contemporary reclining sectional in a bright living room', 'inspiration', ['recliners'], { derived: true, src: 'https://assets.wfcdn.com/im/77284163/compr-r85/3291/329175310/Modern%2BLinen%2BL%2B-%2Bshaped%2BSectional%2BSofa%2Bfor%2BLiving%2BRoom.jpg', srcSet: undefined }),
   f('collection-beds', 'Storage bed with warm LED lighting along its base', 'work', ['beds'], { derived: true }),
   f('detail-gold-leg', 'Grey velvet sofa arm with a perforated panel and gold-tone leg', 'work', ['sofas'], { derived: true }),
   f('detail-glass-cabinet', 'Glass-front overhead kitchen cabinets with a warm strip light beneath', 'work', ['kitchens'], { derived: true }),
   f('detail-fluted-panel', 'Fluted wall panel with gold-tone rules', 'work', ['tv'], { derived: true }),
   // Curated, high-clarity configuration photography used to show layout variety.
-  f('sofa-321', 'Beige three plus two plus one sofa arrangement', 'inspiration', ['sofas'], { derived: true, src: 'https://media-ea.landmarkshops.in/cdn-cgi/image/h=1200,w=1200,q=85,fit=cover/homecentre/1000009277277-10000092772770400_01-2100.jpg', srcSet: undefined }),
+  f('sofa-321', 'Beige three plus two plus one sofa arrangement', 'inspiration', ['sofas'], { derived: true, src: 'https://torqueindia.co/cdn/shop/files/JETT-3_2_1-BLUE-1.jpg?v=1740470964&width=1946', srcSet: undefined }),
   f('sofa-pair', 'Two coordinated beige sofas in a bright living room', 'inspiration', ['sofas'], { derived: true, src: 'https://images.unsplash.com/photo-1771577067936-680c2f795e5f?auto=format&fit=crop&fm=jpg&q=82&w=1500', srcSet: undefined }),
-  f('sofa-sectional', 'Large contemporary sectional sofa with reclining seats', 'inspiration', ['sofas', 'recliners'], { derived: true, src: 'https://images.unsplash.com/photo-1743059199976-b709ec1e35f8?auto=format&fit=crop&fm=jpg&q=82&w=1500', srcSet: undefined }),
-  f('bed-storage', 'Upholstered hydraulic storage bed in a bright bedroom', 'inspiration', ['beds'], { derived: true, src: 'https://ik.imagekit.io/2xkwa8s1i/img/npl_modified_images/CELESTRA/WUWB7872HSLOWHCELESTRA/WUWB7872HSLOWHCELESTRA_LS_1.jpg?tr=w-1800', srcSet: undefined }),
+  f('sofa-sectional', 'Large contemporary sectional sofa with reclining seats', 'inspiration', ['sofas', 'recliners'], { derived: true, src: 'https://assets.wfcdn.com/im/77284163/compr-r85/3291/329175310/Modern%2BLinen%2BL%2B-%2Bshaped%2BSectional%2BSofa%2Bfor%2BLiving%2BRoom.jpg', srcSet: undefined }),
+  f('bed-storage', 'Upholstered hydraulic storage bed in a bright bedroom', 'inspiration', ['beds'], { derived: true, src: 'https://media.adeo.com/mkp/eb909d0b797052f83b467d57327cdb72/media.jpg?fit=bounds&format=jpg&height=1800&quality=82&width=1800', srcSet: undefined }),
   f('kitchen-u', 'Modern U-shaped modular kitchen with warm wood cabinetry', 'inspiration', ['kitchens'], { derived: true, src: 'https://coohom-biz-sg-s3.coohom.com/ins/static/article/hyderabad-mod-kitchen-1773591881640300900.jpg', srcSet: undefined }),
-  f('wardrobe-sliding', 'Modern white sliding wardrobe with open storage', 'inspiration', ['wardrobes'], { derived: true, src: 'https://img.interiorcompany.com/interior/webproduct/881638582911020080659.png?aio=w-1200%3B', srcSet: undefined }),
-  f('office-reception', 'Modern office reception with visitor seating and work desk', 'inspiration', ['office'], { derived: true, src: 'https://images.unsplash.com/photo-1748261232531-6a7b6877d916?auto=format&fit=crop&fm=jpg&q=82&w=1500', srcSet: undefined }),
-  f('tv-feature-wall', 'Contemporary TV wall with floating console and sofa', 'inspiration', ['tv'], { derived: true, src: 'https://images.unsplash.com/photo-1759735218086-67f9f853ab8b?auto=format&fit=crop&fm=jpg&q=82&w=1500', srcSet: undefined }),
+  f('wardrobe-sliding', 'Modern white sliding wardrobe with open storage', 'inspiration', ['wardrobes'], { derived: true, src: 'https://img.interiorcompany.com/interior/webproduct/105638695221872143881.png?aio=w-1080%3B', srcSet: undefined }),
+  f('office-reception', 'Modern office reception with visitor seating and work desk', 'inspiration', ['office'], { derived: true, src: 'https://static.levocdn.com/WC39KELV/ReceptionDeskDesign7-6HghxPOJHYr7.jpg', srcSet: undefined }),
+  f('tv-feature-wall', 'Contemporary TV wall with floating console and sofa', 'inspiration', ['tv'], { derived: true, src: 'https://superpharmstorage.blob.core.windows.net/hybris/products/desktop/large/8681506229427.jpg', srcSet: undefined }),
+  f('office-workstation', 'Open-plan office desk workstations and storage', 'inspiration', ['office'], { derived: true, src: 'https://cdn.prod.website-files.com/642f23e5f54b794300ac12a6/699f72a10577fc102d30b860_vHLLaNn0tyUikJI-XmqCttvsmNLG6R4T8FKntrs7H48.webp', srcSet: undefined }),
+  f('office-meeting', 'Contemporary office meeting table and chairs', 'inspiration', ['office'], { derived: true, src: 'https://static.wixstatic.com/media/a9ed88_1e14de8d5493484f8cfe41d5e2912712~mv2.png/v1/fill/w_1000%2Ch_670%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01/a9ed88_1e14de8d5493484f8cfe41d5e2912712~mv2.png', srcSet: undefined }),
+  f('office-storage', 'Modern office storage cabinets and shelves', 'inspiration', ['office'], { derived: true, src: 'https://cdn.shopify.com/s/files/1/0491/2165/6981/articles/modern-office-storage-trends--style-meets-function.png?v=1748327979', srcSet: undefined }),
 ]
 export const IMAGES = Object.fromEntries(list.map((i) => [i.id, i]))
 export const img = (id) => IMAGES[id]
