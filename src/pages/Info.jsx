@@ -10,15 +10,16 @@ export function Interiors() {
     ['Bedroom', 'A storage bed, wardrobe and matching pieces sized to the room.', 'beds'],
     ['Kitchen', 'Units drawn to your floor plan, with finishes and hardware agreed in writing.', 'modular-kitchens'],
     ['Storage', 'Wardrobes and lofts that use the full wall, with drawers and shelves where you need them.', 'wardrobes'],
+    ['Office spaces', 'Reception counters, workstations, meeting tables and storage planned around the way your team works.', 'office-spaces'],
   ]
   return (
     <>
-      <Seo path="/interiors" title="Interior solutions" description="Coordinated furniture for living rooms, bedrooms, kitchens and storage, made to measure in Pune." />
+      <Seo path="/interiors" title="Interior solutions" description="Made-to-measure furniture for living rooms, bedrooms, kitchens, storage and office spaces in Pune." />
       <PageHead crumbs={[['Home', '/'], ['Interiors']]} title="Interior solutions" lead="Furniture that is planned as a set for one room, so the pieces match in size, colour and finish. We make and fit furniture. We do not offer structural or architectural services." />
       <section className="wrap rooms">
         {rooms.map(([t, d, slug], i) => { const id = SLOTS.interiors[i][0]; return (
           <article key={t} className={i % 2 ? 'flip' : ''}>
-            <Photo id={id} ratio={i === 0 || i === 2 ? '4/3' : '4/5'} reveal />
+            <Photo id={id} ratio={i === 0 || i === 2 || i === 4 ? '4/3' : '4/5'} reveal />
             <div><h2>{t}</h2><p>{d}</p><Link className="textlink" to={`/collections/${slug}`}>See the range</Link></div>
           </article>
         ) })}
