@@ -152,18 +152,22 @@ export default function Home() {
           <div><p className="editorial-eyebrow"><span /> One home, many possibilities</p><h2>Bring the whole room together.</h2><p className="muted">From the first impression in the living room to the everyday rhythm of a kitchen, each element can be planned around your space.</p></div>
           <Link to="/collections" className="editorial-underlink">Explore spaces & furniture <span aria-hidden="true">↗</span></Link>
         </div>
-        <div className="triptych editorial-triptych">
-          {[['Living room', 'sofas'], ['Bedroom', 'beds'], ['Kitchen', 'cabinets']].map(([t, slug], i) => (
-            <Link key={t} to={`/collections/${slug}`} className={`tri tri-${i + 1} tri-scroll-image tri-scroll-image-${i + 1}`}>
-              <Photo id={SLOTS.rooms[i]} ratio="4/3" />
-              <span>{t}</span>
-            </Link>
-          ))}
-        </div>
-        <div className="editorial-room-additions editorial-room-additions--single">
-          <Link to="/collections/office-spaces" className="editorial-room-card">
-            <Photo id="office-reception" ratio="16/10" />
-            <span><b>Office spaces</b><i>Reception, desks and work areas ↗</i></span>
+        <div className="triptych editorial-triptych editorial-room-grid">
+          <Link to="/interiors/living-room" className="tri tri-room-card">
+            <Photo id={SLOTS.rooms[0]} ratio="4/3" sizes="(min-width: 760px) 50vw, 100vw" />
+            <span>Living room</span>
+          </Link>
+          <Link to="/interiors/bedroom" className="tri tri-room-card">
+            <Photo id={SLOTS.rooms[1]} ratio="4/3" sizes="(min-width: 760px) 50vw, 100vw" />
+            <span>Bedroom</span>
+          </Link>
+          <Link to="/interiors/kitchen" className="tri tri-room-card">
+            <Photo id={SLOTS.rooms[2]} ratio="4/3" sizes="(min-width: 760px) 50vw, 100vw" />
+            <span>Kitchen</span>
+          </Link>
+          <Link to="/interiors/office-spaces" className="tri tri-room-card">
+            <Photo id="office-reception" ratio="4/3" sizes="(min-width: 760px) 50vw, 100vw" />
+            <span>Office spaces</span>
           </Link>
         </div>
         <div className="editorial-room-promise">

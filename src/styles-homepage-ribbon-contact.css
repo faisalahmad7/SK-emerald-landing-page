@@ -3570,3 +3570,71 @@ body { font-size: 17px; }
 }
 .variant-grid--fit .variant-card p { margin-bottom: 14px; }
 .variant-grid--fit .variant-card a { margin-top: auto; }
+
+
+/* Equal-sized four-card room grid */
+.homepage-ribbon-pass .editorial-room-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(22px, 3.2vw, 42px);
+  width: 100%;
+  margin: clamp(28px, 4vw, 48px) 0 0;
+  padding: 0;
+  overflow: visible;
+}
+.homepage-ribbon-pass .editorial-room-grid .tri-room-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  text-decoration: none;
+}
+.homepage-ribbon-pass .editorial-room-grid .tri-room-card .photo {
+  display: block;
+  width: 100%;
+  height: auto !important;
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden;
+  outline: 1px solid #C6A66B;
+  outline-offset: 6px;
+  box-shadow: 0 18px 44px #17271e0c;
+}
+.homepage-ribbon-pass .editorial-room-grid .tri-room-card .photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .65s cubic-bezier(.2,.65,.25,1);
+}
+.homepage-ribbon-pass .editorial-room-grid .tri-room-card:hover .photo img,
+.homepage-ribbon-pass .editorial-room-grid .tri-room-card:focus-visible .photo img {
+  transform: scale(1.035);
+}
+.homepage-ribbon-pass .editorial-room-grid .tri-room-card > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  font: 500 clamp(1.35rem, 2vw, 2rem)/1.1 var(--ed-serif);
+}
+.homepage-ribbon-pass .editorial-room-grid .tri-room-card > span::after {
+  content: "↗";
+  color: #9B8150;
+  font: 400 1rem var(--ed-sans);
+}
+@media (max-width: 560px) {
+  .homepage-ribbon-pass .editorial-room-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    margin-top: 26px;
+  }
+  .homepage-ribbon-pass .editorial-room-grid .tri-room-card .photo {
+    outline-offset: 5px;
+  }
+  .homepage-ribbon-pass .editorial-room-grid .tri-room-card > span {
+    padding-top: 14px;
+    font-size: 1.5rem;
+  }
+}
