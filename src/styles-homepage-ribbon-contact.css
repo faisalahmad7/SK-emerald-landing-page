@@ -1,0 +1,3566 @@
+/* SK Emerald — precise homepage ribbon + header alignment pass.
+   No global typography, routing or hero image changes. */
+
+.header-ribbon-contact .header-ribbon-contact-inner,
+.site-header.header-ribbon-contact .bar.wrap {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: clamp(18px, 3vw, 48px);
+  gap: clamp(10px, 1.35vw, 22px);
+}
+
+.site-header.header-ribbon-contact .brand {
+  flex: 0 0 auto;
+  margin-right: 0;
+}
+
+.site-header.header-ribbon-contact .nav {
+  margin-left: auto;
+  gap: clamp(11px, 1.15vw, 18px);
+  flex: 0 1 auto;
+  white-space: nowrap;
+}
+
+.site-header.header-ribbon-contact .nav a {
+  font-size: clamp(.78rem, .85vw, .88rem);
+}
+
+.site-header.header-ribbon-contact .quote {
+  flex: 0 0 auto;
+  margin-left: clamp(4px, .7vw, 12px);
+  padding-inline: clamp(12px, 1.35vw, 19px);
+  white-space: nowrap;
+}
+
+/* If a narrower desktop cannot fit all navigation items, keep them usable
+   in the mobile drawer instead of allowing the header to collide. */
+@media (min-width: 980px) and (max-width: 1120px) {
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    gap: 10px;
+  }
+  .site-header.header-ribbon-contact .nav {
+    gap: 10px;
+  }
+  .site-header.header-ribbon-contact .nav a {
+    font-size: .75rem;
+  }
+  .site-header.header-ribbon-contact .quote {
+    padding-inline: 10px;
+    font-size: .75rem;
+  }
+}
+
+/* The six category links become the confident green ribbon seen in the preview. */
+.homepage-ribbon-pass .editorial-hero-index {
+  background: #17382B;
+  border-top: 1px solid #C6A66B;
+  border-bottom: 1px solid #C6A66B;
+  box-shadow: none;
+}
+
+.homepage-ribbon-pass .editorial-hero-index a {
+  color: #FBF8F1;
+  border-right-color: #FFFFFF30;
+  min-width: 0;
+  transition: color .25s, background .25s;
+}
+
+.homepage-ribbon-pass .editorial-hero-index a span {
+  color: #D3B981;
+}
+
+.homepage-ribbon-pass .editorial-hero-index a:hover {
+  color: #F0D7A5;
+  background: #FFFFFF0A;
+}
+
+.homepage-ribbon-pass .editorial-hero-index a:focus-visible {
+  outline-color: #D3B981;
+}
+
+.home-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 17px 0 15px;
+  border-bottom: 1px solid #C9C4B6;
+  background: #E9E3D7;
+  color: #17382B;
+}
+
+.home-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: sk-home-marquee 34s linear infinite;
+  will-change: transform;
+}
+
+.home-marquee-track span {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 40px);
+  padding-right: clamp(18px, 3vw, 40px);
+  white-space: nowrap;
+  font: 600 .65rem/1.5 var(--ed-sans);
+  letter-spacing: .19em;
+}
+
+.home-marquee-track i {
+  color: #A88B52;
+  font-style: normal;
+  font-size: .9rem;
+}
+
+@keyframes sk-home-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.homepage-ribbon-pass .editorial-intro {
+  background: #FBF8F1;
+}
+
+.homepage-ribbon-pass .editorial-intro-visual .a {
+  outline: 1px solid #C6A66B;
+  outline-offset: 10px;
+  box-shadow: 0 24px 72px #10281F1D;
+}
+
+.homepage-ribbon-pass .editorial-intro-visual .b {
+  border-color: #F4F0E7;
+}
+
+.homepage-ribbon-pass .editorial-triptych .tri .photo {
+  outline-color: #C6A66B;
+  box-shadow: 0 20px 54px #10281F15;
+}
+
+.homepage-ribbon-pass .photo figcaption {
+  padding: 7px 11px 6px;
+  border-top: 1px solid #C6A66B;
+  font: 700 .55rem/1.4 var(--ed-sans);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #17382B;
+  background: #FBF8F1F2;
+}
+
+@media (max-width: 1120px) {
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    padding-inline: clamp(18px, 2.5vw, 30px);
+  }
+}
+
+@media (max-width: 979px) {
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    padding-inline: clamp(18px, 4vw, 28px);
+  }
+  .site-header.header-ribbon-contact .nav,
+  .site-header.header-ribbon-contact .quote {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding-inline: var(--gut);
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(3n) {
+    border-right: 0;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(n+4) {
+    border-top: 1px solid #FFFFFF24;
+  }
+}
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding-inline: var(--gut);
+  }
+  .homepage-ribbon-pass .editorial-hero-index a {
+    min-height: 60px;
+    padding-inline: 10px;
+    border-right: 1px solid #FFFFFF30;
+    border-top: 1px solid #FFFFFF24;
+    font-size: .97rem;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(2n) {
+    border-right: 0;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(-n+2) {
+    border-top: 0;
+  }
+  .home-marquee {
+    padding-block: 14px 12px;
+  }
+  .home-marquee-track span {
+    font-size: .58rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .homepage-ribbon-pass .editorial-hero-index a {
+    font-size: .9rem;
+    gap: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-marquee-track {
+    animation: none;
+    transform: none;
+  }
+  .home-marquee-track,
+  .homepage-ribbon-pass .photo figcaption {
+    transition: none !important;
+  }
+}
+
+
+/* Mobile navigation: the old header backdrop-filter created a containing block
+   for fixed descendants, which could pin the menu to the header instead of the screen. */
+.site-header.header-ribbon-contact.menu-open {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  background: rgba(248, 245, 238, .98);
+}
+
+.site-header.header-ribbon-contact .drawer-backdrop[hidden] {
+  display: none !important;
+}
+
+.site-header.header-ribbon-contact .drawer-backdrop {
+  position: fixed;
+  inset: 68px 0 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: calc(100vh - 68px);
+  height: calc(100dvh - 68px);
+  padding: 0;
+  border: 0;
+  background: rgba(5, 17, 11, .62);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (min-width: 980px) {
+  .site-header.header-ribbon-contact .drawer-backdrop {
+    display: none !important;
+  }
+}
+
+@media (max-width: 979px) {
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    height: 68px;
+    min-height: 68px;
+    padding-left: max(18px, env(safe-area-inset-left));
+    padding-right: max(18px, env(safe-area-inset-right));
+    gap: 12px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .site-header.header-ribbon-contact .brand {
+    min-width: 0;
+    gap: 10px;
+  }
+
+  .site-header.header-ribbon-contact .brand img {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+  }
+
+  .site-header.header-ribbon-contact .brand b {
+    font-size: clamp(1.18rem, 5vw, 1.42rem);
+    white-space: nowrap;
+  }
+
+  .site-header.header-ribbon-contact .brand i {
+    font-size: .58rem;
+    letter-spacing: .28em;
+  }
+
+  .site-header.header-ribbon-contact .burger {
+    display: block;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    z-index: 4;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .site-header.header-ribbon-contact .drawer {
+    inset: 68px 0 0;
+    z-index: 2;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    max-height: calc(100vh - 68px);
+    max-height: calc(100dvh - 68px);
+    padding: 8px max(24px, env(safe-area-inset-left)) calc(24px + env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-right));
+    gap: 24px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: transform .22s ease, opacity .22s ease;
+  }
+
+  .site-header.header-ribbon-contact .drawer.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .site-header.header-ribbon-contact .drawer nav a {
+    min-height: 56px;
+    display: flex;
+    align-items: center;
+    font-size: clamp(1.6rem, 7vw, 1.9rem);
+    line-height: 1.2;
+    padding: 13px 0;
+  }
+
+  .site-header.header-ribbon-contact .drawer > .btn {
+    width: 100%;
+    min-height: 52px;
+    flex: 0 0 auto;
+  }
+}
+
+/* Mobile hero: put the headline on the photograph, then the supporting copy,
+   actions, and only then the six category links and the moving ticker. */
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(clamp(390px, 112vw, 520px), auto) auto auto auto auto;
+    background: #FBF8F1;
+    color: #17382B;
+    overflow: visible;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-copy {
+    display: contents;
+    padding: 0;
+    margin: 0;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-image {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-image > .photo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto !important;
+    box-shadow: none;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-image > .photo::after {
+    content: none;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-image > .photo img {
+    object-position: 48% 50%;
+    filter: brightness(.74);
+  }
+
+  .homepage-ribbon-pass .editorial-hero-image::after {
+    inset: 12px;
+    z-index: 2;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-eyebrow {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    justify-self: stretch;
+    z-index: 4;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    max-width: none;
+    margin: 0;
+    padding: 30px clamp(28px, 7vw, 38px) 0;
+    color: #F3F0E7;
+    font-size: .58rem;
+    line-height: 1.5;
+    letter-spacing: .15em;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-eyebrow > span:first-child {
+    width: 22px;
+    background: #D3B981;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-copy .eyebrow-city {
+    display: inline;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    color: #D6BD8A;
+    white-space: nowrap;
+  }
+
+  .homepage-ribbon-pass .editorial-hero h1 {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+    justify-self: start;
+    z-index: 4;
+    position: relative;
+    max-width: 10ch;
+    margin: 0;
+    padding: 0 clamp(28px, 7vw, 38px) clamp(108px, 28vw, 128px);
+    color: #FBF8F1;
+    font-size: clamp(3.05rem, 12vw, 4.05rem);
+    line-height: .88;
+    letter-spacing: -.05em;
+    text-shadow: 0 3px 28px #06150e80;
+  }
+
+  .homepage-ribbon-pass .editorial-hero h1 em {
+    color: #D6BD8A;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .lead {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    margin: 0;
+    padding: 26px var(--gut) 0;
+    max-width: 54ch;
+    color: #505C53;
+    font-size: .98rem;
+    line-height: 1.75;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .actions {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: start;
+    margin: 18px 0 0;
+    padding: 0 var(--gut);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-btn {
+    width: 100%;
+    min-height: 52px;
+    padding-inline: 18px;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-text-link {
+    width: 100%;
+    min-height: 48px;
+    justify-content: space-between;
+    padding: 12px 2px;
+    color: #17382B;
+    font-size: .82rem;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .hero-proof {
+    grid-column: 1;
+    grid-row: 4;
+    max-width: none;
+    margin: 8px var(--gut) 26px;
+    padding-top: 15px;
+    border-top: 1px solid #C6A66B66;
+    color: #5B695F;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .hero-proof > span:first-child {
+    color: #9A7E4C;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .hero-proof p {
+    color: #5B695F;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-column: 1;
+    grid-row: 5;
+    align-self: stretch;
+    padding: 0 var(--gut);
+    margin: 0;
+  }
+
+  .homepage-ribbon-pass .editorial-intro {
+    gap: 48px;
+    padding-block: 68px;
+  }
+
+  .homepage-ribbon-pass .editorial-intro-visual {
+    width: 100%;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .homepage-ribbon-pass .editorial-showcase {
+    padding-block: 64px 76px;
+  }
+
+  .homepage-ribbon-pass .editorial-materials .split {
+    padding-block: 72px;
+    gap: 44px;
+  }
+
+  .homepage-ribbon-pass .editorial-material-stack {
+    width: 100%;
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  .homepage-ribbon-pass .editorial-rooms {
+    padding-block: 68px;
+  }
+
+  .homepage-ribbon-pass .editorial-triptych {
+    gap: 18px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+
+  .homepage-ribbon-pass .editorial-triptych .tri {
+    width: min(78vw, 320px);
+  }
+
+  .homepage-ribbon-pass .editorial-process-band {
+    padding-block: 68px;
+  }
+
+  .homepage-ribbon-pass .editorial-visit {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding-block: 68px;
+  }
+
+  .homepage-ribbon-pass .editorial-visit-heading h2 {
+    max-width: 10ch;
+    font-size: clamp(3rem, 11vw, 4rem);
+  }
+
+  .homepage-ribbon-pass .editorial-visit .actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .homepage-ribbon-pass .editorial-visit .actions .btn {
+    width: 100%;
+  }
+
+  .homepage-ribbon-pass .editorial-visit .actions .editorial-underlink {
+    margin-top: 0;
+  }
+
+  .homepage-ribbon-pass .enquire > .wrap {
+    padding-block: 68px;
+  }
+
+  .homepage-ribbon-pass .enquire h2 {
+    font-size: clamp(3rem, 11vw, 4.1rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .homepage-ribbon-pass .editorial-hero h1 {
+    max-width: 10ch;
+    font-size: clamp(3rem, 11.8vw, 3.55rem);
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-eyebrow {
+    padding-top: 25px;
+    font-size: .54rem;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-image > .photo img {
+    object-position: 52% 50%;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .lead {
+    font-size: .94rem;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-index a {
+    min-height: 58px;
+    font-size: .92rem;
+  }
+
+  .homepage-ribbon-pass .editorial-mosaic .tile-cap {
+    padding: 48px 16px 18px;
+  }
+
+  .homepage-ribbon-pass .editorial-mosaic .tile-name {
+    font-size: clamp(1.45rem, 7vw, 1.75rem);
+  }
+
+  .homepage-ribbon-pass .editorial-visit .actions {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 599px) {
+  .pagehead {
+    padding-block: 32px 36px;
+  }
+
+  .pagehead h1 {
+    margin-top: 15px;
+    font-size: clamp(2.25rem, 10.5vw, 3.25rem);
+  }
+
+  .catalog {
+    gap: 48px;
+  }
+
+  .cat,
+  .rooms article,
+  .about {
+    gap: 22px;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .site-footer {
+    padding-top: 48px;
+  }
+
+  .site-footer .grid {
+    gap: 30px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header.header-ribbon-contact .drawer,
+  .site-header.header-ribbon-contact .drawer-backdrop {
+    transition: none !important;
+  }
+}
+
+
+/* PHONE-ONLY POLISH: right-align menu, give both hero actions a button shape,
+   and make the made-to-measure note feel integrated with the light page section. */
+@media (max-width: 760px) {
+  /* Keep the wordmark against the left edge and push the menu control to the right. */
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    justify-content: space-between;
+  }
+
+  .site-header.header-ribbon-contact .brand {
+    flex: 0 1 auto;
+    min-width: 0;
+    margin-right: auto !important;
+  }
+
+  .site-header.header-ribbon-contact .burger {
+    flex: 0 0 48px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  /* Give both calls to action a clear silhouette against the cream page background. */
+  .homepage-ribbon-pass .editorial-hero .actions {
+    gap: 10px;
+    margin-top: 18px;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 54px;
+    padding: 14px 18px;
+    border: 1px solid #17382B;
+    background: #17382B;
+    color: #FBF8F1;
+    box-shadow: 0 4px 12px #17382B18;
+    text-decoration: none;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-btn span {
+    color: #D9C18D;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-text-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 52px;
+    padding: 13px 18px;
+    border: 1px solid #C6A66B;
+    background: #F4EFE4;
+    color: #17382B;
+    box-shadow: inset 0 0 0 1px #FFFFFFA0;
+    font-size: .84rem;
+    line-height: 1.35;
+    text-decoration: none;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-text-link span {
+    flex: 0 0 auto;
+    color: #8D713F;
+  }
+
+  /* Hide only the proof number on phones; desktop keeps its original number. */
+  .homepage-ribbon-pass .editorial-hero .hero-proof {
+    display: block;
+    margin: 12px var(--gut) 26px;
+    padding: 15px 17px 14px;
+    border: 0;
+    border-left: 2px solid #B99A60;
+    background: #F0EBDD;
+    color: #334B3B;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .hero-proof > span:first-child {
+    display: none;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .hero-proof p {
+    color: #334B3B;
+    font: italic 500 1.02rem/1.5 var(--ed-serif);
+    letter-spacing: -.005em;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .hero-proof-rule {
+    display: block;
+    width: 38px;
+    height: 1px;
+    margin-top: 11px;
+    background: #B99A60;
+  }
+}
+
+@media (max-width: 420px) {
+  .site-header.header-ribbon-contact .header-ribbon-contact-inner {
+    gap: 8px;
+  }
+
+  .site-header.header-ribbon-contact .brand {
+    gap: 8px;
+  }
+
+  .site-header.header-ribbon-contact .brand b {
+    font-size: clamp(1.1rem, 5vw, 1.28rem);
+  }
+
+  .site-header.header-ribbon-contact .burger {
+    width: 46px;
+    min-width: 46px;
+    flex-basis: 46px;
+  }
+
+  .homepage-ribbon-pass .editorial-hero .editorial-text-link,
+  .homepage-ribbon-pass .editorial-hero .editorial-btn {
+    padding-inline: 15px;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   ATMOSPHERE PASS 02 — full-bleed, architectural rather than botanical.
+   The previous leaf and right-side grain treatments are deliberately removed.
+   Visual cues: quiet furniture-editorial layouts, measured negative space,
+   broad material texture, and thin architectural rules. */
+/* 1) COLLECTIONS: a whole-section contour field, not a small ornament in one
+   text column. It sits behind the complete horizontal section, including the
+   whitespace around the mosaic, and uses a low-contrast mineral palette. */
+.homepage-ribbon-pass .editorial-showcase {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 14% 7%, #F6F1E7 0%, transparent 44%),
+    radial-gradient(ellipse at 91% 76%, #DCD5C7 0%, transparent 42%),
+    #E9E5DA;
+}
+.homepage-ribbon-pass .editorial-showcase::before {
+  content: "";
+  position: absolute;
+  inset: -1.5% -1%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .25;
+  background-image:
+    repeating-radial-gradient(ellipse 74% 58% at 5% 5%,
+      transparent 0 64px, #9C8D70 65px 66px, transparent 67px 92px),
+    repeating-radial-gradient(ellipse 69% 70% at 97% 95%,
+      transparent 0 79px, #9C8D70 80px 81px, transparent 82px 111px);
+  transform: translate3d(0, 0, 0);
+  animation: sk-showcase-contours 38s ease-in-out infinite alternate;
+}
+.homepage-ribbon-pass .editorial-showcase > .wrap,
+.homepage-ribbon-pass .editorial-showcase > .editorial-mosaic {
+  position: relative;
+  z-index: 1;
+}
+@keyframes sk-showcase-contours {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(-8px, 5px, 0) scale(1.012); }
+}
+
+/* 2) MATERIALS: soft, continuous timber lines cross the ENTIRE forest-green
+   band from edge to edge. This is a background surface, not a right-hand card. */
+.homepage-ribbon-pass .editorial-materials {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 16% 42%, #315342 0%, transparent 46%),
+    #17382B;
+}
+.homepage-ribbon-pass .editorial-materials::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: .095;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 1100' preserveAspectRatio='none' fill='none' stroke='%23D8C392' stroke-width='1.35'%3E%3Cpath d='M-80 75 C190 8 292 168 518 126 S822 20 1040 88 S1360 195 1680 76'/%3E%3Cpath d='M-80 115 C180 49 302 204 527 165 S827 60 1049 128 S1361 232 1680 118'/%3E%3Cpath d='M-80 157 C172 91 311 242 535 205 S833 101 1057 170 S1365 273 1680 159'/%3E%3Cpath d='M-80 199 C169 133 320 280 543 246 S840 142 1064 212 S1368 314 1680 202'/%3E%3Cpath d='M-80 340 C185 270 312 420 541 388 S840 282 1067 350 S1370 455 1680 341'/%3E%3Cpath d='M-80 382 C180 311 324 462 549 429 S845 324 1074 392 S1374 495 1680 384'/%3E%3Cpath d='M-80 424 C175 355 333 505 557 470 S852 365 1080 433 S1378 537 1680 426'/%3E%3Cpath d='M-80 466 C170 397 343 546 566 513 S858 406 1087 476 S1383 578 1680 468'/%3E%3Cpath d='M-80 625 C177 552 316 706 544 671 S844 567 1070 634 S1374 741 1680 627'/%3E%3Cpath d='M-80 667 C173 594 329 747 553 712 S850 608 1078 675 S1378 782 1680 669'/%3E%3Cpath d='M-80 709 C168 636 342 789 561 754 S856 649 1085 717 S1383 824 1680 711'/%3E%3Cpath d='M-80 751 C165 678 354 831 570 796 S864 691 1092 759 S1389 866 1680 753'/%3E%3Cpath d='M-80 910 C185 842 316 986 548 955 S846 850 1074 917 S1381 1022 1680 912'/%3E%3Cpath d='M-80 952 C178 884 329 1028 557 997 S853 892 1081 959 S1385 1064 1680 954'/%3E%3Cpath d='M-80 994 C172 926 340 1070 565 1039 S860 934 1088 1001 S1390 1105 1680 996'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: sk-timber-drift 42s ease-in-out infinite alternate;
+}
+.homepage-ribbon-pass .editorial-materials > .wrap {
+  position: relative;
+  z-index: 1;
+}
+@keyframes sk-timber-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-5px, 3px, 0); }
+}
+
+/* 3) PROCESS: on wide screens, let the five steps become a single editorial
+   timeline across the whole content width. The fine gold rule draws in when
+   the steps enter view; the circles keep the line intentional, not decorative. */
+.homepage-ribbon-pass .editorial-process-band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 100% 10%, #F2EDE2 0%, transparent 54%),
+    #E7E3D8;
+}
+.homepage-ribbon-pass .editorial-process-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .16;
+  background-image:
+    linear-gradient(90deg, transparent 0%, #C6A66B 49.9%, transparent 50.1%),
+    repeating-linear-gradient(0deg, transparent 0 74px, #A99B7E 75px 76px, transparent 77px 148px);
+  background-size: 100% 100%, 100% 100%;
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 24%, #000 80%, transparent 100%);
+}
+.homepage-ribbon-pass .editorial-process {
+  position: relative;
+  z-index: 1;
+}
+@media (min-width: 1200px) {
+  .homepage-ribbon-pass .editorial-process {
+    display: block;
+  }
+  .homepage-ribbon-pass .editorial-process-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    align-items: end;
+    gap: clamp(48px, 7vw, 110px);
+    margin-bottom: clamp(38px, 5vw, 66px);
+  }
+  .homepage-ribbon-pass .editorial-process-intro h2 {
+    max-width: 12ch;
+  }
+  .homepage-ribbon-pass .editorial-process-intro > p:last-child {
+    max-width: 40ch;
+    margin: 0 0 5px;
+  }
+  .homepage-ribbon-pass .editorial-process ol {
+    position: relative;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: clamp(16px, 2vw, 30px);
+    align-items: stretch;
+  }
+  .homepage-ribbon-pass .editorial-process ol::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 17px;
+    left: 17px;
+    right: 17px;
+    height: 1px;
+    background: #B59A61;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 1.5s cubic-bezier(.2,.65,.25,1);
+  }
+  .homepage-ribbon-pass .editorial-process ol:has(li[data-in])::before {
+    transform: scaleX(1);
+  }
+  .homepage-ribbon-pass .editorial-process li,
+  .homepage-ribbon-pass .editorial-process li:last-child {
+    grid-column: auto;
+    position: relative;
+    z-index: 1;
+    min-width: 0;
+    padding: 0 14px 24px 0;
+    border-top: 0;
+    border-bottom: 1px solid #B9B9AC;
+    background: transparent;
+  }
+  .homepage-ribbon-pass .editorial-process .step {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    margin: 0 0 23px;
+    border: 1px solid #B59A61;
+    border-radius: 50%;
+    background: #E7E3D8;
+    color: #826A3F;
+    font-size: .62rem;
+  }
+  .homepage-ribbon-pass .editorial-process li h3 {
+    max-width: 14ch;
+    margin-top: 0;
+    font-size: clamp(1.32rem, 1.65vw, 1.8rem);
+    line-height: 1.05;
+  }
+  .homepage-ribbon-pass .editorial-process li p {
+    max-width: 28ch;
+  }
+}
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-showcase::before {
+    opacity: .15;
+    background-size: 155% 112%, 140% 118%;
+    animation-duration: 52s;
+  }
+  .homepage-ribbon-pass .editorial-materials::before {
+    opacity: .055;
+    animation-duration: 60s;
+  }
+  .homepage-ribbon-pass .editorial-process-band::before {
+    opacity: .08;
+    background-image: repeating-linear-gradient(0deg, transparent 0 86px, #A99B7E 87px 88px, transparent 89px 172px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-ribbon-pass .editorial-showcase::before,
+  .homepage-ribbon-pass .editorial-materials::before,
+  .homepage-ribbon-pass .editorial-process ol::before {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+
+/* Layout tune: keep the process eyebrow full-width, then balance the heading
+   against its supporting sentence. Avoid a central divider in the linen field. */
+@media (min-width: 1200px) {
+  .homepage-ribbon-pass .editorial-process-intro .editorial-eyebrow {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+  .homepage-ribbon-pass .editorial-process-intro h2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .homepage-ribbon-pass .editorial-process-intro > p:last-child {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .homepage-ribbon-pass .editorial-process-band::before {
+    background-image: repeating-linear-gradient(
+      0deg,
+      transparent 0 76px,
+      #A99B7E 77px 78px,
+      transparent 79px 152px
+    );
+  }
+}
+
+
+/* USER REFINEMENTS — remove all background rules that run through process copy,
+   open up compressed heading leading, and move the materials glow to two corners. */
+
+/* No central divider or horizontal rule field behind the process heading.
+   Replace it with a quiet concentric detail cropped into the bottom-right corner. */
+.homepage-ribbon-pass .editorial-process-band {
+  background:
+    radial-gradient(circle at 0% 0%, #F1EBDD 0%, transparent 29%),
+    radial-gradient(circle at 100% 100%, #D6CCBB 0%, transparent 36%),
+    #E7E3D8;
+}
+.homepage-ribbon-pass .editorial-process-band::before {
+  inset: auto -150px -205px auto;
+  width: 520px;
+  height: 520px;
+  opacity: .12;
+  background-image: radial-gradient(circle,
+    transparent 0 106px,
+    #A18A5A 107px 108px,
+    transparent 109px 139px,
+    #A18A5A 140px 141px,
+    transparent 142px 174px,
+    #A18A5A 175px 176px,
+    transparent 177px 209px,
+    #A18A5A 210px 211px,
+    transparent 212px
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  mask-image: none;
+}
+
+/* The previous display headings used unusually compressed leading, which made
+   Cormorant's tall ascenders/descenders visually collide when a heading wrapped.
+   Keep the editorial scale while giving each line enough breathing room. */
+.homepage-ribbon-pass .editorial-hero h1 {
+  line-height: .96;
+  text-wrap: balance;
+}
+.homepage-ribbon-pass .editorial-intro-copy h2,
+.homepage-ribbon-pass .editorial-section-head h2,
+.homepage-ribbon-pass .editorial-materials h2,
+.homepage-ribbon-pass .editorial-process-intro h2,
+.homepage-ribbon-pass .editorial-visit-heading h2,
+.homepage-ribbon-pass .enquire h2 {
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.homepage-ribbon-pass .editorial-process li h3 {
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+/* Two separate circular pools of light are anchored to the copy's upper-left
+   and lower-right corners. Neither gradient sits in the centre of the headline. */
+.homepage-ribbon-pass .editorial-materials {
+  background:
+    radial-gradient(circle 370px at 5% 13%, #42644B 0%, #315342 35%, transparent 100%),
+    radial-gradient(circle 310px at 43% 88%, #294B39 0%, #244433 38%, transparent 100%),
+    #17382B;
+}
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-process-band::before {
+    inset: auto -245px -265px auto;
+    width: 420px;
+    height: 420px;
+    opacity: .065;
+  }
+  .homepage-ribbon-pass .editorial-materials {
+    background:
+      radial-gradient(circle 245px at 7% 9%, #3C5B45 0%, #315342 36%, transparent 100%),
+      radial-gradient(circle 210px at 91% 89%, #294B39 0%, #244433 38%, transparent 100%),
+      #17382B;
+  }
+  .homepage-ribbon-pass .editorial-hero h1 {
+    line-height: .98;
+  }
+  .homepage-ribbon-pass .editorial-intro-copy h2,
+  .homepage-ribbon-pass .editorial-section-head h2,
+  .homepage-ribbon-pass .editorial-materials h2,
+  .homepage-ribbon-pass .editorial-process-intro h2,
+  .homepage-ribbon-pass .editorial-visit-heading h2,
+  .homepage-ribbon-pass .enquire h2 {
+    line-height: 1.04;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-ribbon-pass .editorial-process-band::before {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+
+/* ──────────────────────────────────────────────────────────────────────────
+   REQUESTED HOME PAGE DETAILS — symmetric process rings, warm botanical
+   linework in the intro, roomier editorial leading, and premium scroll reveals. */
+
+/* Keep the process section's circular detail balanced: one ring field at each
+   diagonal corner, both behind the content and outside the heading area. */
+.homepage-ribbon-pass .editorial-process-band::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: -235px;
+  left: -235px;
+  width: 520px;
+  height: 520px;
+  pointer-events: none;
+  opacity: .10;
+  background-image: radial-gradient(circle,
+    transparent 0 106px,
+    #A18A5A 107px 108px,
+    transparent 109px 139px,
+    #A18A5A 140px 141px,
+    transparent 142px 174px,
+    #A18A5A 175px 176px,
+    transparent 177px 209px,
+    #A18A5A 210px 211px,
+    transparent 212px
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+/* The intro's botanical branches are drawn as fine, warm wood/sage line art.
+   They sit at opposite corners, behind the photographs and copy—not over them. */
+.homepage-ribbon-pass .editorial-intro {
+  position: relative;
+  isolation: isolate;
+}
+.homepage-ribbon-pass .editorial-intro::before,
+.homepage-ribbon-pass .editorial-intro::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  width: clamp(130px, 16vw, 220px);
+  height: clamp(205px, 23vw, 310px);
+  pointer-events: none;
+  opacity: .20;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.homepage-ribbon-pass .editorial-intro::before {
+  top: 12px;
+  left: -6px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 340' fill='none' stroke='%23978058' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 330 C40 276 60 223 91 174 C120 127 160 83 225 12'/%3E%3Cpath d='M40 278 C17 275 7 253 16 232 C36 243 45 260 40 278Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M47 265 C70 267 89 249 91 226 C68 233 52 247 47 265Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M71 213 C48 207 39 185 50 165 C69 181 77 198 71 213Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M82 195 C104 191 118 173 115 151 C96 162 84 178 82 195Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M112 151 C92 138 91 116 105 100 C119 118 120 135 112 151Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M125 133 C146 130 160 112 157 92 C139 102 128 117 125 133Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M154 96 C138 79 143 58 160 46 C166 65 164 82 154 96Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M166 80 C186 76 199 61 198 42 C180 51 169 65 166 80Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M195 45 C184 30 190 15 205 7 C209 22 205 36 195 45Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3C/svg%3E");
+  transform: rotate(-3deg);
+}
+.homepage-ribbon-pass .editorial-intro::after {
+  right: -4px;
+  bottom: 2px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 340' fill='none' stroke='%23978058' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 330 C40 276 60 223 91 174 C120 127 160 83 225 12'/%3E%3Cpath d='M40 278 C17 275 7 253 16 232 C36 243 45 260 40 278Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M47 265 C70 267 89 249 91 226 C68 233 52 247 47 265Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M71 213 C48 207 39 185 50 165 C69 181 77 198 71 213Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M82 195 C104 191 118 173 115 151 C96 162 84 178 82 195Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M112 151 C92 138 91 116 105 100 C119 118 120 135 112 151Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M125 133 C146 130 160 112 157 92 C139 102 128 117 125 133Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M154 96 C138 79 143 58 160 46 C166 65 164 82 154 96Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M166 80 C186 76 199 61 198 42 C180 51 169 65 166 80Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3Cpath d='M195 45 C184 30 190 15 205 7 C209 22 205 36 195 45Z' fill='%23A5AD96' fill-opacity='.22'/%3E%3C/svg%3E");
+  transform: rotate(177deg);
+}
+.homepage-ribbon-pass .editorial-intro > .editorial-intro-visual,
+.homepage-ribbon-pass .editorial-intro > .editorial-intro-copy {
+  position: relative;
+  z-index: 1;
+}
+
+/* More comfortable leading for the display headings and the short supporting
+   lines throughout the homepage; keep the type sizes and section structure. */
+.homepage-ribbon-pass h2 {
+  line-height: 1.09;
+}
+.homepage-ribbon-pass h3 {
+  line-height: 1.2;
+}
+.homepage-ribbon-pass .editorial-hero h1 {
+  line-height: .98;
+}
+.homepage-ribbon-pass .editorial-visit-heading h2 {
+  line-height: 1.1;
+}
+.homepage-ribbon-pass .editorial-section-head .muted,
+.homepage-ribbon-pass .editorial-intro-copy .lead,
+.homepage-ribbon-pass .editorial-intro-copy > p:not(.lead):not(.editorial-eyebrow),
+.homepage-ribbon-pass .editorial-materials-copy > p:not(.editorial-eyebrow):not(.editorial-small-note),
+.homepage-ribbon-pass .editorial-process-intro > p:last-child,
+.homepage-ribbon-pass .editorial-visit-details > p:first-child,
+.homepage-ribbon-pass .editorial-visit-details .muted,
+.homepage-ribbon-pass .enquire .wrap > p {
+  line-height: 1.82;
+}
+
+
+/* CALM REVEALS — keep the photography itself still while the card arrives. */
+.js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv {
+  opacity: 0;
+  transform: translate3d(0, 14px, 0);
+  clip-path: none;
+  transition: none;
+  will-change: opacity, transform;
+}
+.js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv[data-in] {
+  opacity: 1;
+  transform: none;
+  clip-path: none;
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile .photo img {
+  transform: none;
+  transition: transform .8s cubic-bezier(.2,.65,.25,1);
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:hover .photo img,
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:focus-visible .photo img {
+  transform: scale(1.025);
+}
+
+/* FIXED, SOLID HEADER — no blur/transparent layers while scrolling on phones. */
+.site-header.header-ribbon-contact,
+.site-header.header-ribbon-contact.menu-open {
+  position: fixed;
+  inset: 0 0 auto;
+  width: 100%;
+  z-index: 100;
+  background: #F8F5EE;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid #C9CECC;
+  box-shadow: 0 5px 18px #17271E0A;
+}
+.site-header.header-ribbon-contact + main {
+  padding-top: 81px;
+}
+@media (max-width: 979px) {
+  .site-header.header-ribbon-contact + main {
+    padding-top: 69px;
+  }
+}
+@media (max-width: 979px) {
+  .site-header.header-ribbon-contact .drawer-backdrop {
+    top: 68px;
+    height: calc(100vh - 68px);
+    height: calc(100dvh - 68px);
+  }
+  .site-header.header-ribbon-contact .drawer {
+    inset: 68px 0 0;
+    max-height: calc(100vh - 68px);
+    max-height: calc(100dvh - 68px);
+    padding-bottom: calc(28px + env(safe-area-inset-bottom));
+    overscroll-behavior: contain;
+  }
+}
+
+/* INTRO: a warm linen card floats against muted stone-coloured side panels on wide screens. */
+.homepage-ribbon-pass .editorial-intro {
+  background: #FBF8F1;
+}
+.homepage-ribbon-pass .editorial-intro-sidefield {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: linear-gradient(
+    to right,
+    #E5DFD2 0,
+    #E5DFD2 max(0px, calc((100vw - 1316px) / 2)),
+    transparent max(0px, calc((100vw - 1316px) / 2)),
+    transparent min(100vw, calc((100vw + 1316px) / 2)),
+    #E5DFD2 min(100vw, calc((100vw + 1316px) / 2)),
+    #E5DFD2 100%
+  );
+}
+@media (max-width: 1399px) {
+  .homepage-ribbon-pass .editorial-intro-sidefield {
+    background: transparent;
+  }
+}
+@media (min-width: 900px) {
+  .homepage-ribbon-pass .editorial-intro {
+    box-shadow: 0 1px 0 #C6A66B24;
+  }
+}
+
+/* Keep the heading elegant at phone width; never force it into one oversized line. */
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-visit-heading h2 {
+    max-width: 11.5ch;
+    width: 100%;
+    font-size: clamp(2.35rem, 10vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -.035em;
+    text-wrap: balance;
+  }
+  .homepage-ribbon-pass .editorial-visit .actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    align-items: stretch;
+  }
+  .homepage-ribbon-pass .editorial-visit .actions > .btn,
+  .homepage-ribbon-pass .editorial-visit .actions > .editorial-showroom-link {
+    width: 100%;
+    min-height: 54px;
+    margin: 0;
+    justify-content: space-between;
+  }
+}
+.homepage-ribbon-pass .editorial-showroom-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 48px;
+  margin-top: 0;
+  padding: 13px 17px;
+  border: 1px solid #C6A66B;
+  border-bottom: 1px solid #C6A66B;
+  background: #FFFDF8;
+  color: #17382B;
+  box-shadow: 0 5px 18px #10281F0A;
+  text-decoration: none;
+  transition: background .25s, border-color .25s, box-shadow .25s;
+}
+.homepage-ribbon-pass .editorial-showroom-link:hover {
+  background: #F1EADB;
+  border-color: #A88B52;
+  box-shadow: 0 7px 20px #10281F10;
+}
+
+/* Larger, more visible botanical linework on mobile, still behind the copy and imagery. */
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-intro::before,
+  .homepage-ribbon-pass .editorial-intro::after {
+    width: clamp(175px, 53vw, 230px);
+    height: clamp(260px, 77vw, 330px);
+    opacity: .23;
+  }
+  .homepage-ribbon-pass .editorial-intro::before {
+    top: 0;
+    left: -25px;
+  }
+  .homepage-ribbon-pass .editorial-intro::after {
+    right: -25px;
+    bottom: -2px;
+  }
+  .homepage-ribbon-pass h2 {
+    line-height: 1.11;
+  }
+}
+
+/* Keep the warm-gold active navigation cue on desktop and in the mobile drawer. */
+@media (min-width: 1121px) {
+  .site-header.header-ribbon-contact .nav {
+    gap: clamp(13px, 1.25vw, 20px);
+  }
+  .site-header.header-ribbon-contact .nav a::after {
+    height: 1.5px;
+    bottom: 1px;
+  }
+  .site-header.header-ribbon-contact .nav a.on::after {
+    height: 2px;
+    transform: scaleX(1);
+  }
+}
+.site-header.header-ribbon-contact .nav a.on {
+  color: #17382B;
+}
+.site-header.header-ribbon-contact .nav a.on::after {
+  background: #B99A60;
+  box-shadow: 0 1px 0 #B99A6020;
+}
+.site-header.header-ribbon-contact .drawer nav a.on {
+  color: #D5BE8A;
+  border-left: 1px solid #C6A66B;
+  padding-left: 12px;
+  background: linear-gradient(90deg, #C6A66B12, transparent 80%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv,
+  .js .homepage-ribbon-pass .editorial-mosaic .editorial-tile.rv[data-in] {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    will-change: auto;
+  }
+  .homepage-ribbon-pass .editorial-mosaic .editorial-tile .photo img {
+    transition: none !important;
+    transform: none !important;
+  }
+  .homepage-ribbon-pass .editorial-intro::before,
+  .homepage-ribbon-pass .editorial-intro::after {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+
+/* THE OPENING CURTAIN — a quiet, jewellery-box-style brand reveal. */
+.sk-intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  isolation: isolate;
+  color: #F8F5EE;
+  background:
+    radial-gradient(ellipse at 50% 42%, #315542 0%, #203D31 39%, #122B21 100%);
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: transform .82s cubic-bezier(.78, 0, .18, 1);
+  will-change: transform;
+}
+.sk-intro-loader::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 1px solid #C6A66B45;
+  pointer-events: none;
+}
+.sk-intro-loader::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: min(260px, 58vw);
+  height: 1px;
+  transform: translate(-50%, 82px);
+  background: linear-gradient(90deg, transparent, #C6A66B75, transparent);
+  opacity: 0;
+  animation: sk-loader-hairline .9s ease .42s both;
+  pointer-events: none;
+}
+.sk-intro-loader.is-opening {
+  transform: translate3d(0, -101%, 0);
+  pointer-events: none;
+}
+.sk-loader-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0;
+  padding: 24px;
+}
+.sk-loader-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 82px;
+  height: 82px;
+  opacity: 0;
+  transform: translate3d(-18vw, 16vh, 0) rotate(-360deg) scale(.54);
+  animation: sk-loader-mark-arrive 1.08s cubic-bezier(.16, 1, .3, 1) .08s both;
+}
+.sk-loader-mark img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  border-radius: 0;
+  box-shadow: none;
+}
+.sk-loader-mark::before,
+.sk-loader-mark::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  background: #E6CA91;
+  box-shadow: 0 0 10px #D9B87880, 0 0 22px #D9B87835;
+}
+.sk-loader-mark::before {
+  width: 4px;
+  height: 4px;
+  top: 7px;
+  right: 2px;
+  border-radius: 50%;
+  animation: sk-loader-spark 1.15s ease .62s both;
+}
+.sk-loader-mark::after {
+  width: 11px;
+  height: 11px;
+  left: -3px;
+  bottom: 12px;
+  clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
+  animation: sk-loader-spark 1.25s ease .7s both;
+}
+.sk-loader-wordmark {
+  margin-top: 18px;
+  color: #F5F0E4;
+  font: 600 .71rem/1.6 var(--ed-sans);
+  letter-spacing: .27em;
+  opacity: 0;
+  animation: sk-loader-copy .65s ease .46s both;
+}
+.sk-loader-wordmark span {
+  display: block;
+  margin-top: 2px;
+  color: #D7BD83;
+  font-size: .54rem;
+  letter-spacing: .46em;
+}
+.sk-loader-caption {
+  margin-top: 15px;
+  color: #D7DED4;
+  font: italic 500 1.15rem/1.4 var(--ed-serif);
+  opacity: 0;
+  animation: sk-loader-copy .65s ease .58s both;
+}
+.sk-loader-sound {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+  margin-top: 24px;
+  padding: 7px 10px;
+  border: 1px solid #D3B98155;
+  background: #FFFFFF05;
+  color: #D8C18D;
+  font: 600 .56rem/1.4 var(--ed-sans);
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  animation: sk-loader-copy .6s ease .68s both;
+  transition: background .2s, border-color .2s, color .2s;
+}
+.sk-loader-sound:hover,
+.sk-loader-sound:focus-visible {
+  border-color: #D8C18D;
+  background: #FFFFFF0C;
+  color: #FFF5DA;
+}
+.sk-loader-sound svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.35;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@keyframes sk-loader-mark-arrive {
+  0% { opacity: 0; transform: translate3d(-18vw, 16vh, 0) rotate(-360deg) scale(.54); filter: drop-shadow(0 0 0 #D9B87800); }
+  68% { opacity: 1; transform: translate3d(4px, -3px, 0) rotate(7deg) scale(1.055); filter: drop-shadow(0 0 14px #D9B87880); }
+  84% { transform: translate3d(0, 0, 0) rotate(-3deg) scale(.995); filter: drop-shadow(0 0 10px #D9B87855); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0) rotate(0) scale(1); filter: drop-shadow(0 0 11px #D9B87842); }
+}
+@keyframes sk-loader-spark {
+  0%, 100% { opacity: 0; transform: scale(.45); }
+  42% { opacity: .95; transform: scale(1.1); }
+  68% { opacity: .35; transform: scale(.75); }
+}
+@keyframes sk-loader-copy {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes sk-loader-hairline {
+  0% { opacity: 0; transform: translate(-50%, 82px) scaleX(.4); }
+  45% { opacity: .7; }
+  100% { opacity: .3; transform: translate(-50%, 82px) scaleX(1); }
+}
+@media (max-width: 480px) {
+  .sk-intro-loader::before { inset: 14px; }
+  .sk-loader-mark { width: 76px; height: 76px; }
+  .sk-loader-mark img { width: 70px; height: 70px; }
+  .sk-loader-caption { font-size: 1.05rem; }
+  .sk-loader-sound { margin-top: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sk-intro-loader,
+  .sk-intro-loader.is-opening { transition: none !important; transform: none; }
+  .sk-intro-loader::after { animation: none; opacity: .25; }
+  .sk-loader-mark,
+  .sk-loader-wordmark,
+  .sk-loader-caption,
+  .sk-loader-sound {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  .sk-loader-mark::before,
+  .sk-loader-mark::after { animation: none !important; opacity: .35; }
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   EDITORIAL STORY PASS — scroll-woven photography, customer voices and footer.
+   Inspired by the restrained visual storytelling of award-featured studio sites. */
+
+/* A photographic curtain reveal: no zooming picture, no card bobbing. */
+.homepage-ribbon-pass .editorial-mosaic .tile-photo-reveal {
+  clip-path: inset(0 0 0 0);
+  will-change: clip-path;
+}
+.homepage-ribbon-pass .editorial-mosaic .tile-reveal-rule {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #F0D7A0 12%, #C6A66B 80%, transparent);
+  box-shadow: 0 0 10px #C6A66B42;
+  transform: scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .js .homepage-ribbon-pass .editorial-mosaic .tile-cap {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:hover .tile-photo-reveal img,
+.homepage-ribbon-pass .editorial-mosaic .editorial-tile:focus-visible .tile-photo-reveal img {
+  transform: scale(1.018);
+  transition: transform .7s cubic-bezier(.2,.65,.25,1);
+}
+
+/* The room triptych gets its own pinned viewport scene. The text stays editorial;
+   only the images are pinned, land at the centre focus, then leave with the scroll. */
+.homepage-ribbon-pass .editorial-triptych {
+  position: relative;
+  isolation: isolate;
+}
+.homepage-ribbon-pass .editorial-triptych .tri-scroll-image {
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+}
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .homepage-ribbon-pass .editorial-triptych {
+    min-height: clamp(390px, 55vh, 630px);
+    align-items: stretch;
+    gap: clamp(18px, 2.2vw, 32px);
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image {
+    align-self: stretch;
+    min-width: 0;
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image .photo {
+    height: clamp(340px, 49vh, 560px);
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image-2 {
+    margin-top: 0;
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image > span {
+    margin-top: 10px;
+  }
+}
+
+/* Customer reviews — a warm stone gallery with an unmistakable green and gold scorecard. */
+.homepage-ribbon-pass .editorial-reviews {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(68px, 9vw, 124px);
+  border-top: 1px solid #C6A66B5C;
+  border-bottom: 1px solid #C6A66B5C;
+  background:
+    radial-gradient(ellipse at 100% 0%, #D8D0BF 0%, transparent 47%),
+    linear-gradient(180deg, #EEE9DF 0%, #E6E0D4 100%);
+}
+.homepage-ribbon-pass .editorial-reviews::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: max(var(--gut), calc((100vw - 1220px) / 2));
+  width: 64px;
+  height: 2px;
+  background: #B99A60;
+}
+.homepage-ribbon-pass .editorial-reviews-inner {
+  position: relative;
+  z-index: 1;
+}
+.homepage-ribbon-pass .editorial-reviews-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 280px);
+  align-items: end;
+  gap: clamp(28px, 6vw, 86px);
+  margin-bottom: 32px;
+}
+.homepage-ribbon-pass .editorial-reviews-copy h2 {
+  max-width: 10ch;
+  margin-top: 15px;
+  color: #17382B;
+  font-size: clamp(2.7rem, 5vw, 4.9rem);
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+.homepage-ribbon-pass .editorial-reviews-copy > p:last-child {
+  max-width: 44ch;
+  margin-top: 18px;
+  line-height: 1.8;
+}
+.homepage-ribbon-pass .editorial-review-score {
+  padding: 23px 25px 22px;
+  border: 1px solid #B99A6080;
+  background: #17382B;
+  color: #F7F3E9;
+  box-shadow: 0 12px 32px #12271D12;
+}
+.homepage-ribbon-pass .editorial-google-wordmark {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  font: 600 .96rem/1.4 var(--ed-sans);
+  letter-spacing: -.02em;
+}
+.homepage-ribbon-pass .editorial-google-wordmark > b {
+  color: #D8BD83;
+  font-size: 1.2rem;
+}
+.homepage-ribbon-pass .editorial-google-wordmark > span {
+  color: #D2D9CF;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .06em;
+}
+.homepage-ribbon-pass .editorial-review-score-line {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 12px;
+}
+.homepage-ribbon-pass .editorial-review-score-line > strong {
+  font: 500 3.2rem/.95 var(--ed-serif);
+  color: #FFFDF7;
+  letter-spacing: -.04em;
+}
+.homepage-ribbon-pass .editorial-review-stars {
+  color: #D8BD83;
+  font-size: .82rem;
+  letter-spacing: .11em;
+  white-space: nowrap;
+}
+.homepage-ribbon-pass .editorial-review-score > p {
+  margin-top: 9px;
+  color: #D2D9CF;
+  font-size: .72rem;
+  letter-spacing: .035em;
+}
+.homepage-ribbon-pass .editorial-review-score > p strong {
+  color: #FFFDF7;
+  font-weight: 600;
+}
+.homepage-ribbon-pass .editorial-review-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.homepage-ribbon-pass .editorial-review-topics > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 6px 11px;
+  border: 1px solid #C6BDAA;
+  color: #4A584F;
+  background: #FBF8F1A6;
+  font: 600 .64rem/1.3 var(--ed-sans);
+  letter-spacing: .02em;
+}
+.homepage-ribbon-pass .editorial-review-topics > span b {
+  color: #917447;
+  font-size: .6rem;
+}
+.homepage-ribbon-pass .editorial-review-topics > .topic-active {
+  color: #FBF8F1;
+  border-color: #17382B;
+  background: #17382B;
+}
+.homepage-ribbon-pass .editorial-review-rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, calc((100% - 38px) / 3));
+  gap: 19px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 3px 2px 19px;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 2px;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #B99A60 #D5CEC0;
+  -webkit-overflow-scrolling: touch;
+}
+.homepage-ribbon-pass .editorial-review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  min-width: 0;
+  min-height: 340px;
+  padding: 24px 23px 22px;
+  border: 1px solid #D0C6B3;
+  background: #FBF8F1;
+  box-shadow: 0 12px 30px #17382B09;
+  scroll-snap-align: start;
+}
+.homepage-ribbon-pass .editorial-review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.homepage-ribbon-pass .editorial-review-mark {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #C6A66B6B;
+  border-radius: 50%;
+  color: #8E774B;
+  font: 600 .8rem/1 var(--ed-sans);
+}
+.homepage-ribbon-pass .editorial-review-card blockquote {
+  position: relative;
+  max-width: none;
+  flex: 1;
+  color: #39463E;
+  font: 500 1.12rem/1.65 var(--ed-serif);
+  letter-spacing: -.005em;
+}
+.homepage-ribbon-pass .editorial-review-author {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding-top: 17px;
+  border-top: 1px solid #DDD5C6;
+}
+.homepage-ribbon-pass .editorial-review-avatar {
+  display: grid;
+  place-items: center;
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #C6A66B;
+  border-radius: 50%;
+  background: #F2EBDC;
+  color: #17382B;
+  font: 500 1.25rem/1 var(--ed-serif);
+}
+.homepage-ribbon-pass .editorial-review-author-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+.homepage-ribbon-pass .editorial-review-author-copy strong {
+  color: #17382B;
+  font: 600 .73rem/1.3 var(--ed-sans);
+}
+.homepage-ribbon-pass .editorial-review-author-copy small {
+  color: #737C71;
+  font: 500 .61rem/1.5 var(--ed-sans);
+}
+.homepage-ribbon-pass .editorial-reviews-note {
+  margin-top: 7px;
+  color: #6C746A;
+  font: 500 .64rem/1.5 var(--ed-sans);
+  letter-spacing: .025em;
+}
+
+/* Footer: deep emerald, fine brass separators, and a large, fading typographic signature. */
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 0;
+  border-top: 1px solid #B99A60;
+  background:
+    radial-gradient(ellipse at 15% 0%, #2B4A39 0%, transparent 55%),
+    linear-gradient(150deg, #18382A 0%, #102A20 100%);
+  color: #EDE9DE;
+}
+.site-footer::before {
+  left: max(var(--gut), calc((100vw - 1220px) / 2));
+  width: clamp(58px, 7vw, 94px);
+  height: 2px;
+  background: linear-gradient(90deg, #DCC58D, #9B8050);
+}
+.site-footer .grid {
+  position: relative;
+  z-index: 1;
+  row-gap: clamp(32px, 4vw, 54px);
+  padding-top: clamp(54px, 8vw, 100px);
+  padding-bottom: clamp(28px, 4vw, 46px);
+}
+.site-footer h2 {
+  margin-bottom: 16px;
+  color: #D8BD83;
+  font: 600 .67rem/1.4 var(--ed-sans);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.site-footer a {
+  color: #D8DDD3;
+  transition: color .25s, text-decoration-color .25s;
+}
+.site-footer a:hover {
+  color: #F2D9A2;
+  text-decoration-color: #D8BD83;
+}
+.site-footer .fname {
+  color: #F7F3E9;
+  font-size: 1.75rem;
+}
+.site-footer .muted,
+.site-footer address,
+.site-footer .legal {
+  color: #C2CDBF;
+}
+.site-footer .legal {
+  border-top-color: #D8BD8338;
+  font-size: .72rem;
+  line-height: 1.85;
+}
+.site-footer .f-mark,
+.site-footer .footer-wordmark {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: -.02em;
+  padding-inline: 1.5vw;
+  text-align: center;
+  font-size: clamp(3.4rem, 13.8vw, 15rem);
+  line-height: .79;
+  letter-spacing: -.065em;
+  background: linear-gradient(90deg, #617969 0%, #D3BC86 48%, #617969 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0;
+  opacity: .38;
+  white-space: nowrap;
+  user-select: none;
+}
+@media (max-width: 899px) {
+  .homepage-ribbon-pass .editorial-reviews-heading {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .homepage-ribbon-pass .editorial-reviews-copy h2 {
+    max-width: 12ch;
+    font-size: clamp(2.5rem, 10.5vw, 3.8rem);
+  }
+  .homepage-ribbon-pass .editorial-review-score {
+    max-width: 320px;
+  }
+  .homepage-ribbon-pass .editorial-review-rail {
+    grid-auto-columns: minmax(78vw, 1fr);
+    gap: 13px;
+  }
+  .homepage-ribbon-pass .editorial-review-card {
+    min-height: 330px;
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image {
+    will-change: auto;
+  }
+  .site-footer .grid {
+    padding-top: 53px;
+  }
+  .site-footer .f-mark,
+  .site-footer .footer-wordmark {
+    font-size: clamp(3.15rem, 12.6vw, 7rem);
+    line-height: .87;
+    letter-spacing: -.055em;
+  }
+}
+@media (max-width: 380px) {
+  .homepage-ribbon-pass .editorial-review-card {
+    min-height: 360px;
+    padding: 22px 19px 20px;
+  }
+  .homepage-ribbon-pass .editorial-review-card blockquote {
+    font-size: 1.03rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .homepage-ribbon-pass .editorial-mosaic .tile-photo-reveal {
+    clip-path: none !important;
+    will-change: auto;
+  }
+  .homepage-ribbon-pass .editorial-mosaic .tile-reveal-rule {
+    display: none;
+  }
+  .homepage-ribbon-pass .editorial-mosaic .tile-cap {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+
+/* Review controls are real filters/sorting controls, styled as quiet editorial chips. */
+.homepage-ribbon-pass .editorial-review-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+.homepage-ribbon-pass .editorial-review-topics {
+  margin-bottom: 0;
+}
+.homepage-ribbon-pass .editorial-review-topics > button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 6px 11px;
+  border: 1px solid #C6BDAA;
+  border-radius: 0;
+  color: #4A584F;
+  background: #FBF8F1A6;
+  font: 600 .64rem/1.3 var(--ed-sans);
+  letter-spacing: .02em;
+  cursor: pointer;
+  transition: color .22s, border-color .22s, background .22s;
+}
+.homepage-ribbon-pass .editorial-review-topics > button:hover {
+  border-color: #A88B52;
+  background: #F7F0E2;
+}
+.homepage-ribbon-pass .editorial-review-topics > button.topic-active,
+.homepage-ribbon-pass .editorial-review-topics > button[aria-pressed="true"] {
+  color: #FBF8F1;
+  border-color: #17382B;
+  background: #17382B;
+}
+.homepage-ribbon-pass .editorial-review-topics > button b {
+  color: #917447;
+  font-size: .6rem;
+}
+.homepage-ribbon-pass .editorial-review-topics > button[aria-pressed="true"] b {
+  color: #D8BD83;
+}
+.homepage-ribbon-pass .editorial-review-topics > .editorial-review-more {
+  border: 0;
+  background: transparent;
+  color: #6D7569;
+  padding-inline: 5px;
+  font-size: .62rem;
+}
+.homepage-ribbon-pass .editorial-review-sort {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 9px;
+  color: #687166;
+  font: 600 .65rem/1.3 var(--ed-sans);
+  white-space: nowrap;
+}
+.homepage-ribbon-pass .editorial-review-sort select {
+  width: auto;
+  min-width: 140px;
+  min-height: 38px;
+  padding: 7px 30px 7px 11px;
+  border-color: #C6BDAA;
+  background-color: #FBF8F1;
+  color: #263B30;
+  font: 600 .68rem/1.3 var(--ed-sans);
+  cursor: pointer;
+}
+@media (max-width: 899px) {
+  .homepage-ribbon-pass .editorial-review-tools {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .homepage-ribbon-pass .editorial-review-topics {
+    margin-bottom: 0;
+  }
+  .homepage-ribbon-pass .editorial-review-sort {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image {
+    transition: none !important;
+  }
+}
+
+
+.site-footer .footer-mobile-accordions {
+  display: none;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   RESPONSIVE POLISH — mobile width containment and footer compression. */
+html {
+  overflow-x: clip !important;
+  max-width: 100%;
+}
+body {
+  max-width: 100%;
+  overflow-x: clip !important;
+}
+@media (max-width: 760px) {
+  .homepage-ribbon-pass {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+  .homepage-ribbon-pass .editorial-showcase {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /* The full section used to scale its contours against a very tall mobile
+     canvas. Re-size the pattern to a short tile, then repeat it cleanly. */
+  .homepage-ribbon-pass .editorial-showcase::before {
+    inset: 0;
+    opacity: .13;
+    background-size: min(100vw, 420px) 430px, min(100vw, 420px) 470px;
+    background-repeat: repeat, repeat;
+    background-position: left top, right bottom;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* A concise accordion replaces the stacked desktop navigation columns. */
+  .site-footer .grid {
+    gap: 0;
+    padding-top: 28px;
+    padding-bottom: 18px;
+  }
+  .site-footer .grid > .footer-desktop-column {
+    display: none !important;
+  }
+  .site-footer .footer-mobile-accordions {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: 0;
+    margin-top: 11px;
+    border-top: 1px solid #D8BD8338;
+    border-bottom: 1px solid #D8BD8338;
+  }
+  .site-footer .footer-mobile-accordions details {
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #D8BD8338;
+  }
+  .site-footer .footer-mobile-accordions details:first-child {
+    border-top: 0;
+  }
+  .site-footer .footer-mobile-accordions summary {
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 10px 32px 10px 0;
+    color: #D8BD83;
+    font: 600 .69rem/1.35 var(--ed-sans);
+    letter-spacing: .13em;
+    text-transform: uppercase;
+  }
+  .site-footer .footer-mobile-accordions summary::after {
+    top: 10px;
+    right: 3px;
+    color: #D8BD83;
+    font: 400 1rem/1.4 var(--ed-sans);
+  }
+  .site-footer .footer-mobile-accordions details[open] summary {
+    border-bottom: 1px solid #D8BD8325;
+  }
+  .site-footer .footer-mobile-accordions .footer-accordion-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 16px;
+    padding: 8px 0 13px;
+  }
+  .site-footer .footer-mobile-accordions .footer-accordion-links a {
+    min-width: 0;
+    padding: 7px 0;
+    font-size: .77rem;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+  .site-footer .f-brand img {
+    width: 43px;
+    height: 43px;
+  }
+  .site-footer .fname {
+    margin-top: 9px;
+    font-size: 1.32rem;
+    line-height: 1.1;
+  }
+  .site-footer .f-brand .muted {
+    display: none;
+  }
+  .site-footer .f-brand address {
+    margin-top: 8px;
+    font-size: .76rem;
+    line-height: 1.48;
+  }
+  .site-footer .legal {
+    grid-column: 1 / -1;
+    margin-top: 16px;
+    padding-top: 13px;
+    font-size: .66rem;
+    line-height: 1.6;
+  }
+  .site-footer .f-mark,
+  .site-footer .footer-wordmark {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 0;
+    font-size: clamp(2.65rem, 10.5vw, 4rem);
+    line-height: .9;
+    letter-spacing: -.075em;
+    white-space: normal;
+    overflow-wrap: normal;
+  }
+}
+
+/* Line spacing and hierarchy: enough air around Cormorant's tall letterforms. */
+.homepage-ribbon-pass .editorial-reviews-copy h2 {
+  max-width: 12ch;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+.homepage-ribbon-pass .editorial-process-intro h2 {
+  max-width: none;
+  font-size: clamp(2.6rem, 4.3vw, 4.4rem);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+.process-heading-break { display: none; }
+@media (min-width: 900px) {
+  .homepage-ribbon-pass .editorial-process-intro h2 {
+    max-width: none;
+  }
+  .process-heading-break {
+    display: block;
+  }
+}
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-reviews-copy h2 {
+    line-height: 1.13;
+  }
+  .homepage-ribbon-pass .editorial-process-intro h2 {
+    max-width: 15ch;
+    font-size: clamp(2.35rem, 9vw, 3rem);
+    line-height: 1.1;
+  }
+  .homepage-ribbon-pass .editorial-rooms,
+  .homepage-ribbon-pass .editorial-showcase {
+    padding-bottom: 58px;
+  }
+}
+
+/* Pinned image scene: keep the same large image dimensions but give the
+   approach, resting point and exit more space to breathe. */
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .homepage-ribbon-pass .editorial-triptych {
+    min-height: clamp(390px, 55vh, 630px);
+  }
+  .homepage-ribbon-pass .editorial-triptych .tri-scroll-image .photo {
+    height: clamp(340px, 49vh, 560px);
+  }
+}
+
+
+/* Keep the photo story large without adding a long dead zone after it. */
+@media (min-width: 900px) {
+  .homepage-ribbon-pass .editorial-rooms {
+    padding-top: clamp(72px, 8vw, 112px);
+    padding-bottom: clamp(42px, 5vw, 72px);
+  }
+  .homepage-ribbon-pass .editorial-gallery-note {
+    margin-top: 26px;
+  }
+}
+
+
+/* Desktop hero: let the statement breathe across two intentional lines. */
+.homepage-ribbon-pass .hero-desktop-break {
+  display: none;
+}
+@media (min-width: 1051px) {
+  .homepage-ribbon-pass .editorial-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  }
+  .homepage-ribbon-pass .editorial-hero-copy {
+    padding-left: max(var(--gut), calc((100vw - 1220px) / 2 + 10px));
+    padding-right: clamp(20px, 3.2vw, 48px);
+  }
+  .homepage-ribbon-pass .editorial-hero h1 {
+    width: 100%;
+    max-width: none;
+    font-size: clamp(3.7rem, 6.2vw, 7rem);
+    line-height: .93;
+    letter-spacing: -.05em;
+    text-wrap: initial;
+  }
+  .homepage-ribbon-pass .hero-desktop-break {
+    display: block;
+  }
+}
+@media (min-width: 1500px) {
+  .homepage-ribbon-pass .editorial-hero-copy {
+    padding-left: max(var(--gut), calc((100vw - 1380px) / 2 - 10px));
+  }
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   CUSTOMER-FIRST PASS — clearer choices, stronger type and easier browsing.
+   Desktop navigation remains separate; phone routes combine the related pages. */
+
+.brand img {
+  box-shadow: none !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+
+.sk-loader-mark {
+  width: 164px;
+  height: 164px;
+}
+.sk-loader-mark img {
+  width: 152px;
+  height: 152px;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+@media (min-width: 980px) {
+  .site-header.header-ribbon-contact {
+    background: #F8F5EE;
+    border-bottom: 1px solid #C6A66B90;
+    box-shadow: 0 8px 28px #17271E0A;
+  }
+  .site-header.header-ribbon-contact .nav {
+    gap: clamp(5px, .55vw, 10px);
+  }
+  .site-header.header-ribbon-contact .nav a {
+    padding: 12px clamp(9px, .8vw, 14px);
+    border-radius: 4px;
+    color: #254535;
+    font-size: clamp(.84rem, .9vw, .96rem);
+    font-weight: 700;
+    letter-spacing: .015em;
+    transition: background .22s ease, color .22s ease, transform .22s ease;
+  }
+  .site-header.header-ribbon-contact .nav a:hover {
+    color: #17382B;
+    background: #EAE3D5;
+    transform: translateY(-1px);
+  }
+  .site-header.header-ribbon-contact .nav a.on {
+    color: #FFFDF8;
+    background: #17382B;
+    border-bottom: 0;
+    box-shadow: inset 0 -2px 0 #C6A66B;
+  }
+  .site-header.header-ribbon-contact .quote {
+    min-height: 46px;
+    padding-inline: 20px;
+    border: 1px solid #C6A66B;
+    background: #17382B;
+    color: #FFFDF8;
+    font-weight: 750;
+    letter-spacing: .01em;
+    box-shadow: 0 7px 18px #17382B20;
+  }
+}
+
+/* Slightly more readable body copy without scaling the whole layout system. */
+body { font-size: 17px; }
+.lead { font-size: clamp(1.02rem, 1.15vw, 1.14rem); }
+.catalog .cat p,
+.cd-side .lead,
+.variant-card p,
+.editorial-room-promise p,
+.home-offers-heading > p:not(.editorial-eyebrow) {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Home value / combination offer band. Prices are always confirmed by enquiry. */
+.home-offers {
+  position: relative;
+  padding: clamp(54px, 7vw, 92px) 0;
+  color: #17382B;
+  background: #F5F0E6;
+  border-bottom: 1px solid #C6A66B80;
+  overflow: hidden;
+}
+.home-offers::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #C6A66B 18%, #C6A66B 82%, transparent);
+}
+.home-offers-inner {
+  display: grid;
+  grid-template-columns: minmax(240px, .82fr) minmax(0, 1.18fr);
+  gap: clamp(32px, 5vw, 76px);
+  align-items: center;
+}
+.home-offers-heading h2 {
+  max-width: 11ch;
+  margin-top: 12px;
+  font: 500 clamp(2.55rem, 4.6vw, 4.5rem)/.98 var(--ed-serif);
+  letter-spacing: -.045em;
+}
+.home-offers-heading > p:not(.editorial-eyebrow) {
+  max-width: 43ch;
+  margin-top: 18px;
+  color: #56645B;
+}
+.home-offer-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.home-offer-cards article {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px 19px;
+  border: 1px solid #C8B990;
+  background: linear-gradient(145deg, #FFFDF8, #ECE5D8);
+  box-shadow: 0 12px 28px #17271E08;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.home-offer-cards article:hover {
+  transform: translateY(-5px);
+  border-color: #A98C52;
+  box-shadow: 0 18px 36px #17271E15;
+}
+.home-offer-cards article > span {
+  margin-bottom: auto;
+  color: #8D7549;
+  font: 700 .61rem/1.3 var(--ed-sans);
+  letter-spacing: .14em;
+}
+.home-offer-cards h3 {
+  margin-top: 26px;
+  color: #17382B;
+  font: 600 1.25rem/1.1 var(--ed-serif);
+}
+.home-offer-cards p {
+  margin-top: 9px;
+  color: #59645C;
+  font-size: .83rem;
+  line-height: 1.58;
+}
+
+/* Expanded room discovery: three lead spaces plus storage and office spaces. */
+.homepage-ribbon-pass .editorial-triptych .tri .photo {
+  aspect-ratio: 4 / 3 !important;
+}
+.editorial-room-additions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 36px);
+  margin-top: clamp(26px, 4vw, 50px);
+}
+.editorial-room-card {
+  min-width: 0;
+  color: #17382B;
+  text-decoration: none;
+}
+.editorial-room-card .photo {
+  aspect-ratio: 16 / 10 !important;
+  overflow: hidden;
+  outline: 1px solid #C6A66B;
+  outline-offset: -8px;
+  box-shadow: 0 18px 40px #17271E12;
+}
+.editorial-room-card .photo img {
+  transition: transform .65s cubic-bezier(.2,.65,.25,1), filter .45s ease;
+}
+.editorial-room-card:hover .photo img,
+.editorial-room-card:focus-visible .photo img {
+  transform: scale(1.035);
+}
+.editorial-room-card > span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #C6A66B;
+}
+.editorial-room-card b {
+  font: 600 clamp(1.35rem, 2vw, 2rem)/1.08 var(--ed-serif);
+}
+.editorial-room-card i {
+  color: #667268;
+  font: 600 .73rem/1.45 var(--ed-sans);
+  font-style: normal;
+  text-align: right;
+}
+.editorial-room-promise {
+  display: grid;
+  grid-template-columns: minmax(180px, .65fr) minmax(0, 1.35fr);
+  align-items: center;
+  gap: 22px;
+  margin-top: 34px;
+  padding: 22px 26px;
+  border-left: 3px solid #C6A66B;
+  background: #F1EDE4;
+}
+.editorial-room-promise > span {
+  color: #806B42;
+  font: 750 .62rem/1.5 var(--ed-sans);
+  letter-spacing: .12em;
+}
+.editorial-room-promise p {
+  color: #46564B;
+}
+
+/* Clear, image-first configurations on every product detail page. */
+.collections-subhead {
+  margin-bottom: clamp(22px, 3vw, 38px);
+}
+.collections-subhead .editorial-eyebrow { margin-bottom: 12px; }
+.collections-subhead h2 {
+  color: #17382B;
+  font: 500 clamp(2.25rem, 4vw, 3.5rem)/1 var(--ed-serif);
+  letter-spacing: -.035em;
+}
+.collections-subhead > p:last-child {
+  max-width: 55ch;
+  margin-top: 10px;
+  color: #5D665F;
+  line-height: 1.7;
+}
+.collection-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+.collection-quick-actions .textlink { margin-top: 0; }
+.product-variants {
+  padding-block: clamp(48px, 7vw, 86px);
+  border-top: 1px solid #C9CECC;
+}
+.variant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+.variant-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #D3CCBD;
+  background: #FFFDF8;
+  box-shadow: 0 10px 28px #17271E08;
+  transition: transform .32s ease, box-shadow .32s ease, border-color .32s ease;
+}
+.variant-card:hover {
+  transform: translateY(-5px);
+  border-color: #B99A60;
+  box-shadow: 0 19px 36px #17271E14;
+}
+.variant-card .photo {
+  aspect-ratio: 4 / 3 !important;
+  background: #E5E0D6;
+}
+.variant-card .photo img {
+  transition: transform .65s cubic-bezier(.2,.65,.25,1);
+}
+.variant-card:hover .photo img { transform: scale(1.035); }
+.variant-card-copy { padding: 19px 20px 21px; }
+/* Room setup cards show only the photo and the enquiry link */
+.setup-card .variant-card-copy { padding: 14px 20px 16px; }
+.setup-card .variant-card-copy a { margin-top: 0; }
+.variant-card-copy > span {
+  color: #987B49;
+  font: 750 .6rem/1.4 var(--ed-sans);
+  letter-spacing: .14em;
+}
+.variant-card h3 {
+  margin-top: 8px;
+  color: #17382B;
+  font: 600 1.45rem/1.12 var(--ed-serif);
+}
+.variant-card p {
+  min-height: 4.7em;
+  margin-top: 9px;
+  color: #5C665E;
+}
+.variant-card a {
+  display: inline-flex;
+  margin-top: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #C6A66B;
+  color: #17382B;
+  font-size: .82rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+/* One clear space-first route joins Interiors and Collections on phones. */
+.collections-phone-spaces { display: none; }
+.collections-offer-band {
+  padding-block: 34px;
+  background: #17382B;
+  color: #FFFDF8;
+}
+.collections-offer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.collections-offer-inner > div { max-width: 760px; }
+.collections-offer-inner .editorial-eyebrow { color: #D9D0BC; }
+.collections-offer-inner h2 {
+  margin-top: 8px;
+  color: #FFFDF8;
+  font: 500 clamp(1.8rem, 3.3vw, 2.8rem)/1.05 var(--ed-serif);
+}
+.collections-offer-inner p:not(.editorial-eyebrow) {
+  margin-top: 9px;
+  color: #D8E0D8;
+  line-height: 1.65;
+}
+.collections-offer-inner .btn {
+  flex: 0 0 auto;
+  background: #D7BE8B;
+  border-color: #D7BE8B;
+  color: #17382B;
+  font-weight: 750;
+}
+.collections-space-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+.collections-space-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #D7D0C2;
+  background: #FFFDF8;
+  color: #17382B;
+  text-decoration: none;
+  box-shadow: 0 8px 22px #17271E08;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.collections-space-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px #17271E12;
+}
+.collections-space-card .photo {
+  aspect-ratio: 16 / 10 !important;
+  background: #E4DED2;
+}
+.collections-space-card > span {
+  display: grid;
+  gap: 4px;
+  padding: 12px 13px 14px;
+}
+.collections-space-card b { font: 650 1.06rem/1.1 var(--ed-serif); }
+.collections-space-card i { color: #627066; font: 500 .74rem/1.4 var(--ed-sans); font-style: normal; }
+.mobile-contact-merge { display: none; }
+
+@media (max-width: 760px) {
+  /* A calm measured-grid detail replaces the oversized abstract contour field. */
+  .homepage-ribbon-pass .editorial-showcase::before {
+    inset: 0;
+    opacity: .13;
+    background-image:
+      linear-gradient(90deg, #9C8D7024 1px, transparent 1px),
+      linear-gradient(0deg, #9C8D7024 1px, transparent 1px),
+      radial-gradient(ellipse 180px 120px at 100% 0%, transparent 68%, #9C8D7030 69%, transparent 70%);
+    background-size: 42px 42px, 42px 42px, 100% 100%;
+    background-repeat: repeat, repeat, no-repeat;
+    background-position: 0 0, 0 0, right top;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .home-offers { padding-block: 44px 48px; }
+  .home-offers-inner {
+    display: block;
+  }
+  .home-offers-heading h2 {
+    max-width: 13ch;
+    font-size: clamp(2.35rem, 10vw, 3rem);
+  }
+  .home-offers-heading > p:not(.editorial-eyebrow) {
+    margin-top: 12px;
+    font-size: .94rem;
+    line-height: 1.65;
+  }
+  .home-offer-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 9px;
+    margin-top: 22px;
+  }
+  .home-offer-cards article {
+    min-height: 0;
+    padding: 14px 16px;
+    display: grid;
+    grid-template-columns: 105px minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 12px;
+  }
+  .home-offer-cards article > span {
+    grid-row: 1 / 3;
+    margin: 0;
+    align-self: start;
+    padding-top: 3px;
+    font-size: .56rem;
+  }
+  .home-offer-cards h3 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  .home-offer-cards p {
+    margin-top: 5px;
+    font-size: .78rem;
+  }
+
+  .editorial-room-additions {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+  }
+  .editorial-room-card .photo {
+    aspect-ratio: 16 / 9 !important;
+    outline-offset: -7px;
+  }
+  .editorial-room-card > span {
+    align-items: flex-start;
+    padding-top: 12px;
+  }
+  .editorial-room-card b { font-size: 1.55rem; }
+  .editorial-room-card i { font-size: .74rem; }
+  .editorial-room-promise {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 16px 17px;
+  }
+  .editorial-room-promise p { font-size: .91rem; line-height: 1.65; }
+
+  .product-variants {
+    padding-block: 38px 44px;
+  }
+  .variant-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .variant-card-copy { padding: 13px 12px 15px; }
+  .setup-card .variant-card-copy { padding: 11px 12px 12px; }
+  .variant-card-copy > span { font-size: .52rem; }
+  .variant-card h3 { font-size: 1.08rem; line-height: 1.13; }
+  .variant-card p {
+    min-height: 0;
+    margin-top: 6px;
+    font-size: .78rem;
+    line-height: 1.5;
+  }
+  .variant-card a {
+    margin-top: 9px;
+    font-size: .73rem;
+  }
+
+  .collections-phone-spaces {
+    display: block;
+    padding-block: 30px 34px;
+    background: #EEE9DE;
+  }
+  .collections-phone-spaces .collections-subhead {
+    margin-bottom: 18px;
+  }
+  .collections-phone-spaces .collections-subhead h2 {
+    font-size: 2.1rem;
+  }
+  .collections-phone-spaces .collections-subhead > p:last-child {
+    margin-top: 7px;
+    font-size: .9rem;
+  }
+  .collections-space-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .collections-space-card > span { padding: 10px 10px 12px; }
+  .collections-space-card b { font-size: 1rem; }
+  .collections-space-card i { font-size: .69rem; }
+  .collections-offer-band { padding-block: 23px; }
+  .collections-offer-inner {
+    display: grid;
+    gap: 16px;
+  }
+  .collections-offer-inner h2 { font-size: 1.85rem; }
+  .collections-offer-inner p:not(.editorial-eyebrow) {
+    font-size: .88rem;
+    line-height: 1.55;
+  }
+  .collections-offer-inner .btn { width: 100%; justify-content: space-between; }
+
+  /* Product catalogue cards become compact, clear choices rather than long panels. */
+  .catalog {
+    gap: 16px;
+    padding-bottom: 54px;
+  }
+  .catalog > .collections-subhead {
+    margin-bottom: 5px;
+  }
+  .catalog .cat {
+    display: grid;
+    grid-template-columns: minmax(104px, 34%) minmax(0, 1fr);
+    gap: 14px;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #D5CEBF;
+    background: #FFFDF8;
+  }
+  .catalog .cat > a {
+    display: block;
+    min-width: 0;
+  }
+  .catalog .cat > a .photo {
+    aspect-ratio: 4 / 5 !important;
+    height: auto;
+  }
+  .catalog .cat > div { min-width: 0; }
+  .catalog .cat h2 { font-size: 1.28rem; line-height: 1.08; }
+  .catalog .cat p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-top: 6px;
+    font-size: .79rem;
+    line-height: 1.5;
+  }
+  .catalog .cat .dim { display: none; }
+  .catalog .cat .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    margin-top: 10px;
+  }
+  .catalog .cat .actions .btn {
+    min-height: 38px;
+    padding: 8px 10px;
+    justify-content: center;
+    font-size: .74rem;
+  }
+
+  .mobile-contact-merge {
+    display: block;
+    padding-block: 30px 36px;
+    background: #EEE9DE;
+  }
+  .mobile-contact-card {
+    display: grid;
+    gap: 13px;
+    padding: 21px;
+    border: 1px solid #C9B98F;
+    background: #FFFDF8;
+    box-shadow: 0 12px 28px #17271E0C;
+  }
+  .mobile-contact-card h2 {
+    margin-top: 8px;
+    color: #17382B;
+    font: 500 2rem/1.03 var(--ed-serif);
+  }
+  .mobile-contact-card p {
+    margin-top: 8px;
+    color: #56645B;
+    font-size: .9rem;
+    line-height: 1.6;
+  }
+  .mobile-contact-card address {
+    display: grid;
+    gap: 3px;
+    padding: 12px 0 12px 14px;
+    border-left: 2px solid #C6A66B;
+    color: #3E5045;
+    font-size: .86rem;
+    font-style: normal;
+    line-height: 1.5;
+  }
+  .mobile-contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+  .mobile-contact-actions > a {
+    min-height: 43px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 13px;
+    border: 1px solid #BDAA7B;
+    color: #17382B;
+    font-size: .78rem;
+    font-weight: 750;
+    text-decoration: none;
+  }
+  .mobile-contact-actions > .btn {
+    background: #17382B;
+    color: #FFFDF8;
+    border-color: #17382B;
+  }
+  .mobile-contact-email a {
+    color: #17382B;
+    overflow-wrap: anywhere;
+    font-weight: 650;
+  }
+}
+
+@media (max-width: 420px) {
+  .variant-grid { gap: 8px; }
+  .catalog .cat {
+    grid-template-columns: 100px minmax(0, 1fr);
+    gap: 11px;
+    padding: 10px;
+  }
+  .catalog .cat h2 { font-size: 1.18rem; }
+  .catalog .cat p { font-size: .76rem; }
+  .collections-space-grid { gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .variant-card,
+  .collections-space-card,
+  .editorial-room-card,
+  .home-offer-cards article {
+    transition: none !important;
+  }
+  .variant-card:hover,
+  .collections-space-card:hover,
+  .home-offer-cards article:hover {
+    transform: none !important;
+  }
+}
+
+
+/* Seven product links: preserve a single, even row on wide desktop screens. */
+@media (min-width: 1051px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+}
+
+/* Stronger type hierarchy on the product and room catalogue pages. */
+@media (min-width: 761px) {
+  .pagehead h1 { font-size: clamp(2.7rem, 4vw, 4.1rem); }
+  .catalog .cat h2 { font-size: clamp(1.85rem, 2.6vw, 2.6rem); }
+  .variant-card h3 { font-size: clamp(1.4rem, 1.65vw, 1.8rem); }
+}
+
+
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(2n) {
+    border-right: 0;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(odd) {
+    border-right: 1px solid #FFFFFF30;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(n+3) {
+    border-top: 1px solid #FFFFFF30;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:last-child {
+    grid-column: 1 / -1;
+    border-right: 0;
+  }
+}
+
+
+
+/* PHONE POLISH — restore separate About and Contact destinations. */
+@media (max-width: 760px) {
+  .mobile-contact-merge { display: none !important; }
+
+  /* Collections page: give every line of text a clear breathing margin. */
+  .collections-phone-spaces .collections-subhead {
+    margin-bottom: 22px;
+  }
+  .collections-subhead .editorial-eyebrow {
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  .collections-subhead h2 {
+    margin: 0;
+    line-height: 1.13;
+    letter-spacing: -.025em;
+    text-wrap: balance;
+  }
+  .collections-subhead > p:last-child {
+    margin-top: 13px;
+    line-height: 1.68;
+  }
+  .collections-space-grid {
+    row-gap: 13px;
+    column-gap: 10px;
+  }
+  .collections-space-card > span {
+    gap: 7px;
+    padding: 13px 11px 15px;
+  }
+  .collections-space-card b {
+    line-height: 1.22;
+    letter-spacing: -.01em;
+    overflow-wrap: anywhere;
+  }
+  .collections-space-card i {
+    line-height: 1.55;
+  }
+
+  .collections-offer-inner {
+    gap: 19px;
+  }
+  .collections-offer-inner .editorial-eyebrow {
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+  .collections-offer-inner h2 {
+    margin-top: 0;
+    line-height: 1.15;
+    text-wrap: balance;
+  }
+  .collections-offer-inner p:not(.editorial-eyebrow) {
+    margin-top: 13px;
+    line-height: 1.68;
+  }
+  .collections-offer-inner .btn {
+    min-height: 50px;
+    line-height: 1.3;
+    padding-block: 13px;
+  }
+
+  .catalog {
+    gap: 18px;
+  }
+  .catalog > .collections-subhead {
+    margin-bottom: 9px;
+  }
+  .catalog .collections-subhead .editorial-eyebrow {
+    margin-bottom: 14px;
+  }
+  .catalog .collections-subhead h2 {
+    line-height: 1.14;
+  }
+  .catalog .collections-subhead > p:last-child {
+    margin-top: 12px;
+  }
+  .catalog .cat {
+    gap: 15px;
+    padding: 13px;
+    align-items: center;
+  }
+  .catalog .cat > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .catalog .cat h2 {
+    margin: 0;
+    line-height: 1.18;
+    letter-spacing: -.015em;
+    text-wrap: balance;
+  }
+  .catalog .cat p {
+    margin-top: 10px;
+    line-height: 1.62;
+    -webkit-line-clamp: 4;
+  }
+  .catalog .cat .actions {
+    width: 100%;
+    gap: 9px;
+    margin-top: 13px;
+  }
+  .catalog .cat .actions .btn {
+    min-height: 42px;
+    line-height: 1.25;
+    padding: 10px 9px;
+    white-space: normal;
+    text-align: center;
+  }
+  .catalog .cat .actions .btn + .btn {
+    margin-top: 0;
+  }
+  .catalog .cat.flip {
+    direction: ltr;
+  }
+
+  .also {
+    padding-bottom: 48px;
+  }
+  .also h2 {
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .also > .muted {
+    margin-top: 6px;
+    line-height: 1.6;
+  }
+  .also li {
+    min-height: 54px;
+    gap: 12px;
+    padding-block: 12px;
+    align-items: center;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 420px) {
+  .collections-space-card > span {
+    padding: 12px 9px 13px;
+  }
+  .catalog .cat {
+    gap: 12px;
+    padding: 11px;
+  }
+  .catalog .cat h2 {
+    line-height: 1.2;
+  }
+  .catalog .cat p {
+    margin-top: 9px;
+    line-height: 1.58;
+  }
+  .catalog .cat .actions {
+    margin-top: 11px;
+  }
+}
+
+/* SIMPLE ROOM-FIRST COLLECTIONS — visible on desktop and phones. */
+.collections-phone-spaces {
+  display: block;
+  padding-block: clamp(38px, 6vw, 76px);
+  background: #EEE9DE;
+}
+.collections-phone-spaces .collections-subhead {
+  margin-bottom: clamp(22px, 3vw, 38px);
+}
+.collections-phone-spaces .collections-subhead h2 {
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.collections-space-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 2vw, 24px);
+}
+.collections-space-card > span {
+  padding: 16px 17px 18px;
+  gap: 7px;
+}
+.collections-space-card b {
+  line-height: 1.2;
+}
+.collections-space-card i {
+  line-height: 1.55;
+}
+
+/* The About information now lives in four straightforward points under the
+   existing "A thoughtful process. A better fit." heading. */
+.editorial-process ol.editorial-about-points {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 clamp(22px, 3vw, 38px);
+}
+.editorial-process .editorial-about-points li {
+  min-width: 0;
+  padding: 25px 0 28px;
+}
+.editorial-process .editorial-about-points li:last-child {
+  grid-column: auto;
+}
+.editorial-process .editorial-about-points li h3 {
+  margin-top: 13px;
+  line-height: 1.2;
+}
+.editorial-process .editorial-about-points li p {
+  margin-top: 9px;
+  line-height: 1.75;
+}
+.editorial-process .editorial-process-intro .editorial-underlink {
+  margin-top: 22px;
+}
+
+/* The room photo on the Plan a room page is a link to that room's page. */
+.rooms article > a.room-photo-link {
+  display: block;
+  margin: 9px;
+  cursor: pointer;
+}
+.rooms article > a.room-photo-link .photo {
+  width: 100%;
+  margin: 0;
+}
+.rooms article > a.room-photo-link:focus-visible {
+  outline: 2px solid #17382B;
+  outline-offset: 4px;
+}
+
+/* Give the separate Interiors room cards a gentle, non-distracting response. */
+.rooms article .photo img {
+  transition: transform .65s cubic-bezier(.2,.65,.25,1);
+}
+.rooms article:hover .photo img,
+.rooms article:focus-within .photo img {
+  transform: scale(1.025);
+}
+
+@media (max-width: 1050px) {
+  .collections-space-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .collections-phone-spaces {
+    padding-block: 34px 40px;
+  }
+  .collections-phone-spaces .collections-subhead h2 {
+    line-height: 1.18;
+  }
+  .collections-space-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .collections-space-card > span {
+    padding: 12px 11px 14px;
+    gap: 6px;
+  }
+  .collections-space-card b {
+    line-height: 1.24;
+  }
+  .collections-space-card i {
+    line-height: 1.52;
+  }
+  .collections-subhead h2 {
+    line-height: 1.18;
+  }
+  .collections-subhead > p:last-child {
+    line-height: 1.65;
+  }
+  .collections-offer-inner h2 {
+    line-height: 1.18;
+  }
+  .collections-offer-inner p:not(.editorial-eyebrow) {
+    line-height: 1.65;
+  }
+  .catalog .cat h2 {
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+  .catalog .cat p {
+    margin-top: 8px;
+    line-height: 1.62;
+  }
+  .catalog .cat .actions {
+    gap: 9px;
+    margin-top: 12px;
+  }
+  .editorial-process ol.editorial-about-points {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .editorial-process .editorial-about-points li {
+    padding: 20px 0 22px;
+  }
+}
+@media (max-width: 420px) {
+  .collections-space-grid {
+    gap: 9px;
+  }
+  .collections-space-card > span {
+    padding: 11px 10px 13px;
+  }
+  .collections-space-card b {
+    font-size: .98rem;
+    line-height: 1.25;
+  }
+  .collections-space-card i {
+    font-size: .71rem;
+    line-height: 1.5;
+  }
+  .catalog .cat h2 {
+    font-size: 1.2rem;
+    line-height: 1.22;
+  }
+  .catalog .cat p {
+    font-size: .78rem;
+    line-height: 1.58;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rooms article .photo img {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* COMPACT ABOUT SECTION — replaces the former process feature on the homepage. */
+.homepage-ribbon-pass .editorial-about-band {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(38px, 5vw, 64px);
+  border-block: 1px solid #C6A66B70;
+  background:
+    radial-gradient(circle at 100% 0%, #DDD5C6 0%, transparent 40%),
+    #EEE9DE;
+}
+.homepage-ribbon-pass .editorial-about-inner {
+  display: grid;
+  grid-template-columns: minmax(220px, .78fr) minmax(0, 1.22fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+}
+.homepage-ribbon-pass .editorial-about-heading h2 {
+  max-width: none;
+  margin-top: 13px;
+  color: #17382B;
+  font: 500 clamp(2rem, 4.2vw, 3.7rem)/1.08 var(--ed-serif);
+  letter-spacing: -.035em;
+  white-space: nowrap; /* two fixed lines: "About SK Emerald" / "Interior." */
+}
+.homepage-ribbon-pass .editorial-about-copy p {
+  max-width: 66ch;
+  color: #4F5D53;
+  font-size: .94rem;
+  line-height: 1.72;
+}
+.homepage-ribbon-pass .editorial-about-copy p + p {
+  margin-top: 12px;
+}
+.homepage-ribbon-pass .editorial-about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  margin-top: 20px;
+}
+.homepage-ribbon-pass .editorial-about-actions .btn {
+  min-height: 48px;
+}
+.homepage-ribbon-pass .editorial-about-actions .editorial-underlink {
+  margin-top: 0;
+}
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-about-band {
+    padding-block: 34px 38px;
+  }
+  .homepage-ribbon-pass .editorial-about-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+  }
+  .homepage-ribbon-pass .editorial-about-heading h2 {
+    max-width: none;
+    font-size: clamp(2.1rem, 11vw, 3.4rem);
+  }
+  .homepage-ribbon-pass .editorial-about-copy p {
+    font-size: .9rem;
+    line-height: 1.7;
+  }
+  .homepage-ribbon-pass .editorial-about-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    margin-top: 17px;
+  }
+  .homepage-ribbon-pass .editorial-about-actions > a {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Centre every numbered collection link on every screen size. Keep Office spaces
+   centred on its own final row instead of leaving it aligned to the left. */
+.homepage-ribbon-pass .editorial-hero-index {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.homepage-ribbon-pass .editorial-hero-index a {
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  white-space: normal;
+}
+@media (max-width: 1050px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 34%;
+    border-right: 0;
+  }
+}
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .homepage-ribbon-pass .editorial-hero-index a {
+    justify-content: center;
+    text-align: center;
+    gap: 7px;
+    padding-inline: 8px;
+  }
+  .homepage-ribbon-pass .editorial-hero-index a:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+    border-right: 0;
+  }
+}
+@media (max-width: 420px) {
+  .homepage-ribbon-pass .editorial-hero-index a:last-child {
+    width: 62%;
+  }
+}
+
+/* Remove the pale halo/shadow around the header mark; leave the logo artwork alone. */
+.site-header.header-ribbon-contact .brand img {
+  box-shadow: none !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+.homepage-ribbon-pass .editorial-intro-visual .b img {
+  object-position: center 65% !important;
+}
+.tile.t-a img {
+  object-position: 50% 75% !important;
+  transform: scale(1.1) translateX(-4%) !important;
+  transform-origin: 50% 50%;
+}
+.cd-main img {
+  object-position: 2% 50% !important;
+}
+.tri-scroll-image {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+/* Room section: single Office spaces card now that Storage & wardrobes is removed */
+.editorial-room-additions--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+.editorial-room-additions--single .editorial-room-card .photo {
+  aspect-ratio: 21 / 9 !important;
+}
+@media (max-width: 760px) {
+  .editorial-room-additions--single .editorial-room-card .photo {
+    aspect-ratio: 16 / 9 !important;
+  }
+}
+
+/* Collections: "Choose the piece you need" uses the same cards as the room section. */
+.catalog.catalog-cards {
+  gap: clamp(22px, 3vw, 38px);
+}
+.catalog.catalog-cards > .collections-subhead {
+  margin-bottom: 0;
+}
+
+/* Room pages: photo to the right of the title. */
+.room-pagehead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(24px, 4vw, 64px);
+  align-items: center;
+}
+.room-pagehead-copy { min-width: 0; }
+.room-pagehead-copy > .lead {
+  max-width: 58ch;
+  margin-top: 20px;
+  line-height: 1.85;
+}
+.room-pagehead-photo {
+  min-width: 0;
+}
+.room-pagehead-photo .photo {
+  aspect-ratio: 4 / 3 !important;
+  overflow: hidden;
+  outline: 1px solid #C6A66B;
+  outline-offset: -8px;
+  box-shadow: 0 18px 40px #17271E12;
+}
+@media (max-width: 860px) {
+  .room-pagehead { grid-template-columns: minmax(0, 1fr); }
+}
+/* Chairs & armchairs card: show the whole chair photo */
+.collections-space-card[href="/collections/chairs"] .photo {
+  background: #E4DED2;
+}
+.collections-space-card[href="/collections/chairs"] .photo img {
+  object-fit: contain !important;
+  object-position: center !important;
+}
+/* Dressing tables and Shelves & drawers options: every card is the same size and each photo is shown whole.
+   Spare space beside or above a photo is filled with a soft blurred copy of it. */
+.variant-grid--fit .variant-card {
+  display: flex;
+  flex-direction: column;
+}
+.variant-grid--fit .variant-card .photo {
+  position: relative;
+  aspect-ratio: var(--vc-ratio, 3 / 4) !important;
+  overflow: hidden;
+  background: #E5E0D6;
+}
+.variant-grid--fit .variant-card .photo::before {
+  content: "";
+  position: absolute;
+  inset: -24px;
+  background: var(--vc-bg, none) center / cover no-repeat;
+  filter: blur(22px) saturate(1.05);
+  opacity: .9;
+}
+.variant-grid--fit .variant-card .photo img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center !important;
+}
+.variant-grid--fit .variant-card:hover .photo img { transform: none; }
+.variant-grid--fit .variant-card-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.variant-grid--fit .variant-card p { margin-bottom: 14px; }
+.variant-grid--fit .variant-card a { margin-top: auto; }

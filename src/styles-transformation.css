@@ -1,0 +1,127 @@
+/* Before / after video section (sits between the "Not just furniture" intro and the collections).
+   A white panel inside a thick forest-green border; deep-green headings and gold hairlines. */
+.sk-tf {
+  --tf-frame: clamp(14px, 2.4vw, 36px);   /* thickness of the green border around the white panel */
+  position: relative;
+  isolation: isolate;
+  padding-block: calc(clamp(64px, 8vw, 120px) + var(--tf-frame));
+  background: var(--ed-green, #17382B);
+  color: var(--ink2, #5C645D);
+  overflow: hidden;
+}
+/* the white panel, inset from the green border; a fine gold line runs just inside its edge */
+.sk-tf::before {
+  content: ""; position: absolute; z-index: -1; inset: var(--tf-frame);
+  background: #FBF8F1;
+  outline: 1px solid rgba(198, 166, 107, .85); outline-offset: -9px;
+  pointer-events: none;
+}
+.sk-tf > .wrap { padding-inline: calc(var(--gut) + var(--tf-frame)); }
+.sk-tf-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 92px);
+}
+
+/* copy */
+.sk-tf-copy .editorial-eyebrow { color: var(--ink2, #5C645D); }
+.sk-tf-copy h2 { max-width: 14ch; color: var(--ed-green, #17382B); font-size: clamp(2.7rem, 4.8vw, 4.7rem); line-height: .94; letter-spacing: -.04em; }
+.sk-tf-copy h2 em { color: #9C8150; font-weight: 500; }
+.sk-tf-lead { margin-top: 26px; max-width: 50ch; color: var(--ink, #252A27); font-size: 1.06rem; line-height: 1.8; }
+.sk-tf-body { margin-top: 14px; max-width: 48ch; color: var(--ink2, #5C645D); font-size: .92rem; line-height: 1.9; }
+.sk-tf-steps { list-style: none; padding: 0; margin: 34px 0 0; max-width: 480px; border-top: 1px solid rgba(198, 166, 107, .7); }
+.sk-tf-steps li { display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 15px 0; border-bottom: 1px solid rgba(198, 166, 107, .45); }
+.sk-tf-steps li > span { color: #9C8150; font: 600 .66rem/1.9 var(--ed-sans, sans-serif); letter-spacing: .14em; }
+.sk-tf-steps b { display: block; color: var(--ed-green, #17382B); font: 500 1.28rem/1.15 var(--ed-serif, Georgia, serif); }
+.sk-tf-steps p { margin-top: 3px; color: var(--ink2, #5C645D); font-size: .82rem; line-height: 1.6; }
+.sk-tf-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 34px; }
+.sk-tf-copy .editorial-btn { background: var(--ed-green, #17382B); border-color: var(--ed-green, #17382B); color: #FBF8F1; }
+.sk-tf-copy .editorial-btn:hover { background: #C6A66B; border-color: #C6A66B; color: #10281F; }
+.sk-tf-copy .editorial-text-link { color: var(--ed-green, #17382B); border-bottom-color: #C6A66B; }
+.sk-tf-copy a:focus-visible { outline: 2px solid var(--ed-green, #17382B); outline-offset: 3px; }
+
+/* video side: a soft beige panel behind the video gives depth on the white background */
+.sk-tf-stage { position: relative; justify-self: center; width: min(100%, 380px); }
+.sk-tf-stage::before {
+  content: ""; position: absolute; z-index: -1; inset: -40px -52px; background: #F1ECE0;
+  border: 1px solid rgba(198, 166, 107, .35);
+}
+
+/* video */
+.sk-tf-frame {
+  position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: #10281F;
+  outline: 1px solid #C6A66B; outline-offset: 10px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .2), 0 36px 70px #05100b66, 0 0 90px #3f8a6a2e;
+}
+.sk-tf-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; cursor: pointer; }
+.sk-tf-frame::after { content: ""; position: absolute; inset: auto 0 0; height: 34%; background: linear-gradient(to top, rgba(10, 24, 18, .78), rgba(10, 24, 18, 0)); pointer-events: none; }
+
+.sk-tf-tags { position: absolute; top: 14px; left: 14px; z-index: 2; height: 30px; min-width: 96px; pointer-events: none; }
+.sk-tf-tag {
+  position: absolute; left: 0; top: 0; display: inline-flex; align-items: center; gap: 8px; height: 30px; padding: 0 13px 0 11px;
+  background: rgba(16, 40, 31, .78); border: 1px solid rgba(198, 166, 107, .7); color: #F4F0E7; backdrop-filter: blur(6px);
+  font: 600 .6rem/1 var(--ed-sans, sans-serif); letter-spacing: .22em; text-transform: uppercase;
+  opacity: 0; transform: translateY(-5px); transition: opacity .45s var(--ease, ease), transform .45s var(--ease, ease);
+}
+.sk-tf-tag::before { content: ""; width: 6px; height: 6px; background: #C6A66B; }
+.sk-tf-frame[data-stage="before"] .sk-tf-tag-before,
+.sk-tf-frame[data-stage="after"] .sk-tf-tag-after { opacity: 1; transform: none; }
+.sk-tf-frame[data-stage="after"] .sk-tf-tag-after::before { background: #8FD0AE; }
+
+.sk-tf-bigplay {
+  position: absolute; z-index: 3; left: 50%; top: 50%; width: 72px; height: 72px; margin: -36px 0 0 -36px; display: grid; place-items: center;
+  border: 1px solid #C6A66B; border-radius: 50%; background: rgba(16, 40, 31, .62); color: #F4F0E7; cursor: pointer; backdrop-filter: blur(6px);
+  transition: transform .3s var(--ease, ease), background .3s, opacity .3s;
+}
+.sk-tf-bigplay svg { width: 22px; height: 22px; margin-left: 3px; }
+.sk-tf-bigplay:hover { background: #C6A66B; color: #10281F; transform: scale(1.06); }
+.sk-tf-frame[data-playing] .sk-tf-bigplay { opacity: 0; pointer-events: none; transform: scale(.8); }
+
+.sk-tf-bar { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; display: flex; align-items: center; gap: 12px; padding: 0 14px 14px; }
+.sk-tf-round {
+  flex: 0 0 auto; width: 34px; height: 34px; display: grid; place-items: center; padding: 0; border: 1px solid rgba(244, 240, 231, .55); border-radius: 50%;
+  background: rgba(16, 40, 31, .45); color: #F4F0E7; cursor: pointer; transition: background .25s, color .25s, border-color .25s;
+}
+.sk-tf-round:hover { background: #C6A66B; border-color: #C6A66B; color: #10281F; }
+.sk-tf-track { position: relative; flex: 1; height: 22px; display: flex; align-items: center; cursor: pointer; }
+.sk-tf-track::before { content: ""; position: absolute; inset: 10px 0; background: rgba(244, 240, 231, .32); }
+.sk-tf-fill { position: absolute; left: 0; top: 10px; height: 2px; background: #D9BE86; transition: width .28s linear; }
+.sk-tf-notch { position: absolute; top: 5px; width: 2px; height: 12px; margin-left: -1px; background: #F4F0E7; }
+
+.sk-tf-frame :focus-visible, .sk-tf-switch :focus-visible, .sk-tf-copy a:focus-visible { outline: 2px solid #D9BE86; outline-offset: 3px; }
+
+/* before / after toggle */
+.sk-tf-switch { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 30px; }
+.sk-tf-switch button {
+  display: grid; grid-template-columns: auto 1fr; column-gap: 9px; align-items: baseline; text-align: left; padding: 12px 0 0;
+  border: 0; border-top: 1px solid rgba(198, 166, 107, .35); background: none; color: #9DAA9F; cursor: pointer; position: relative;
+  transition: color .3s;
+}
+.sk-tf-switch button::before { content: ""; position: absolute; left: 0; top: -1px; height: 2px; width: 0; background: #D9BE86; transition: width .5s var(--ease, ease); }
+.sk-tf-switch button.on { color: #F4F0E7; }
+.sk-tf-switch button.on::before { width: 100%; }
+.sk-tf-switch button:hover { color: #F4F0E7; }
+.sk-tf-switch span { color: #C6A66B; font: 600 .58rem var(--ed-sans, sans-serif); letter-spacing: .14em; }
+.sk-tf-switch b { font: 500 1.3rem/1 var(--ed-serif, Georgia, serif); }
+.sk-tf-switch small { grid-column: 2; margin-top: 4px; font: 500 .66rem/1.4 var(--ed-sans, sans-serif); letter-spacing: .04em; color: #8F9E92; }
+
+/* light-background adjustments for the video's frame and the Before / After switch */
+.sk-tf-frame { box-shadow: 0 0 0 1px rgba(0, 0, 0, .06), 0 30px 60px rgba(23, 56, 43, .24); }
+.sk-tf-switch button { border-top-color: rgba(198, 166, 107, .6); color: var(--ink2, #5C645D); }
+.sk-tf-switch button:hover, .sk-tf-switch button.on { color: var(--ed-green, #17382B); }
+.sk-tf-switch span { color: #9C8150; }
+.sk-tf-switch small { color: var(--ink2, #5C645D); }
+.sk-tf-switch :focus-visible { outline: 2px solid var(--ed-green, #17382B); outline-offset: 3px; }
+
+@media (max-width: 899px) {
+  .sk-tf-panel { grid-template-columns: 1fr; gap: 72px; }
+  .sk-tf-copy h2 { max-width: 14ch; }
+  .sk-tf-body { display: none; }
+  .sk-tf-stage { width: min(100%, 320px); }
+  .sk-tf-stage::before { inset: -24px -8px; }
+  .sk-tf-actions .editorial-btn { width: 100%; justify-content: space-between; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sk-tf-tag, .sk-tf-bigplay, .sk-tf-fill, .sk-tf-switch button::before { transition: none; }
+}

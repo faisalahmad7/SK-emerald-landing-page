@@ -1,0 +1,52 @@
+/* SK Emerald — editorial finish layer */
+:root{
+  --ivory:#F6F3EB;--chalk:#FFFDF8;--lime:#ECE9E0;--silver:#C9CECC;--plat:#E7E8E3;
+  --gold:#C4A66A;--ink:#202923;--ink2:#5D665F;--forest:#203D31;--euc:#7D9181;--sage:#AAB8AA;
+  --w:1220px;
+}
+html{scroll-behavior:smooth}
+body{background:linear-gradient(180deg,#F8F5EE 0%,var(--ivory) 42%,#F3F0E8 100%)}
+::selection{background:var(--forest);color:var(--chalk)}
+.site-header{background:rgba(248,245,238,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:rgba(151,161,154,.5)}
+.brand img{box-shadow:0 0 0 1px var(--gold),0 0 0 4px var(--ivory),0 5px 16px #17271e12}
+.brand b{font-size:1.55rem;letter-spacing:-.025em}.brand i{font-size:.64rem;letter-spacing:.38em}
+.btn{box-shadow:0 3px 12px #1b34250a;transition:background .35s,color .35s,box-shadow .35s,transform .35s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.hero{isolation:isolate}.hero-text{padding-top:clamp(48px,7vw,84px)}
+.hero-text::before{content:"BESPOKE FURNITURE  ·  PUNE";display:flex;align-items:center;gap:12px;margin-bottom:20px;color:var(--ink2);font:600 .68rem/1.4 var(--bf);letter-spacing:.19em}
+.hero-text::before{border-left:30px solid var(--gold);padding-left:12px}
+.hero h1{max-width:11ch;font-size:clamp(3rem,6vw,5.4rem);line-height:.99;letter-spacing:-.035em}
+.hero .lead{max-width:43ch;font-size:clamp(1rem,1.35vw,1.12rem);line-height:1.85}
+.hero-img{isolation:isolate}.hero-img>.photo{box-shadow:0 18px 48px #17271e0d}
+.hero-img::before{z-index:2;top:14px;left:-14px;right:14px;bottom:14px;opacity:.8}
+.hero-note{font-size:.7rem;letter-spacing:.04em;padding:10px 16px 8px 20px;border-top:1px solid var(--gold)}
+.hero-index{border-top:1px solid #C9CECC80;margin-top:16px}.hero-index a{letter-spacing:.015em}
+.intro{position:relative}.intro-copy h2,.sec-head h2,.split h2,.process h2,.visit h2{letter-spacing:-.025em}
+.intro-copy .lead{font-size:clamp(1.05rem,1.5vw,1.18rem)}
+.overlap .a{box-shadow:0 14px 40px #18271e12}.overlap .b{border-width:7px;box-shadow:0 0 0 1px var(--gold),0 12px 28px #18271e12}
+.sec-head{gap:18px 32px;padding-bottom:22px;margin-bottom:38px}.sec-head .textlink{margin-bottom:5px}
+.showcase .sec-head>div:first-child::before{content:"THE COLLECTION";display:block;margin-bottom:10px;color:var(--ink2);font:600 .66rem/1.4 var(--bf);letter-spacing:.19em}
+.mosaic{gap:18px}.tile{box-shadow:0 10px 30px #17271e0b}.tile::after{inset:12px;border-color:#fff9}
+.tile-cap{padding:74px 30px 27px;background:linear-gradient(0deg,rgba(13,29,21,.9) 0%,rgba(13,29,21,.53) 52%,rgba(13,29,21,0) 100%)}
+.tile-name{letter-spacing:-.02em}.tile-tag{font-size:.82rem;letter-spacing:.01em}
+.materials-band{background:linear-gradient(115deg,#203D31 0%,#29483A 58%,#1D382D 100%)}
+.materials-band::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background:linear-gradient(115deg,transparent 0 58%,#D5C39C 58.1%,transparent 58.3% 100%)}
+.materials-band .split{position:relative;z-index:1}.mat-stack .photo{box-shadow:0 18px 44px #07150e30}
+.mat-stack .m-a,.mat-stack .m-b{border:1px solid #C4A66A66}
+.rooms-home .sec-head>div:first-child::before{content:"ROOMS, CONSIDERED"}
+.tri .photo{box-shadow:0 12px 32px #17271e0d}.tri span{font-size:1.65rem;letter-spacing:-.015em;padding-top:14px}
+.process{position:relative}.process h2{margin-bottom:40px}.process li{padding-top:24px}.step{font-size:1.9rem}
+.visit{position:relative;padding-top:32px;border-top:1px solid var(--silver)}
+.visit::before{content:"";position:absolute;top:-1px;left:var(--gut);width:60px;height:1px;background:var(--gold)}
+.site-footer{background:linear-gradient(180deg,#EEECE4 0%,#E7E5DC 100%)}.site-footer .grid{row-gap:46px}
+.f-mark{background:linear-gradient(90deg,#B9C1BC,#D0B781 48%,#B9C1BC);background-clip:text;-webkit-background-clip:text;-webkit-text-stroke:0;color:transparent;opacity:.62}
+.fab{box-shadow:0 0 0 1px #C4A66A,0 8px 24px #10231938;transition:transform .3s var(--ease),box-shadow .3s}
+.fab:hover{transform:translateY(-3px);box-shadow:0 0 0 1px #C4A66A,0 12px 28px #10231945}
+.js .rv.gsap-managed{transition:none!important}.js .rv-mask.gsap-managed{opacity:1;transform:none}
+@media(min-width:900px){
+ .hero-text{padding-top:74px;padding-bottom:64px}.hero h1{font-size:clamp(3.4rem,5.1vw,5.2rem);max-width:10.5ch}
+ .hero-img{padding-top:34px}.hero-img>.photo{min-height:560px}.hero-index{padding-top:30px;padding-bottom:24px;margin-top:10px}
+ .intro{gap:clamp(70px,8vw,112px)}.mosaic{gap:20px}.materials-band{padding-block:clamp(84px,10vw,136px)}
+}
+@media(max-width:899px){.hero-text::before{margin-bottom:16px}.hero h1{max-width:12ch}.hero-img::before{left:10px;right:10px;top:10px;bottom:10px;border-right:1px solid var(--gold)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover,.fab:hover{transform:none}}
