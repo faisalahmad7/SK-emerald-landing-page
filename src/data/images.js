@@ -129,6 +129,8 @@ const list = [
   f('wardrobe-sliding-geometric', 'Sliding wardrobe with geometric sage-green and cream doors, open side shelves and loft cabinets', 'inspiration', ['wardrobes']),
   // TV unit configuration image (inspiration, not a completed SK Emerald job). Original kept in /source-images.
   f('dining-walnut-two-seater', 'Compact walnut dining table with two walnut chairs with black cushioned seats, inspiration image', 'inspiration', ['dining']),
+  f('mirror-backlit-organic', 'Free-form full-length wall mirror with a softly glowing backlit edge, reflecting a bedroom dressing corner, inspiration image', 'inspiration', ['mirrors']),
+  f('wall-art-gallery-frames', 'Gallery wall of framed art in gold, silver and black frames, lit by ceiling spotlights, inspiration image', 'inspiration', ['decor']),
   // Office setups (inspiration images, not completed SK Emerald jobs).
   f('office-twin-workstations', 'Two black height-adjustable workstations facing each other, with monitors, task chairs and a low bookcase', 'inspiration', ['office']),
   f('office-desk-sideboard', 'Office with a walnut desk on black legs, a leather chair, a matching sideboard and a bookcase beside a tall window', 'inspiration', ['office']),
