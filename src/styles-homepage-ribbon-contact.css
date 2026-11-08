@@ -3556,6 +3556,12 @@ body { font-size: 17px; }
   object-position: center !important;
 }
 .variant-grid--fit .variant-card:hover .photo img { transform: none; }
+/* Cards flagged "fill" (e.g. Framed wall art): the photo covers the whole card frame, no blurred side bars. */
+.variant-grid--fit .variant-card--fill .photo::before { display: none; }
+.variant-grid--fit .variant-card--fill .photo img {
+  object-fit: cover;
+  object-position: var(--vc-pos, 50% 50%) !important;
+}
 .variant-grid--fit .variant-card-copy {
   display: flex;
   flex: 1;

@@ -5,7 +5,7 @@ import { img } from '../data/images'
 import { COLLECTIONS, MORE_COLLECTIONS, ALSO_MADE, bySlug } from '../data/collections'
 
 // Collections whose option cards show each photo whole, in one fixed card shape.
-const FIT_VARIANTS = { 'dressing-tables': '3/4', 'shelves-and-drawers': '2/3', 'mirrors-and-wall-decor': '3/4' }
+const FIT_VARIANTS = { 'dressing-tables': '3/4', 'shelves-and-drawers': '2/3', 'mirrors-and-wall-decor': '3/4', wardrobes: '3/4', 'crockery-units': '3/4' }
 
 export function Collections() {
   return (
@@ -79,7 +79,7 @@ export function Collection({ slug }) {
         </div>
         <div className={`variant-grid${FIT_VARIANTS[c.slug] ? ' variant-grid--fit' : ''}`} style={FIT_VARIANTS[c.slug] ? { '--vc-ratio': FIT_VARIANTS[c.slug] } : undefined}>
           {(c.variants || []).map((variant, i) => (
-            <article className="variant-card rv" key={variant.name} style={FIT_VARIANTS[c.slug] && img(variant.image) ? { '--vc-bg': `url("${img(variant.image).src}")` } : undefined}>
+            <article className={`variant-card rv${variant.fill ? ' variant-card--fill' : ''}`} key={variant.name} style={FIT_VARIANTS[c.slug] && img(variant.image) ? { '--vc-bg': `url("${img(variant.image).src}")`, '--vc-pos': variant.pos || 'center' } : undefined}>
               <Photo id={variant.image} ratio="4/3" pos={variant.pos} alt={variant.name} />
               <div className="variant-card-copy">
                 <span>OPTION 0{i + 1}</span>

@@ -13,7 +13,7 @@ export const ROOMS = [
       { name: 'Beige sectional with a round coffee table', detail: 'A warm corner sofa, a gold-tone coffee table and a floating TV unit.', image: 34 },
       { name: 'Tan sectional with a marble TV wall', detail: 'A channelled corner sofa, a marble-look TV wall with a white drawer unit and a cove-lit ceiling.', image: 'living-tan-sectional-marble-tv', pos: '50% 42%' },
     ],
-    pieces: ['sofas', 'recliners', 'tv-units', 'centre-side-and-coffee-tables', 'dining-tables', 'chairs', 'false-ceilings', 'mirrors-and-wall-decor', 'shelves-and-drawers'] },
+    pieces: ['sofas', 'sofa-cum-beds', 'recliners', 'tv-units', 'centre-side-and-coffee-tables', 'dining-tables', 'chairs', 'false-ceilings', 'mirrors-and-wall-decor', 'shelves-and-drawers'] },
   { slug: 'bedroom', hero: 'bed-beige', heroPos: '50% 55%', name: 'Bedroom', short: 'bedroom',
     lead: 'A bed, wardrobe and matching pieces sized to the room, with lighting and finishes chosen to go together.',
     setups: [
@@ -24,7 +24,7 @@ export const ROOMS = [
       { name: 'Timber headboard with a study desk', detail: 'A timber headboard with pendant lights and a long desk by the window.', image: 'bedroom-desk-pendants', pos: '50% 50%' },
       { name: 'Bedroom with wardrobes and a cove ceiling', detail: 'A padded headboard, tall wardrobes, a dressing corner and a cove-lit ceiling.', image: 'bedroom-wardrobe-cove-ceiling', pos: '50% 40%' },
     ],
-    pieces: ['beds', 'wardrobes', 'dressing-tables', 'study-and-office-tables', 'tv-units', 'false-ceilings', 'mirrors-and-wall-decor', 'shelves-and-drawers', 'chairs'] },
+    pieces: ['beds', 'sofa-cum-beds', 'bedside-tables', 'wardrobes', 'dressing-tables', 'study-and-office-tables', 'tv-units', 'false-ceilings', 'mirrors-and-wall-decor', 'shelves-and-drawers', 'chairs'] },
   { slug: 'kitchen', hero: 'kitchen-u', heroPos: '50% 50%', name: 'Kitchen', short: 'kitchen',
     lead: 'Units drawn to your floor plan, with finishes, counter tops and hardware agreed in writing.',
     setups: [
@@ -35,7 +35,7 @@ export const ROOMS = [
       { name: 'Plum and white kitchen', detail: 'A two-colour kitchen with a bold lower run.', image: 35 },
       { name: 'Taupe kitchen with a breakfast table', detail: 'A handleless taupe kitchen with under-cabinet lighting and a wooden breakfast table.', image: 'kitchen-taupe-breakfast-table', pos: '50% 50%' },
     ],
-    pieces: ['cabinets', 'counter-tops', 'shelves-and-drawers', 'dining-tables'] },
+    pieces: ['cabinets', 'crockery-units', 'counter-tops', 'shelves-and-drawers', 'dining-tables'] },
   { slug: 'office-spaces', hero: 'office-reception', heroPos: '50% 50%', name: 'Office spaces', short: 'office',
     lead: 'Reception counters, workstations, meeting tables and storage planned around the way your team works.',
     setups: [
@@ -44,6 +44,6 @@ export const ROOMS = [
       { name: 'Office with a desk and sideboard', detail: 'A solid desk with a matching sideboard and bookcase for a private office.', image: 'office-desk-sideboard', pos: '50% 50%' },
       { name: 'Executive office with seating', detail: 'A large desk, wall-to-wall shelving and a seating area for meetings.', image: 'office-executive-desk-seating', pos: '50% 50%' },
     ],
-    pieces: ['office-spaces', 'study-and-office-tables', 'chairs', 'cabinets', 'shelves-and-drawers', 'counter-tops'] },
+    pieces: ['office-loungers', 'study-and-office-tables', 'chairs', 'shelves-and-drawers'] },
 ]
 export const roomBySlug = (s) => ROOMS.find((r) => r.slug === s)
