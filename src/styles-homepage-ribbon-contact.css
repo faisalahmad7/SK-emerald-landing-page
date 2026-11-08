@@ -3638,3 +3638,52 @@ body { font-size: 17px; }
     font-size: 1.5rem;
   }
 }
+
+/* Home: "View more" button under the pieces mosaic, links to the Collections page */
+.editorial-showcase-more {
+  display: flex;
+  justify-content: center;
+  margin-top: clamp(32px, 4.5vw, 60px);
+}
+.editorial-showcase-more .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 60px;
+  padding: 16px 46px;
+  border: 1px solid #C6A66B;
+  border-radius: 0;
+  background: #17382B;
+  color: #FBF8F1;
+  font: 700 1.05rem/1 var(--ed-sans, inherit);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 6px #17382B14, 0 16px 34px #17271E2E;
+  transition: background .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.editorial-showcase-more .btn span {
+  font-size: 1.25rem;
+  color: #E5D7B8;
+  transition: transform .3s ease, color .3s ease;
+}
+.editorial-showcase-more .btn:hover,
+.editorial-showcase-more .btn:focus-visible {
+  background: #C6A66B;
+  border-color: #C6A66B;
+  color: #10281F;
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 6px #C6A66B33, 0 20px 40px #17271E38;
+}
+.editorial-showcase-more .btn:hover span,
+.editorial-showcase-more .btn:focus-visible span {
+  color: #10281F;
+  transform: translate(3px, -3px);
+}
+@media (max-width: 760px) {
+  .editorial-showcase-more .btn {
+    width: min(100%, 340px);
+    padding: 16px 28px;
+    font-size: .98rem;
+  }
+}

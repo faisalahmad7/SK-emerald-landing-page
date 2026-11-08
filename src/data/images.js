@@ -125,6 +125,7 @@ const list = [
   f('lounge-fabric-corner', 'Light grey soft-fabric corner lounge sofa with a chaise end, a round coffee table and a black pouf, inspiration image', 'inspiration', ['office'], { derived: true }),
   f('lounge-tan-leather-tub', 'Tan leather two-seater and two tub armchairs with slim black legs around a black wire coffee table, inspiration image', 'inspiration', ['office'], { derived: true }),
   f('lounge-two-tone-reception', 'Two-tone tan and cream three-seater, two-seater and armchair in an office reception beside a glass-walled workspace, inspiration image', 'inspiration', ['office'], { derived: true }),
+  f('sofa-velvet-curved-gold-home', 'Beige velvet curved three-seater sofa with pleated arms and gold-tone legs beside a marble-top coffee table, with extra wall space on the left for the Home page tile', 'inspiration', ['sofas'], { derived: true }),
   f('sofa-velvet-curved-gold', 'Beige velvet curved three-seater sofa with pleated arms, scatter cushions and slim gold-tone legs beside a marble-top coffee table, inspiration image', 'inspiration', ['sofas'], { derived: true }),
   f('sofa-grey-chaise-sectional', 'Dark grey fabric corner sofa with a chaise end, cream cushions and a glass-top coffee table in a spotlit living room, inspiration image', 'inspiration', ['sofas', 'living'], { derived: true }),
   f('sofa-cream-channelled-gold', 'Cream velvet two-seater sofa with a channelled back and arms and slim gold-tone legs, inspiration image', 'inspiration', ['sofas'], { derived: true }),

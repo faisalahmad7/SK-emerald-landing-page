@@ -13,12 +13,12 @@ const ld = {
 }
 
 const TILES = [
-  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 'sofa-navy', pos: '50% 75%' },
+  { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 'sofa-velvet-curved-gold-home', pos: '50% 45%' },
   { slug: 'cabinets', area: 'b', ratio: '4/5', delay: 1, imageId: 'cabinet-brown-glass-kitchen', pos: '50% 30%' },
   { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0, imageId: 'wardrobe-sliding' },
   { slug: 'tv-units', area: 'd', ratio: '16/10', delay: 0, imageId: 'tv-feature-wall' },
   { slug: 'beds', area: 'e', ratio: '16/10', delay: 1, imageId: 'bed-beige' },
-  { slug: 'recliners', area: 'f', ratio: '1/1', delay: 0, imageId: 'recliner-set', pos: '35% 50%' },
+  { slug: 'dining-tables', area: 'f', ratio: '1/1', delay: 0, imageId: 'dining-glass-top-six-seater', pos: '50% 82%' },
 ]
 
 const REVIEWS = [
@@ -125,6 +125,9 @@ export default function Home() {
         </div>
         <div className="mosaic editorial-mosaic">
           {TILES.map((t) => <Tile key={t.slug} {...t} />)}
+        </div>
+        <div className="wrap editorial-showcase-more">
+          <Link to="/collections" className="btn">View more <span aria-hidden="true">↗</span></Link>
         </div>
       </section>
 
