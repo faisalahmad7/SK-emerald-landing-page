@@ -305,4 +305,18 @@ export const MORE_COLLECTIONS = [
     options: [['Seating', 'Three-seater, two-seater, single armchairs or a corner layout.'], ['Upholstery', 'Leather, leatherette or fabric in the colour you choose.'], ['Legs', 'Slim metal or wooden legs to match your office.'], ['Extras', 'A matching coffee table and side tables.']],
     materials: 'Frame, foam and upholstery vary by design and are confirmed in your quotation.',
     gallery: ['lounge-brown-leather-set', 'lounge-fabric-corner', 'lounge-tan-leather-tub', 'lounge-two-tone-reception'], related: ['sofas', 'chairs'] }),
+  piece({ slug: 'office-chairs', name: 'Office chairs', enquiry: 'office chairs', image: 'chair-leather-walnut-lounge', pos: '50% 28%',
+    tag: 'Chairs for the office, manager cabin and home study',
+    intro: 'Office and executive chairs with tilt, swivel and height adjustment, chosen for comfort through a full working day and to match your desk.',
+    parts: ['Base', 'Seat', 'Upholstery'],
+    features: ['Executive, manager and visitor chairs', 'Leather, leatherette and fabric upholstery', 'Tilt, swivel and height adjustment', 'Reclining models with a footrest'],
+    variants: [
+      { name: 'Soft-pad executive chair', detail: 'A high-back chair with ribbed leather pads and a chrome frame for a manager cabin.', image: 'chair-black-soft-pad-executive', pos: '50% 50%' },
+      { name: 'Leather and walnut lounge chair', detail: 'A black leather chair with a walnut shell and a swivel base for a private office.', image: 'chair-leather-walnut-lounge', pos: '50% 50%' },
+      { name: 'Quilted high-back chair', detail: 'A cream quilted chair with padded armrests and a tilt seat for a home office.', image: 'chair-cream-quilted-executive', pos: '50% 50%' },
+      { name: 'Reclining chair with footrest', detail: 'A fabric desk chair with a headrest, padded armrests and a pull-out footrest.', image: 'chair-olive-reclining-footrest', pos: '50% 50%' },
+    ],
+    options: [['Upholstery', 'Leather, leatherette or fabric in the colour you choose.'], ['Base', 'Metal or nylon base with smooth-rolling castors.'], ['Comfort', 'Headrest, lumbar support, armrests and a footrest on selected models.'], ['Quantity', 'Single chairs or a matching set for the whole office.']],
+    materials: 'Frame, foam and upholstery vary by design and are confirmed in your quotation.',
+    gallery: ['chair-black-soft-pad-executive', 'chair-cream-quilted-executive', 'chair-olive-reclining-footrest'], related: ['study-and-office-tables', 'office-loungers'] }),
 ]

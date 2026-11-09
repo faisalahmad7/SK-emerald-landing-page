@@ -125,6 +125,11 @@ const list = [
   f('lounge-fabric-corner', 'Light grey soft-fabric corner lounge sofa with a chaise end, a round coffee table and a black pouf, inspiration image', 'inspiration', ['office'], { derived: true }),
   f('lounge-tan-leather-tub', 'Tan leather two-seater and two tub armchairs with slim black legs around a black wire coffee table, inspiration image', 'inspiration', ['office'], { derived: true }),
   f('lounge-two-tone-reception', 'Two-tone tan and cream three-seater, two-seater and armchair in an office reception beside a glass-walled workspace, inspiration image', 'inspiration', ['office'], { derived: true }),
+  // Office chairs (inspiration images, not completed SK Emerald jobs).
+  f('chair-cream-quilted-executive', 'Cream quilted high-back office chair with padded armrests on a black five-star base, beside a light wood desk, inspiration image', 'inspiration', ['office'], { derived: true }),
+  f('chair-leather-walnut-lounge', 'Black leather office lounge chair with a walnut shell, button-tufted back and a polished metal swivel base, inspiration image', 'inspiration', ['office'], { derived: true }),
+  f('chair-black-soft-pad-executive', 'Black leather high-back executive chair with ribbed soft pads and a chrome frame in a modern office, inspiration image', 'inspiration', ['office'], { derived: true }),
+  f('chair-olive-reclining-footrest', 'Olive fabric reclining desk chair with a headrest, padded armrests and a pull-out footrest, inspiration image', 'inspiration', ['office'], { derived: true }),
   f('sofa-velvet-curved-gold-home', 'Beige velvet curved three-seater sofa with pleated arms and gold-tone legs beside a marble-top coffee table, with extra wall space on the left for the Home page tile', 'inspiration', ['sofas'], { derived: true }),
   f('sofa-velvet-curved-gold', 'Beige velvet curved three-seater sofa with pleated arms, scatter cushions and slim gold-tone legs beside a marble-top coffee table, inspiration image', 'inspiration', ['sofas'], { derived: true }),
   f('sofa-grey-chaise-sectional', 'Dark grey fabric corner sofa with a chaise end, cream cushions and a glass-top coffee table in a spotlit living room, inspiration image', 'inspiration', ['sofas', 'living'], { derived: true }),

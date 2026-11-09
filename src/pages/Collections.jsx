@@ -5,7 +5,7 @@ import { img } from '../data/images'
 import { COLLECTIONS, MORE_COLLECTIONS, ALSO_MADE, bySlug } from '../data/collections'
 
 // Collections whose option cards show each photo whole, in one fixed card shape.
-const FIT_VARIANTS = { 'dressing-tables': '3/4', 'shelves-and-drawers': '2/3', 'mirrors-and-wall-decor': '3/4', wardrobes: '3/4', 'crockery-units': '3/4' }
+const FIT_VARIANTS = { 'dressing-tables': '3/4', 'shelves-and-drawers': '2/3', 'mirrors-and-wall-decor': '3/4', wardrobes: '3/4', 'crockery-units': '3/4', 'office-chairs': '2/3' }
 
 export function Collections() {
   return (
