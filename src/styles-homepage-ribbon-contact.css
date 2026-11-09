@@ -3687,3 +3687,39 @@ body { font-size: 17px; }
     font-size: .98rem;
   }
 }
+
+
+/* HOME PAGE PHONE FIX: keep all six category links in a balanced 2 × 3 grid.
+   In particular, Office spaces stays in the right cell beside TV units. */
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-auto-flow: row;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-index a,
+  .homepage-ribbon-pass .editorial-hero-index a:last-child {
+    grid-column: auto !important;
+    justify-self: stretch !important;
+    width: auto !important;
+    min-width: 0;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(odd) {
+    border-right: 1px solid #FFFFFF30;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(even) {
+    border-right: 0;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(n+3) {
+    border-top: 1px solid #FFFFFF24;
+  }
+
+  .homepage-ribbon-pass .editorial-hero-index a:nth-child(-n+2) {
+    border-top: 0;
+  }
+}

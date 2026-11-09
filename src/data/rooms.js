@@ -44,6 +44,6 @@ export const ROOMS = [
       { name: 'Office with a desk and sideboard', detail: 'A solid desk with a matching sideboard and bookcase for a private office.', image: 'office-desk-sideboard', pos: '50% 50%' },
       { name: 'Executive office with seating', detail: 'A large desk, wall-to-wall shelving and a seating area for meetings.', image: 'office-executive-desk-seating', pos: '50% 50%' },
     ],
-    pieces: ['office-loungers', 'study-and-office-tables', 'chairs', 'shelves-and-drawers'] },
+    pieces: ['office-loungers', 'study-and-office-tables','office-chairs', 'shelves-and-drawers'] },
 ]
 export const roomBySlug = (s) => ROOMS.find((r) => r.slug === s)
