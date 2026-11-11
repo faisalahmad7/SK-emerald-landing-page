@@ -1993,8 +1993,23 @@ details p {
   margin: 0 0 10px
 }
 
-.cinfo h2:nth-of-type(2) {
+.cinfo h2:not(:first-child) {
   margin-top: 40px
+}
+
+/* Showroom and factory addresses */
+.cinfo address {
+  display: grid;
+  gap: 3px;
+  margin: 0 0 14px;
+  padding: 4px 0 4px 18px;
+  border-left: 2px solid var(--gold);
+  font-style: normal;
+  line-height: 1.55
+}
+
+.cinfo address span:first-child {
+  font-weight: 600
 }
 
 .cinfo .btn {

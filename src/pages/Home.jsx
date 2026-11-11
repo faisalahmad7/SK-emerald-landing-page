@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from '../router'
 import { Photo, Seo, Dim } from '../components/ui'
-import { BUSINESS, waLink, mapsLink } from '../data/business'
+import { BUSINESS, waLink, mapsLink, telLink } from '../data/business'
 import { COLLECTIONS, bySlug } from '../data/collections'
 import { SLOTS } from '../data/images'
 import TransformationVideo from '../components/TransformationVideo'
@@ -238,16 +238,47 @@ export default function Home() {
               <Link to="/collections" className="editorial-underlink">Explore our collections <span aria-hidden="true">↗</span></Link>
             </div>
           </div>
+          <ul className="editorial-about-points">
+            <li>
+              <span className="eap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 8h18v8H3z" /><path d="M7 8v3M11 8v4M15 8v3M19 8v4" /></svg></span>
+              <div><strong>Made to measure</strong><span>Sized for your room and your family.</span></div>
+            </li>
+            <li>
+              <span className="eap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20V9l6 3V9l6 3V5h3v15z" /><path d="M7 20v-3M12 20v-3" /></svg></span>
+              <div><strong>Made in our own factory</strong><span>Built at our factory in Kondhwa, Pune.</span></div>
+            </li>
+            <li>
+              <span className="eap-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z" /><path d="M14 3v5h5M9 12h7M9 16h7" /></svg></span>
+              <div><strong>A clear quotation</strong><span>Sizes, materials and finish written down.</span></div>
+            </li>
+          </ul>
         </div>
       </section>
 
       <section className="wrap visit editorial-visit">
-        <div className="editorial-visit-heading"><p className="editorial-eyebrow"><span /> Come see it in person</p><h2>Let's elevate your space.</h2></div>
+        <div className="editorial-visit-heading">
+          <p className="editorial-eyebrow"><span /> Come see it in person</p>
+          <h2>Let's elevate your space.</h2>
+          <div className="visit-photo"><Photo id="living-sage" ratio="4/3" alt="" /></div>
+        </div>
         <div className="editorial-visit-details">
           <p>See finishes, compare fabrics and talk through your measurements at our showroom in Kondhwa, Pune.</p>
-          <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
-          <p className="muted">Please call or message first to confirm visiting times.</p>
+          <div className="visit-places">
+            <article className="visit-place">
+              <span className="visit-place-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></svg></span>
+              <h3>Showroom</h3>
+              <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
+              <p className="muted">Please call or message first to confirm visiting times.</p>
+            </article>
+            <article className="visit-place">
+              <span className="visit-place-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20V9l6 3V9l6 3V5h3v15z" /><path d="M7 20v-3M12 20v-3" /></svg></span>
+              <h3>Factory</h3>
+              <address>{BUSINESS.factory.lines.map((l) => <span key={l}>{l}</span>)}</address>
+              <p className="muted">Where our furniture is made. Please call first before visiting.</p>
+            </article>
+          </div>
           <div className="actions"><a className="btn" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a><Link className="editorial-underlink editorial-showroom-link" to="/contact">Contact the showroom <span aria-hidden="true">↗</span></Link></div>
+          <p className="visit-call">Call us: {BUSINESS.phones.map((p, i) => <span key={p.tel}>{i > 0 && <i aria-hidden="true"> · </i>}<a href={telLink(p)}>{p.display}</a></span>)}</p>
         </div>
       </section>
     </div>

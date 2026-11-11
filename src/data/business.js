@@ -8,14 +8,18 @@ export const BUSINESS = {
     { display: '90759 01169', tel: '+919075901169' },
   ],
   whatsapp: '919011831169', // VERIFY: which number should receive WhatsApp enquiries
-  email: 'emeraldfurniturepune@gmail.com',
+  email: 'Skemeraldinterior@gmail.com',
   showroom: {
     lines: ['Shop No. 226, First Floor', 'Unitas Fashion Centre Mall', 'Parge Nagar', 'Kondhwa Khurd, Pune, Maharashtra 411048'], // VERIFY
     oneLine: 'Shop No. 226, First Floor, Unitas Fashion Centre Mall, Parge Nagar, Kondhwa Khurd, Pune, Maharashtra 411048',
   },
   // Sources disagree on hours (10 AM-9 PM vs 9 AM-9:30 PM), so none are published. VERIFY then set `hours`.
   hours: null,
-  // Factory address is deliberately NOT public (showroom and factory are different places). VERIFY before using.
+  // Factory where the furniture is made. Showroom and factory are different places.
+  factory: {
+    lines: ['S No 105', 'Opp HP Petrol Pump', 'Near Zudio Mall', 'Kondhwa BK, Pune'],
+    oneLine: 'S No 105 Opp HP Petrol Pump Near Zudio Mall, Kondhwa BK, Pune',
+  },
   established: null, // Reported as 2019 on directories. VERIFY before showing.
 }
 
