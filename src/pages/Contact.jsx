@@ -18,7 +18,7 @@ export default function Contact() {
     if (!v.interest) er.interest = 'Choose what you are looking for.'
     setErr(er); setSent(false)
     if (Object.keys(er).length) { document.getElementById(`f-${Object.keys(er)[0]}`)?.focus(); return }
-    const text = `Hello SK Emerald Interior, I am ${v.name.trim()}. I am looking for: ${v.interest}.${v.message.trim() ? `\n${v.message.trim()}` : ''}\nMy number: ${digits}`
+    const text = `Hi SK Emerald Interior, my name is ${v.name.trim()} and I would like to enquire about ${v.interest.toLowerCase()}.${v.message.trim() ? `\nAdditional details: ${v.message.trim()}` : ''}\nPlease share the available options, customisation possibilities and indicative pricing.\nMy contact number: ${digits}\nThank you.`
     window.open(waLink(text), '_blank', 'noopener')
     setSent(true)
   }
