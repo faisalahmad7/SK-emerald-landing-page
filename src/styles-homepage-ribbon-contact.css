@@ -3892,3 +3892,19 @@ body { font-size: 17px; }
 @media (max-width: 560px) {
   .visit-places { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Visit section on wide screens: left and right columns start and end on the same line.
+   The paragraph lines up with the eyebrow at the top, and the buttons and phone numbers
+   sit level with the bottom of the photo. */
+@media (min-width: 900px) {
+  .homepage-ribbon-pass .editorial-visit { align-items: stretch; }
+  .homepage-ribbon-pass .editorial-visit-details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0;
+  }
+  .homepage-ribbon-pass .editorial-visit-details .actions {
+    margin-top: auto;
+    padding-top: 26px;
+  }
+}
