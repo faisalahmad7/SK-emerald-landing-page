@@ -92,6 +92,8 @@ const list = [
   f('dining-sculpted-base-walnut', 'Walnut-look dining table with a sculpted base and curved-back chairs with blue seats', 'inspiration', []),
   f('dining-stone-top-four-seater', 'Four-seater dining table with a stone-look top, dark wood frame and cushioned chairs', 'inspiration', []),
   f('dining-stone-top-six-seater', 'Six-seater dining table with a stone-look top on tapered wooden legs and cushioned chairs', 'inspiration', []),
+  f('dressing-cane-arched-mirror', 'Natural oak-look dressing table with woven cane drawer and cupboard fronts, arched mirror and matching stool, photographed in a softly styled bedroom', 'inspiration', [], { derived: true, src: 'https://www.sicotas.com/cdn/shop/files/1_638ffc26-e332-4d13-90af-e6f2309e053a.jpg?v=1762973341', srcSet: undefined }),
+  f('dressing-walnut-trifold', 'Restored mid-century walnut dressing table with tapered legs, wide drawer storage and a three-panel mirror', 'inspiration', [], { derived: true, src: 'https://www.mustardvintage.com/cdn/shop/files/mid_century_vintage_alfred_cox_walnut_dressing_table.1_daa2e03f-d08a-4c53-b86a-5488244c9b6c_2048x2048.jpg?v=1716103188', srcSet: undefined }),
   f('dressing-mirror-cabinet-two-drawer', 'Slim dresser with a mirrored cabinet above and two drawers below in a walnut and cream finish', 'inspiration', []),
   f('dressing-oval-mirror-lit-pouf', 'Wall-fixed dressing counter with a backlit oval mirror, a wood-finish drawer and an upholstered pouf', 'inspiration', []),
   f('dressing-oval-mirror-floating', 'Floating dressing unit with an oval mirror, a fluted drawer front and a tall open shelf unit beside it', 'inspiration', []),
