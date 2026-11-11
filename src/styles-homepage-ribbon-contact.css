@@ -3906,3 +3906,11 @@ body { font-size: 17px; }
     padding-top: 0;
   }
 }
+
+/* Homepage hero: the written content sits at the far left of the page on wide screens,
+   instead of lining up with the centred content column below it. */
+@media (min-width: 1051px) {
+  .homepage-ribbon-pass .editorial-hero-copy {
+    padding-left: clamp(28px, 3.2vw, 64px);
+  }
+}
