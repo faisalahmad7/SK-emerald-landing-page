@@ -79,7 +79,7 @@ export default function Home() {
           <p className="lead">Furniture and interiors shaped around the way you live — measured for your home, finished to your taste, and specified clearly before the work begins.</p>
           <div className="actions">
             <Link to="/collections" className="btn editorial-btn">Discover the collections <span aria-hidden="true">↗</span></Link>
-            <a className="editorial-text-link" href={waLink('Hello SK Emerald Interior, I would like a quotation.')} target="_blank" rel="noopener noreferrer">Start a conversation <span aria-hidden="true">↗</span></a>
+            <a className="editorial-text-link" href={waLink('Hi SK Emerald Interior, I visited your website and would like to discuss a furniture or interior requirement. Please guide me through the available styles, customisation options and indicative pricing. Thank you.')} target="_blank" rel="noopener noreferrer">Start a conversation <span aria-hidden="true">↗</span></a>
           </div>
           <div className="hero-proof"><span>01</span><p>Made around your measurements.<br />Not the other way around.</p><span className="hero-proof-rule" /></div>
         </div>
