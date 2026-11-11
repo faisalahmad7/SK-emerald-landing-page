@@ -3893,18 +3893,16 @@ body { font-size: 17px; }
   .visit-places { grid-template-columns: minmax(0, 1fr); }
 }
 
-/* Visit section on wide screens: left and right columns start and end on the same line.
-   The paragraph lines up with the eyebrow at the top, and the buttons and phone numbers
-   sit level with the bottom of the photo. */
+/* Visit section on wide screens: the whole right column sits at the bottom of the row,
+   so it ends level with the bottom of the photo and its gold frame on the left. */
 @media (min-width: 900px) {
-  .homepage-ribbon-pass .editorial-visit { align-items: stretch; }
   .homepage-ribbon-pass .editorial-visit-details {
-    display: flex;
-    flex-direction: column;
+    align-self: end;
     padding-top: 0;
+    padding-bottom: 14px; /* the photo frame is offset 14px below the photo */
   }
   .homepage-ribbon-pass .editorial-visit-details .actions {
-    margin-top: auto;
-    padding-top: 26px;
+    margin-top: 22px;
+    padding-top: 0;
   }
 }
