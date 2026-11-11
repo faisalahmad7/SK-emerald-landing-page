@@ -93,7 +93,7 @@ export function Header() {
         <nav aria-label="Mobile">
           {MOBILE_NAV.map(([to, l]) => <NavLink key={to} to={to}>{l}</NavLink>)}
         </nav>
-        <a className="btn" href={waLink('Hello SK Emerald Interior, I would like a quotation.')} target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+        <a className="btn" href={waLink('Hi SK Emerald Interior, I would like to enquire about your furniture and interior solutions. Please share the available options, customisation details and indicative pricing. Thank you.')} target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
       </div>
     </header>
   )
@@ -135,7 +135,7 @@ export function Footer() {
 
 export function WhatsAppFab() {
   return (
-    <a className="fab" href={waLink('Hello SK Emerald Interior, I would like a quotation.')} target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp">
+    <a className="fab" href={waLink('Hi SK Emerald Interior, I would like to enquire about your furniture and interior solutions. Please share the available options, customisation details and indicative pricing. Thank you.')} target="_blank" rel="noopener noreferrer" aria-label="Message us on WhatsApp">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 19L4 20Z" /><path d="M9 9c0 3 3 6 6 6l1.2-1.4-2-1-1 .7c-.9-.4-1.6-1.1-2-2l.7-1-1-2L9 9Z" /></svg>
       <span>WhatsApp</span>
     </a>
