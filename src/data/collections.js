@@ -57,7 +57,7 @@ export const COLLECTIONS = [
       { name: 'Charcoal gloss wardrobe with mirror panel', detail: 'Floor-to-ceiling gloss shutters with curved steel handles and a central mirror panel.', image: 'wardrobe-grey-gloss-mirror-panel', pos: '50% 45%' },
       { name: 'Freestanding three-door wardrobe', detail: 'A light grey gloss wardrobe with two drawers, black handles and an oak-look top and base.', image: 'wardrobe-grey-three-door-drawers', pos: '50% 45%' },
       { name: 'Sliding Door Wardrobe', detail: 'A space-saving wardrobe with smooth sliding shutters, geometric sage-and-cream detailing, open side shelves and overhead loft storage.', image: 'wardrobe-sliding-geometric', pos: '50% 45%' },
-      { name: 'Hinged Door Wardrobe', detail: 'A classic full-access wardrobe with hinged walnut-finish shutters, overhead loft cabinets and a central mirror niche with drawers.', image: 'wardrobe-grey-three-door-drawers', pos: '50% 45%' },
+      { name: 'Hinged Door Wardrobe', detail: 'A classic full-access wardrobe with hinged walnut-finish shutters, overhead loft cabinets and a central mirror niche with drawers.', image: 'wardrobe-hinged-beige-fullheight', pos: '50% 45%' },
       { name: 'Walk-in Wardrobe', detail: 'A dedicated walk-in dressing room with floor-to-ceiling wardrobes, multiple hanging sections, open shelves, shoe storage, deep drawers and warm integrated lighting.', image: 'wardrobe-walk-in-room', pos: '50% 50%' },
     ],
     options: [['Doors', 'Sliding for tight rooms, hinged for full access, or a mix.'], ['Interior', 'Hanging rails, open shelves, drawers and lofts.'], ['Finish', 'Two-tone combinations such as navy and cream.'], ['Size', 'Built to your wall, up to the ceiling where wanted.']],
