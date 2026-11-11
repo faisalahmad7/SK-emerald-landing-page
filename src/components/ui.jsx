@@ -71,7 +71,7 @@ export function PageHead({ crumbs, title, lead, children }) {
     </header>
   )
 }
-export function Enquire({ title = 'Tell us about your room', text = 'Send a photo and rough measurements on WhatsApp and we will suggest what to make and what it involves.', message = 'Hello SK Emerald Interior, I would like a quotation.' }) {
+export function Enquire({ title = 'Tell us about your room', text = 'Send a photo and rough measurements on WhatsApp and we will suggest what to make and what it involves.', message = 'Hi SK Emerald Interior, I would like to discuss a furniture or interior requirement. Please share the available options, customisation details and indicative pricing. Thank you.' }) {
   return (
     <section className="green enquire"><div className="wrap">
       <h2>{title}</h2>
