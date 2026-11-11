@@ -100,8 +100,8 @@ export const COLLECTIONS = [
 export const bySlug = (s) => COLLECTIONS.find((c) => c.slug === s) || MORE_COLLECTIONS.find((c) => c.slug === s)
 // Listed as services on the supplied directory profiles, but no photographs supplied yet.
 export const ALSO_MADE = [
-  ['Wooden doors', 'Hello SK Emerald Interior, I am interested in wooden doors.'],
-  ['Wood polishing and refurbishing', 'Hello SK Emerald Interior, I would like to ask about wood polishing.'],
+  ['Wooden doors', 'Hi SK Emerald Interior, I am interested in your wooden door options. Please share the available designs, wood and finish choices, customisation options and indicative pricing. Thank you.'],
+  ['Wood polishing and refurbishing', 'Hi SK Emerald Interior, I would like to enquire about your wood polishing and refurbishing services. Please share the available finish options, process, approximate pricing and how I can arrange an assessment. Thank you.'],
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
