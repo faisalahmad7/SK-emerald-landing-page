@@ -85,10 +85,14 @@ export function Collection({ slug }) {
                 <span>OPTION 0{i + 1}</span>
                 <h3>{variant.name}</h3>
                 <p>{variant.detail}</p>
-                <a href={waLink(`${c.wa} I would like to ask about: ${variant.name}.`)} target="_blank" rel="noopener noreferrer">Ask about this option ↗</a>
+                <a href={waLink(`Hi SK Emerald Interior, I am interested in the ${variant.name} shown in your ${c.name} collection. Could you share more details about its available sizes, materials, finishes, customisation options and indicative price? Thank you.`)} target="_blank" rel="noopener noreferrer">Ask about this option ↗</a>
               </div>
             </article>
           ))}
+        </div>
+        <div className="collection-more-cta">
+          <p>Looking for a different look?</p>
+          <a className="btn" href={waLink(`Hi SK Emerald Interior, I explored your ${c.name} collection on your website and would love to see more ${c.name.toLowerCase()} styles and design options. Please share additional designs, available customisation, finishes and indicative pricing. Thank you.`)} target="_blank" rel="noopener noreferrer">AND MORE <span aria-hidden="true">↗</span></a>
         </div>
       </section>
       <section className="wrap options">
