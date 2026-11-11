@@ -426,3 +426,21 @@
   .editorial-mosaic .tile-name { font-size: 1.55rem; }
   .editorial-triptych .tri span { font-size: 1.4rem; }
 }
+
+
+/* Collection-level WhatsApp prompt for additional styles. */
+.collection-more-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 34px;
+  padding: 22px 0;
+  border-top: 1px solid var(--silver);
+  border-bottom: 1px solid var(--silver)
+}
+.collection-more-cta p { margin: 0; color: var(--ink2) }
+.collection-more-cta .btn { flex: 0 0 auto }
+@media(max-width:520px) {
+  .collection-more-cta { align-items: flex-start; flex-direction: column; gap: 14px }
+}
