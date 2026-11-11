@@ -1,6 +1,6 @@
 // parts = the physical components of the piece, shown as a dimension-line annotation.
 export const COLLECTIONS = [
-  { slug: 'sofas', name: 'Sofas', layout: 'wide', hero: 'sofa-velvet-curved-gold', tile: 'sofa-velvet-curved-gold', tilePos: '50% 70%', detail: 2, gallery: ['sofa-321', 12, 2, 0, 3, 5], parts: ['Frame', 'Foam', 'Fabric'],
+  { slug: 'sofas', name: 'Sofas', layout: 'wide', hero: 'sofa-velvet-curved-gold', tile: 'sofa-velvet-curved-gold', tilePos: '50% 70%', detail: 2, gallery: ['sofa-321', 12, 2, 0, 3, 5, 'sofa-bed-wood-drawer-open', 'sofa-bed-fold-out-foam', 'sofa-bed-click-clack-grey'], parts: ['Frame', 'Foam', 'Fabric'],
     tag: 'Frame, foam and fabric, explained before you pay',
     intro: 'Corner sofas, sectionals and 3+2 sets made to the size of your room. You choose the layout, upholstery and leg style, and we explain what goes inside before the order is confirmed.',
     features: ['3+2+1, 3+2 and 2+1 seating combinations', 'L-shaped, corner and chaise layouts', 'Fabric and velvet choices in a range of colours', 'Matching ottomans and centre tables on request'],
@@ -11,6 +11,9 @@ export const COLLECTIONS = [
       { name: 'Curved velvet sofa', detail: 'A rounded sofa with pleated arms in soft velvet, on slim gold-tone legs.', image: 'sofa-velvet-curved-gold', pos: '50% 72%' },
       { name: 'Grey sectional with chaise', detail: 'A deep grey corner sofa with a chaise end, planned for a family living room.', image: 'sofa-grey-chaise-sectional', pos: '50% 70%' },
       { name: 'Channelled two-seater sofa', detail: 'A cream sofa with a channelled back and arms, on slim gold-tone legs.', image: 'sofa-cream-channelled-gold', pos: '50% 55%' },
+      { name: 'Solid-wood pull-out sofa-cum-bed with open drawer storage', detail: 'A warm teak-finish sofa that extends into a double bed, with its front storage drawer visibly pulled open to show the built-in space for bedding.', image: 'sofa-bed-wood-drawer-open', pos: '50% 48%' },
+      { name: 'Fold-out foam sofa-cum-bed', detail: 'A low, compact upholstered sofa that unfolds into a broad cushioned sleeping surface, suited to studios and flexible guest spaces.', image: 'sofa-bed-fold-out-foam', pos: '50% 52%' },
+      { name: 'Click-clack three-seater sofa bed', detail: 'A minimalist three-seater with a hinged backrest that folds flat to create a bed, set on a slim dark metal frame.', image: 'sofa-bed-click-clack-grey', pos: '50% 55%' },
     ],
     options: [['Layout', 'L-shape, corner, 3+2 or 3+2+1, with or without a chaise.'], ['Upholstery', 'Velvet and fabric options, shown to you before you decide.'], ['Legs and detail', 'Slim metal legs, channelled arms and quilted backs, as seen in the photographs.'], ['Extras', 'Matching ottomans, cushions and centre tables.']],
     materials: 'Frame, foam and fabric vary by model. The quotation states what is used in your sofa.',
