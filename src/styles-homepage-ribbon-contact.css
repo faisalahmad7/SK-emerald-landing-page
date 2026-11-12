@@ -3938,3 +3938,27 @@ body { font-size: 17px; }
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* FINAL CASCADE OVERRIDE — six homepage collection links; no special final-item row. */
+.homepage-ribbon-pass .editorial-hero-index {
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  justify-items: stretch !important;
+}
+.homepage-ribbon-pass .editorial-hero-index a {
+  grid-column: auto !important;
+  justify-self: stretch !important;
+  width: auto !important;
+  min-width: 0;
+  justify-content: center !important;
+  text-align: center !important;
+}
+@media (min-width: 761px) and (max-width: 1050px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 760px) {
+  .homepage-ribbon-pass .editorial-hero-index {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
