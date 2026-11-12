@@ -8,13 +8,15 @@ export function Interiors() {
   const rooms = [
     ['Living room', 'Sofa set, centre table and TV wall planned together so colours and finishes belong to one idea.', 'living-room'],
     ['Bedroom', 'A storage bed, wardrobe and matching pieces sized to the room.', 'bedroom'],
-    ['Kitchen', 'Units drawn to your floor plan, with finishes and hardware agreed in writing.', 'kitchen'],
+    ['Modular kitchen', 'Units drawn to your floor plan, with finishes and hardware agreed in writing.', 'modular-kitchen'],
     ['Office spaces', 'Reception counters, workstations, meeting tables and storage planned around the way your team works.', 'office-spaces'],
   ]
   return (
     <>
-      <Seo path="/interiors" title="Plan a room" description="Plan coordinated furniture for living rooms, bedrooms, kitchens and office spaces in Pune." />
-      <PageHead crumbs={[['Home', '/'], ['Interiors']]} title="Plan a room" lead="Bring the furniture in a room together. We help you plan the main pieces, storage, sizes and finishes as one coordinated space. We make and fit furniture; we do not offer structural or architectural services." />
+      <Seo path="/interiors" title="Home Interiors in Kondhwa & South Pune | SK Emerald Interior" name="Interiors" type="CollectionPage" image={SLOTS.interiors[0][0]}
+        description="Living rooms, bedrooms, modular kitchens and offices planned room by room, with furniture made to measure at our factory in Kondhwa, Pune."
+        service={{ name: 'Home interiors', type: 'Interior design and custom furniture' }} />
+      <PageHead crumbs={[['Home', '/'], ['Interiors']]} title="Home interiors, planned room by room" lead="Bring the furniture in a room together. We help you plan the main pieces, storage, sizes and finishes as one coordinated space. We make and fit furniture; we do not offer structural or architectural services." />
       <section className="wrap rooms">
         {rooms.map(([t, d, slug], i) => { const id = SLOTS.interiors[i][0]; return (
           <article key={t} className={i % 2 ? 'flip rv' : 'rv'}>
@@ -37,7 +39,8 @@ export function Interiors() {
 export function Materials() {
   return (
     <>
-      <Seo path="/materials" title="Materials and craftsmanship" description="Board, laminate, upholstery and hardware used by SK Emerald Interior, with care guidance." />
+      <Seo path="/materials" title="Materials We Use: Board, Laminates, Fabrics | SK Emerald" name="Materials" image={SLOTS.materialsPage[0][0]}
+        description="The board, laminates, upholstery and hardware SK Emerald Interior uses for furniture in Pune, what to ask for in a quotation, and how to look after each finish." />
       <PageHead crumbs={[['Home', '/'], ['Materials']]} title="Materials and craftsmanship" lead="What we work with, and how to care for it. Specifications vary by product and are confirmed in your written quotation." />
       <section className="wrap mat-grid">
         <dl>{MATERIALS.map(([t, d], i) => <div key={t}><dt>{t}</dt><dd>{d}</dd></div>)}</dl>
@@ -60,7 +63,8 @@ export function Materials() {
 export function Faq() {
   return (
     <>
-      <Seo path="/faq" title="FAQs" description="Answers about measurements, customisation, materials, quotations, delivery and visiting the SK Emerald Interior showroom." />
+      <Seo path="/faq" title="Custom Furniture FAQs: Prices, Materials, Visits | SK Emerald" name="FAQs" faqs={FAQS}
+        description="Answers about custom furniture from SK Emerald Interior in Kondhwa, Pune: sizes, materials, quotations, kitchens, delivery areas and visiting the showroom." />
       <PageHead crumbs={[['Home', '/'], ['FAQs']]} title="Questions, answered" />
       <section className="wrap faq">
         {FAQS.map(([q, a]) => <details key={q}><summary>{q}</summary><p>{a}</p></details>)}
@@ -73,7 +77,7 @@ export function Faq() {
 export function Privacy() {
   return (
     <>
-      <Seo path="/privacy" title="Privacy policy" description="How SK Emerald Interior handles the details you share through this website." />
+      <Seo path="/privacy" title="Privacy Policy | SK Emerald Interior" name="Privacy policy" description="How SK Emerald Interior handles the details you share through this website, the enquiry form, WhatsApp and email. No accounts, no cookies, no data sold." />
       <PageHead crumbs={[['Home', '/'], ['Privacy']]} title="Privacy policy" />
       <section className="wrap prose">
         <h2>What this website collects</h2>
@@ -81,9 +85,9 @@ export function Privacy() {
         <h2>How we use your details</h2>
         <p>When you message, call or email us, we use the details you share to reply to your enquiry and prepare a quotation. We do not sell your details.</p>
         <h2>Third parties</h2>
-        <p>WhatsApp, your phone network and your email provider handle messages under their own policies. This site loads fonts from Google Fonts, which may receive your IP address. Map links open Google Maps.</p>
+        <p>WhatsApp, your phone network and your email provider handle messages under their own policies. Fonts and images are served from this website itself. Map links open Google Maps.</p>
         <h2>Cookies and analytics</h2>
-        <p>This website does not set cookies or run analytics. If that changes, this page will be updated.</p>
+        <p>This website does not set cookies. It may use Cloudflare Web Analytics, which counts page visits without cookies and without building a profile of you. If that changes, this page will be updated.</p>
         <h2>Your choices</h2>
         <p>To ask us to delete messages you have sent, contact us at <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>.</p>
         <p className="muted note">This policy describes the website as built and has not been legally reviewed.</p>
@@ -95,7 +99,7 @@ export function Privacy() {
 export function NotFound() {
   return (
     <>
-      <Seo path="/404" title="Page not found" description="This page could not be found." />
+      <Seo path="/404" title="Page not found | SK Emerald Interior" name="Page not found" noindex preload={false} description="This page could not be found. Browse SK Emerald Interior's furniture collections or contact our showroom in Kondhwa, Pune." />
       <PageHead title="That page is not here" lead="The link may be old or mistyped. Try one of these instead.">
         <div className="actions"><Link className="btn" to="/">Home</Link><Link className="btn ghost" to="/collections">Collections</Link><Link className="btn ghost" to="/contact">Contact</Link></div>
       </PageHead>

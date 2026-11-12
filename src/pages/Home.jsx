@@ -5,32 +5,18 @@ import { BUSINESS, waLink, mapsLink, telLink } from '../data/business'
 import { COLLECTIONS, bySlug } from '../data/collections'
 import { SLOTS } from '../data/images'
 import TransformationVideo from '../components/TransformationVideo'
-
-const ld = {
-  '@context': 'https://schema.org', '@type': 'FurnitureStore', name: BUSINESS.name, alternateName: BUSINESS.altName, slogan: BUSINESS.tagline,
-  telephone: BUSINESS.phones.map((p) => p.tel), email: BUSINESS.email,
-  address: { '@type': 'PostalAddress', streetAddress: 'Shop No. 226, First Floor, Unitas Fashion Centre Mall, Parge Nagar, Kondhwa Khurd', addressLocality: 'Pune', addressRegion: 'Maharashtra', postalCode: '411048', addressCountry: 'IN' },
-}
+import { REVIEWS } from '../data/reviews'
+import { POSTS } from '../content/posts'
 
 const TILES = [
   { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 'sofa-velvet-curved-gold-home', pos: '50% 45%' },
   { slug: 'cabinets', area: 'b', ratio: '4/5', delay: 1, imageId: 'cabinet-brown-glass-kitchen', pos: '50% 30%' },
-  { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0, imageId: 'wardrobe-sliding' },
+  { slug: 'wardrobes', area: 'c', ratio: '4/5', delay: 0, imageId: 'wardrobe-sliding-geometric' },
   { slug: 'tv-units', area: 'd', ratio: '16/10', delay: 0, imageId: 'tv-feature-wall' },
   { slug: 'beds', area: 'e', ratio: '16/10', delay: 1, imageId: 'bed-beige' },
   { slug: 'dining-tables', area: 'f', ratio: '1/1', delay: 0, imageId: 'dining-glass-top-six-seater', pos: '50% 82%' },
 ]
 
-const REVIEWS = [
-  { name: 'Misbah Shaikh', meta: '1 review · 9 months ago', ageMonths: 9, rating: 5, topics: ['sofas', 'interiors'], text: 'Very authentic and original shop to purchase furniture. Best and budget friendly place for home interiors. They are very professional. Starting from frame of sofa and foam everything is well explained and various colour options. I will definitely suggest to purchase from this store.' },
-  { name: 'Iqbal Shaikh', meta: '7 reviews · 3 months ago', ageMonths: 3, rating: 5, topics: ['sofas', 'kitchens'], text: 'I had ordered a TV unit, sofa, and kitchen unit, and I am extremely happy with the overall experience. Everything was delivered on time, exactly as promised.' },
-  { name: 'SIDD GAMER', meta: '3 reviews · 4 months ago', ageMonths: 4, rating: 5, topics: ['quality'], text: 'Very satisfied with my purchase. Good quality furniture, reasonable prices, and excellent customer service.' },
-  { name: 'Arshad Shaikh', meta: '1 review · 4 months ago', ageMonths: 4, rating: 5, topics: ['quality'], text: 'Best Quality Furniture product And Best Quality Total Material Use' },
-  { name: 'Naaz Shaikh', meta: '2 reviews · 9 months ago', ageMonths: 9, rating: 5, topics: ['interiors'], text: 'Their furniture and interior both work are excellent. Very attractive collection. We roamed a lot but did not find quality items like SK Emerald Interior. Really satisfied with best quality and service.' },
-  { name: 'Sachin Lonkar', meta: '1 review · 1 photo · 1 month ago', ageMonths: 1, rating: 5, topics: [], text: 'Wishing you continued success with all your future orders.' },
-  { name: 'Iqra Khan', meta: '1 review · 9 months ago', ageMonths: 9, rating: 5, topics: ['sofas'], text: 'There furnitures quality must be appreciated. They use such a great quality of material. There sofa collections quality was really nice. Their kitchen trolley and interior must be appreciated. Their modular interior designs will melt your heart at once.' },
-  { name: 'Abul Shaikh', meta: 'Local Guide · 35 reviews · 2 months ago', ageMonths: 2, rating: 5, topics: ['kitchens'], text: 'I recently got my kitchen cabinets designed and installed by this interior design shop, and I’m very happy with the final outcome. The finish is sleek, modern, and premium-looking, with excellent attention to detail.' },
-]
 
 const REVIEW_TOPICS = [
   { key: 'all', label: 'All' },
@@ -70,13 +56,14 @@ export default function Home() {
     })
   return (
     <div className="homepage-ribbon-pass">
-      <Seo path="/" description="Sofas, beds, wardrobes, modular kitchens, TV units and office furniture, made to measure in Kondhwa, Pune." ld={ld} />
+      <Seo path="/" title="Furniture Manufacturer in Kondhwa, Pune | SK Emerald Interior" name="Home" image={SLOTS.hero}
+        description="Custom sofas, beds, wardrobes, modular kitchens and TV units made to measure at our own factory in Kondhwa, Pune. Visit our showroom at Unitas Fashion Centre." />
 
       <section className="hero editorial-hero">
         <div className="hero-text editorial-hero-copy">
           <p className="editorial-eyebrow"><span /> Furniture, thoughtfully made <span className="eyebrow-city">Kondhwa · Pune</span></p>
-          <h1>Make room for<br className="hero-desktop-break" /> <em>living & working.</em></h1>
-          <p className="lead">Furniture and interiors shaped around the way you live — measured for your home, finished to your taste, and specified clearly before the work begins.</p>
+          <h1>Make room for<br className="hero-desktop-break" /> <em>living & working.</em><span className="hero-h1-sub">Made-to-measure furniture and interiors, from our Kondhwa factory</span></h1>
+          <p className="lead">Sofas, beds, wardrobes, modular kitchens and TV units, made to your measurements at our own factory in Kondhwa, Pune, with the materials and finish written into your quotation before work begins.</p>
           <div className="actions">
             <Link to="/collections" className="btn editorial-btn">Discover the collections <span aria-hidden="true">↗</span></Link>
             <a className="editorial-text-link" href={waLink('Hi SK Emerald Interior, I visited your website and would like to discuss a furniture or interior requirement. Please guide me through the available styles, customisation options and indicative pricing. Thank you.')} target="_blank" rel="noopener noreferrer">Start a conversation <span aria-hidden="true">↗</span></a>
@@ -104,14 +91,14 @@ export default function Home() {
           <h2>Not just furniture. <em>A feeling.</em></h2>
           <p className="lead">A room comes together when the proportions feel right, the materials work hard, and every finish belongs. We help you make those choices with confidence.</p>
           <p>Start with a room, a measurement or an idea you saved. We will work through size, fabric, finish and specification with you — so the piece feels considered before it ever arrives home.</p>
-          <Link to="/#about-us" className="editorial-underlink">About SK Emerald <span aria-hidden="true">↗</span></Link>
+          <Link to="/about" className="editorial-underlink">About SK Emerald <span aria-hidden="true">↗</span></Link>
           <div className="editorial-quote"><span>“</span><p>Good design makes everyday life feel a little more extraordinary.</p></div>
         </div>
       </section>
 
       <TransformationVideo />
 
-      <div className="home-marquee" aria-label="Furniture collections and made-to-measure furniture">
+      <div className="home-marquee" aria-hidden="true">
         <div className="home-marquee-track" aria-hidden="true">
           <span>SOFAS <i>✳</i> CABINETS & STORAGE <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> OFFICE FURNITURE <i>✳</i> MADE TO MEASURE <i>✳</i></span>
           <span>SOFAS <i>✳</i> CABINETS & STORAGE <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> OFFICE FURNITURE <i>✳</i> MADE TO MEASURE <i>✳</i></span>
@@ -164,12 +151,12 @@ export default function Home() {
             <Photo id={SLOTS.rooms[1]} ratio="4/3" sizes="(min-width: 760px) 50vw, 100vw" />
             <span>Bedroom</span>
           </Link>
-          <Link to="/interiors/kitchen" className="tri tri-room-card">
+          <Link to="/interiors/modular-kitchen" className="tri tri-room-card">
             <Photo id={SLOTS.rooms[2]} ratio="4/3" sizes="(min-width: 760px) 50vw, 100vw" />
-            <span>Kitchen</span>
+            <span>Modular kitchen</span>
           </Link>
           <Link to="/interiors/office-spaces" className="tri tri-room-card">
-            <Photo id="office-reception" ratio="4/3" sizes="(min-width: 760px) 50vw, 100vw" />
+            <Photo id="office-executive-desk-seating" ratio="4/3" sizes="(min-width: 760px) 50vw, 100vw" />
             <span>Office spaces</span>
           </Link>
         </div>
@@ -220,7 +207,7 @@ export default function Home() {
               </article>
             ))}
           </div>
-          <p className="editorial-reviews-note">Selected excerpts from customer reviews shared with SK Emerald Interior.</p>
+          <p className="editorial-reviews-note">Selected excerpts from customer reviews shared with SK Emerald Interior. <Link to="/reviews">Read all reviews</Link></p>
         </div>
       </section>
 
@@ -254,6 +241,20 @@ export default function Home() {
           </ul>
         </div>
       </section>
+
+      {POSTS.length > 0 && (
+        <section className="wrap home-guides" aria-labelledby="guides-heading">
+          <div className="sec-head editorial-section-head">
+            <div><p className="editorial-eyebrow"><span /> Before you buy</p><h2 id="guides-heading">Guides for Pune homes.</h2><p className="muted">Plain answers about materials, sizes and choices, from the people who make the furniture.</p></div>
+            <Link to="/blog" className="editorial-underlink">All guides <span aria-hidden="true">↗</span></Link>
+          </div>
+          <ul className="guide-cards">
+            {POSTS.slice(0, 3).map((p) => (
+              <li key={p.slug}><Link to={p.path}><span className="guide-cat">{p.category}</span><b>{p.title}</b><span className="muted">{p.readingMinutes} min read</span></Link></li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <section className="wrap visit editorial-visit">
         <div className="editorial-visit-heading">

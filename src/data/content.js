@@ -29,4 +29,12 @@ export const FAQS = [
   ['Do you offer a warranty?', 'Please ask when you enquire. Any warranty is stated in your quotation.'],
   ['How do I look after gloss shutters?', 'Wipe with a dry microfibre cloth and avoid abrasive pads.'],
   ['Can I see finishes before I decide?', 'Yes. Visit the showroom at Unitas Fashion Centre, Kondhwa. Call or WhatsApp first to confirm visiting times.'],
+  ['Do you make the furniture yourselves?', 'Yes. Our furniture is made at our own factory in Kondhwa Budruk (S No 105, opposite the HP petrol pump, near Zudio Mall). Our showroom is at Unitas Fashion Centre, Kondhwa.'],
+  ['Can I order a single piece, or only a full room?', 'Either. We can plan the furniture and finishes for a whole room, or make one custom piece to fit the space you already have.'],
+  ['How much will my furniture cost?', 'It depends on the size, the materials and the finish. Send your measurements and a photo of the space, and we will give you a written quotation that lists the specification, so you can compare like with like.'],
+  ['Which areas of Pune do you serve?', 'We are based in Kondhwa, close to NIBM Road, Undri, Wanowrie and Hadapsar. Tell us your area when you enquire and we will confirm delivery and fitting.'],
+  ['Do you make modular kitchens?', 'Yes. We make straight, L-shaped, U-shaped and parallel kitchens to your floor plan, with the board, shutter finish, counter top and hardware listed in your quotation.'],
+  ['Which board should I choose for a kitchen?', 'Near the sink and under the counter, ask for a water-resistant grade. Drier areas such as wardrobes can use other grades. The grade used for your order is named in your quotation.'],
+  ['Do you make recliners and sofa cum beds?', 'Yes. We make single recliners and recliner sofa sets in several mechanisms, and sofa cum beds for rooms that double as guest rooms.'],
+  ['Do you make office furniture?', 'Yes. We make workstations, desks, storage and reception furniture for offices and institutions, planned around how your team works.'],
 ]

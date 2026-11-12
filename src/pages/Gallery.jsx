@@ -1,29 +1,35 @@
 import { useEffect, useRef, useState } from 'react'
+import { Link } from '../router'
 import { Photo, Seo, PageHead, Enquire } from '../components/ui'
 import { GALLERY_IMAGES } from '../data/images'
 
 const FILTERS = [['all', 'All'], ['living', 'Living rooms'], ['sofas', 'Sofas'], ['recliners', 'Recliners'], ['kitchens', 'Kitchens'], ['wardrobes', 'Wardrobes'], ['beds', 'Beds'], ['tv', 'TV units']]
-const SETS = [['work', 'Our furniture'], ['inspiration', 'Design inspiration']]
 const RATIOS = ['4/3', '4/5', '1/1', '3/4', '5/4']
 
-export default function Gallery() {
-  const [set, setSet] = useState('work')
+// Two pages: /gallery shows the shop's own furniture; /design-ideas shows clearly labelled illustrative interiors.
+export default function Gallery({ set = 'work' }) {
   const [f, setF] = useState('all')
   const [open, setOpen] = useState(null)
-  const pool = GALLERY_IMAGES.filter((i) => i.kind === set)
+  useEffect(() => { setF('all'); setOpen(null) }, [set])
+  const pool = GALLERY_IMAGES.filter((i) => i.kind === set && i.src.startsWith('/'))
   const filters = FILTERS.filter(([k]) => k === 'all' || pool.some((i) => i.tags.includes(k)))
   const list = pool.filter((i) => f === 'all' || i.tags.includes(f))
-  const choose = (k) => { setSet(k); setF('all'); setOpen(null) }
+  const work = set === 'work'
   return (
     <>
-      <Seo path="/gallery" title="Our work" description="Photographs of sofas, recliners, kitchens, wardrobes, beds and TV units from SK Emerald Interior, Pune." />
-      <PageHead crumbs={[['Home', '/'], ['Our work']]} title="Our work" lead="Photographs of furniture from SK Emerald Interior, and a separate set of design inspiration for finishes and layouts we can build to." />
+      {work
+        ? <Seo path="/gallery" title="Our Work: Furniture We Have Made in Pune | SK Emerald Interior" name="Our work" type="CollectionPage" image={13}
+            description="Photographs of sofas, recliners, kitchens, wardrobes, beds and TV units made by SK Emerald Interior at our factory in Kondhwa, Pune." />
+        : <Seo path="/design-ideas" title="Design Ideas: Interiors We Can Build To | SK Emerald Interior" name="Design ideas" type="CollectionPage" image="living-sage"
+            description="Illustrative living rooms, bedrooms, kitchens and TV walls showing styles and finishes SK Emerald Interior can make to measure in Pune." />}
+      <PageHead crumbs={[['Home', '/'], [work ? 'Our work' : 'Design ideas']]} title={work ? 'Our work' : 'Design ideas'}
+        lead={work ? 'Photographs of furniture made by SK Emerald Interior.' : 'Illustrative interiors that show a style or finish we can build to. They are not completed SK Emerald projects.'} />
       <section className="wrap">
         <div className="gtabs" role="group" aria-label="Choose a set of photographs">
-          {SETS.map(([k, l]) => <button key={k} type="button" aria-pressed={set === k} onClick={() => choose(k)}>{l}</button>)}
+          <Link to="/gallery" aria-current={work ? 'page' : undefined} className={work ? 'on' : ''}>Our furniture</Link>
+          <Link to="/design-ideas" aria-current={!work ? 'page' : undefined} className={!work ? 'on' : ''}>Design ideas</Link>
         </div>
-        {set === 'inspiration' && <p className="muted note gnote">Illustrative interiors that show a style or finish we can build to. They are not completed SK Emerald projects.</p>}
-        {set === 'inspiration' && (
+                {set === 'inspiration' && (
           <div className="chips" role="group" aria-label="Filter design inspiration">
             {filters.map(([k, l]) => <button key={k} type="button" aria-pressed={f === k} onClick={() => setF(k)}>{l}</button>)}
           </div>

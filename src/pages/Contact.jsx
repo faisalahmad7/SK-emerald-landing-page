@@ -37,7 +37,8 @@ export default function Contact() {
   const aria = (k) => ({ id: `f-${k}`, 'aria-invalid': !!err[k], 'aria-describedby': err[k] ? `e-${k}` : undefined })
   return (
     <>
-      <Seo path="/contact" title="Contact and showroom" description="Visit SK Emerald Interior at Unitas Fashion Centre, Kondhwa Khurd, Pune, or call and message us on WhatsApp." />
+      <Seo path="/contact" title="Visit Our Showroom & Factory in Kondhwa, Pune | SK Emerald" name="Contact" type="ContactPage" image="living-sage"
+        description="Visit SK Emerald Interior at Unitas Fashion Centre, Kondhwa, Pune, or our factory in Kondhwa Budruk. Call 90118 31169 or message us on WhatsApp." />
       <PageHead crumbs={[['Home', '/'], ['Contact']]} title="Contact and showroom" lead="Call, message on WhatsApp, or visit our showroom or factory. Photos and rough measurements are the best way to start." />
       <section className="wrap contact">
         <div className="cinfo">
