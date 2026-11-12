@@ -1,0 +1,842 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "title": "Furniture Manufacturer in Kondhwa, Pune | SK Emerald Interior",
+    "titleLen": 61,
+    "desc": "Custom sofas, beds, wardrobes, modular kitchens and TV units made to measure at our own factory in Kondhwa, Pune. Visit our showroom at Unitas Fashion Centre.",
+    "descLen": 158,
+    "canonical": "https://sk-emeraldinterior.in/",
+    "h1": "Make room for living working. Made-to-measure furniture and interiors, from our Kondhwa factory",
+    "h1Count": 1,
+    "words": 1383,
+    "internalLinks": 80,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "17 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/about",
+    "status": 200,
+    "title": "About Us: Furniture Makers in Kondhwa, Pune | SK Emerald Interior",
+    "titleLen": 65,
+    "desc": "SK Emerald Interior makes furniture to measure at its own factory in Kondhwa, Pune, with a showroom at Unitas Fashion Centre. How we work, and what we make.",
+    "descLen": 156,
+    "canonical": "https://sk-emeraldinterior.in/about",
+    "h1": "About SK Emerald Interior",
+    "h1Count": 1,
+    "words": 633,
+    "internalLinks": 62,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "1 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/blog",
+    "status": 200,
+    "title": "Furniture Guides for Pune Homes | SK Emerald Interior",
+    "titleLen": 53,
+    "desc": "Plain-language guides to sofas, recliners, kitchens, plywood, laminates and false ceilings, written by a furniture maker in Kondhwa, Pune.",
+    "descLen": 138,
+    "canonical": "https://sk-emeraldinterior.in/blog",
+    "h1": "Furniture guides for Pune homes",
+    "h1Count": 1,
+    "words": 476,
+    "internalLinks": 56,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "6 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/blog/bwp-vs-bwr-vs-mr-plywood",
+    "status": 200,
+    "title": "BWP vs BWR vs MR Plywood HDHMR: Which Board Where | SK Emerald",
+    "titleLen": 62,
+    "desc": "BWP vs BWR vs MR plywood, HDHMR and MDF in plain words for Pune homes: which board suits a sink base, wardrobe or bed, and how to check what you get.",
+    "descLen": 149,
+    "canonical": "https://sk-emeraldinterior.in/blog/bwp-vs-bwr-vs-mr-plywood",
+    "h1": "MR, BWR, BWP or HDHMR? Choosing board for kitchens, wardrobes and beds",
+    "h1Count": 1,
+    "words": 1997,
+    "internalLinks": 59,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "1 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/blog/gypsum-vs-pop-false-ceiling",
+    "status": 200,
+    "title": "Gypsum vs POP vs PVC False Ceiling: Which Is Best? | SK Emerald",
+    "titleLen": 63,
+    "desc": "Gypsum, POP, PVC, grid and wooden false ceilings compared for Pune homes: finish, mess, damp, cracks, lighting and upkeep, so you can choose with care.",
+    "descLen": 151,
+    "canonical": "https://sk-emeraldinterior.in/blog/gypsum-vs-pop-false-ceiling",
+    "h1": "Gypsum, POP or PVC false ceiling: which is best for your home?",
+    "h1Count": 1,
+    "words": 1987,
+    "internalLinks": 57,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "1 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/blog/how-to-choose-a-recliner",
+    "status": 200,
+    "title": "Recliner vs Sofa, Manual vs Power: How to Choose | SK Emerald",
+    "titleLen": 61,
+    "desc": "Recliner vs sofa, manual vs power, wall-hugger, swivel-glider and lift chairs compared. How to measure a Pune flat so your recliner opens fully.",
+    "descLen": 144,
+    "canonical": "https://sk-emeraldinterior.in/blog/how-to-choose-a-recliner",
+    "h1": "Recliner or sofa, manual or power: how to choose a recliner",
+    "h1Count": 1,
+    "words": 1960,
+    "internalLinks": 56,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "1 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/blog/laminate-vs-acrylic-vs-pu",
+    "status": 200,
+    "title": "Laminate vs Acrylic vs PU vs Veneer Shutters | SK Emerald",
+    "titleLen": 57,
+    "desc": "Laminate vs acrylic vs PU vs veneer for kitchen and wardrobe shutters in Pune: looks, scratches, heat, cleaning and repair, to pick a finish that lasts.",
+    "descLen": 152,
+    "canonical": "https://sk-emeraldinterior.in/blog/laminate-vs-acrylic-vs-pu",
+    "h1": "Laminate, acrylic, PU or veneer: shutter finishes compared",
+    "h1Count": 1,
+    "words": 1761,
+    "internalLinks": 59,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "1 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/blog/modular-vs-carpenter-kitchen",
+    "status": 200,
+    "title": "Modular vs Carpenter Kitchen: Cost, Quality Time | SK Emerald",
+    "titleLen": 61,
+    "desc": "Modular, semi-modular or carpenter-made? Compare finish, edges, dust, time on site and cost for a Pune flat, and know what to ask before you pay.",
+    "descLen": 145,
+    "canonical": "https://sk-emeraldinterior.in/blog/modular-vs-carpenter-kitchen",
+    "h1": "Modular or carpenter-made kitchen: cost, quality and time",
+    "h1Count": 1,
+    "words": 1986,
+    "internalLinks": 57,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "1 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/blog/whats-inside-a-good-sofa",
+    "status": 200,
+    "title": "What's Inside a Good Sofa: Frame, Foam Fabric | SK Emerald",
+    "titleLen": 58,
+    "desc": "How to choose sofa material: frame wood, joints, foam density, springs and fabric rub counts. A Pune maker's checks to run before you pay a deposit.",
+    "descLen": 148,
+    "canonical": "https://sk-emeraldinterior.in/blog/whats-inside-a-good-sofa",
+    "h1": "What s inside a good sofa: frame, foam and fabric",
+    "h1Count": 1,
+    "words": 2012,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "1 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections",
+    "status": 200,
+    "title": "Made-to-Order Furniture Collections, Pune | SK Emerald Interior",
+    "titleLen": 63,
+    "desc": "Sofas, recliners, beds, wardrobes, kitchens, TV units, dining tables and more, made to order at our factory in Kondhwa, Pune. Browse by piece.",
+    "descLen": 142,
+    "canonical": "https://sk-emeraldinterior.in/collections",
+    "h1": "Furniture made to order in Pune",
+    "h1Count": 1,
+    "words": 476,
+    "internalLinks": 71,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "21 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/beds",
+    "status": 200,
+    "title": "Hydraulic Storage Beds in Pune, Made to Size | SK Emerald",
+    "titleLen": 57,
+    "desc": "Hydraulic lift-up and box storage beds, upholstered headboards and bunk beds, made to your mattress size at our factory in Kondhwa, Pune.",
+    "descLen": 137,
+    "canonical": "https://sk-emeraldinterior.in/collections/beds",
+    "h1": "Storage beds, made to your mattress size",
+    "h1Count": 1,
+    "words": 834,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "26 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/bedside-tables",
+    "status": 200,
+    "title": "Bedside tables in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 61,
+    "desc": "Bedside tables with drawers and open shelves for your phone, lamp and books, made to match your bed and. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 153,
+    "canonical": "https://sk-emeraldinterior.in/collections/bedside-tables",
+    "h1": "Bedside tables",
+    "h1Count": 1,
+    "words": 456,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "11 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/cabinets",
+    "status": 200,
+    "title": "Kitchen Storage Cabinets in Pune | SK Emerald Interior",
+    "titleLen": 54,
+    "desc": "Cabinets for the kitchen, living room and utility areas, with glass-front, closed or display options. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 150,
+    "canonical": "https://sk-emeraldinterior.in/collections/cabinets",
+    "h1": "Kitchen and storage cabinets",
+    "h1Count": 1,
+    "words": 403,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "11 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/centre-side-and-coffee-tables",
+    "status": 200,
+    "title": "Centre, side coffee tables in Pune | SK Emerald Interior",
+    "titleLen": 56,
+    "desc": "Centre tables, side tables and coffee tables sized to sit properly with your sofa set, in the top, base and. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 157,
+    "canonical": "https://sk-emeraldinterior.in/collections/centre-side-and-coffee-tables",
+    "h1": "Centre, side coffee tables",
+    "h1Count": 1,
+    "words": 550,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "20 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/chairs",
+    "status": 200,
+    "title": "Chairs armchairs in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 63,
+    "desc": "Armchairs, accent chairs, dining chairs and office chairs to go with the rest of your furniture, in the. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 153,
+    "canonical": "https://sk-emeraldinterior.in/collections/chairs",
+    "h1": "Chairs armchairs",
+    "h1Count": 1,
+    "words": 530,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "19 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/counter-tops",
+    "status": 200,
+    "title": "Counter tops in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 59,
+    "desc": "Counter tops for kitchens and utility areas, cut to your cabinet run and finished to match the cabinets and. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 157,
+    "canonical": "https://sk-emeraldinterior.in/collections/counter-tops",
+    "h1": "Counter tops",
+    "h1Count": 1,
+    "words": 465,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "13 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/crockery-units",
+    "status": 200,
+    "title": "Crockery Units in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 61,
+    "desc": "Crockery units with glass-door display shelves above and closed storage below, planned to suit your dining. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 156,
+    "canonical": "https://sk-emeraldinterior.in/collections/crockery-units",
+    "h1": "Crockery units",
+    "h1Count": 1,
+    "words": 542,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "15 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/dining-tables",
+    "status": 200,
+    "title": "Dining Tables in Pune, Made to Size | SK Emerald Interior",
+    "titleLen": 57,
+    "desc": "Dining tables made to the size of your dining area and the number of people you seat, with the top and base. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 157,
+    "canonical": "https://sk-emeraldinterior.in/collections/dining-tables",
+    "h1": "Dining tables made to size",
+    "h1Count": 1,
+    "words": 494,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "15 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/dressing-tables",
+    "status": 200,
+    "title": "Dressing tables in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 62,
+    "desc": "Dressing tables and dressing units with a mirror and drawers, planned to fit a bedroom wall or sit beside a. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 157,
+    "canonical": "https://sk-emeraldinterior.in/collections/dressing-tables",
+    "h1": "Dressing tables",
+    "h1Count": 1,
+    "words": 515,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "15 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/false-ceilings",
+    "status": 200,
+    "title": "False Ceiling Design Installation in Pune | SK Emerald",
+    "titleLen": 54,
+    "desc": "Cove, tray and layered false ceilings with concealed lighting, planned around your fans, lights and AC, and fitted with your furniture in Pune.",
+    "descLen": 143,
+    "canonical": "https://sk-emeraldinterior.in/collections/false-ceilings",
+    "h1": "False ceilings for homes in Pune",
+    "h1Count": 1,
+    "words": 614,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "14 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/mirrors-and-wall-decor",
+    "status": 200,
+    "title": "Mirrors wall decor in Pune | SK Emerald Interior",
+    "titleLen": 48,
+    "desc": "Mirrors, framed art and decorative wall pieces chosen to finish a room, sized and placed to suit your wall. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 156,
+    "canonical": "https://sk-emeraldinterior.in/collections/mirrors-and-wall-decor",
+    "h1": "Mirrors wall decor",
+    "h1Count": 1,
+    "words": 665,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "28 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/office-chairs",
+    "status": 200,
+    "title": "Office chairs in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 60,
+    "desc": "Office chairs for desks, cabins and home offices, from supportive task seating to visitor chairs for. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 150,
+    "canonical": "https://sk-emeraldinterior.in/collections/office-chairs",
+    "h1": "Office chairs",
+    "h1Count": 1,
+    "words": 557,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "15 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/office-loungers",
+    "status": 200,
+    "title": "Office loungers in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 62,
+    "desc": "Sofas and lounge seating for office receptions, waiting areas and manager cabins, in leather or fabric and. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 156,
+    "canonical": "https://sk-emeraldinterior.in/collections/office-loungers",
+    "h1": "Office loungers",
+    "h1Count": 1,
+    "words": 453,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "11 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/recliners",
+    "status": 200,
+    "title": "Recliner Sofas Chairs in Pune | SK Emerald Interior",
+    "titleLen": 51,
+    "desc": "Single recliners and recliner sofa sets: push-back, wall-hugger, swivel-glider and power-lift styles, planned around the space in your Pune home.",
+    "descLen": 145,
+    "canonical": "https://sk-emeraldinterior.in/collections/recliners",
+    "h1": "Recliner chairs and recliner sofas in Pune",
+    "h1Count": 1,
+    "words": 727,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "19 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/shelves-and-drawers",
+    "status": 200,
+    "title": "Shelves drawers in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 62,
+    "desc": "Open shelves, display niches and drawer units planned to your wall, for storage that is easy to reach and. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 155,
+    "canonical": "https://sk-emeraldinterior.in/collections/shelves-and-drawers",
+    "h1": "Shelves drawers",
+    "h1Count": 1,
+    "words": 590,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "20 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/shoe-racks",
+    "status": 200,
+    "title": "Shoe racks in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 57,
+    "desc": "Shoe racks, shoe cabinets and shoe benches planned to the space by your door, so shoes stay tidy and easy. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 155,
+    "canonical": "https://sk-emeraldinterior.in/collections/shoe-racks",
+    "h1": "Shoe racks",
+    "h1Count": 1,
+    "words": 530,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "15 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/sofa-cum-beds",
+    "status": 200,
+    "title": "Sofa cum Beds in Pune, Made to Measure | SK Emerald Interior",
+    "titleLen": 60,
+    "desc": "Sofa cum beds that sit as a regular sofa in your living room and pull out into a full bed when guests stay. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 156,
+    "canonical": "https://sk-emeraldinterior.in/collections/sofa-cum-beds",
+    "h1": "Sofa cum beds",
+    "h1Count": 1,
+    "words": 541,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "15 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/sofas",
+    "status": 200,
+    "title": "Custom Sofas Sofa Sets, Made in Kondhwa, Pune | SK Emerald",
+    "titleLen": 58,
+    "desc": "L-shaped, corner, 3+2 and 3+2+1 sofa sets made to your room size at our Kondhwa factory. We explain the frame, foam and fabric before you order.",
+    "descLen": 144,
+    "canonical": "https://sk-emeraldinterior.in/collections/sofas",
+    "h1": "Custom sofas and sofa sets, made in Pune",
+    "h1Count": 1,
+    "words": 721,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "16 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/study-and-office-tables",
+    "status": 200,
+    "title": "Study Office Tables in Pune | SK Emerald Interior",
+    "titleLen": 49,
+    "desc": "Study tables, home-office desks and workplace tables made to the size of your room and the way you work. Made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 153,
+    "canonical": "https://sk-emeraldinterior.in/collections/study-and-office-tables",
+    "h1": "Study and office tables",
+    "h1Count": 1,
+    "words": 600,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "20 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/tv-units",
+    "status": 200,
+    "title": "TV Units TV Wall Panels in Pune | SK Emerald Interior",
+    "titleLen": 53,
+    "desc": "Floating TV consoles, fluted panels, lit shelves and full media walls, planned around your screen and made at our factory in Kondhwa, Pune.",
+    "descLen": 139,
+    "canonical": "https://sk-emeraldinterior.in/collections/tv-units",
+    "h1": "TV units and feature walls",
+    "h1Count": 1,
+    "words": 744,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "21 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/collections/wardrobes",
+    "status": 200,
+    "title": "Customised Wardrobes in Pune: Sliding Hinged | SK Emerald",
+    "titleLen": 57,
+    "desc": "Sliding and hinged wardrobes with lofts, drawers and hanging space, built to your wall size in gloss, matte or laminate finishes at our Kondhwa factory.",
+    "descLen": 152,
+    "canonical": "https://sk-emeraldinterior.in/collections/wardrobes",
+    "h1": "Wardrobes built to your wall",
+    "h1Count": 1,
+    "words": 735,
+    "internalLinks": 55,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "15 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/contact",
+    "status": 200,
+    "title": "Visit Our Showroom Factory in Kondhwa, Pune | SK Emerald",
+    "titleLen": 56,
+    "desc": "Visit SK Emerald Interior at Unitas Fashion Centre, Kondhwa, Pune, or our factory in Kondhwa Budruk. Call 90118 31169 or message us on WhatsApp.",
+    "descLen": 144,
+    "canonical": "https://sk-emeraldinterior.in/contact",
+    "h1": "Contact and showroom",
+    "h1Count": 1,
+    "words": 300,
+    "internalLinks": 49,
+    "jsonLd": 1,
+    "issues": []
+  },
+  {
+    "path": "/design-ideas",
+    "status": 200,
+    "title": "Design Ideas: Interiors We Can Build To | SK Emerald Interior",
+    "titleLen": 61,
+    "desc": "Illustrative living rooms, bedrooms, kitchens and TV walls showing styles and finishes SK Emerald Interior can make to measure in Pune.",
+    "descLen": 135,
+    "canonical": "https://sk-emeraldinterior.in/design-ideas",
+    "h1": "Design ideas",
+    "h1Count": 1,
+    "words": 207,
+    "internalLinks": 52,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "79 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/faq",
+    "status": 200,
+    "title": "Custom Furniture FAQs: Prices, Materials, Visits | SK Emerald",
+    "titleLen": 61,
+    "desc": "Answers about custom furniture from SK Emerald Interior in Kondhwa, Pune: sizes, materials, quotations, kitchens, delivery areas and visiting the showroom.",
+    "descLen": 155,
+    "canonical": "https://sk-emeraldinterior.in/faq",
+    "h1": "Questions, answered",
+    "h1Count": 1,
+    "words": 641,
+    "internalLinks": 49,
+    "jsonLd": 1,
+    "issues": []
+  },
+  {
+    "path": "/gallery",
+    "status": 200,
+    "title": "Our Work: Furniture We Have Made in Pune | SK Emerald Interior",
+    "titleLen": 62,
+    "desc": "Photographs of sofas, recliners, kitchens, wardrobes, beds and TV units made by SK Emerald Interior at our factory in Kondhwa, Pune.",
+    "descLen": 132,
+    "canonical": "https://sk-emeraldinterior.in/gallery",
+    "h1": "Our work",
+    "h1Count": 1,
+    "words": 188,
+    "internalLinks": 52,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "15 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/interiors",
+    "status": 200,
+    "title": "Home Interiors in Kondhwa South Pune | SK Emerald Interior",
+    "titleLen": 58,
+    "desc": "Living rooms, bedrooms, modular kitchens and offices planned room by room, with furniture made to measure at our factory in Kondhwa, Pune.",
+    "descLen": 138,
+    "canonical": "https://sk-emeraldinterior.in/interiors",
+    "h1": "Home interiors, planned room by room",
+    "h1Count": 1,
+    "words": 368,
+    "internalLinks": 58,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "4 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/interiors/bedroom",
+    "status": 200,
+    "title": "Bedroom Interiors Furniture, Pune | SK Emerald Interior",
+    "titleLen": 55,
+    "desc": "Bedroom setups and the furniture to go with them, made to measure at our factory in Kondhwa, Pune. Send us your room size for ideas.",
+    "descLen": 132,
+    "canonical": "https://sk-emeraldinterior.in/interiors/bedroom",
+    "h1": "Bedroom interiors",
+    "h1Count": 1,
+    "words": 405,
+    "internalLinks": 63,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "18 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/interiors/living-room",
+    "status": 200,
+    "title": "Living Room Interiors Furniture, Pune | SK Emerald",
+    "titleLen": 50,
+    "desc": "Living room setups and the furniture to go with them, made to measure at our factory in Kondhwa, Pune. Send us your room size for ideas.",
+    "descLen": 136,
+    "canonical": "https://sk-emeraldinterior.in/interiors/living-room",
+    "h1": "Living room interiors",
+    "h1Count": 1,
+    "words": 411,
+    "internalLinks": 62,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "17 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/interiors/modular-kitchen",
+    "status": 200,
+    "title": "Modular Kitchens in Kondhwa, Pune | SK Emerald Interior",
+    "titleLen": 55,
+    "desc": "L-shaped, U-shaped, parallel and straight modular kitchens drawn to your floor plan and made at our Kondhwa factory, with finishes agreed in writing.",
+    "descLen": 149,
+    "canonical": "https://sk-emeraldinterior.in/interiors/modular-kitchen",
+    "h1": "Modular kitchens, designed and made in Pune",
+    "h1Count": 1,
+    "words": 599,
+    "internalLinks": 59,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "12 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/interiors/office-spaces",
+    "status": 200,
+    "title": "Office Furniture Interiors in Pune | SK Emerald Interior",
+    "titleLen": 56,
+    "desc": "Office spaces setups and the furniture to go with them, made to measure at our factory in Kondhwa, Pune. Send us your room size for ideas.",
+    "descLen": 138,
+    "canonical": "https://sk-emeraldinterior.in/interiors/office-spaces",
+    "h1": "Office furniture and interiors",
+    "h1Count": 1,
+    "words": 332,
+    "internalLinks": 56,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "9 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/materials",
+    "status": 200,
+    "title": "Materials We Use: Board, Laminates, Fabrics | SK Emerald",
+    "titleLen": 56,
+    "desc": "The board, laminates, upholstery and hardware SK Emerald Interior uses for furniture in Pune, what to ask for in a quotation, and how to look after each finish.",
+    "descLen": 160,
+    "canonical": "https://sk-emeraldinterior.in/materials",
+    "h1": "Materials and craftsmanship",
+    "h1Count": 1,
+    "words": 398,
+    "internalLinks": 50,
+    "jsonLd": 1,
+    "issues": [
+      {
+        "level": "info",
+        "msg": "4 <img> without width/height"
+      }
+    ]
+  },
+  {
+    "path": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy | SK Emerald Interior",
+    "titleLen": 36,
+    "desc": "How SK Emerald Interior handles the details you share through this website, the enquiry form, WhatsApp and email. No accounts, no cookies, no data sold.",
+    "descLen": 152,
+    "canonical": "https://sk-emeraldinterior.in/privacy",
+    "h1": "Privacy policy",
+    "h1Count": 1,
+    "words": 330,
+    "internalLinks": 49,
+    "jsonLd": 1,
+    "issues": []
+  },
+  {
+    "path": "/reviews",
+    "status": 200,
+    "title": "SK Emerald Interior Reviews (Google) | Kondhwa, Pune",
+    "titleLen": 52,
+    "desc": "What customers say about SK Emerald Interior's sofas, kitchens, TV units and service: Google reviews of our furniture showroom and factory in Kondhwa, Pune.",
+    "descLen": 156,
+    "canonical": "https://sk-emeraldinterior.in/reviews",
+    "h1": "What our customers say",
+    "h1Count": 1,
+    "words": 541,
+    "internalLinks": 50,
+    "jsonLd": 1,
+    "issues": []
+  }
+]

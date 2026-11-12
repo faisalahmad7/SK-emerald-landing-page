@@ -1,0 +1,1953 @@
+{
+  "generated": "2026-11-13",
+  "source": "autocomplete (1409 phrases from 339 queries, 2026-11-13)",
+  "pillar": {
+    "title": "Home: custom furniture and interiors in Kondhwa, Pune",
+    "keyword": "custom furniture kondhwa pune",
+    "url": "/",
+    "template": "landing-page",
+    "wordCount": 900,
+    "status": "rewrite",
+    "id": "pillar",
+    "cluster": "(pillar)",
+    "role": "pillar",
+    "evidenceCount": 50,
+    "evidence": [
+      "furniture manufacturers in kondhwa pune",
+      "furniture manufacturers kondhwa",
+      "furniture factory in kondhwa pune",
+      "furniture factory pune",
+      "furniture kondhwa pune",
+      "furniture manufacturers in manesar",
+      "furniture shop near me kondhwa",
+      "furniture shop pune",
+      "furniture at pune",
+      "furniture factory in kondhwa",
+      "furniture factory kondhwa",
+      "furniture in kondhwa"
+    ]
+  },
+  "clusters": [
+    {
+      "name": "Sofas & recliners",
+      "color": "#4E79A7",
+      "pages": [
+        {
+          "title": "Custom sofas and sofa sets in Pune",
+          "keyword": "custom sofa pune",
+          "url": "/collections/sofas",
+          "template": "landing-page",
+          "wordCount": 900,
+          "status": "rewrite",
+          "id": "cluster-0-post-0",
+          "cluster": "Sofas & recliners",
+          "role": "hub",
+          "evidenceCount": 54,
+          "evidence": [
+            "kondhwa sofa shop",
+            "sofa maker kondhwa",
+            "sofa maker near kondhwa pune",
+            "sofa set pune nearby",
+            "kondhwa sofa",
+            "pune sofa manufacturers",
+            "pune sofa market",
+            "sofa furniture pune",
+            "sofa maker pune",
+            "sofa pune buy",
+            "sofa set pune",
+            "sofa set repairing near me"
+          ]
+        },
+        {
+          "title": "Recliner sofas and chairs in Pune",
+          "keyword": "recliner sofa pune",
+          "url": "/collections/recliners",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "rewrite",
+          "id": "cluster-0-post-1",
+          "cluster": "Sofas & recliners",
+          "role": "money",
+          "evidenceCount": 6,
+          "evidence": [
+            "price of recliner chairs",
+            "price of recliner chairs near me",
+            "recliner chair pune",
+            "recliner manufacturers in pune",
+            "recliner pune",
+            "recliner sofa pune"
+          ]
+        },
+        {
+          "title": "Sofa cum beds made to measure",
+          "keyword": "sofa cum bed pune",
+          "url": "/collections/sofa-cum-beds",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "rewrite",
+          "id": "cluster-0-post-2",
+          "cluster": "Sofas & recliners",
+          "role": "money",
+          "evidenceCount": 4,
+          "evidence": [
+            "sofa cum bed pune",
+            "best sofa come bed",
+            "cost of sofa bed",
+            "price of sofa cum bed"
+          ]
+        },
+        {
+          "title": "Sofa set price in Pune (2026): what changes the price",
+          "keyword": "sofa set price pune",
+          "url": "/blog/sofa-set-price-pune",
+          "template": "explainer",
+          "wordCount": 1600,
+          "status": "planned",
+          "id": "cluster-0-post-3",
+          "cluster": "Sofas & recliners",
+          "role": "spoke",
+          "evidenceCount": 14,
+          "evidence": [
+            "sofa price in pune",
+            "sofa set pune price",
+            "sofa set pune under 10000",
+            "sofa set pune under 1500",
+            "cost of recliner sofa price",
+            "cost of sofa",
+            "cost of sofa set",
+            "cost of sofa set in india",
+            "l shape sofa price in pune",
+            "l'shape sofa price",
+            "sofa price near pune maharashtra",
+            "sofa price pune"
+          ]
+        },
+        {
+          "title": "What's inside a good sofa: frame, foam and fabric",
+          "keyword": "how to choose sofa material",
+          "url": "/blog/whats-inside-a-good-sofa",
+          "template": "how-to",
+          "wordCount": 1500,
+          "status": "planned",
+          "id": "cluster-0-post-4",
+          "cluster": "Sofas & recliners",
+          "role": "spoke",
+          "evidenceCount": 13,
+          "evidence": [
+            "how to choose sofa fabric",
+            "how to choose sofa material",
+            "cost of sofa cushion foam",
+            "how much is sofa material",
+            "how to choose sofa color for living room",
+            "how to choose sofa colour",
+            "how to choose sofa cushions",
+            "how to choose sofa fabric color",
+            "how to choose sofa foam",
+            "how to choose sofa for living room",
+            "how to choose sofa for small living room",
+            "how to choose sofa set for living room"
+          ]
+        },
+        {
+          "title": "Which sofa fabric is best for Indian homes?",
+          "keyword": "which sofa fabric is best",
+          "url": "/blog/best-sofa-fabric",
+          "template": "comparison",
+          "wordCount": 1400,
+          "status": "planned",
+          "id": "cluster-0-post-5",
+          "cluster": "Sofas & recliners",
+          "role": "spoke",
+          "evidenceCount": 33,
+          "evidence": [
+            "cost of sofa fabric",
+            "cost of sofa fabric change",
+            "price of sofa cloth",
+            "price of sofa fabric material",
+            "price of sofa fabric material near me",
+            "which sofa fabric is best",
+            "best sofa colour combination",
+            "best sofa fabric",
+            "best sofa fabric brands",
+            "best sofa fabric brands in india",
+            "best sofa fabric colour",
+            "best sofa fabric in india"
+          ]
+        },
+        {
+          "title": "Recliner or sofa, manual or power: how to choose a recliner",
+          "keyword": "recliner vs sofa",
+          "url": "/blog/how-to-choose-a-recliner",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "id": "cluster-0-post-6",
+          "cluster": "Sofas & recliners",
+          "role": "spoke",
+          "evidenceCount": 29,
+          "evidence": [
+            "difference between recliner and power recliner",
+            "best recliner",
+            "best recliner brands in india",
+            "best recliner chair",
+            "best recliner chair for work from home",
+            "best recliner chair in india",
+            "best recliner sofa",
+            "best recliner sofa brands in india",
+            "best recliner sofa in india",
+            "best recliners for home",
+            "best recliners in india",
+            "cost of recliner bed"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sofa repair & refurbishing",
+      "color": "#E15759",
+      "pages": [
+        {
+          "title": "Sofa repair and re-upholstery in Kondhwa, Pune",
+          "keyword": "sofa repair kondhwa",
+          "url": "/services/sofa-repair",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "gated",
+          "id": "cluster-1-post-0",
+          "cluster": "Sofa repair & refurbishing",
+          "role": "hub",
+          "evidenceCount": 19,
+          "evidence": [
+            "sofa repair kondhwa",
+            "sofa repair near kondhwa pune",
+            "sofa repair pune near me",
+            "recliner sofa repair pune",
+            "sofa repair near pune maharashtra",
+            "sofa repair pune",
+            "furniture repair pune",
+            "how much fabric for sofa upholstery",
+            "how much sofa upholstery",
+            "price of sofa upholstery",
+            "recliner repair pune",
+            "sofa repair near dhanori pune"
+          ]
+        },
+        {
+          "title": "Furniture polishing and refurbishing",
+          "keyword": "furniture polish pune",
+          "url": "/services/furniture-polishing",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "gated",
+          "id": "cluster-1-post-1",
+          "cluster": "Sofa repair & refurbishing",
+          "role": "money",
+          "evidenceCount": 5,
+          "evidence": [
+            "furniture polish pune",
+            "furniture polish use",
+            "is furniture polish bad for wood",
+            "is furniture polish good for wood",
+            "wood polish pune"
+          ]
+        },
+        {
+          "title": "Sofa repair cost in Pune: fabric, foam and frame",
+          "keyword": "sofa repairing cost pune",
+          "url": "/blog/sofa-repair-cost-pune",
+          "template": "explainer",
+          "wordCount": 1400,
+          "status": "gated",
+          "id": "cluster-1-post-2",
+          "cluster": "Sofa repair & refurbishing",
+          "role": "spoke",
+          "evidenceCount": 7,
+          "evidence": [
+            "sofa repairing cost pune",
+            "sofa repair cost",
+            "sofa set repair cost",
+            "cost of sofa upholstery",
+            "sofa repairing price",
+            "cost of sofa repair",
+            "how much sofa repair cost"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Modular kitchens & trolleys",
+      "color": "#F28E2B",
+      "pages": [
+        {
+          "title": "Modular kitchens in Kondhwa, Pune",
+          "keyword": "modular kitchen kondhwa",
+          "url": "/interiors/modular-kitchen",
+          "template": "landing-page",
+          "wordCount": 1000,
+          "status": "planned",
+          "id": "cluster-2-post-0",
+          "cluster": "Modular kitchens & trolleys",
+          "role": "hub",
+          "evidenceCount": 31,
+          "evidence": [
+            "what comes in modular kitchen",
+            "what does modular kitchen include",
+            "best modular kitchen pune",
+            "modular kitchen pune near me",
+            "aluminium modular kitchen pune",
+            "modular kitchen and furniture in pune",
+            "modular kitchen dealers in pune",
+            "modular kitchen factory pune",
+            "modular kitchen kondhwa",
+            "modular kitchen on emi in pune",
+            "modular kitchen pune reddit",
+            "best modular kitchen"
+          ]
+        },
+        {
+          "title": "Kitchen trolleys made to fit your cabinets",
+          "keyword": "kitchen trolley kondhwa",
+          "url": "/collections/kitchen-trolleys",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "gated",
+          "id": "cluster-2-post-1",
+          "cluster": "Modular kitchens & trolleys",
+          "role": "money",
+          "evidenceCount": 14,
+          "evidence": [
+            "kitchen trolley kondhwa",
+            "modular kitchen trolley price pune",
+            "modular kitchen trolley pune",
+            "kitchen trolley design pune",
+            "kitchen trolley hadapsar",
+            "kitchen trolley near hadapsar pune",
+            "kitchen trolley near kondhwa pune",
+            "kitchen trolley near me",
+            "kitchen trolley near undri pune",
+            "kitchen trolley pune",
+            "kitchen trolley pune cost",
+            "kitchen trolley pune price list"
+          ]
+        },
+        {
+          "title": "Modular kitchen cost in Pune per sq ft (2026)",
+          "keyword": "modular kitchen cost in pune per square foot",
+          "url": "/blog/modular-kitchen-cost-pune",
+          "template": "explainer",
+          "wordCount": 2000,
+          "status": "planned",
+          "id": "cluster-2-post-2",
+          "cluster": "Modular kitchens & trolleys",
+          "role": "spoke",
+          "evidenceCount": 23,
+          "evidence": [
+            "modular kitchen cost in pune per square foot",
+            "modular kitchen pune price list",
+            "modular kitchen in pune with price",
+            "modular kitchen manufacturers in pune with price",
+            "modular kitchen pune price",
+            "cost of modular kitchen",
+            "cost of modular kitchen cabinets",
+            "cost of modular kitchen in india",
+            "cost of modular kitchen in pune",
+            "cost of modular kitchen per square feet",
+            "cost of modular kitchen with chimney",
+            "how much aluminium modular kitchen cost"
+          ]
+        },
+        {
+          "title": "Modular or carpenter-made kitchen: cost, quality and time",
+          "keyword": "modular kitchen vs carpenter kitchen",
+          "url": "/blog/modular-vs-carpenter-kitchen",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "id": "cluster-2-post-3",
+          "cluster": "Modular kitchens & trolleys",
+          "role": "spoke",
+          "evidenceCount": 18,
+          "evidence": [
+            "modular kitchen is good or bad",
+            "difference between modular kitchen and semi modular kitchen",
+            "which modular kitchen is best",
+            "difference between modular and non modular kitchen",
+            "difference between modular and semi modular kitchen",
+            "difference between modular kitchen and normal kitchen",
+            "how to set non modular kitchen",
+            "modular kitchen vs aluminium kitchen",
+            "modular kitchen vs carpenter kitchen",
+            "modular kitchen vs carpenter made kitchen",
+            "modular kitchen vs granite kitchen",
+            "modular kitchen vs modern kitchen"
+          ]
+        },
+        {
+          "title": "Kitchen trolley sizes, types and prices",
+          "keyword": "kitchen trolley dimensions",
+          "url": "/blog/kitchen-trolley-guide",
+          "template": "how-to",
+          "wordCount": 1300,
+          "status": "planned",
+          "id": "cluster-2-post-4",
+          "cluster": "Modular kitchens & trolleys",
+          "role": "spoke",
+          "evidenceCount": 5,
+          "evidence": [
+            "kitchen trolley ideas",
+            "difference between modular kitchen and kitchen trolley",
+            "kitchen trolley dimensions",
+            "price of modular kitchen trolley",
+            "standard size of kitchen trolley"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Materials",
+      "color": "#76B7B2",
+      "pages": [
+        {
+          "title": "Materials we use: plywood, laminates, fabrics",
+          "keyword": "plywood grades for furniture",
+          "url": "/materials",
+          "template": "landing-page",
+          "wordCount": 1000,
+          "status": "rewrite",
+          "id": "cluster-3-post-0",
+          "cluster": "Materials",
+          "role": "hub",
+          "evidenceCount": 1,
+          "evidence": [
+            "how to choose plywood for furniture"
+          ]
+        },
+        {
+          "title": "BWP, BWR, MR or HDHMR? Choosing plywood for kitchens, wardrobes and beds",
+          "keyword": "bwp vs bwr",
+          "url": "/blog/bwp-vs-bwr-vs-mr-plywood",
+          "template": "comparison",
+          "wordCount": 1600,
+          "status": "planned",
+          "id": "cluster-3-post-1",
+          "cluster": "Materials",
+          "role": "spoke",
+          "evidenceCount": 43,
+          "evidence": [
+            "best plywood",
+            "best plywood brands",
+            "best plywood brands in india",
+            "best plywood company in india",
+            "best plywood for furniture",
+            "best plywood for furniture in india",
+            "best plywood for kitchen",
+            "best plywood for kitchen cabinets in india",
+            "best plywood in india",
+            "best plywood shop near me",
+            "bwp vs bwr",
+            "bwp vs bwr plywood"
+          ]
+        },
+        {
+          "title": "Laminate, acrylic, PU or veneer: shutter finishes compared",
+          "keyword": "difference between laminate and acrylic",
+          "url": "/blog/laminate-vs-acrylic-vs-pu",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "id": "cluster-3-post-2",
+          "cluster": "Materials",
+          "role": "spoke",
+          "evidenceCount": 35,
+          "evidence": [
+            "best laminate",
+            "best laminate brands",
+            "best laminate brands in india",
+            "best laminate company in india",
+            "best laminate for wardrobe",
+            "best laminate shop in pune",
+            "best laminate shop near me",
+            "best laminates for kitchen",
+            "best laminates in india",
+            "cost of laminate countertops",
+            "cost of laminate per square foot",
+            "cost of laminate sheet"
+          ]
+        },
+        {
+          "title": "Looking after furniture in Pune's monsoon",
+          "keyword": "furniture care in monsoon",
+          "url": "/blog/furniture-care-monsoon",
+          "template": "how-to",
+          "wordCount": 1200,
+          "status": "planned",
+          "id": "cluster-3-post-3",
+          "cluster": "Materials",
+          "role": "spoke",
+          "evidenceCount": 1,
+          "evidence": [
+            "which false ceiling is termite proof"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bedroom storage",
+      "color": "#59A14F",
+      "pages": [
+        {
+          "title": "Wardrobes built to your wall",
+          "keyword": "customized wardrobe pune",
+          "url": "/collections/wardrobes",
+          "template": "landing-page",
+          "wordCount": 900,
+          "status": "rewrite",
+          "id": "cluster-4-post-0",
+          "cluster": "Bedroom storage",
+          "role": "hub",
+          "evidenceCount": 14,
+          "evidence": [
+            "aluminium wardrobe pune",
+            "best wardrobe color combinations",
+            "best wardrobe colour",
+            "best wardrobe colour for bedroom",
+            "best wardrobe design",
+            "best wardrobe design for bedroom",
+            "customized wardrobe pune",
+            "how to choose wardrobe colors",
+            "how to choose wardrobe colors for bedroom",
+            "modular wardrobe pune",
+            "sliding door wardrobe pune",
+            "sliding wardrobe pune"
+          ]
+        },
+        {
+          "title": "Storage beds and hydraulic beds in Pune",
+          "keyword": "hydraulic bed price in pune",
+          "url": "/collections/beds",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "rewrite",
+          "id": "cluster-4-post-1",
+          "cluster": "Bedroom storage",
+          "role": "money",
+          "evidenceCount": 5,
+          "evidence": [
+            "hydraulic bed price in india",
+            "hydraulic bed price in pune",
+            "hydraulic bed price near pune maharashtra",
+            "hydraulic bed pune",
+            "storage bed in pune"
+          ]
+        },
+        {
+          "title": "Wardrobe cost per sq ft in Pune: sliding vs hinged",
+          "keyword": "wardrobe cost per sq ft",
+          "url": "/blog/wardrobe-cost-per-sq-ft",
+          "template": "explainer",
+          "wordCount": 1500,
+          "status": "planned",
+          "id": "cluster-4-post-2",
+          "cluster": "Bedroom storage",
+          "role": "spoke",
+          "evidenceCount": 11,
+          "evidence": [
+            "cost of wardrobe",
+            "cost of wardrobe doors",
+            "cost of wardrobe in bedroom",
+            "cost of wardrobe installation",
+            "cost of wardrobe making",
+            "cost of wardrobe per sq ft",
+            "cost of wardrobe sliding doors",
+            "how much wardrobe cost",
+            "sliding wardrobe price",
+            "sliding wardrobe price in pune",
+            "sliding wardrobe vs normal wardrobe cost"
+          ]
+        },
+        {
+          "title": "Storage bed or hydraulic bed: which gives you more space?",
+          "keyword": "storage bed vs hydraulic bed",
+          "url": "/blog/storage-bed-vs-hydraulic-bed",
+          "template": "comparison",
+          "wordCount": 1300,
+          "status": "planned",
+          "id": "cluster-4-post-3",
+          "cluster": "Bedroom storage",
+          "role": "spoke",
+          "evidenceCount": 9,
+          "evidence": [
+            "storage bed vs non storage bed",
+            "cost of storage bed",
+            "price of storage bed",
+            "are storage beds worth it",
+            "best storage bed frame",
+            "best storage beds",
+            "best storage beds king",
+            "best storage beds queen",
+            "best storage beds with drawers"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Living room & ceilings",
+      "color": "#EDC948",
+      "pages": [
+        {
+          "title": "TV units and TV wall panels in Pune",
+          "keyword": "tv unit design pune",
+          "url": "/collections/tv-units",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "rewrite",
+          "id": "cluster-5-post-0",
+          "cluster": "Living room & ceilings",
+          "role": "hub",
+          "evidenceCount": 5,
+          "evidence": [
+            "tv unit design pune",
+            "tv unit furniture in pune",
+            "tv unit manufacturers in pune",
+            "tv unit pune",
+            "tv unit shop in pune"
+          ]
+        },
+        {
+          "title": "False ceilings for homes in Pune",
+          "keyword": "false ceiling pune rate",
+          "url": "/collections/false-ceilings",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "rewrite",
+          "id": "cluster-5-post-1",
+          "cluster": "Living room & ceilings",
+          "role": "money",
+          "evidenceCount": 12,
+          "evidence": [
+            "bathroom false ceiling pune",
+            "cost of false ceiling in pune",
+            "false ceiling contractor pune",
+            "false ceiling design pune",
+            "false ceiling in hadapsar",
+            "false ceiling pune",
+            "false ceiling pune rate",
+            "false ceiling services in pune",
+            "false ceiling work pune",
+            "gypsum false ceiling pune",
+            "pop false ceiling pune",
+            "pvc false ceiling pune"
+          ]
+        },
+        {
+          "title": "TV unit cost per sq ft, and the right size for your TV",
+          "keyword": "cost of tv unit per sq ft",
+          "url": "/blog/tv-unit-cost-and-size",
+          "template": "explainer",
+          "wordCount": 1300,
+          "status": "planned",
+          "id": "cluster-5-post-2",
+          "cluster": "Living room & ceilings",
+          "role": "spoke",
+          "evidenceCount": 20,
+          "evidence": [
+            "cost of tv unit design",
+            "cost of tv unit in india",
+            "cost of tv unit interior design",
+            "cost of tv unit per sq ft",
+            "should a tv unit be bigger than the tv",
+            "best tv unit design",
+            "best tv unit design 2024",
+            "best tv unit design 2026",
+            "best tv unit design for hall",
+            "best tv unit design for living room",
+            "best tv unit design for small living room",
+            "best tv unit for living room"
+          ]
+        },
+        {
+          "title": "Gypsum, POP or PVC false ceiling: cost per sq ft and which is best",
+          "keyword": "difference between false ceiling and pop",
+          "url": "/blog/gypsum-vs-pop-false-ceiling",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "id": "cluster-5-post-3",
+          "cluster": "Living room & ceilings",
+          "role": "spoke",
+          "evidenceCount": 33,
+          "evidence": [
+            "which type of false ceiling is best",
+            "best false ceiling",
+            "best false ceiling design",
+            "best false ceiling design for bedroom",
+            "best false ceiling design for hall",
+            "best false ceiling design for living room",
+            "best false ceiling for bathroom",
+            "best false ceiling lights",
+            "best false ceiling lights brands in india",
+            "best false ceiling material",
+            "cost of false ceiling",
+            "cost of false ceiling design"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Whole home & local",
+      "color": "#B07AA1",
+      "pages": [
+        {
+          "title": "Furniture and interiors in Kondhwa",
+          "keyword": "furniture shop in kondhwa",
+          "url": "/areas/kondhwa",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "gated",
+          "id": "cluster-6-post-0",
+          "cluster": "Whole home & local",
+          "role": "hub",
+          "evidenceCount": 29,
+          "evidence": [
+            "furniture shop kondhwa pune",
+            "furniture shop on katraj kondhwa road",
+            "carpenter kondhwa",
+            "furniture shop kondhwa",
+            "furniture stores kondhwa",
+            "home interior kondhwa",
+            "interior designer kondhwa",
+            "kondhwa furniture factory",
+            "wooden furniture shop kondhwa",
+            "best furniture shop in kondhwa",
+            "best furniture shop in kondhwa pune",
+            "carpenter near kondhwa pune"
+          ]
+        },
+        {
+          "title": "Home interiors in Kondhwa and south Pune",
+          "keyword": "home interior kondhwa",
+          "url": "/interiors",
+          "template": "landing-page",
+          "wordCount": 900,
+          "status": "rewrite",
+          "id": "cluster-6-post-1",
+          "cluster": "Whole home & local",
+          "role": "money",
+          "evidenceCount": 11,
+          "evidence": [
+            "best interior designer in hadapsar",
+            "home interior pune",
+            "home interior undri",
+            "interior designer hadapsar",
+            "interior designer hadapsar pune",
+            "interior designer near hadapsar pune maharashtra",
+            "interior designer nibm",
+            "interior designer nibm pune",
+            "interior designer undri",
+            "interior designers in undri pune",
+            "interior designers in wanowrie"
+          ]
+        },
+        {
+          "title": "Furnishing a 2BHK in Pune: what you need and what it costs",
+          "keyword": "basic furniture cost for 2bhk",
+          "url": "/blog/2bhk-furniture-cost-pune",
+          "template": "explainer",
+          "wordCount": 1800,
+          "status": "planned",
+          "id": "cluster-6-post-2",
+          "cluster": "Whole home & local",
+          "role": "spoke",
+          "evidenceCount": 8,
+          "evidence": [
+            "basic furniture cost for 2bhk",
+            "furniture cost for 2bhk",
+            "furniture design for 2bhk flat",
+            "furniture for 2bhk",
+            "furniture for 2bhk flat",
+            "furniture for 2bhk flat with cost",
+            "furniture for new flat",
+            "furniture set for 2bhk"
+          ]
+        },
+        {
+          "title": "Custom-made, carpenter or ready-made furniture: which suits you?",
+          "keyword": "custom made furniture pune",
+          "url": "/blog/custom-vs-carpenter-vs-ready-made",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "id": "cluster-6-post-3",
+          "cluster": "Whole home & local",
+          "role": "spoke",
+          "evidenceCount": 17,
+          "evidence": [
+            "carpenter hadapsar",
+            "carpenter hadapsar pune",
+            "carpenter in wanowrie",
+            "carpenter near me hadapsar",
+            "carpenter near undri pune",
+            "carpenter nibm",
+            "carpenter pune",
+            "carpenter pune near me",
+            "carpenter pune price list",
+            "carpenter undri",
+            "custom furniture ideas",
+            "custom furniture manufacturers in pune"
+          ]
+        },
+        {
+          "title": "Furniture near Undri and Pisoli",
+          "keyword": "furniture shop undri",
+          "url": "/areas/undri",
+          "template": "landing-page",
+          "wordCount": 650,
+          "status": "gated",
+          "id": "cluster-6-post-4",
+          "cluster": "Whole home & local",
+          "role": "money",
+          "evidenceCount": 12,
+          "evidence": [
+            "sofa repair near undri pune",
+            "sofa repair undri",
+            "best furniture shop in undri pune",
+            "furniture manufacturers in undri",
+            "furniture shop in undri pisoli",
+            "furniture shop near undri pune",
+            "furniture shop undri",
+            "furniture shop undri pisoli road",
+            "home decor undri",
+            "modular kitchen undri",
+            "office furniture undri",
+            "undri sofa shop"
+          ]
+        },
+        {
+          "title": "Furniture near Hadapsar",
+          "keyword": "furniture shop hadapsar",
+          "url": "/areas/hadapsar",
+          "template": "landing-page",
+          "wordCount": 650,
+          "status": "gated",
+          "id": "cluster-6-post-5",
+          "cluster": "Whole home & local",
+          "role": "money",
+          "evidenceCount": 24,
+          "evidence": [
+            "sofa repair hadapsar pune",
+            "modular kitchen hadapsar pune",
+            "sofa maker hadapsar",
+            "sofa repair hadapsar",
+            "sofa repair near hadapsar pune maharashtra",
+            "sofa set in hadapsar",
+            "best furniture shop hadapsar",
+            "furniture factory hadapsar",
+            "furniture manufacturers in hadapsar",
+            "furniture shop hadapsar",
+            "furniture shop hadapsar near me",
+            "furniture shop hadapsar pune"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dining & office",
+      "color": "#FF9DA7",
+      "pages": [
+        {
+          "title": "Office furniture and interiors in Pune",
+          "keyword": "office furniture pune",
+          "url": "/interiors/office-spaces",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "rewrite",
+          "id": "cluster-7-post-0",
+          "cluster": "Dining & office",
+          "role": "hub",
+          "evidenceCount": 11,
+          "evidence": [
+            "modular office furniture pune",
+            "office chairs pune",
+            "office desk pune",
+            "office furniture description",
+            "office furniture examples",
+            "office furniture manufacturer pune",
+            "office furniture pune",
+            "office furniture pune near me",
+            "office furniture shop pune",
+            "office furniture synonyms",
+            "office table pune"
+          ]
+        },
+        {
+          "title": "Dining tables made to size",
+          "keyword": "dining table pune",
+          "url": "/collections/dining-tables",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "rewrite",
+          "id": "cluster-7-post-1",
+          "cluster": "Dining & office",
+          "role": "money",
+          "evidenceCount": 8,
+          "evidence": [
+            "buy dining table pune",
+            "dining table in pune with price",
+            "dining table pune",
+            "epoxy dining table pune",
+            "extendable dining table pune",
+            "folding dining table pune",
+            "marble dining table pune",
+            "wooden dining table pune"
+          ]
+        },
+        {
+          "title": "Dining table size guide: 4, 6 or 8 seats for your room",
+          "keyword": "dining table size for 6",
+          "url": "/blog/dining-table-size-guide",
+          "template": "how-to",
+          "wordCount": 1200,
+          "status": "planned",
+          "id": "cluster-7-post-2",
+          "cluster": "Dining & office",
+          "role": "spoke",
+          "evidenceCount": 0,
+          "evidence": []
+        },
+        {
+          "title": "Study tables for kids and home offices",
+          "keyword": "study table pune",
+          "url": "/collections/study-and-office-tables",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "rewrite",
+          "id": "cluster-7-post-3",
+          "cluster": "Dining & office",
+          "role": "money",
+          "evidenceCount": 5,
+          "evidence": [
+            "buy study table pune",
+            "foldable study table pune",
+            "kids study table pune",
+            "study table near pune maharashtra",
+            "study table pune"
+          ]
+        },
+        {
+          "title": "Crockery units",
+          "keyword": "crockery unit pune",
+          "url": "/collections/crockery-units",
+          "template": "landing-page",
+          "wordCount": 600,
+          "status": "rewrite",
+          "id": "cluster-7-post-4",
+          "cluster": "Dining & office",
+          "role": "money",
+          "evidenceCount": 4,
+          "evidence": [
+            "crockery unit cost",
+            "crockery unit meaning",
+            "crockery unit near me",
+            "crockery unit pune"
+          ]
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from": "pillar",
+      "to": "cluster-0-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "pillar",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-1",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-1",
+      "to": "cluster-0-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-1",
+      "to": "cluster-0-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-1",
+      "to": "cluster-0-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-1",
+      "to": "cluster-0-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-1",
+      "to": "cluster-0-post-5",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-1",
+      "to": "cluster-0-post-6",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-2",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-2",
+      "to": "cluster-0-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-2",
+      "to": "cluster-0-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-2",
+      "to": "cluster-0-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-2",
+      "to": "cluster-0-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-2",
+      "to": "cluster-0-post-5",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-2",
+      "to": "cluster-0-post-6",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-3",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-0-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-0-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-0-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-0-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-0-post-5",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-3",
+      "to": "cluster-0-post-6",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-4",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-4",
+      "to": "cluster-0-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-4",
+      "to": "cluster-0-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-4",
+      "to": "cluster-0-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-4",
+      "to": "cluster-0-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-4",
+      "to": "cluster-0-post-5",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-4",
+      "to": "cluster-0-post-6",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-5",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-5",
+      "to": "cluster-0-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-5",
+      "to": "cluster-0-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-5",
+      "to": "cluster-0-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-5",
+      "to": "cluster-0-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-5",
+      "to": "cluster-0-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-5",
+      "to": "cluster-0-post-6",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-0",
+      "to": "cluster-0-post-6",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-6",
+      "to": "cluster-0-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-0-post-6",
+      "to": "cluster-0-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-6",
+      "to": "cluster-0-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-6",
+      "to": "cluster-0-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-6",
+      "to": "cluster-0-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-0-post-6",
+      "to": "cluster-0-post-5",
+      "type": "recommended"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-1-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-1-post-0",
+      "to": "pillar",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-1-post-0",
+      "to": "cluster-1-post-1",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-1-post-1",
+      "to": "cluster-1-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-1-post-1",
+      "to": "cluster-1-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-1-post-0",
+      "to": "cluster-1-post-2",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-1-post-2",
+      "to": "cluster-1-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-1-post-2",
+      "to": "cluster-1-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-2-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "pillar",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "cluster-2-post-1",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-1",
+      "to": "cluster-2-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-1",
+      "to": "cluster-2-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-1",
+      "to": "cluster-2-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-1",
+      "to": "cluster-2-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "cluster-2-post-2",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-2",
+      "to": "cluster-2-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-2",
+      "to": "cluster-2-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-2",
+      "to": "cluster-2-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-2",
+      "to": "cluster-2-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "cluster-2-post-3",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-3",
+      "to": "cluster-2-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-3",
+      "to": "cluster-2-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-3",
+      "to": "cluster-2-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-3",
+      "to": "cluster-2-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-0",
+      "to": "cluster-2-post-4",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-4",
+      "to": "cluster-2-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-2-post-4",
+      "to": "cluster-2-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-4",
+      "to": "cluster-2-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-2-post-4",
+      "to": "cluster-2-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-3-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-3-post-0",
+      "to": "pillar",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-3-post-0",
+      "to": "cluster-3-post-1",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-3-post-1",
+      "to": "cluster-3-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-3-post-1",
+      "to": "cluster-3-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-3-post-1",
+      "to": "cluster-3-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-3-post-0",
+      "to": "cluster-3-post-2",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-3-post-2",
+      "to": "cluster-3-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-3-post-2",
+      "to": "cluster-3-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-3-post-2",
+      "to": "cluster-3-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-3-post-0",
+      "to": "cluster-3-post-3",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-3-post-3",
+      "to": "cluster-3-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-3-post-3",
+      "to": "cluster-3-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-3-post-3",
+      "to": "cluster-3-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-4-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-4-post-0",
+      "to": "pillar",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-4-post-0",
+      "to": "cluster-4-post-1",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-4-post-1",
+      "to": "cluster-4-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-4-post-1",
+      "to": "cluster-4-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-4-post-1",
+      "to": "cluster-4-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-4-post-0",
+      "to": "cluster-4-post-2",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-4-post-2",
+      "to": "cluster-4-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-4-post-2",
+      "to": "cluster-4-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-4-post-2",
+      "to": "cluster-4-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-4-post-0",
+      "to": "cluster-4-post-3",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-4-post-3",
+      "to": "cluster-4-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-4-post-3",
+      "to": "cluster-4-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-4-post-3",
+      "to": "cluster-4-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-5-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-5-post-0",
+      "to": "pillar",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-5-post-0",
+      "to": "cluster-5-post-1",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-5-post-1",
+      "to": "cluster-5-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-5-post-1",
+      "to": "cluster-5-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-5-post-1",
+      "to": "cluster-5-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-5-post-0",
+      "to": "cluster-5-post-2",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-5-post-2",
+      "to": "cluster-5-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-5-post-2",
+      "to": "cluster-5-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-5-post-2",
+      "to": "cluster-5-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-5-post-0",
+      "to": "cluster-5-post-3",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-5-post-3",
+      "to": "cluster-5-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-5-post-3",
+      "to": "cluster-5-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-5-post-3",
+      "to": "cluster-5-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-6-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-0",
+      "to": "pillar",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-0",
+      "to": "cluster-6-post-1",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-1",
+      "to": "cluster-6-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-1",
+      "to": "cluster-6-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-1",
+      "to": "cluster-6-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-1",
+      "to": "cluster-6-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-1",
+      "to": "cluster-6-post-5",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-0",
+      "to": "cluster-6-post-2",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-2",
+      "to": "cluster-6-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-2",
+      "to": "cluster-6-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-2",
+      "to": "cluster-6-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-2",
+      "to": "cluster-6-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-2",
+      "to": "cluster-6-post-5",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-0",
+      "to": "cluster-6-post-3",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-3",
+      "to": "cluster-6-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-3",
+      "to": "cluster-6-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-3",
+      "to": "cluster-6-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-3",
+      "to": "cluster-6-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-3",
+      "to": "cluster-6-post-5",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-0",
+      "to": "cluster-6-post-4",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-4",
+      "to": "cluster-6-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-4",
+      "to": "cluster-6-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-4",
+      "to": "cluster-6-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-4",
+      "to": "cluster-6-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-4",
+      "to": "cluster-6-post-5",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-0",
+      "to": "cluster-6-post-5",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-5",
+      "to": "cluster-6-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-6-post-5",
+      "to": "cluster-6-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-5",
+      "to": "cluster-6-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-5",
+      "to": "cluster-6-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-6-post-5",
+      "to": "cluster-6-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "pillar",
+      "to": "cluster-7-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-0",
+      "to": "pillar",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-0",
+      "to": "cluster-7-post-1",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-1",
+      "to": "cluster-7-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-1",
+      "to": "cluster-7-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-1",
+      "to": "cluster-7-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-1",
+      "to": "cluster-7-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-0",
+      "to": "cluster-7-post-2",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-2",
+      "to": "cluster-7-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-2",
+      "to": "cluster-7-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-2",
+      "to": "cluster-7-post-3",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-2",
+      "to": "cluster-7-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-0",
+      "to": "cluster-7-post-3",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-3",
+      "to": "cluster-7-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-3",
+      "to": "cluster-7-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-3",
+      "to": "cluster-7-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-3",
+      "to": "cluster-7-post-4",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-0",
+      "to": "cluster-7-post-4",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-4",
+      "to": "cluster-7-post-0",
+      "type": "mandatory"
+    },
+    {
+      "from": "cluster-7-post-4",
+      "to": "cluster-7-post-1",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-4",
+      "to": "cluster-7-post-2",
+      "type": "recommended"
+    },
+    {
+      "from": "cluster-7-post-4",
+      "to": "cluster-7-post-3",
+      "type": "recommended"
+    }
+  ],
+  "cannibalization": [],
+  "unassigned": [
+    "sofa sofa customer services",
+    "sofa near by",
+    "interior designer description",
+    "home interior examples",
+    "modular kitchen meaning",
+    "carpenter work description",
+    "cost of storage 3 bed house",
+    "home interior color ideas",
+    "interior designer locations",
+    "interior features of a house",
+    "interiors or interior",
+    "modular kitchen ideas",
+    "what is tv unit",
+    "best sofa",
+    "best sofa brands in india",
+    "best storage bed reddit",
+    "best tv unit",
+    "best tv unit furniture",
+    "best tv units online",
+    "best wardrobe",
+    "best wardrobe brand in india",
+    "best wardrobe for bedroom",
+    "best wardrobe for clothes",
+    "best wardrobe organizer",
+    "carpenter duties list",
+    "carpenter park events",
+    "carpenter short form",
+    "carpenter spiritual meaning",
+    "carpenter union levels",
+    "carpenter work details",
+    "carpentry business description",
+    "characteristics of table furniture",
+    "cost of sofa dry clean",
+    "describe a table furniture",
+    "difference between laminated and toughened glass",
+    "difference between leather and fabric sofa",
+    "difference between modular and modern kitchen",
+    "difference between modular and tandem kitchen",
+    "difference between modular kitchen",
+    "difference between modular kitchen and carpenter kitchen",
+    "difference between modular kitchen and italian kitchen",
+    "difference between modular kitchen and simple kitchen",
+    "difference between plywood and block board",
+    "difference between plywood and board",
+    "difference between plywood and engineered wood",
+    "difference between plywood and mdf",
+    "difference between plywood and particle board",
+    "difference between plywood and plyboard",
+    "difference between plywood and pvc board",
+    "difference between plywood and wood",
+    "difference between recliner and lounge",
+    "difference between recliner and prime plus",
+    "difference between recliner and pxl",
+    "difference between recliner and recliner",
+    "difference between recliner and recliner prime",
+    "difference between recliner and sofa",
+    "difference between recliner prime and classic",
+    "difference between sofa and lounge",
+    "difference between sofa and qsofa",
+    "difference between sofa and qsofa score",
+    "difference between sofa and recliner",
+    "difference between sofa and upholstery",
+    "difference between sofa slider and recliner",
+    "difference between tv panel and tv unit",
+    "difference between tv stand and console",
+    "difference between tv stand and sideboard",
+    "difference between tv stand and tv unit",
+    "difference between tv unit and tv cabinet",
+    "difference between tv unit and tv console",
+    "difference between wardrobe and almirah",
+    "difference between wardrobe and armoire",
+    "difference between wardrobe and cabinet",
+    "difference between wardrobe and closet",
+    "difference between wardrobe and covered",
+    "difference between wardrobe and cupboard",
+    "difference between wardrobe and cupboard and closet",
+    "difference between wardrobe and dresser",
+    "difference between wardrobe and walk in wardrobe",
+    "difference between wardrobe cupboard and almirah",
+    "do i need a tv unit"
+  ],
+  "competitorPhrases": [
+    "bhumi modular kitchen pune reviews",
+    "parmeshwar modular kitchen pune reviews",
+    "apna sofa kondhwa",
+    "bhagyalaxmi modular kitchen pune photos",
+    "bhagyalaxmi modular kitchen pune reviews",
+    "bhawani modular kitchen pune reviews",
+    "bhoomi modular kitchen pune photos",
+    "creative furniture kondhwa pune",
+    "kesar modular kitchen pune photos",
+    "keshar modular kitchen pune reviews",
+    "maya modular kitchen pune reviews",
+    "nectar modular kitchen pune reviews",
+    "nilkamal furniture near kondhwa pune",
+    "nilkanth modular kitchen pune reviews",
+    "satyam modular kitchen pune photos",
+    "sunrise modular kitchen pune reviews",
+    "vikas modular kitchen kharadi pune",
+    "vikas modular kitchen kharadi pune reviews",
+    "welcome furniture kondhwa pune",
+    "a1 furniture kondhwa",
+    "aayat modular kitchen and furniture pune reviews",
+    "anmol furniture kondhwa",
+    "apna sofa pune",
+    "aryan furniture & sofa house pune photos",
+    "aryan furniture & sofa house pune reviews",
+    "bella modular kitchens wardrobes pune",
+    "bella modular kitchens wardrobes pune photos",
+    "bella modular kitchens wardrobes pune reviews",
+    "bhagyalaxmi modular kitchen pune",
+    "bholenath furniture kondhwa",
+    "champion sofa maker kondhwa",
+    "classic modular kitchen pune",
+    "curves furniture kondhwa",
+    "diamond furniture kondhwa",
+    "domicil sofa pune",
+    "estilo style of furniture kondhwa pune",
+    "everfresh modular kitchen pune",
+    "godrej interio modular kitchen pune",
+    "godrej modular kitchen pune",
+    "hafele modular kitchen pune",
+    "hettich modular kitchen pune",
+    "highland modular kitchen & interiors pvt ltd pune",
+    "highland modular kitchen & interiors pvt ltd pune photos",
+    "highland modular kitchen & interiors pvt ltd pune reviews",
+    "how much godrej modular kitchen cost",
+    "kesar modular kitchen pune",
+    "keshar modular kitchen pune",
+    "mahalaxmi furniture modular kitchen handewadi pune",
+    "mahalaxmi furniture modular kitchen handewadi pune reviews",
+    "mahalaxmi modular kitchen trolley pune reviews",
+    "maya modular kitchen pune",
+    "my wardrobe pune",
+    "nectar modular kitchen and furniture pune",
+    "nectar modular kitchen and furniture pune reviews",
+    "nectar modular kitchen pune",
+    "price of modular kitchen godrej",
+    "puneet wardrobe city",
+    "satyam modular kitchen pune reviews",
+    "sunrise modular kitchen pune"
+  ]
+}

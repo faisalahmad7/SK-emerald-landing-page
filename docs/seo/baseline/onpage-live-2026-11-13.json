@@ -1,0 +1,442 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  },
+  {
+    "path": "/collections",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  },
+  {
+    "path": "/collections/sofas",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  },
+  {
+    "path": "/collections/wardrobes",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  },
+  {
+    "path": "/contact",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  },
+  {
+    "path": "/faq",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  },
+  {
+    "path": "/gallery",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  },
+  {
+    "path": "/interiors",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  },
+  {
+    "path": "/interiors/kitchen",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  },
+  {
+    "path": "/materials",
+    "status": 200,
+    "title": "SK Emerald Interior | Furniture and interiors in Kondhwa, Pune",
+    "titleLen": 62,
+    "desc": "Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune.",
+    "descLen": 115,
+    "canonical": "",
+    "h1": "",
+    "h1Count": 0,
+    "words": 0,
+    "internalLinks": 0,
+    "jsonLd": 0,
+    "issues": [
+      {
+        "level": "error",
+        "msg": "missing canonical"
+      },
+      {
+        "level": "error",
+        "msg": "0 <h1> elements in raw HTML"
+      },
+      {
+        "level": "warn",
+        "msg": "no JSON-LD"
+      },
+      {
+        "level": "warn",
+        "msg": "no og:image"
+      },
+      {
+        "level": "warn",
+        "msg": "thin raw HTML: 0 words"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate title (shared by 10 pages)"
+      },
+      {
+        "level": "error",
+        "msg": "duplicate desc (shared by 10 pages)"
+      }
+    ]
+  }
+]

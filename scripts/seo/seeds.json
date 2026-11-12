@@ -1,0 +1,17 @@
+{
+  "_note": "Seeds for scripts/seo/autocomplete.mjs. Products x places, Kondhwa-first phrasing, buyer questions, and a..z expansion of the core phrases.",
+  "hl": "en",
+  "gl": "in",
+  "products": [
+    "furniture shop", "furniture manufacturer", "custom furniture", "sofa", "sofa set", "l shape sofa", "sofa maker",
+    "sofa repair", "recliner", "storage bed", "hydraulic bed", "wardrobe", "sliding wardrobe", "modular kitchen",
+    "kitchen trolley", "tv unit", "false ceiling", "dining table", "sofa cum bed", "interior designer", "home interior",
+    "office furniture", "furniture polish", "crockery unit", "study table", "carpenter"
+  ],
+  "places": ["kondhwa", "pune", "nibm", "undri", "wanowrie", "hadapsar"],
+  "placeFirst": ["kondhwa"],
+  "questions": ["how to choose", "which", "best", "price of", "cost of", "difference between", "how much"],
+  "questionProducts": ["sofa", "recliner", "storage bed", "wardrobe", "modular kitchen", "plywood", "laminate", "false ceiling", "sofa fabric", "tv unit"],
+  "alphabet": ["furniture kondhwa", "modular kitchen pune", "sofa pune"],
+  "extra": ["sofa vs", "plywood vs", "wardrobe vs", "modular kitchen vs", "recliner vs", "laminate vs", "bwp vs", "furniture for 2bhk", "furniture for new flat"]
+}
