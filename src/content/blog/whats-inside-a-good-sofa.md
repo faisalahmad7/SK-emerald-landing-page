@@ -3,13 +3,16 @@
   "title": "What's inside a good sofa: frame, foam and fabric",
   "seoTitle": "What's Inside a Good Sofa: Frame, Foam & Fabric | SK Emerald",
   "description": "How to choose sofa material: frame wood, joints, foam density, springs and fabric rub counts. A Pune maker's checks to run before you pay a deposit.",
-  "date": "2026-11-13",
-  "updated": "2026-11-13",
+  "date": "2026-10-23",
+  "updated": "2026-10-23",
   "category": "Buying guides",
-  "image": "/images/2.webp",
-  "imageAlt": "Grey velvet sectional sofa with gold-tone legs",
+  "image": "/images/blog-grey-fabric-sofa.webp",
+  "imageAlt": "Grey fabric sofa with plush cushions",
   "primaryQuery": "how to choose sofa material",
-  "related": ["/collections/sofas", "/blog/how-to-choose-a-recliner"],
+  "related": [
+    "/collections/sofas",
+    "/blog/how-to-choose-a-recliner"
+  ],
   "draft": false
 }
 ---
@@ -72,6 +75,8 @@ Ask which base your sofa has. If it is webbing, ask how close the straps are.
 
 Pick fabric by how much rubbing it can take, then by colour and feel. A sofa fabric gets rubbed each time someone sits down or slides back.
 
+![Close-up of a curved armchair showing its upholstery fabric and piping](/images/blog-fabric-texture.webp "Look at the weave and the seams up close before you choose.|Photo: Bilal Mansuri / Pexels")
+
 Fabric makers measure this with a rub test, often called the Martindale test. A machine rubs the fabric until it shows wear. The result is given as a number of rubs. Many suppliers suggest 15,000 to 25,000 rubs for an everyday family sofa. For homes with children, pets or recliners, look for 25,000 or more. Not every fabric book lists this number, so ask for it.
 
 A few more points help:
@@ -84,6 +89,8 @@ A few more points help:
 ## Sofa legs: how they are fixed matters
 
 A leg should screw into a metal plate or a threaded insert fixed to the frame, not only into a thin bottom board. Slim metal legs look light and neat, but they still need a solid fixing above them. In the showroom, push the sofa gently from the side. It should not rock or twist on its legs.
+
+![Grey velvet sectional sofa with gold-tone legs](/images/2.webp "A velvet sectional on slim gold-tone legs.")
 
 ## How to check a sofa in the showroom
 

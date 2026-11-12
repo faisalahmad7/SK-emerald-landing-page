@@ -3,13 +3,18 @@
   "title": "Laminate, acrylic, PU or veneer: shutter finishes compared",
   "seoTitle": "Laminate vs Acrylic vs PU vs Veneer Shutters | SK Emerald",
   "description": "Laminate vs acrylic vs PU vs veneer for kitchen and wardrobe shutters in Pune: looks, scratches, heat, cleaning and repair, to pick a finish that lasts.",
-  "date": "2026-11-13",
-  "updated": "2026-11-13",
+  "date": "2026-11-04",
+  "updated": "2026-11-04",
   "category": "Materials",
-  "image": "/images/15.webp",
-  "imageAlt": "Navy and cream gloss wardrobe with loft",
+  "image": "/images/blog-gloss-woodgrain-kitchen.webp",
+  "imageAlt": "Kitchen with white gloss upper shutters and dark wood-grain tall units",
   "primaryQuery": "difference between laminate and acrylic",
-  "related": ["/materials", "/interiors/modular-kitchen", "/collections/wardrobes", "/blog/bwp-vs-bwr-vs-mr-plywood"],
+  "related": [
+    "/materials",
+    "/interiors/modular-kitchen",
+    "/collections/wardrobes",
+    "/blog/bwp-vs-bwr-vs-mr-plywood"
+  ],
   "draft": false
 }
 ---
@@ -36,6 +41,8 @@ When a carpenter offers "sunmica", they mean laminate. The useful question is no
 ## Glossy or matte laminate: which is best?
 
 Matte suits kitchens and children's rooms. Gloss suits spaces where you want shine and don't mind wiping.
+
+![White gloss kitchen shutters beside walnut-finish tall units](/images/blog-gloss-walnut-units.webp "Gloss and wood-grain finishes side by side.|Photo: Max Vakhtbovych / Pexels")
 
 Gloss laminate bounces light and can make a small room feel brighter. It also shows smudges and fine scratches. Matte and textured sheets hide fingerprints and everyday marks far better. Some matte ranges are sold as anti-fingerprint. Wood-grain textures are forgiving too, because small marks blend into the pattern.
 
@@ -67,6 +74,8 @@ Veneer is glued onto board and then polished. It looks and feels like solid wood
 ## Which finish is best for kitchens and wardrobes?
 
 Kitchens need a tough, wipeable face. Wardrobes can take softer, glossier finishes.
+
+![Navy and cream gloss wardrobe with a loft](/images/15.webp "Gloss shutters on a navy and cream wardrobe.")
 
 **In the kitchen**, shutters near the hob face heat and oil, and the ones under the sink face water. Laminate, especially matte, is the safe pick for these. Acrylic and PU look good on wall cabinets and tall units, where they catch the eye and see less wear. Whatever the finish, ask for every edge to be sealed, even the hidden ones. Our [modular kitchen page](/interiors/modular-kitchen) shows how we plan cabinets and finishes together.
 

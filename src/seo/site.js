@@ -11,7 +11,7 @@ export const DEFAULT_OG = '/og/home.jpg'
 export const SECTION_NAMES = {
   collections: ['Collections', '/collections'],
   interiors: ['Interiors', '/interiors'],
-  blog: ['Guides', '/blog'],
+  blog: ['Blogs', '/blog'],
 }
 
 // /collections/sofas -> "collections-sofas"; "/" -> "home". Used for share-image file names.

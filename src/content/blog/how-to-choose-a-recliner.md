@@ -3,13 +3,16 @@
   "title": "Recliner or sofa, manual or power: how to choose a recliner",
   "seoTitle": "Recliner vs Sofa, Manual vs Power: How to Choose | SK Emerald",
   "description": "Recliner vs sofa, manual vs power, wall-hugger, swivel-glider and lift chairs compared. How to measure a Pune flat so your recliner opens fully.",
-  "date": "2026-11-13",
-  "updated": "2026-11-13",
+  "date": "2026-10-06",
+  "updated": "2026-10-06",
   "category": "Buying guides",
-  "image": "/images/10.webp",
-  "imageAlt": "Charcoal recliner set with seats reclined",
+  "image": "/images/blog-recliner-sofa-grey.webp",
+  "imageAlt": "Grey leather recliner sofa in a living room with a slatted wood wall",
   "primaryQuery": "recliner vs sofa",
-  "related": ["/collections/recliners", "/collections/sofas"],
+  "related": [
+    "/collections/recliners",
+    "/collections/sofas"
+  ],
   "draft": false
 }
 ---
@@ -35,6 +38,8 @@ Pick a recliner if someone at home watches long films, stands all day at work, o
 ## Manual or power recliner: what's the difference?
 
 A manual recliner opens with your body or a lever. A power recliner opens with a motor and a button. Both can be comfortable. The right one depends on who will use it.
+
+![Charcoal recliner set with seats reclined](/images/10.webp "A recliner set with the footrests up.")
 
 | Type | How it opens | Good for | Keep in mind |
 |---|---|---|---|
@@ -89,6 +94,8 @@ If the user has a health condition, ask their doctor what kind of seat suits the
 ## Single recliner or a recliner sofa set?
 
 A single recliner suits one person, a reading corner or a bedroom. A recliner sofa puts two or three seats in one piece. On some sofas every seat reclines. On others only the end seats do, and the middle stays fixed. A full set, such as a three-seater with matching single chairs, suits a family living room or a home theatre.
+
+![Home theatre with brown leather recliner seats facing a projector screen](/images/blog-home-theatre-recliners.webp "Recliner seats in a home theatre.|Photo: Curtis Adams / Pexels")
 
 Some designs add cup-holder arms and padded headrests. Before you order, check which seats recline. Also check that each seat can open fully without hitting a wall, a table or the next seat.
 

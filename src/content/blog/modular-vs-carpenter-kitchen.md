@@ -3,13 +3,17 @@
   "title": "Modular or carpenter-made kitchen: cost, quality and time",
   "seoTitle": "Modular vs Carpenter Kitchen: Cost, Quality & Time | SK Emerald",
   "description": "Modular, semi-modular or carpenter-made? Compare finish, edges, dust, time on site and cost for a Pune flat, and know what to ask before you pay.",
-  "date": "2026-11-13",
-  "updated": "2026-11-13",
+  "date": "2026-10-29",
+  "updated": "2026-10-29",
   "category": "Buying guides",
-  "image": "/images/20.webp",
-  "imageAlt": "L-shaped kitchen in navy gloss and cream with glass-front units",
+  "image": "/images/blog-modular-kitchen-wood.webp",
+  "imageAlt": "Modular kitchen in wood and sage green with an island and pendant lights",
   "primaryQuery": "modular kitchen vs carpenter kitchen",
-  "related": ["/interiors/modular-kitchen", "/blog/bwp-vs-bwr-vs-mr-plywood", "/blog/laminate-vs-acrylic-vs-pu"],
+  "related": [
+    "/interiors/modular-kitchen",
+    "/blog/bwp-vs-bwr-vs-mr-plywood",
+    "/blog/laminate-vs-acrylic-vs-pu"
+  ],
   "draft": false
 }
 ---
@@ -37,6 +41,8 @@ In a carpenter-made kitchen, the carpenter brings sheets of board to your flat. 
 
 A modular kitchen has five parts: the carcass, the shutters, the hardware, the counter top and the accessories. Knowing them helps you read any quote, modular or not.
 
+![L-shaped kitchen in navy gloss and cream with glass-front units](/images/20.webp "An L-shaped kitchen with gloss shutters and glass-front wall units.")
+
 - **Carcass.** This is the box itself, made of board or plywood. It faces water from the sink and steam from cooking, so its grade matters most. Our guide to [BWP, BWR, MR and HDHMR boards](/blog/bwp-vs-bwr-vs-mr-plywood) explains the grades in plain words.
 - **Shutters.** These are the doors and drawer fronts you see. They come in laminate, gloss, acrylic, PU paint or glass. See [laminate, acrylic and PU shutters compared](/blog/laminate-vs-acrylic-vs-pu) for how they wear.
 - **Hardware.** Hinges, drawer runners, handles and lift-up fittings for wall cabinets. Soft-close hinges and runners stop doors and drawers from banging.
@@ -58,6 +64,8 @@ Still, a modular kitchen with cheap board under the sink will fail. A careful ca
 ## How long does each one take, and how much mess?
 
 A modular kitchen is mostly made away from your home. Once the boxes arrive, fitting is mainly assembly, so you lose the use of your kitchen for a shorter spell.
+
+![Carpenter planing wood in a workshop stacked with timber](/images/blog-carpenter-workshop.webp "Hand carpentry takes real skill, and real time.|Photo: GOWTHAM AGM / Pexels")
 
 A carpenter-made kitchen is built where you live. Expect weeks of sawing, sanding, glue smell and sawdust. Your neighbours will hear it too, which matters in a housing society.
 
