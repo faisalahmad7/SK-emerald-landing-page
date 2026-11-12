@@ -91,15 +91,21 @@
 .home-marquee-track {
   display: flex;
   width: max-content;
+  gap: 0;
   animation: sk-home-marquee 34s linear infinite;
+  animation-iteration-count: infinite;
   will-change: transform;
 }
 
 .home-marquee-track span {
   display: flex;
+  flex: 0 0 max-content;
   align-items: center;
+  justify-content: space-around;
+  min-width: 100vw;
+  box-sizing: border-box;
   gap: clamp(18px, 3vw, 40px);
-  padding-right: clamp(18px, 3vw, 40px);
+  padding-inline: clamp(18px, 3vw, 40px);
   white-space: nowrap;
   font: 600 .65rem/1.5 var(--ed-sans);
   letter-spacing: .19em;
@@ -112,8 +118,8 @@
 }
 
 @keyframes sk-home-marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-25%, 0, 0); }
 }
 
 .homepage-ribbon-pass .editorial-intro {
