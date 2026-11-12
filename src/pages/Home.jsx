@@ -243,16 +243,26 @@ export default function Home() {
       </section>
 
       {POSTS.length > 0 && (
-        <section className="wrap home-guides" aria-labelledby="guides-heading">
-          <div className="sec-head editorial-section-head">
-            <div><p className="editorial-eyebrow"><span /> Before you buy</p><h2 id="guides-heading">Guides for Pune homes.</h2><p className="muted">Plain answers about materials, sizes and choices, from the people who make the furniture.</p></div>
-            <Link to="/blog" className="editorial-underlink">All guides <span aria-hidden="true">↗</span></Link>
+        <section className="home-guides" aria-labelledby="guides-heading">
+          <div className="wrap home-guides-inner">
+            <div className="home-guides-head">
+              <p className="editorial-eyebrow"><span /> Before you buy</p>
+              <h2 id="guides-heading">Guides for Pune homes.</h2>
+              <p className="muted">Plain answers about materials, sizes and choices, from the people who make the furniture.</p>
+              <Link to="/blog" className="editorial-underlink">All guides <span aria-hidden="true">↗</span></Link>
+            </div>
+            <ul className="reading-list">
+              {POSTS.slice(0, 4).map((p) => (
+                <li key={p.slug}>
+                  <Link to={p.path}>
+                    <span className="reading-list-cat">{p.category}</span>
+                    <span className="reading-list-title">{p.title}</span>
+                    <span className="reading-list-meta">{p.readingMinutes} min read</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
-          <ul className="guide-cards">
-            {POSTS.slice(0, 3).map((p) => (
-              <li key={p.slug}><Link to={p.path}><span className="guide-cat">{p.category}</span><b>{p.title}</b><span className="muted">{p.readingMinutes} min read</span></Link></li>
-            ))}
-          </ul>
         </section>
       )}
 
