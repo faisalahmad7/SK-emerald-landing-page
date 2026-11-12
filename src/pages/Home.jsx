@@ -88,7 +88,7 @@ export default function Home() {
           <div className="hero-image-caption"><span>SK EMERALD INTERIOR</span><span>Living, in a deeper shade of green</span></div>
         </div>
         <nav className="hero-index editorial-hero-index wrap" aria-label="Explore furniture ranges">
-          {COLLECTIONS.filter((c) => c.slug !== 'office-spaces').concat(bySlug('dining-tables'), bySlug('office-chairs')).map((c, i) => <Link key={c.slug} to={`/collections/${c.slug}`}><span>0{i + 1}</span>{c.name}</Link>)}
+          {COLLECTIONS.filter((c) => c.slug !== 'office-spaces').concat(bySlug('dining-tables')).map((c, i) => <Link key={c.slug} to={`/collections/${c.slug}`}><span>0{i + 1}</span>{c.name}</Link>)}
         </nav>
       </section>
 
