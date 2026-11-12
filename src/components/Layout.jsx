@@ -112,7 +112,7 @@ export function Footer() {
           <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
         </div>
         <div className="footer-desktop-column"><h2>Collections</h2>{FOOTER_COLLECTIONS.map(([to, name]) => <Link key={to} to={to}>{name}</Link>)}<Link to="/collections">All collections</Link></div>
-        <div className="footer-desktop-column"><h2>Explore</h2><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/design-ideas">Design ideas</Link><Link to="/blog">Guides</Link><Link to="/materials">Materials</Link><Link to="/about">About us</Link><Link to="/reviews">Reviews</Link><Link to="/faq">FAQs</Link></div>
+        <div className="footer-desktop-column"><h2>Explore</h2><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/design-ideas">Design ideas</Link><Link to="/blog">Blogs</Link><Link to="/materials">Materials</Link><Link to="/about">About us</Link><Link to="/reviews">Reviews</Link><Link to="/faq">FAQs</Link></div>
         <div className="footer-desktop-column"><h2>Contact</h2>
           {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
           <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
@@ -121,7 +121,7 @@ export function Footer() {
         </div>
         <div className="footer-mobile-accordions" aria-label="Footer navigation">
           <details><summary>Collections</summary><div className="footer-accordion-links">{FOOTER_COLLECTIONS.map(([to, name]) => <Link key={to} to={to}>{name}</Link>)}<Link to="/collections">All collections</Link></div></details>
-          <details><summary>Explore</summary><div className="footer-accordion-links"><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/design-ideas">Design ideas</Link><Link to="/blog">Guides</Link><Link to="/materials">Materials</Link><Link to="/about">About us</Link><Link to="/reviews">Reviews</Link><Link to="/faq">FAQs</Link></div></details>
+          <details><summary>Explore</summary><div className="footer-accordion-links"><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/design-ideas">Design ideas</Link><Link to="/blog">Blogs</Link><Link to="/materials">Materials</Link><Link to="/about">About us</Link><Link to="/reviews">Reviews</Link><Link to="/faq">FAQs</Link></div></details>
           <details><summary>Contact</summary><div className="footer-accordion-links">
             {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
             <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>

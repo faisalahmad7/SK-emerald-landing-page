@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { marked } from 'marked'
+import sharp from 'sharp'
+import path from 'node:path'
 
 const slugify = (s) => s.toLowerCase().replace(/<[^>]+>/g, '').replace(/&[a-z#0-9]+;/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 const plain = (md) => md.replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[*_`>#|]/g, '').replace(/\s+/g, ' ').trim()
@@ -12,7 +14,7 @@ function blogMarkdown() {
   return {
     name: 'blog-markdown',
     enforce: 'pre',
-    transform(src, id) {
+    async transform(src, id) {
       const [file, query = ''] = id.split('?')
       if (!file.endsWith('.md')) return
       const m = src.replace(/\r\n/g, '\n').match(/^---\s*\n([\s\S]*?)\n---\s*\n?([\s\S]*)$/)
@@ -20,7 +22,7 @@ function blogMarkdown() {
       let meta
       try { meta = JSON.parse(m[1]) } catch (e) { this.error(`${file}: front matter is not valid JSON (${e.message})`) }
       const body = m[2]
-      const words = body.split(/\s+/).filter(Boolean).length
+      const words = body.replace(/!\[[^\]]*\]\([^)]*\)/g, '').split(/\s+/).filter(Boolean).length
       Object.assign(meta, { words, readingMinutes: Math.max(1, Math.round(words / 200)) })
       if (query.includes('meta')) return { code: `export default ${JSON.stringify(meta)}`, map: null }
       // FAQ pairs from the "## Frequently asked questions" section (### question + answer text).
@@ -39,6 +41,23 @@ function blogMarkdown() {
         .replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>')
         .replace(/<a href="(https?:\/\/[^"]+)"/g, '<a href="$1" rel="noopener" target="_blank"')
         .replace(/<img /g, '<img loading="lazy" decoding="async" ')
+      // Captioned images: ![alt](/images/x.webp "Caption|Photo credit") -> <figure> with caption, credit and the real
+      // width/height (read from the file) so the page does not jump while the photo loads.
+      const sizes = {}
+      for (const [, src] of html.matchAll(/<img [^>]*src="(\/images\/[^"]+)"/g)) {
+        if (sizes[src]) continue
+        try { const info = await sharp(path.join('public', src)).metadata(); sizes[src] = [info.width, info.height] } catch { /* missing file: no size */ }
+      }
+      html = html.replace(/<p>(<img [^>]*>)<\/p>/g, (_, tag) => {
+        const src = tag.match(/src="([^"]+)"/)?.[1]
+        const title = tag.match(/ title="([^"]*)"/)?.[1]
+        let img = tag.replace(/ title="[^"]*"/, '')
+        if (sizes[src]) img = img.replace('<img ', `<img width="${sizes[src][0]}" height="${sizes[src][1]}" `)
+        const cls = sizes[src] && sizes[src][1] > sizes[src][0] ? 'post-figure post-figure--portrait' : 'post-figure'
+        if (!title) return `<figure class="${cls}">${img}</figure>`
+        const [caption, credit] = title.split('|')
+        return `<figure class="${cls}">${img}<figcaption>${caption}${credit ? ` <span class="post-credit">${credit}</span>` : ''}</figcaption></figure>`
+      })
       // Structure for styling: the "What to ask for in your quotation" section becomes a checklist card, and each FAQ
       // question + answer becomes its own group. Both run to the next <h2> (or the end of the post).
       const section = (id, wrap) => {

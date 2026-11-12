@@ -3,13 +3,18 @@
   "title": "MR, BWR, BWP or HDHMR? Choosing board for kitchens, wardrobes and beds",
   "seoTitle": "BWP vs BWR vs MR Plywood & HDHMR: Which Board Where | SK Emerald",
   "description": "BWP vs BWR vs MR plywood, HDHMR and MDF in plain words for Pune homes: which board suits a sink base, wardrobe or bed, and how to check what you get.",
-  "date": "2026-11-13",
-  "updated": "2026-11-13",
+  "date": "2026-10-14",
+  "updated": "2026-10-14",
   "category": "Materials",
-  "image": "/images/18.webp",
-  "imageAlt": "Wardrobe with open shelves, drawers and a sliding door",
+  "image": "/images/blog-plywood-layers.webp",
+  "imageAlt": "Close-up of plywood sheets showing their layered edges",
   "primaryQuery": "bwp vs bwr",
-  "related": ["/materials", "/interiors/modular-kitchen", "/collections/wardrobes", "/blog/laminate-vs-acrylic-vs-pu"],
+  "related": [
+    "/materials",
+    "/interiors/modular-kitchen",
+    "/collections/wardrobes",
+    "/blog/laminate-vs-acrylic-vs-pu"
+  ],
   "draft": false
 }
 ---
@@ -69,6 +74,8 @@ Some kitchens pair a plywood carcass with HDHMR shutters and drawer fronts. That
 
 In a dry room, MR or BWR is usually enough. Step up a grade where a wall gets damp.
 
+![Wardrobe with open shelves, drawers and a sliding door](/images/18.webp "Open shelves and drawers: the board inside a wardrobe.")
+
 Bedrooms are dry for most of the year. In the monsoon, though, an outside wall or a wall shared with a bathroom can stay damp for weeks. A wardrobe against that wall needs a better board, a small gap and a sealed back. Check the wall before you choose. A damp patch or flaking paint is a warning sign.
 
 A bed takes weight, not water. Its frame and base panels need a firm board that holds screws well, and plywood does this better than particle board. A storage bed with a lift-up mechanism needs strong fixing points too. A TV unit is mostly dry, but it may carry a heavy TV and a lot of wiring.
@@ -84,6 +91,8 @@ From June to September the air in Pune stays humid, and wood takes up moisture f
 ## How to choose good plywood: check what you are getting
 
 Look at the stamp, look at the edge, and get it in writing.
+
+![Carpenter guiding a wooden board through a table saw](/images/blog-table-saw-board.webp "Check the grade stamp before the board is cut and covered.|Photo: Tima Miroshnichenko / Pexels")
 
 - **Read the stamp.** Plywood made to IS 303 should be stamped near one corner. The stamp shows the maker, the year, the batch and the grade. Marine ply should name IS 710.
 - **Look at a cut edge.** The layers should be even, with no gaps or hollow spots in the core.

@@ -6,7 +6,6 @@ import { COLLECTIONS, bySlug } from '../data/collections'
 import { SLOTS } from '../data/images'
 import TransformationVideo from '../components/TransformationVideo'
 import { REVIEWS } from '../data/reviews'
-import { POSTS } from '../content/posts'
 
 const TILES = [
   { slug: 'sofas', area: 'a', ratio: '4/3', delay: 0, imageId: 'sofa-velvet-curved-gold-home', pos: '50% 45%' },
@@ -241,30 +240,6 @@ export default function Home() {
           </ul>
         </div>
       </section>
-
-      {POSTS.length > 0 && (
-        <section className="home-guides" aria-labelledby="guides-heading">
-          <div className="wrap home-guides-inner">
-            <div className="home-guides-head">
-              <p className="editorial-eyebrow"><span /> Before you buy</p>
-              <h2 id="guides-heading">Guides for Pune homes.</h2>
-              <p className="muted">Plain answers about materials, sizes and choices, from the people who make the furniture.</p>
-              <Link to="/blog" className="editorial-underlink">All guides <span aria-hidden="true">↗</span></Link>
-            </div>
-            <ul className="reading-list">
-              {POSTS.slice(0, 4).map((p) => (
-                <li key={p.slug}>
-                  <Link to={p.path}>
-                    <span className="reading-list-cat">{p.category}</span>
-                    <span className="reading-list-title">{p.title}</span>
-                    <span className="reading-list-meta">{p.readingMinutes} min read</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-      )}
 
       <section className="wrap visit editorial-visit">
         <div className="editorial-visit-heading">

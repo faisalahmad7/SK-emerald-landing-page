@@ -3,13 +3,18 @@
   "title": "Gypsum, POP or PVC false ceiling: which is best for your home?",
   "seoTitle": "Gypsum vs POP vs PVC False Ceiling: Which Is Best? | SK Emerald",
   "description": "Gypsum, POP, PVC, grid and wooden false ceilings compared for Pune homes: finish, mess, damp, cracks, lighting and upkeep, so you can choose with care.",
-  "date": "2026-11-13",
-  "updated": "2026-11-13",
+  "date": "2026-11-11",
+  "updated": "2026-11-11",
   "category": "Materials",
-  "image": "/images/ceiling-fan-layered-cove.webp",
-  "imageAlt": "Layered cove-lit false ceiling with a ceiling fan panel and recessed spotlights",
+  "image": "/images/blog-false-ceiling-living.webp",
+  "imageAlt": "Living room with geometric LED lines in the ceiling, a grey sectional sofa and a TV wall",
   "primaryQuery": "difference between false ceiling and pop",
-  "related": ["/collections/false-ceilings", "/interiors/living-room", "/interiors/bedroom", "/collections/tv-units"],
+  "related": [
+    "/collections/false-ceilings",
+    "/interiors/living-room",
+    "/interiors/bedroom",
+    "/collections/tv-units"
+  ],
   "draft": false
 }
 ---
@@ -69,6 +74,8 @@ In any wet room, leave a small access panel. You will need it to reach the geyse
 ## Cove lights, spotlights and profile lights
 
 In most homes, a false ceiling is mainly about light. Plan the lights first, then the shape.
+
+![A layered false ceiling with cove lighting around a ceiling fan](/images/ceiling-fan-layered-cove.webp "Design idea: a layered ceiling with cove lighting around the fan.")
 
 - **Cove lighting** hides LED strips in a recessed edge. The light washes across the ceiling, with no glare in your eyes.
 - **Spotlights** sit flush in the board and light a sofa, a wall or a dining table.
