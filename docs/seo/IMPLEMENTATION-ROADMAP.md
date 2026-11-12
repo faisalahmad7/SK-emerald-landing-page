@@ -2,6 +2,8 @@
 
 Companion to [SEO-STRATEGY.md](SEO-STRATEGY.md). **Who:** C = Claude (me) · Y = you (Google accounts, Business Profile) · O = shop owner.
 
+**Status, 13 Nov 2026:** Phase 0 research ✅ · Phase 1 ✅ live (all tasks except 1.10 and 1.17, which need your Cloudflare/Google logins; steps in `handoff/OWNER-ACTIONS.md`) · Phase 2: page rewrites, About, Reviews, FAQ, gallery split ✅; Business Profile, citations and gated pages wait on the owner · Phase 3: blog system + 6 guides ✅, 3 cost guides drafted (need prices). Report: `reports/2026-11-13-phase1.md`.
+
 **Ground rules**
 - All work stays on D:. Code changes go on a branch (`seo/phase-1`, `seo/phase-2`, …) with a PR to `main`. Vercel builds a preview of every PR, which serves as staging.
 - Nothing goes live until its checks pass **and you approve the deploy**. A push to `main` does **not** update the live site. Live is the Cloudflare Pages project `sk-emerald-interior`, deployed manually (`npx wrangler pages deploy dist --project-name sk-emerald-interior`). Cloudflare keeps every deployment, so rollback is one click.

@@ -8,7 +8,7 @@
     "url": "/",
     "template": "landing-page",
     "wordCount": 900,
-    "status": "rewrite",
+    "status": "written",
     "evidence": "furniture (shop|shops|store|stores|manufacturer|manufacturers|factory|mall|market|showroom|maker)|kondhwa furniture|furniture (in|at) (kondhwa|pune)|custom furniture|furniture manufacturers? (in|near) |furniture kondhwa"
   },
   "clusters": [
@@ -21,7 +21,7 @@
         "url": "/collections/sofas",
         "template": "landing-page",
         "wordCount": 900,
-        "status": "rewrite",
+        "status": "written",
         "evidence": "sofa (maker|makers|manufacturer|manufacturers|shop|set|furniture|market|pune|kondhwa)|kondhwa sofa|custom sofa|l shape sofa|leather sofa|sofa set in|pune sofa|best sofa shop|are l-shaped sofas|best sofa design"
       },
       "posts": [
@@ -31,7 +31,7 @@
           "url": "/collections/recliners",
           "template": "landing-page",
           "wordCount": 800,
-          "status": "rewrite",
+          "status": "written",
           "evidence": "recliner (sofa pune|pune|chair pune|manufacturers)|price of recliner chairs"
         },
         {
@@ -40,7 +40,7 @@
           "url": "/collections/sofa-cum-beds",
           "template": "landing-page",
           "wordCount": 700,
-          "status": "rewrite",
+          "status": "written",
           "evidence": "sofa (cum|come) bed|cost of sofa bed"
         },
         {
@@ -49,7 +49,7 @@
           "url": "/blog/sofa-set-price-pune",
           "template": "explainer",
           "wordCount": 1600,
-          "status": "planned",
+          "status": "gated",
           "evidence": "sofa (set )?(pune )?price|sofa price|cost of sofa set|cost of sofa$|sofa set pune under|l shape sofa price"
         },
         {
@@ -58,7 +58,7 @@
           "url": "/blog/whats-inside-a-good-sofa",
           "template": "how-to",
           "wordCount": 1500,
-          "status": "planned",
+          "status": "written",
           "evidence": "how to choose sofa|sofa material|sofa cushion foam|sofa frame"
         },
         {
@@ -76,7 +76,7 @@
           "url": "/blog/how-to-choose-a-recliner",
           "template": "comparison",
           "wordCount": 1500,
-          "status": "planned",
+          "status": "written",
           "evidence": "recliner vs|power recliner|best recliner|cost of recliner|recliner (bed|chair)$"
         }
       ]
@@ -123,7 +123,7 @@
         "url": "/interiors/modular-kitchen",
         "template": "landing-page",
         "wordCount": 1000,
-        "status": "planned",
+        "status": "written",
         "evidence": "modular kitchen (kondhwa|hadapsar|pune|factory|dealer|manufacturer|and furniture|on emi|in pune)|best modular kitchen|aluminium modular kitchen|what (comes|does) .*modular kitchen"
       },
       "posts": [
@@ -142,7 +142,7 @@
           "url": "/blog/modular-kitchen-cost-pune",
           "template": "explainer",
           "wordCount": 2000,
-          "status": "planned",
+          "status": "gated",
           "evidence": "modular kitchen.*(cost|price)|cost of modular kitchen|kitchen in pune with price"
         },
         {
@@ -151,7 +151,7 @@
           "url": "/blog/modular-vs-carpenter-kitchen",
           "template": "comparison",
           "wordCount": 1500,
-          "status": "planned",
+          "status": "written",
           "evidence": "modular kitchen vs|semi modular|non modular|normal kitchen|modular kitchen is good|which modular kitchen"
         },
         {
@@ -174,17 +174,17 @@
         "url": "/materials",
         "template": "landing-page",
         "wordCount": 1000,
-        "status": "rewrite",
+        "status": "written",
         "evidence": "plywood shop|laminate shop|plywood for furniture|best plywood for furniture"
       },
       "posts": [
         {
-          "title": "BWP, BWR, MR or HDHMR? Choosing plywood for kitchens, wardrobes and beds",
+          "title": "MR, BWR, BWP or HDHMR? Choosing board for kitchens, wardrobes and beds",
           "keyword": "bwp vs bwr",
           "url": "/blog/bwp-vs-bwr-vs-mr-plywood",
           "template": "comparison",
           "wordCount": 1600,
-          "status": "planned",
+          "status": "written",
           "evidence": "bwp|bwr|hdhmr|marine ply|mr plywood|best plywood|plywood vs|cost of plywood"
         },
         {
@@ -193,7 +193,7 @@
           "url": "/blog/laminate-vs-acrylic-vs-pu",
           "template": "comparison",
           "wordCount": 1500,
-          "status": "planned",
+          "status": "written",
           "evidence": "laminate (and|vs)|acrylic|sunmica|veneer|best laminate|cost of laminate"
         },
         {
@@ -216,7 +216,7 @@
         "url": "/collections/wardrobes",
         "template": "landing-page",
         "wordCount": 900,
-        "status": "rewrite",
+        "status": "written",
         "evidence": "wardrobe (pune|in pune)|customi[sz]ed wardrobe|modular wardrobe|sliding (door )?wardrobe (pune|price)|aluminium wardrobe|best wardrobe design|wardrobe colou?r"
       },
       "posts": [
@@ -226,7 +226,7 @@
           "url": "/collections/beds",
           "template": "landing-page",
           "wordCount": 800,
-          "status": "rewrite",
+          "status": "written",
           "evidence": "hydraulic bed (price|pune)|storage bed in pune"
         },
         {
@@ -258,7 +258,7 @@
         "url": "/collections/tv-units",
         "template": "landing-page",
         "wordCount": 800,
-        "status": "rewrite",
+        "status": "written",
         "evidence": "tv unit (design pune|furniture in pune|manufacturers|price pune|pune|shop)"
       },
       "posts": [
@@ -268,7 +268,7 @@
           "url": "/collections/false-ceilings",
           "template": "landing-page",
           "wordCount": 800,
-          "status": "rewrite",
+          "status": "written",
           "evidence": "false ceiling (pune|in hadapsar|contractor|services|work|design pune)|gypsum false ceiling pune|cost of false ceiling in pune"
         },
         {
@@ -281,12 +281,12 @@
           "evidence": "tv unit.*(cost|price|bigger|size)|cost of (tv|media|entertainment|making tv)|best tv unit design for small|best tv unit design|best tv unit for living"
         },
         {
-          "title": "Gypsum, POP or PVC false ceiling: cost per sq ft and which is best",
+          "title": "Gypsum, POP or PVC false ceiling: which is best for your home?",
           "keyword": "difference between false ceiling and pop",
           "url": "/blog/gypsum-vs-pop-false-ceiling",
           "template": "comparison",
           "wordCount": 1500,
-          "status": "planned",
+          "status": "written",
           "evidence": "false ceiling.*(vs|best|difference|type|termite)|difference between false ceiling|cost of false ceiling|best false ceiling"
         }
       ]
@@ -310,7 +310,7 @@
           "url": "/interiors",
           "template": "landing-page",
           "wordCount": 900,
-          "status": "rewrite",
+          "status": "written",
           "evidence": "home interior (pune|undri)|interior designers? (in |near )?(nibm|undri|wanowrie|hadapsar)"
         },
         {
@@ -319,7 +319,7 @@
           "url": "/blog/2bhk-furniture-cost-pune",
           "template": "explainer",
           "wordCount": 1800,
-          "status": "planned",
+          "status": "gated",
           "evidence": "2bhk|new flat"
         },
         {
@@ -360,7 +360,7 @@
         "url": "/interiors/office-spaces",
         "template": "landing-page",
         "wordCount": 800,
-        "status": "rewrite",
+        "status": "written",
         "evidence": "office (furniture|chairs|desk|table)|modular office"
       },
       "posts": [
@@ -370,7 +370,7 @@
           "url": "/collections/dining-tables",
           "template": "landing-page",
           "wordCount": 700,
-          "status": "rewrite",
+          "status": "written",
           "evidence": "dining table"
         },
         {
@@ -388,7 +388,7 @@
           "url": "/collections/study-and-office-tables",
           "template": "landing-page",
           "wordCount": 700,
-          "status": "rewrite",
+          "status": "written",
           "evidence": "study table"
         },
         {
@@ -397,7 +397,7 @@
           "url": "/collections/crockery-units",
           "template": "landing-page",
           "wordCount": 600,
-          "status": "rewrite",
+          "status": "written",
           "evidence": "crockery unit"
         }
       ]

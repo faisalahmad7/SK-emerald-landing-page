@@ -92,7 +92,9 @@ if (existsSync(tpl)) {
     clusters: cfg.clusters.map((c, ci) => ({ name: c.name, color: c.color, posts: pages.filter((p) => p.id.startsWith(`cluster-${ci}-`)).sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true })).map(node) })),
     links, meta: { totalPosts: pages.length, totalClusters: cfg.clusters.length, totalLinks: links.length, estimatedWords: pages.reduce((n, p) => n + p.wordCount, 0) },
   }
-  const html = readFileSync(tpl, 'utf8').replace(/const CLUSTER_DATA = \{[\s\S]*?\n\s*\};\n(\s*\/\/ === END CLUSTER DATA ===)/, `const CLUSTER_DATA = ${JSON.stringify(data).replace(/</g, '\\u003c')};\n$1`)
+  // The template may use Windows line endings; a function replacement avoids "$" in the data being read as a pattern.
+  const html = readFileSync(tpl, 'utf8').replace(/const CLUSTER_DATA = \{[\s\S]*?\r?\n\s*\};\r?\n\s*\/\/ === END CLUSTER DATA ===/, () => `const CLUSTER_DATA = ${JSON.stringify(data).replace(/</g, '\\u003c')};\n    // === END CLUSTER DATA ===`)
+  if (html.includes('Sample Pillar Page')) throw new Error('cluster-map.html: CLUSTER_DATA placeholder was not replaced')
   writeFileSync(join(dir, 'cluster-map.html'), html)
 }
 console.log(`Pages: ${pages.length} · phrases assigned: ${pages.reduce((n, p) => n + p.found.length, 0)} · unassigned: ${unassigned.length} · competitor phrases: ${competitorPhrases.length} · cannibalization: ${dupes.length}`)

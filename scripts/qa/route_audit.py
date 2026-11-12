@@ -15,7 +15,7 @@ widths = [375, 1360]
 if '--widths' in sys.argv:
     widths = [int(w) for w in sys.argv[sys.argv.index('--widths') + 1].split(',')]
 
-sitemap = urllib.request.urlopen(base + '/sitemap.xml').read().decode()
+sitemap = urllib.request.urlopen(urllib.request.Request(base + '/sitemap.xml', headers={'User-Agent': 'Mozilla/5.0 (route audit)'})).read().decode()
 routes = [re.sub(r'^https?://[^/]+', '', u) or '/' for u in re.findall(r'<loc>([^<]+)</loc>', sitemap)]
 problems = []
 
