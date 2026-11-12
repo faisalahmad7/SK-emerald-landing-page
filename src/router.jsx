@@ -4,11 +4,13 @@ import { createContext, useCallback, useContext, useEffect, useState } from 'rea
 const Ctx = createContext({ path: '/', go: () => {} })
 const clean = (p) => (p.length > 1 ? p.replace(/\/+$/, '') : p) || '/'
 
-export function Router({ children }) {
-  const [path, setPath] = useState(() => clean(window.location.pathname))
-  const go = useCallback((to) => {
+// `initialPath` is passed when pages are pre-rendered at build time (there is no window there).
+export function Router({ children, initialPath }) {
+  const [path, setPath] = useState(() => initialPath ?? clean(window.location.pathname))
+  const go = useCallback((to, { replace = false } = {}) => {
     const [p, hash] = to.split('#')
-    if (clean(p) !== path) window.history.pushState({}, '', to)
+    if (replace) window.history.replaceState({}, '', to)
+    else if (clean(p) !== path) window.history.pushState({}, '', to)
     setPath(clean(p))
     requestAnimationFrame(() => {
       const el = hash && document.getElementById(hash)

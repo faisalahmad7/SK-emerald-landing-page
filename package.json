@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs",
+    "preview": "npx wrangler pages dev dist --port 8788",
+    "seo:audit": "node scripts/seo/onpage-audit.mjs --dir dist",
+    "deploy": "npm run build && npm run seo:audit && npx wrangler pages deploy dist --project-name sk-emerald-interior --branch main && node scripts/seo/indexnow.mjs"
   },
   "dependencies": {
     "gsap": "^3.15.0",
@@ -15,6 +17,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.1",
+    "marked": "^14.1.4",
+    "sharp": "^0.33.5",
     "vite": "^5.4.0"
   }
 }

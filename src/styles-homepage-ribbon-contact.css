@@ -1880,7 +1880,7 @@
   font: 600 .73rem/1.3 var(--ed-sans);
 }
 .homepage-ribbon-pass .editorial-review-author-copy small {
-  color: #737C71;
+  color: #5F675D;
   font: 500 .61rem/1.5 var(--ed-sans);
 }
 .homepage-ribbon-pass .editorial-reviews-note {
@@ -2537,7 +2537,7 @@ body { font-size: 17px; }
   background: #F1EDE4;
 }
 .editorial-room-promise > span {
-  color: #806B42;
+  color: #6B5730;
   font: 750 .62rem/1.5 var(--ed-sans);
   letter-spacing: .12em;
 }
