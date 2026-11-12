@@ -115,6 +115,8 @@ export default function Home() {
         <div className="home-marquee-track" aria-hidden="true">
           <span>SOFAS <i>✳</i> CABINETS & STORAGE <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> OFFICE FURNITURE <i>✳</i> MADE TO MEASURE <i>✳</i></span>
           <span>SOFAS <i>✳</i> CABINETS & STORAGE <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> OFFICE FURNITURE <i>✳</i> MADE TO MEASURE <i>✳</i></span>
+          <span>SOFAS <i>✳</i> CABINETS & STORAGE <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> OFFICE FURNITURE <i>✳</i> MADE TO MEASURE <i>✳</i></span>
+          <span>SOFAS <i>✳</i> CABINETS & STORAGE <i>✳</i> WARDROBES <i>✳</i> TV UNITS <i>✳</i> BEDS <i>✳</i> OFFICE FURNITURE <i>✳</i> MADE TO MEASURE <i>✳</i></span>
         </div>
       </div>
 
