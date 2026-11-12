@@ -8,13 +8,18 @@ import { img } from '../data/images'
 export function Photo({ id, ratio = '4/3', pos = 'center', eager = false, caption, className = '', sizes, reveal = false, alt }) {
   const im = img(id)
   const [state, setState] = useState('loading')
+  const [usingFallback, setUsingFallback] = useState(false)
   if (!im || state === 'error') return <Placeholder ratio={ratio} label={alt || im?.alt} className={className} />
   return (
     <figure className={`photo ${state} ${className}`} style={{ aspectRatio: ratio }}>
-      <img src={im.src} srcSet={im.srcSet} sizes={im.srcSet ? sizes || '(min-width: 900px) 50vw, 100vw' : undefined} alt={alt ?? im.alt}
+      <img src={usingFallback && im.fallbackSrc ? im.fallbackSrc : im.src} srcSet={!usingFallback ? im.srcSet : undefined} sizes={!usingFallback && im.srcSet ? sizes || '(min-width: 900px) 50vw, 100vw' : undefined} alt={alt ?? im.alt}
         loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined}
         decoding="async" style={{ objectPosition: pos }}
-        onLoad={() => setState('ready')} onError={() => setState('error')} />
+        onLoad={() => setState('ready')}
+        onError={() => {
+          if (!usingFallback && im.fallbackSrc) { setUsingFallback(true); setState('loading') }
+          else setState('error')
+        }} />
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
   )
