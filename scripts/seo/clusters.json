@@ -1,0 +1,406 @@
+{
+  "_note": "Topic clusters for sk-emeraldinterior.in. Edit pages/posts here, then run: node scripts/seo/cluster-plan.mjs. 'evidence' = regex matched against research/autocomplete.json. status: live | rewrite | planned | gated (needs owner confirmation) | written.",
+  "exclude": "reviews|photos|olx|jobs|second hand|rent\\b|used|ikea|bookmyshow|course|college|salary|nigeria|ghana|singapore|australia|canada|\\buk\\b|kirti nagar|mumbai|delhi|bangalore|bengaluru|kolkata|nagpur|nashik|thane|noida|hyderabad|ahmedabad|theatre|pvr|gaming|disposal|donation|expo|exhibition|cleaning|cleaner|sofa cover|wakad|baner|kharadi|hinjewadi|wagholi|instagram|contact number|laminate flooring|flooring|storage unit|storage for|bedroom apartment|bedroom house|pdf|laminated glass|wardrobe boxes|massage|rocking|lounger|davenport|settee|couch",
+  "competitorNames": "bhumi|bhoomi|parmeshwar|bhagyalaxmi|bhawani|kesar|keshar|maya modular|nectar|nilkanth|satyam|sunrise|vikas|aayat|aryan|bella|apna sofa|creative furniture|welcome furniture|a1 furniture|anmol|bholenath|champion sofa|curves|diamond furniture|estilo|everfresh|classic modular|godrej|hafele|hettich|highland|nilkamal|domicil|mahalaxmi|puneet|my wardrobe|duroflex",
+  "pillar": {
+    "title": "Home: custom furniture and interiors in Kondhwa, Pune",
+    "keyword": "custom furniture kondhwa pune",
+    "url": "/",
+    "template": "landing-page",
+    "wordCount": 900,
+    "status": "rewrite",
+    "evidence": "furniture (shop|shops|store|stores|manufacturer|manufacturers|factory|mall|market|showroom|maker)|kondhwa furniture|furniture (in|at) (kondhwa|pune)|custom furniture|furniture manufacturers? (in|near) |furniture kondhwa"
+  },
+  "clusters": [
+    {
+      "name": "Sofas & recliners",
+      "color": "#4E79A7",
+      "hub": {
+        "title": "Custom sofas and sofa sets in Pune",
+        "keyword": "custom sofa pune",
+        "url": "/collections/sofas",
+        "template": "landing-page",
+        "wordCount": 900,
+        "status": "rewrite",
+        "evidence": "sofa (maker|makers|manufacturer|manufacturers|shop|set|furniture|market|pune|kondhwa)|kondhwa sofa|custom sofa|l shape sofa|leather sofa|sofa set in|pune sofa|best sofa shop|are l-shaped sofas|best sofa design"
+      },
+      "posts": [
+        {
+          "title": "Recliner sofas and chairs in Pune",
+          "keyword": "recliner sofa pune",
+          "url": "/collections/recliners",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "rewrite",
+          "evidence": "recliner (sofa pune|pune|chair pune|manufacturers)|price of recliner chairs"
+        },
+        {
+          "title": "Sofa cum beds made to measure",
+          "keyword": "sofa cum bed pune",
+          "url": "/collections/sofa-cum-beds",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "rewrite",
+          "evidence": "sofa (cum|come) bed|cost of sofa bed"
+        },
+        {
+          "title": "Sofa set price in Pune (2026): what changes the price",
+          "keyword": "sofa set price pune",
+          "url": "/blog/sofa-set-price-pune",
+          "template": "explainer",
+          "wordCount": 1600,
+          "status": "planned",
+          "evidence": "sofa (set )?(pune )?price|sofa price|cost of sofa set|cost of sofa$|sofa set pune under|l shape sofa price"
+        },
+        {
+          "title": "What's inside a good sofa: frame, foam and fabric",
+          "keyword": "how to choose sofa material",
+          "url": "/blog/whats-inside-a-good-sofa",
+          "template": "how-to",
+          "wordCount": 1500,
+          "status": "planned",
+          "evidence": "how to choose sofa|sofa material|sofa cushion foam|sofa frame"
+        },
+        {
+          "title": "Which sofa fabric is best for Indian homes?",
+          "keyword": "which sofa fabric is best",
+          "url": "/blog/best-sofa-fabric",
+          "template": "comparison",
+          "wordCount": 1400,
+          "status": "planned",
+          "evidence": "sofa fabric|sofa cloth|best sofa colour|fabric vs leather"
+        },
+        {
+          "title": "Recliner or sofa, manual or power: how to choose a recliner",
+          "keyword": "recliner vs sofa",
+          "url": "/blog/how-to-choose-a-recliner",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "evidence": "recliner vs|power recliner|best recliner|cost of recliner|recliner (bed|chair)$"
+        }
+      ]
+    },
+    {
+      "name": "Sofa repair & refurbishing",
+      "color": "#E15759",
+      "hub": {
+        "title": "Sofa repair and re-upholstery in Kondhwa, Pune",
+        "keyword": "sofa repair kondhwa",
+        "url": "/services/sofa-repair",
+        "template": "landing-page",
+        "wordCount": 800,
+        "status": "gated",
+        "evidence": "sofa (repair|repairing|upholstery)(?!.*cost)|recliner (sofa )?repair|leather sofa repair|furniture repair|sofa set repairing"
+      },
+      "posts": [
+        {
+          "title": "Furniture polishing and refurbishing",
+          "keyword": "furniture polish pune",
+          "url": "/services/furniture-polishing",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "gated",
+          "evidence": "polish"
+        },
+        {
+          "title": "Sofa repair cost in Pune: fabric, foam and frame",
+          "keyword": "sofa repairing cost pune",
+          "url": "/blog/sofa-repair-cost-pune",
+          "template": "explainer",
+          "wordCount": 1400,
+          "status": "gated",
+          "evidence": "sofa (set )?repair(ing)? (cost|price)|cost of sofa (fabric change|upholstery|repair)|cost of recliner repair|sofa repairing price"
+        }
+      ]
+    },
+    {
+      "name": "Modular kitchens & trolleys",
+      "color": "#F28E2B",
+      "hub": {
+        "title": "Modular kitchens in Kondhwa, Pune",
+        "keyword": "modular kitchen kondhwa",
+        "url": "/interiors/modular-kitchen",
+        "template": "landing-page",
+        "wordCount": 1000,
+        "status": "planned",
+        "evidence": "modular kitchen (kondhwa|hadapsar|pune|factory|dealer|manufacturer|and furniture|on emi|in pune)|best modular kitchen|aluminium modular kitchen|what (comes|does) .*modular kitchen"
+      },
+      "posts": [
+        {
+          "title": "Kitchen trolleys made to fit your cabinets",
+          "keyword": "kitchen trolley kondhwa",
+          "url": "/collections/kitchen-trolleys",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "gated",
+          "evidence": "kitchen trolley (?!.*(dimension|size|ideas|repair))|modular kitchen trolley (pune|manufacturers)"
+        },
+        {
+          "title": "Modular kitchen cost in Pune per sq ft (2026)",
+          "keyword": "modular kitchen cost in pune per square foot",
+          "url": "/blog/modular-kitchen-cost-pune",
+          "template": "explainer",
+          "wordCount": 2000,
+          "status": "planned",
+          "evidence": "modular kitchen.*(cost|price)|cost of modular kitchen|kitchen in pune with price"
+        },
+        {
+          "title": "Modular or carpenter-made kitchen: cost, quality and time",
+          "keyword": "modular kitchen vs carpenter kitchen",
+          "url": "/blog/modular-vs-carpenter-kitchen",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "evidence": "modular kitchen vs|semi modular|non modular|normal kitchen|modular kitchen is good|which modular kitchen"
+        },
+        {
+          "title": "Kitchen trolley sizes, types and prices",
+          "keyword": "kitchen trolley dimensions",
+          "url": "/blog/kitchen-trolley-guide",
+          "template": "how-to",
+          "wordCount": 1300,
+          "status": "planned",
+          "evidence": "trolley (dimensions|ideas|design)|size of kitchen trolley|price of modular kitchen trolley|modular kitchen and kitchen trolley"
+        }
+      ]
+    },
+    {
+      "name": "Materials",
+      "color": "#76B7B2",
+      "hub": {
+        "title": "Materials we use: plywood, laminates, fabrics",
+        "keyword": "plywood grades for furniture",
+        "url": "/materials",
+        "template": "landing-page",
+        "wordCount": 1000,
+        "status": "rewrite",
+        "evidence": "plywood shop|laminate shop|plywood for furniture|best plywood for furniture"
+      },
+      "posts": [
+        {
+          "title": "BWP, BWR, MR or HDHMR? Choosing plywood for kitchens, wardrobes and beds",
+          "keyword": "bwp vs bwr",
+          "url": "/blog/bwp-vs-bwr-vs-mr-plywood",
+          "template": "comparison",
+          "wordCount": 1600,
+          "status": "planned",
+          "evidence": "bwp|bwr|hdhmr|marine ply|mr plywood|best plywood|plywood vs|cost of plywood"
+        },
+        {
+          "title": "Laminate, acrylic, PU or veneer: shutter finishes compared",
+          "keyword": "difference between laminate and acrylic",
+          "url": "/blog/laminate-vs-acrylic-vs-pu",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "evidence": "laminate (and|vs)|acrylic|sunmica|veneer|best laminate|cost of laminate"
+        },
+        {
+          "title": "Looking after furniture in Pune's monsoon",
+          "keyword": "furniture care in monsoon",
+          "url": "/blog/furniture-care-monsoon",
+          "template": "how-to",
+          "wordCount": 1200,
+          "status": "planned",
+          "evidence": "termite|monsoon|fungus"
+        }
+      ]
+    },
+    {
+      "name": "Bedroom storage",
+      "color": "#59A14F",
+      "hub": {
+        "title": "Wardrobes built to your wall",
+        "keyword": "customized wardrobe pune",
+        "url": "/collections/wardrobes",
+        "template": "landing-page",
+        "wordCount": 900,
+        "status": "rewrite",
+        "evidence": "wardrobe (pune|in pune)|customi[sz]ed wardrobe|modular wardrobe|sliding (door )?wardrobe (pune|price)|aluminium wardrobe|best wardrobe design|wardrobe colou?r"
+      },
+      "posts": [
+        {
+          "title": "Storage beds and hydraulic beds in Pune",
+          "keyword": "hydraulic bed price in pune",
+          "url": "/collections/beds",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "rewrite",
+          "evidence": "hydraulic bed (price|pune)|storage bed in pune"
+        },
+        {
+          "title": "Wardrobe cost per sq ft in Pune: sliding vs hinged",
+          "keyword": "wardrobe cost per sq ft",
+          "url": "/blog/wardrobe-cost-per-sq-ft",
+          "template": "explainer",
+          "wordCount": 1500,
+          "status": "planned",
+          "evidence": "wardrobe.*(cost|price)|cost of wardrobe|sliding wardrobe vs"
+        },
+        {
+          "title": "Storage bed or hydraulic bed: which gives you more space?",
+          "keyword": "storage bed vs hydraulic bed",
+          "url": "/blog/storage-bed-vs-hydraulic-bed",
+          "template": "comparison",
+          "wordCount": 1300,
+          "status": "planned",
+          "evidence": "storage bed (vs|frame|with)|cost of storage bed|price of storage bed|best storage beds?$|storage beds? (worth|with drawers|king|queen)|are storage beds"
+        }
+      ]
+    },
+    {
+      "name": "Living room & ceilings",
+      "color": "#EDC948",
+      "hub": {
+        "title": "TV units and TV wall panels in Pune",
+        "keyword": "tv unit design pune",
+        "url": "/collections/tv-units",
+        "template": "landing-page",
+        "wordCount": 800,
+        "status": "rewrite",
+        "evidence": "tv unit (design pune|furniture in pune|manufacturers|price pune|pune|shop)"
+      },
+      "posts": [
+        {
+          "title": "False ceilings for homes in Pune",
+          "keyword": "false ceiling pune rate",
+          "url": "/collections/false-ceilings",
+          "template": "landing-page",
+          "wordCount": 800,
+          "status": "rewrite",
+          "evidence": "false ceiling (pune|in hadapsar|contractor|services|work|design pune)|gypsum false ceiling pune|cost of false ceiling in pune"
+        },
+        {
+          "title": "TV unit cost per sq ft, and the right size for your TV",
+          "keyword": "cost of tv unit per sq ft",
+          "url": "/blog/tv-unit-cost-and-size",
+          "template": "explainer",
+          "wordCount": 1300,
+          "status": "planned",
+          "evidence": "tv unit.*(cost|price|bigger|size)|cost of (tv|media|entertainment|making tv)|best tv unit design for small|best tv unit design|best tv unit for living"
+        },
+        {
+          "title": "Gypsum, POP or PVC false ceiling: cost per sq ft and which is best",
+          "keyword": "difference between false ceiling and pop",
+          "url": "/blog/gypsum-vs-pop-false-ceiling",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "evidence": "false ceiling.*(vs|best|difference|type|termite)|difference between false ceiling|cost of false ceiling|best false ceiling"
+        }
+      ]
+    },
+    {
+      "name": "Whole home & local",
+      "color": "#B07AA1",
+      "hub": {
+        "title": "Furniture and interiors in Kondhwa",
+        "keyword": "furniture shop in kondhwa",
+        "url": "/areas/kondhwa",
+        "template": "landing-page",
+        "wordCount": 800,
+        "status": "gated",
+        "evidence": "kondhwa (furniture|budruk furniture)|furniture (shop|shops|stores?|market|mall|showroom) (in |near |on )?(kondhwa|katraj kondhwa)|carpenter (near )?(me )?kondhwa|interior designers? (in |near )?kondhwa|home interior kondhwa|housing interior design kondhwa"
+      },
+      "posts": [
+        {
+          "title": "Home interiors in Kondhwa and south Pune",
+          "keyword": "home interior kondhwa",
+          "url": "/interiors",
+          "template": "landing-page",
+          "wordCount": 900,
+          "status": "rewrite",
+          "evidence": "home interior (pune|undri)|interior designers? (in |near )?(nibm|undri|wanowrie|hadapsar)"
+        },
+        {
+          "title": "Furnishing a 2BHK in Pune: what you need and what it costs",
+          "keyword": "basic furniture cost for 2bhk",
+          "url": "/blog/2bhk-furniture-cost-pune",
+          "template": "explainer",
+          "wordCount": 1800,
+          "status": "planned",
+          "evidence": "2bhk|new flat"
+        },
+        {
+          "title": "Custom-made, carpenter or ready-made furniture: which suits you?",
+          "keyword": "custom made furniture pune",
+          "url": "/blog/custom-vs-carpenter-vs-ready-made",
+          "template": "comparison",
+          "wordCount": 1500,
+          "status": "planned",
+          "evidence": "custom(i[sz]ed)? (made )?furniture|custom kids furniture|carpenter (pune|hadapsar|undri|nibm|in wanowrie|near me hadapsar|near undri)"
+        },
+        {
+          "title": "Furniture near Undri and Pisoli",
+          "keyword": "furniture shop undri",
+          "url": "/areas/undri",
+          "template": "landing-page",
+          "wordCount": 650,
+          "status": "gated",
+          "evidence": "undri"
+        },
+        {
+          "title": "Furniture near Hadapsar",
+          "keyword": "furniture shop hadapsar",
+          "url": "/areas/hadapsar",
+          "template": "landing-page",
+          "wordCount": 650,
+          "status": "gated",
+          "evidence": "hadapsar"
+        }
+      ]
+    },
+    {
+      "name": "Dining & office",
+      "color": "#FF9DA7",
+      "hub": {
+        "title": "Office furniture and interiors in Pune",
+        "keyword": "office furniture pune",
+        "url": "/interiors/office-spaces",
+        "template": "landing-page",
+        "wordCount": 800,
+        "status": "rewrite",
+        "evidence": "office (furniture|chairs|desk|table)|modular office"
+      },
+      "posts": [
+        {
+          "title": "Dining tables made to size",
+          "keyword": "dining table pune",
+          "url": "/collections/dining-tables",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "rewrite",
+          "evidence": "dining table"
+        },
+        {
+          "title": "Dining table size guide: 4, 6 or 8 seats for your room",
+          "keyword": "dining table size for 6",
+          "url": "/blog/dining-table-size-guide",
+          "template": "how-to",
+          "wordCount": 1200,
+          "status": "planned",
+          "evidence": "dining table size|6 seater"
+        },
+        {
+          "title": "Study tables for kids and home offices",
+          "keyword": "study table pune",
+          "url": "/collections/study-and-office-tables",
+          "template": "landing-page",
+          "wordCount": 700,
+          "status": "rewrite",
+          "evidence": "study table"
+        },
+        {
+          "title": "Crockery units",
+          "keyword": "crockery unit pune",
+          "url": "/collections/crockery-units",
+          "template": "landing-page",
+          "wordCount": 600,
+          "status": "rewrite",
+          "evidence": "crockery unit"
+        }
+      ]
+    }
+  ]
+}

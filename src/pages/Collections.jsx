@@ -3,6 +3,8 @@ import { Photo, Seo, Dim, PageHead, Enquire } from '../components/ui'
 import { waLink } from '../data/business'
 import { img } from '../data/images'
 import { COLLECTIONS, MORE_COLLECTIONS, ALSO_MADE, bySlug } from '../data/collections'
+import { COLLECTION_SEO, defaultTitle, defaultDescription } from '../data/seo-pages'
+import { Facts, FaqList } from './Sections'
 
 // Collections whose option cards show each photo whole, in one fixed card shape.
 const FIT_VARIANTS = { 'dressing-tables': '3/4', 'shelves-and-drawers': '2/3', 'mirrors-and-wall-decor': '3/4', wardrobes: '3/4', 'crockery-units': '3/4', 'office-chairs': '2/3', recliners: '3/4' }
@@ -10,8 +12,10 @@ const FIT_VARIANTS = { 'dressing-tables': '3/4', 'shelves-and-drawers': '2/3', '
 export function Collections() {
   return (
     <>
-      <Seo path="/collections" title="Furniture collections" description="Browse furniture by piece, with made-to-measure options from SK Emerald Interior, Pune." />
-      <PageHead crumbs={[['Home', '/'], ['Collections']]} title="Furniture collections" lead="Choose a particular piece, then explore the layouts, sizes and finishes that suit your space." />
+      <Seo path="/collections" title="Made-to-Order Furniture Collections, Pune | SK Emerald Interior" name="Collections" type="CollectionPage" image={13}
+        description="Sofas, recliners, beds, wardrobes, kitchens, TV units, dining tables and more, made to order at our factory in Kondhwa, Pune. Browse by piece."
+        items={[...COLLECTIONS.filter((c) => c.slug !== 'office-spaces'), ...MORE_COLLECTIONS].map((c) => [c.name, c.tag])} itemsName="Furniture collections" />
+      <PageHead crumbs={[['Home', '/'], ['Collections']]} title="Furniture made to order in Pune" lead="Choose a particular piece, then explore the layouts, sizes and finishes that suit your space. Everything is made to your measurements at our factory in Kondhwa." />
       <section className="collections-offer-band">
         <div className="wrap collections-offer-inner">
           <div><p className="editorial-eyebrow"><span /> Selected combinations</p><h2>Ask about current combo offers.</h2><p>Check current set pricing and any limited-period offers before you decide. Every offer, finish and final price is confirmed in your quotation.</p></div>
@@ -52,10 +56,13 @@ export function Collections() {
 export function Collection({ slug }) {
   const c = bySlug(slug)
   const path = `/collections/${slug}`
+  const seo = COLLECTION_SEO[slug] || {}
   return (
     <>
-      <Seo path={path} title={c.name} description={`${c.intro.split('.')[0]}. Made to measure by SK Emerald Interior, Kondhwa, Pune.`} />
-      <PageHead crumbs={[[ 'Home', '/' ], ['Collections', '/collections'], [c.name]]} title={c.name} lead={c.tag}>
+      <Seo path={path} title={seo.title || defaultTitle(c.name)} name={c.name} description={seo.description || defaultDescription(c.intro)}
+        type="CollectionPage" image={c.hero} faqs={seo.faqs} service={{ name: `${c.name}, made to measure`, type: c.name }}
+        items={(c.variants || []).map((v) => [v.name, v.detail])} itemsName={`${c.name} options`} />
+      <PageHead crumbs={[[ 'Home', '/' ], ['Collections', '/collections'], [c.name]]} title={seo.h1 || c.name} lead={c.tag}>
         <div className="collection-quick-actions">
           <a className="btn small" href={waLink(c.wa)} target="_blank" rel="noopener noreferrer">Ask for a price <span aria-hidden="true">↗</span></a>
           <Link className="textlink" to="/collections">View all furniture</Link>
@@ -95,6 +102,7 @@ export function Collection({ slug }) {
           <a className="btn" href={waLink(`Hi SK Emerald Interior, I explored your ${c.name} collection on your website and would love to see more ${c.name.toLowerCase()} styles and design options. Please share additional designs, available customisation, finishes and indicative pricing. Thank you.`)} target="_blank" rel="noopener noreferrer">AND MORE <span aria-hidden="true">↗</span></a>
         </div>
       </section>
+      {seo.facts && <Facts title={`${c.name} at a glance`} facts={seo.facts} />}
       <section className="wrap options">
         <h2>What you can customise</h2>
         <dl>{c.options.map(([t, d]) => <div key={t}><dt>{t}</dt><dd>{d}</dd></div>)}</dl>
@@ -104,6 +112,7 @@ export function Collection({ slug }) {
         <h2>More views</h2>
         <div className="strip">{c.gallery.map((g, i) => <Photo key={`${g}-${i}`} id={g} ratio="4/5" />)}</div>
       </section>
+      {seo.faqs && <FaqList title={`${c.name}: common questions`} faqs={seo.faqs} />}
       <section className="wrap related">
         <h2>Related ranges</h2>
         <div className="rel">{c.related.map((r) => { const x = bySlug(r); return x ? <Link key={r} to={`/collections/${r}`}><Photo id={x.tile} pos={x.tilePos} ratio="16/10" /><span>{x.name}</span></Link> : null })}</div>

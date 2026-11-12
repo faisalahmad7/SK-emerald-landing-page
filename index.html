@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>SK Emerald Interior | Furniture and interiors in Kondhwa, Pune</title>
-  <meta name="description"
-    content="Sofas, recliners, beds, wardrobes, modular kitchens and TV units made to measure, from a showroom in Kondhwa, Pune." />
+  <title>SK Emerald Interior | Furniture Manufacturer in Kondhwa, Pune</title>
   <meta name="theme-color" content="#F7F4EC" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="SK Emerald Interior" />
   <link rel="icon" href="/favicon.png" />
-  <link rel="preload" as="image" href="/images/13.webp" imagesrcset="/images/13-800.webp 800w, /images/13.webp 1500w"
-    imagesizes="(min-width: 900px) 58vw, 100vw" fetchpriority="high" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600&display=swap"
-    rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/cormorant-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <!--seo-head-->
+  <script>
+    // Before first paint: enable scroll reveals, and show the intro curtain only on the first page of a visit.
+    // If the app has not started after 5 s (slow network, script blocked), reveal everything anyway.
+    (function (d) {
+      var h = d.documentElement; h.classList.add('js')
+      try { if (sessionStorage.getItem('sk-intro')) h.classList.add('sk-seen'); else sessionStorage.setItem('sk-intro', '1') } catch (e) { h.classList.add('sk-seen') }
+      setTimeout(function () { if (!window.__skHydrated) h.classList.remove('js') }, 5000)
+    })(document)
+  </script>
 </head>
 
 <body>
+  <div class="sk-intro-loader sk-intro-static" aria-hidden="true">
+    <div class="sk-loader-content">
+      <div class="sk-loader-mark"><img src="/images/logo-160.webp" alt="" width="76" height="76" /></div>
+      <p class="sk-loader-wordmark">SK EMERALD <span>INTERIOR</span></p>
+      <p class="sk-loader-caption">Thoughtfully made for living.</p>
+    </div>
+  </div>
   <div id="root"></div>
-  <noscript>
-    <p style="padding:40px;text-align:center">SK Emerald Interior, Kondhwa, Pune. Call 90118 31169 or email
-      Skemeraldinterior@gmail.com. Please enable JavaScript to browse the site.</p>
-  </noscript>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

@@ -3,13 +3,18 @@ import { Photo, Seo, Enquire } from '../components/ui'
 import { waLink } from '../data/business'
 import { bySlug } from '../data/collections'
 import { roomBySlug } from '../data/rooms'
+import { ROOM_SEO } from '../data/seo-pages'
+import { Facts, FaqList } from './Sections'
 
 export function Room({ slug }) {
   const r = roomBySlug(slug)
   const msg = `Hello SK Emerald Interior, I would like to plan my ${r.short}.`
+  const seo = ROOM_SEO[slug] || {}
   return (
     <>
-      <Seo path={`/interiors/${slug}`} title={`${r.name} setups`} description={`${r.name} setups and the furniture to go with them, made to measure by SK Emerald Interior, Kondhwa, Pune.`} />
+      <Seo path={`/interiors/${slug}`} title={seo.title || `${r.name} setups`} name={r.name} image={r.hero} faqs={seo.faqs}
+        description={seo.description || `${r.name} setups and the furniture to go with them, made to measure at our factory in Kondhwa, Pune. Send us your room size for ideas.`}
+        service={{ name: `${r.name} interiors`, type: `${r.name} interior design and furniture` }} items={r.setups.map((x) => [x.name, x.detail])} itemsName={`${r.name} setups`} />
       <header className="pagehead wrap room-pagehead">
         <div className="room-pagehead-copy">
           <nav aria-label="Breadcrumb" className="crumbs"><ol>
@@ -17,7 +22,7 @@ export function Room({ slug }) {
             <li><Link to="/interiors">Plan a room</Link></li>
             <li><span aria-current="page">{r.name}</span></li>
           </ol></nav>
-          <h1>{r.name}</h1>
+          <h1>{seo.h1 || r.name}</h1>
           <p className="lead">{r.lead}</p>
           <div className="collection-quick-actions">
             <a className="btn small" href={waLink(msg)} target="_blank" rel="noopener noreferrer">Plan my {r.short} <span aria-hidden="true">↗</span></a>
@@ -59,6 +64,11 @@ export function Room({ slug }) {
           ))}
         </div>
       </section>
+      {seo.facts && <Facts title={`${r.name} at a glance`} facts={seo.facts} />}
+      {seo.faqs && <FaqList title={`${r.name}: common questions`} faqs={seo.faqs} />}
+      {slug === 'modular-kitchen' && (
+        <section className="wrap related-guides"><p className="muted">Comparing options? Read <Link to="/blog/modular-vs-carpenter-kitchen">modular or carpenter-made kitchen</Link> and <Link to="/blog/bwp-vs-bwr-vs-mr-plywood">which board to choose for a kitchen</Link>.</p></section>
+      )}
       <Enquire message={msg} title={`Planning your ${r.short}?`} />
     </>
   )

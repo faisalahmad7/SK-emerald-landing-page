@@ -254,7 +254,7 @@ export const SLOTS = {
   hero: 13,                               // home hero (living room, dark-green sofa set)
   intro: [3, 'home-tv-wall'],             // home "made for the room" overlap
   materials: ['sofa-olive', 'detail-glass-cabinet', 'detail-fluted-panel'],
-  rooms: ['living-sage', 'bedroom-soft-neutral', 'kitchen-u'], // home room sequence: living, bedroom, kitchen
+  rooms: ['living-sage', 'bed-beige', 'kitchen-u-window-warm'], // home room sequence: living, bedroom, kitchen (local photos only)
   aboutMain: 11, aboutInset: 'detail-gold-leg',
   materialsPage: [
     ['detail-glass-cabinet', 'Glass-front units and gloss shutters'],
@@ -262,5 +262,5 @@ export const SLOTS = {
     ['detail-fluted-panel', 'Fluted panel with gold-tone rules'],
     [19, 'LED strip lighting on a storage bed'],
   ],
-  interiors: [['living-sage', 'Living room'], ['bedroom-soft-neutral', 'Bedroom'], ['kitchen-u', 'Kitchen'], ['office-reception', 'Office spaces']],
+  interiors: [['living-sage', 'Living room'], ['bed-beige', 'Bedroom'], ['kitchen-u-window-warm', 'Modular kitchen'], ['office-executive-desk-seating', 'Office spaces']],
 }

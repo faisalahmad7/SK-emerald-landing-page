@@ -1,1 +1,8 @@
-{ "rewrites": [{ "source": "/((?!images/|assets/|favicon).*)", "destination": "/index.html" }] }
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/collections/office-spaces", "destination": "/interiors/office-spaces", "permanent": true },
+    { "source": "/interiors/kitchen", "destination": "/interiors/modular-kitchen", "permanent": true },
+    { "source": "/:path*", "has": [{ "type": "host", "value": "sk-emerald-landing-page.vercel.app" }], "destination": "https://sk-emeraldinterior.in/:path*", "permanent": true }
+  ]
+}

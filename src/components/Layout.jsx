@@ -5,7 +5,9 @@ import { COLLECTIONS } from '../data/collections'
 
 const NAV = [['/', 'Home'], ['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
 const MOBILE_NAV = [['/', 'Home'], ['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
-const logo = `${import.meta.env.BASE_URL}images/logo.png`
+const logo = `${import.meta.env.BASE_URL}images/logo-160.webp`
+// Footer product links: the main ranges plus the modular kitchen and office pages (office furniture moved to /interiors).
+const FOOTER_COLLECTIONS = [...COLLECTIONS.filter((c) => c.slug !== 'office-spaces').map((c) => [`/collections/${c.slug}`, c.name]), ['/interiors/modular-kitchen', 'Modular kitchens'], ['/interiors/office-spaces', 'Office furniture']]
 
 // Sets data-in on every .rv element as it scrolls into view (an attribute, because React rewrites className when a photo
 // finishes loading). Elements with their own clip-path report zero intersection, so masked photos are observed through
@@ -109,8 +111,8 @@ export function Footer() {
           <p className="muted">{BUSINESS.altName} &middot; <i>{BUSINESS.tagline}</i></p>
           <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
         </div>
-        <div className="footer-desktop-column"><h2>Collections</h2>{COLLECTIONS.map((c) => <Link key={c.slug} to={`/collections/${c.slug}`}>{c.name}</Link>)}<Link to="/collections">All collections</Link></div>
-        <div className="footer-desktop-column"><h2>Explore</h2><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/faq">FAQs</Link></div>
+        <div className="footer-desktop-column"><h2>Collections</h2>{FOOTER_COLLECTIONS.map(([to, name]) => <Link key={to} to={to}>{name}</Link>)}<Link to="/collections">All collections</Link></div>
+        <div className="footer-desktop-column"><h2>Explore</h2><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/design-ideas">Design ideas</Link><Link to="/blog">Guides</Link><Link to="/materials">Materials</Link><Link to="/about">About us</Link><Link to="/reviews">Reviews</Link><Link to="/faq">FAQs</Link></div>
         <div className="footer-desktop-column"><h2>Contact</h2>
           {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
           <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
@@ -118,8 +120,8 @@ export function Footer() {
           <Link to="/contact">Showroom and directions</Link>
         </div>
         <div className="footer-mobile-accordions" aria-label="Footer navigation">
-          <details><summary>Collections</summary><div className="footer-accordion-links">{COLLECTIONS.map((c) => <Link key={c.slug} to={`/collections/${c.slug}`}>{c.name}</Link>)}<Link to="/collections">All collections</Link></div></details>
-          <details><summary>Explore</summary><div className="footer-accordion-links"><Link to="/gallery">Our work</Link><Link to="/materials">Materials</Link><Link to="/faq">FAQs</Link></div></details>
+          <details><summary>Collections</summary><div className="footer-accordion-links">{FOOTER_COLLECTIONS.map(([to, name]) => <Link key={to} to={to}>{name}</Link>)}<Link to="/collections">All collections</Link></div></details>
+          <details><summary>Explore</summary><div className="footer-accordion-links"><Link to="/interiors">Interior solutions</Link><Link to="/gallery">Our work</Link><Link to="/design-ideas">Design ideas</Link><Link to="/blog">Guides</Link><Link to="/materials">Materials</Link><Link to="/about">About us</Link><Link to="/reviews">Reviews</Link><Link to="/faq">FAQs</Link></div></details>
           <details><summary>Contact</summary><div className="footer-accordion-links">
             {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
             <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>

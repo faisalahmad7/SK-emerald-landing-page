@@ -25,8 +25,8 @@ export const ROOMS = [
       { name: 'Bedroom with wardrobes and a cove ceiling', detail: 'A padded headboard, tall wardrobes, a dressing corner and a cove-lit ceiling.', image: 'bedroom-wardrobe-cove-ceiling', pos: '50% 40%' },
     ],
     pieces: ['beds', 'sofa-cum-beds', 'bedside-tables', 'wardrobes', 'dressing-tables', 'study-and-office-tables', 'tv-units', 'false-ceilings', 'mirrors-and-wall-decor', 'shelves-and-drawers', 'chairs'] },
-  { slug: 'kitchen', hero: 'kitchen-u', heroPos: '50% 50%', name: 'Kitchen', short: 'kitchen',
-    lead: 'Units drawn to your floor plan, with finishes, counter tops and hardware agreed in writing.',
+  { slug: 'modular-kitchen', hero: 'kitchen-u-window-warm', heroPos: '50% 55%', name: 'Modular kitchen', short: 'kitchen',
+    lead: 'Straight, L-shaped, U-shaped and parallel kitchens drawn to your floor plan and made at our factory in Kondhwa, with finishes, counter tops and hardware agreed in writing.',
     setups: [
       { name: 'U-shaped kitchen in warm wood', detail: 'Three connected runs with generous counter and cabinet space.', image: 'kitchen-u' },
       { name: 'Cream L-shaped kitchen with a fridge corner', detail: 'A cream L-shaped layout with open niche shelves, a black chimney and a window.', image: 'kitchen-cream-fridge-corner', pos: '50% 50%' },
@@ -36,7 +36,7 @@ export const ROOMS = [
       { name: 'Taupe kitchen with a breakfast table', detail: 'A handleless taupe kitchen with under-cabinet lighting and a wooden breakfast table.', image: 'kitchen-taupe-breakfast-table', pos: '50% 50%' },
     ],
     pieces: ['cabinets', 'crockery-units', 'counter-tops', 'shelves-and-drawers', 'dining-tables'] },
-  { slug: 'office-spaces', hero: 'office-reception', heroPos: '50% 50%', name: 'Office spaces', short: 'office',
+  { slug: 'office-spaces', hero: 'office-executive-desk-seating', heroPos: '50% 50%', name: 'Office spaces', short: 'office',
     lead: 'Reception counters, workstations, meeting tables and storage planned around the way your team works.',
     setups: [
       { name: 'Reception with visitor seating', detail: 'A front desk and seating that give visitors a clear first point of contact.', image: 'office-reception' },
