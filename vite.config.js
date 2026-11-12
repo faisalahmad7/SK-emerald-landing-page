@@ -39,7 +39,22 @@ function blogMarkdown() {
         .replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>')
         .replace(/<a href="(https?:\/\/[^"]+)"/g, '<a href="$1" rel="noopener" target="_blank"')
         .replace(/<img /g, '<img loading="lazy" decoding="async" ')
-      return { code: `export default ${JSON.stringify({ ...meta, html, faqs })}`, map: null }
+      // Structure for styling: the "What to ask for in your quotation" section becomes a checklist card, and each FAQ
+      // question + answer becomes its own group. Both run to the next <h2> (or the end of the post).
+      const section = (id, wrap) => {
+        html = html.replace(new RegExp(`(<h2 id="${id}">[\\s\\S]*?<\\/h2>)([\\s\\S]*?)(?=<h2 |$)`), (_, h, body) => wrap(h, body))
+      }
+      // The checklist card holds the heading, its intro and the first list only; any closing paragraphs stay outside.
+      html = html.replace(/(<h2 id="what-to-ask-for-in-your-quotation">[\s\S]*?<\/h2>)((?:\s*<p>[\s\S]*?<\/p>)*?\s*)<ul>([\s\S]*?<\/ul>)/,
+        (_, h, intro, list) => `<section class="post-checklist" aria-labelledby="what-to-ask-for-in-your-quotation">${h}${intro}<ul class="checklist">${list}</section>`)
+      section('frequently-asked-questions', (h, body) => {
+        const parts = body.split(/(?=<h3 )/)
+        const intro = parts[0].startsWith('<h3') ? '' : parts.shift()
+        return `<section class="post-faq" aria-labelledby="frequently-asked-questions">${h}${intro}${parts.map((p) => `<div class="faq-item">${p.trim()}</div>`).join('')}</section>`
+      })
+      // Table of contents from the H2s (id + text without tags), rendered beside the article.
+      const toc = [...html.matchAll(/<h2 id="([^"]+)">([\s\S]*?)<\/h2>/g)].map(([, id, t]) => [id, t.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"')])
+      return { code: `export default ${JSON.stringify({ ...meta, html, faqs, toc })}`, map: null }
     },
   }
 }

@@ -6,8 +6,8 @@
   "date": "2026-11-13",
   "updated": "2026-11-13",
   "category": "Materials",
-  "image": "/images/20.webp",
-  "imageAlt": "L-shaped kitchen in navy gloss and cream with glass-front units",
+  "image": "/images/18.webp",
+  "imageAlt": "Wardrobe with open shelves, drawers and a sliding door",
   "primaryQuery": "bwp vs bwr",
   "related": ["/materials", "/interiors/modular-kitchen", "/collections/wardrobes", "/blog/laminate-vs-acrylic-vs-pu"],
   "draft": false

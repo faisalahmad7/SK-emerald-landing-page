@@ -1,4 +1,4 @@
-import { createContext, useCallback, useContext, useEffect, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 
 // Small History-API router: no dependency, direct URLs and refresh work (host must rewrite to index.html).
 const Ctx = createContext({ path: '/', go: () => {} })
@@ -7,6 +7,8 @@ const clean = (p) => (p.length > 1 ? p.replace(/\/+$/, '') : p) || '/'
 // `initialPath` is passed when pages are pre-rendered at build time (there is no window there).
 export function Router({ children, initialPath }) {
   const [path, setPath] = useState(() => initialPath ?? clean(window.location.pathname))
+  const current = useRef(path)
+  current.current = path
   const go = useCallback((to, { replace = false } = {}) => {
     const [p, hash] = to.split('#')
     if (replace) window.history.replaceState({}, '', to)
@@ -19,7 +21,8 @@ export function Router({ children, initialPath }) {
     })
   }, [path])
   useEffect(() => {
-    const on = () => { setPath(clean(window.location.pathname)); window.scrollTo(0, 0) }
+    // Back/forward between pages scrolls to the top; in-page jumps (#section links) keep the browser's own scroll.
+    const on = () => { const p = clean(window.location.pathname); if (p !== current.current) window.scrollTo(0, 0); setPath(p) }
     window.addEventListener('popstate', on)
     return () => window.removeEventListener('popstate', on)
   }, [])
