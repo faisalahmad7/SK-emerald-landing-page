@@ -23,10 +23,11 @@ export default function Gallery() {
           {SETS.map(([k, l]) => <button key={k} type="button" aria-pressed={set === k} onClick={() => choose(k)}>{l}</button>)}
         </div>
         {set === 'inspiration' && <p className="muted note gnote">Illustrative interiors that show a style or finish we can build to. They are not completed SK Emerald projects.</p>}
-        <div className="chips" role="group" aria-label="Filter photographs">
-          {filters.map(([k, l]) => <button key={k} type="button" aria-pressed={f === k} onClick={() => setF(k)}>{l}</button>)}
-        </div>
-        <p className="muted count" aria-live="polite">{list.length} photographs</p>
+        {set === 'inspiration' && (
+          <div className="chips" role="group" aria-label="Filter design inspiration">
+            {filters.map(([k, l]) => <button key={k} type="button" aria-pressed={f === k} onClick={() => setF(k)}>{l}</button>)}
+          </div>
+        )}
         <div className="masonry">
           {list.map((i, n) => (
             <button key={i.id} type="button" className="mitem" onClick={() => setOpen(n)} aria-label={`View larger: ${i.alt}`}>
@@ -66,7 +67,7 @@ function Lightbox({ list, index, setIndex }) {
       <button className="lb-nav prev" onClick={() => step(-1)} aria-label="Previous photograph">&lsaquo;</button>
       <img key={im.id} src={im.src} alt={im.alt} />
       <button className="lb-nav next" onClick={() => step(1)} aria-label="Next photograph">&rsaquo;</button>
-      <p>{im.alt} &middot; {index + 1} of {n}</p>
+      <p>{im.alt}</p>
     </div>
   )
 }
