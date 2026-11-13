@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Seo, PageHead } from '../components/ui'
 import { BUSINESS, waLink, mapsLink, telLink } from '../data/business'
+import SocialBar from '../components/SocialBar'
 
 const INTERESTS = ['Sofa', 'Recliner', 'Bed', 'Wardrobe', 'Cabinets & storage', 'TV unit', 'Whole room or home', 'Something else']
 
@@ -73,6 +74,7 @@ export default function Contact() {
           </p>
         </form>
       </section>
+      <SocialBar className="social-bar-contact" />
     </>
   )
 }

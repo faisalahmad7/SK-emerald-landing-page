@@ -5,6 +5,7 @@ import { BUSINESS, waLink, mapsLink, telLink } from '../data/business'
 import { COLLECTIONS, bySlug } from '../data/collections'
 import { SLOTS } from '../data/images'
 import TransformationVideo from '../components/TransformationVideo'
+import SocialBar from '../components/SocialBar'
 import { REVIEWS } from '../data/reviews'
 
 const TILES = [
@@ -267,6 +268,8 @@ export default function Home() {
           <p className="visit-call">Call us: {BUSINESS.phones.map((p, i) => <span key={p.tel}>{i > 0 && <i aria-hidden="true"> · </i>}<a href={telLink(p)}>{p.display}</a></span>)}</p>
         </div>
       </section>
+
+      <SocialBar />
     </div>
   )
 }
