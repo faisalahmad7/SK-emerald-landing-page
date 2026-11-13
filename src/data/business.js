@@ -27,7 +27,11 @@ export const BUSINESS = {
   // Areas we deliver to (structured data areaServed). VERIFY the list with the owner.
   areas: ['Kondhwa', 'NIBM Road', 'Undri', 'Pisoli', 'Wanowrie', 'Hadapsar'],
   geo: null,        // VERIFY: copy the exact pin from the Google Business Profile, e.g. { lat: 18.46, lng: 73.89 }
-  sameAs: [],       // Add profile URLs: Google Business Profile (Maps), Justdial, IndiaMART, Instagram, Facebook, YouTube
+  instagram: 'https://www.instagram.com/s.k_emeraldinterior/',
+  instagramHandle: '@s.k_emeraldinterior',
+  googleProfile: 'https://www.google.com/maps?cid=13440211058621275175', // Google Business Profile (Maps listing)
+  // Profile URLs for structured data. Add Justdial, IndiaMART, Facebook, YouTube when confirmed.
+  sameAs: ['https://www.instagram.com/s.k_emeraldinterior/', 'https://www.google.com/maps?cid=13440211058621275175'],
   priceRange: null, // e.g. '₹₹' once the owner agrees
   reviewLink: null, // Paste the Business Profile "Ask for reviews" link here (https://g.page/r/.../review)
 }
@@ -37,3 +41,4 @@ export const waLink = (text) =>
 export const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('SK Emerald Interior ' + BUSINESS.showroom.oneLine)}`
 export const reviewLink = BUSINESS.reviewLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('SK Emerald Interior Kondhwa Pune')}`
 export const telLink = (p) => `tel:${p.tel}`
+export const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(BUSINESS.email)}&su=${encodeURIComponent('Enquiry from website')}`

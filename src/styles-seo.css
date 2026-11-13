@@ -234,3 +234,28 @@ details.article-toc-mobile:last-of-type { margin-bottom: 34px; border-bottom: 1p
 
 /* On phones the hero text sits over the photo: a soft shadow keeps the subtitle legible on busy areas. */
 @media (max-width: 899px) { .editorial-hero h1 .hero-h1-sub { text-shadow: 0 1px 14px rgba(10, 25, 18, .55); } }
+
+/* ── Our socials bar (Home + Contact) ─────────────────────────────────────── */
+.social-bar { background: var(--chalk); border-top: 1px solid var(--plat); padding-block: clamp(48px, 7vw, 88px); }
+.social-bar-contact { margin-top: 0; }
+.social-bar-inner { display: grid; gap: clamp(24px, 4vw, 40px); }
+.social-bar-head h2 { margin: 8px 0 0; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1; letter-spacing: -.03em; }
+.social-bar-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+.social-bar-list a { display: flex; flex-direction: column; align-items: center; gap: 14px; height: 100%; padding: 26px 12px 22px; text-align: center; text-decoration: none; color: var(--ink); background: #fff; border: 1px solid var(--plat); border-radius: 18px; transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease); }
+.social-bar-list a:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 18px 40px -24px rgba(38, 63, 52, .45); }
+.social-bar-list a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.social-bar-icon { display: grid; place-items: center; width: 64px; height: 64px; }
+.social-bar-icon svg { width: 100%; height: 100%; display: block; }
+.social-bar-text { display: grid; gap: 4px; }
+.social-bar-text strong { font-size: .98rem; font-weight: 700; }
+.social-bar-text small { font-size: .8rem; color: var(--ink2); overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .social-bar-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .social-bar-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .social-bar-list li:last-child { grid-column: 1 / -1; }
+  .social-bar-list a { padding: 20px 10px 18px; gap: 10px; }
+  .social-bar-icon { width: 52px; height: 52px; }
+}
+@media (prefers-reduced-motion: reduce) { .social-bar-list a { transition: none; } .social-bar-list a:hover { transform: none; } }
