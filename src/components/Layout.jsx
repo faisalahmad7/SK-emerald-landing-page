@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useRouter } from '../router'
 import { BUSINESS, waLink, telLink } from '../data/business'
 import { COLLECTIONS } from '../data/collections'
+import SocialIcons from './SocialIcons'
 
 const NAV = [['/', 'Home'], ['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
 const MOBILE_NAV = [['/', 'Home'], ['/collections', 'Collections'], ['/interiors', 'Interiors'], ['/gallery', 'Our work'], ['/contact', 'Contact'], ['/faq', 'FAQs']]
@@ -117,7 +118,9 @@ export function Footer() {
           {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
           <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
           <a href={waLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
           <Link to="/contact">Showroom and directions</Link>
+          <SocialIcons className="on-dark" />
         </div>
         <div className="footer-mobile-accordions" aria-label="Footer navigation">
           <details><summary>Collections</summary><div className="footer-accordion-links">{FOOTER_COLLECTIONS.map(([to, name]) => <Link key={to} to={to}>{name}</Link>)}<Link to="/collections">All collections</Link></div></details>
@@ -126,7 +129,9 @@ export function Footer() {
             {BUSINESS.phones.map((p) => <a key={p.tel} href={telLink(p)}>{p.display}</a>)}
             <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
             <a href={waLink()} target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer">Instagram</a>
           </div></details>
+          <SocialIcons className="on-dark" />
         </div>
         <p className="legal">Specifications, finishes and prices are confirmed in your written quotation. Interior inspiration is for reference only. <Link to="/privacy">Privacy policy</Link></p>
       </div>

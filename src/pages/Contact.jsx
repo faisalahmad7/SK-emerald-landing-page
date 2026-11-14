@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Seo, PageHead } from '../components/ui'
 import { BUSINESS, waLink, mapsLink, telLink } from '../data/business'
-import SocialBar from '../components/SocialBar'
+import SocialIcons from '../components/SocialIcons'
 
 const INTERESTS = ['Sofa', 'Recliner', 'Bed', 'Wardrobe', 'Cabinets & storage', 'TV unit', 'Whole room or home', 'Something else']
 
@@ -55,7 +55,9 @@ export default function Contact() {
             {BUSINESS.phones.map((p) => <li key={p.tel}><span>Call</span><a href={telLink(p)}>{p.display}</a></li>)}
             <li><span>WhatsApp</span><a href={waLink()} target="_blank" rel="noopener noreferrer">Start a chat</a></li>
             <li><span>Email</span><a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a></li>
+            <li><span>Instagram</span><a href={BUSINESS.instagram} target="_blank" rel="noopener noreferrer">{BUSINESS.instagramHandle}</a></li>
           </ul>
+          <SocialIcons />
         </div>
         <form className="eform" onSubmit={submit('whatsapp')} noValidate>
           <h2>Send an enquiry</h2>
@@ -74,7 +76,6 @@ export default function Contact() {
           </p>
         </form>
       </section>
-      <SocialBar className="social-bar-contact" />
     </>
   )
 }
