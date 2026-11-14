@@ -5,7 +5,6 @@ import { BUSINESS, waLink, mapsLink, telLink } from '../data/business'
 import { COLLECTIONS, bySlug } from '../data/collections'
 import { SLOTS } from '../data/images'
 import TransformationVideo from '../components/TransformationVideo'
-import SocialBar from '../components/SocialBar'
 import { REVIEWS } from '../data/reviews'
 
 const TILES = [
@@ -269,7 +268,6 @@ export default function Home() {
         </div>
       </section>
 
-      <SocialBar />
     </div>
   )
 }

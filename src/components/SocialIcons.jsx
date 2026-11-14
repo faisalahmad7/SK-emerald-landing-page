@@ -29,14 +29,6 @@ const Maps = () => (
     <path fill="#4285F4" d="M28.24 22a5.48 5.48 0 0 0 1.26-3.5c0-3.04-2.46-5.5-5.5-5.5-1.71 0-3.24.78-4.24 1.98l8.64-10.24a14.5 14.5 0 0 1 8.17 7.38L28.24 22z" />
   </svg>
 )
-const Google = () => (
-  <svg viewBox="0 0 48 48" aria-hidden="true">
-    <path fill="#FBBC05" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z" />
-    <path fill="#EA4335" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z" />
-    <path fill="#34A853" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z" />
-    <path fill="#4285F4" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z" />
-  </svg>
-)
 const Gmail = () => (
   <svg viewBox="0 0 48 48" aria-hidden="true">
     <path fill="#34A853" d="m45 16.2-5 2.75-5 4.75V40h7a3 3 0 0 0 3-3V16.2z" />
@@ -48,32 +40,21 @@ const Gmail = () => (
 )
 
 const LINKS = [
-  { name: 'Instagram', note: BUSINESS.instagramHandle, href: BUSINESS.instagram, Icon: Instagram },
-  { name: 'WhatsApp', note: 'Chat with us', href: waLink(), Icon: WhatsApp },
-  { name: 'Google Maps', note: 'Get directions', href: mapsLink, Icon: Maps },
-  { name: 'Google', note: 'Reviews and profile', href: BUSINESS.googleProfile, Icon: Google },
-  { name: 'Gmail', note: 'Email us', href: gmailLink, Icon: Gmail },
+  { name: 'Instagram', href: BUSINESS.instagram, Icon: Instagram },
+  { name: 'WhatsApp', href: waLink(), Icon: WhatsApp },
+  { name: 'Gmail', href: gmailLink, Icon: Gmail },
+  { name: 'Google Maps', href: mapsLink, Icon: Maps },
 ]
 
-export default function SocialBar({ className = '' }) {
+// Small row of brand icons, used in the footer and on the contact page.
+export default function SocialIcons({ className = '' }) {
   return (
-    <section className={`social-bar ${className}`} aria-labelledby="social-bar-h">
-      <div className="wrap social-bar-inner">
-        <div className="social-bar-head">
-          <p className="editorial-eyebrow"><span /> Our socials</p>
-          <h2 id="social-bar-h">Find us and follow along</h2>
-        </div>
-        <ul className="social-bar-list">
-          {LINKS.map(({ name, note, href, Icon }) => (
-            <li key={name}>
-              <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`${name}: ${note} (opens in a new tab)`}>
-                <span className="social-bar-icon"><Icon /></span>
-                <span className="social-bar-text"><strong>{name}</strong><small>{note}</small></span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
+    <ul className={`social-icons ${className}`} aria-label="Our social links">
+      {LINKS.map(({ name, href, Icon }) => (
+        <li key={name}>
+          <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`${name} (opens in a new tab)`} title={name}><Icon /></a>
+        </li>
+      ))}
+    </ul>
   )
 }
