@@ -254,7 +254,7 @@ export default function Home() {
               <span className="visit-place-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></svg></span>
               <h3>Showroom</h3>
               <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
-              <p className="muted">Please call or message first to confirm visiting times.</p>
+              <p className="muted">Open every day, 12 pm to 9 pm.</p>
             </article>
             <article className="visit-place">
               <span className="visit-place-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 20V9l6 3V9l6 3V5h3v15z" /><path d="M7 20v-3M12 20v-3" /></svg></span>

@@ -113,7 +113,7 @@ A clear quotation names the board for each part, not just "plywood".
 
 At SK Emerald Interior, the board grade differs by product, so we write it into your quotation. That gives you something to check against the stamp.
 
-Once the board is settled, the next choice is the finish on top. Our guide to [laminate, acrylic, PU and veneer finishes](/blog/laminate-vs-acrylic-vs-pu) covers that. You can also see the boards, laminates and hardware we work with on our [materials page](/materials). Or visit the SK Emerald Interior showroom at Unitas Fashion Centre in Kondhwa, and call or WhatsApp first to confirm visiting times.
+Once the board is settled, the next choice is the finish on top. Our guide to [laminate, acrylic, PU and veneer finishes](/blog/laminate-vs-acrylic-vs-pu) covers that. You can also see the boards, laminates and hardware we work with on our [materials page](/materials). Or visit the SK Emerald Interior showroom at Unitas Fashion Centre in Kondhwa, and it is open every day from 12 pm to 9 pm.
 
 ## Frequently asked questions
 

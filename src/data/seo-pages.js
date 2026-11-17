@@ -15,7 +15,7 @@ export const COLLECTION_SEO = {
       ['Do you make sofas to custom sizes?', 'Yes. Every sofa is made to your room measurements at our factory in Kondhwa. You choose the layout, seat count, upholstery and leg style, and we confirm the final size in your quotation.'],
       ['What is inside your sofas?', 'It varies by model. Before you order, we explain the frame, the foam and the fabric used, and the agreed specification is written into your quotation so you know exactly what you are paying for.'],
       ['How much does a sofa set cost in Pune?', 'The price depends on the size, the layout (for example L-shaped or 3+2), the foam and the fabric. Send us your room measurements on WhatsApp and we will give you a written quotation.'],
-      ['Can I see sofa fabrics before I decide?', 'Yes. Visit our showroom at Unitas Fashion Centre, Kondhwa to compare fabrics and finishes. Please call or message first to confirm visiting times.'],
+      ['Can I see sofa fabrics before I decide?', 'Yes. Visit our showroom at Unitas Fashion Centre, Kondhwa to compare fabrics and finishes. Open every day, 12 pm to 9 pm.'],
     ],
   },
   recliners: {

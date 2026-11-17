@@ -120,7 +120,7 @@ Whichever type you choose, the quote should name every material. At SK Emerald I
 - What is not included: sink, tap, chimney, hob, plumbing, wiring, tiles and GST
 - The timeline, and any warranty, in writing
 
-Abul, who had his kitchen cabinets designed and installed by us, wrote: "The finish is sleek, modern, and premium-looking, with excellent attention to detail." To see layouts, shutters and counter tops side by side, look through our [modular kitchen layouts and finishes](/interiors/modular-kitchen). Then send us photos and rough measurements of your kitchen on WhatsApp. You can also see finishes at the SK Emerald Interior showroom in Kondhwa. Call first to confirm visiting times.
+Abul, who had his kitchen cabinets designed and installed by us, wrote: "The finish is sleek, modern, and premium-looking, with excellent attention to detail." To see layouts, shutters and counter tops side by side, look through our [modular kitchen layouts and finishes](/interiors/modular-kitchen). Then send us photos and rough measurements of your kitchen on WhatsApp. You can also see finishes at the SK Emerald Interior showroom in Kondhwa. It is open every day from 12 pm to 9 pm.
 
 ## Frequently asked questions
 

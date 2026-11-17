@@ -49,7 +49,7 @@ export function About() {
       </section>
       <section className="wrap about-visit">
         <h2>Visit or call</h2>
-        <p>Showroom: {BUSINESS.showroom.oneLine}. Please call or message first to confirm visiting times.</p>
+        <p>Showroom: {BUSINESS.showroom.oneLine}. Open every day, 12 pm to 9 pm.</p>
         <p>Call {BUSINESS.phones.map((p, i) => <span key={p.tel}>{i > 0 && ' or '}<a href={telLink(p)}>{p.display}</a></span>)}, or <a href={waLink('Hello SK Emerald Interior, I would like to visit the showroom.')} target="_blank" rel="noopener noreferrer">message us on WhatsApp</a>. <a href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions</a>.</p>
       </section>
       <Enquire />

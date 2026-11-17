@@ -11,13 +11,14 @@ export const BUSINESS = {
   whatsapp: '919011831169', // VERIFY: which number should receive WhatsApp enquiries
   email: 'Skemeraldinterior@gmail.com',
   showroom: {
-    lines: ['Shop No. 226, First Floor', 'Unitas Fashion Centre Mall', 'Parge Nagar', 'Kondhwa Khurd, Pune, Maharashtra 411048'], // VERIFY: match the Google Business Profile wording exactly
-    street: 'Shop No. 226, First Floor, Unitas Fashion Centre Mall, Parge Nagar, Kondhwa Khurd',
-    oneLine: 'Shop No. 226, First Floor, Unitas Fashion Centre Mall, Parge Nagar, Kondhwa Khurd, Pune, Maharashtra 411048',
+    // Wording matches the verified Google Business Profile (checked 17 Nov 2026).
+    lines: ['Shop No. 226, First Floor', 'Unitas Fashion Center', 'Parge Nagar, Kondhwa', 'Pune, Maharashtra 411048'],
+    street: 'Shop No. 226, First Floor, Unitas Fashion Center, Parge Nagar, Kondhwa',
+    oneLine: 'Shop No. 226, First Floor, Unitas Fashion Center, Parge Nagar, Kondhwa, Pune, Maharashtra 411048',
   },
-  // Sources disagree on hours (10 AM-9 PM vs 9 AM-9:30 PM), so none are published. VERIFY, then set e.g.
-  // hours: [{ days: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'], opens: '10:00', closes: '21:00' }]
-  hours: null,
+  // Showroom hours from the verified Google Business Profile (17 Nov 2026). Keep both in sync.
+  hours: [{ days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '12:00', closes: '21:00' }],
+  hoursText: 'Open every day, 12 pm to 9 pm',
   // Factory where the furniture is made. Showroom and factory are different places.
   factory: {
     lines: ['S No 105', 'Opp HP Petrol Pump', 'Near Zudio Mall', 'Kondhwa BK, Pune'],
@@ -26,19 +27,19 @@ export const BUSINESS = {
   established: null, // Reported as 2019 on directories. VERIFY before showing.
   // Areas we deliver to (structured data areaServed). VERIFY the list with the owner.
   areas: ['Kondhwa', 'NIBM Road', 'Undri', 'Pisoli', 'Wanowrie', 'Hadapsar'],
-  geo: null,        // VERIFY: copy the exact pin from the Google Business Profile, e.g. { lat: 18.46, lng: 73.89 }
+  geo: { lat: 18.4643763, lng: 73.8932152 }, // Google Business Profile pin (17 Nov 2026)
   instagram: 'https://www.instagram.com/s.k_emeraldinterior/',
   instagramHandle: '@s.k_emeraldinterior',
   googleProfile: 'https://www.google.com/maps?cid=13440211058621275175', // Google Business Profile (Maps listing)
   // Profile URLs for structured data. Add Justdial, IndiaMART, Facebook, YouTube when confirmed.
   sameAs: ['https://www.instagram.com/s.k_emeraldinterior/', 'https://www.google.com/maps?cid=13440211058621275175'],
   priceRange: null, // e.g. '₹₹' once the owner agrees
-  reviewLink: null, // Paste the Business Profile "Ask for reviews" link here (https://g.page/r/.../review)
+  reviewLink: 'https://search.google.com/local/writereview?placeid=ChIJI6022AvrwjsRJ9xln784hbo', // opens the Google review form for this listing
 }
 
 export const waLink = (text) =>
   `https://wa.me/${BUSINESS.whatsapp}${text ? `?text=${encodeURIComponent(text)}` : ''}`
-export const mapsLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('SK Emerald Interior ' + BUSINESS.showroom.oneLine)}`
+export const mapsLink = BUSINESS.googleProfile // the verified listing itself, so Directions lands on the right pin
 export const reviewLink = BUSINESS.reviewLink || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('SK Emerald Interior Kondhwa Pune')}`
 export const telLink = (p) => `tel:${p.tel}`
 export const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(BUSINESS.email)}&su=${encodeURIComponent('Enquiry from website')}`

@@ -72,6 +72,7 @@ const llms = `# ${b.name}
 > Custom furniture maker with its own factory in Kondhwa, Pune (India) and a showroom at Unitas Fashion Centre, Kondhwa. Sofas, recliners, beds, wardrobes, modular kitchens, TV units, false ceilings, dining tables and office furniture, made to measure. Materials and finishes are written into each quotation.
 
 - Showroom: ${b.showroom.oneLine}
+- Showroom hours: ${b.hoursText}
 - Factory: ${b.factory.oneLine}
 - Phone / WhatsApp: ${b.phones.map((p) => p.tel).join(', ')}
 - Email: ${b.email}

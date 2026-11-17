@@ -107,7 +107,7 @@ A good quotation names the finish on every shutter, not just "laminate".
 
 At SK Emerald Interior, laminates come in plain, textured and wood-grain looks, and selected designs have a high-gloss finish. Ask which finishes are available for your design, and see them before you decide.
 
-You can see our laminates and gloss shutters on the [materials page](/materials). You can also compare samples at the SK Emerald Interior showroom in Unitas Fashion Centre, Kondhwa. Call or WhatsApp first to confirm visiting times. If you haven't chosen the board under the finish yet, read [MR, BWR, BWP or HDHMR](/blog/bwp-vs-bwr-vs-mr-plywood) first.
+You can see our laminates and gloss shutters on the [materials page](/materials). You can also compare samples at the SK Emerald Interior showroom in Unitas Fashion Centre, Kondhwa. It is open every day from 12 pm to 9 pm. If you haven't chosen the board under the finish yet, read [MR, BWR, BWP or HDHMR](/blog/bwp-vs-bwr-vs-mr-plywood) first.
 
 ## Frequently asked questions
 
