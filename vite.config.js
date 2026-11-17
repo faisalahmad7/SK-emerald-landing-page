@@ -83,4 +83,6 @@ export default defineConfig({
   base: '/',
   plugins: [blogMarkdown(), react()],
   ssr: { noExternal: ['gsap'] },
+  // The manifest tells scripts/prerender.mjs which JS chunk each page needs (it is deleted after pre-rendering).
+  build: { manifest: true },
 })
