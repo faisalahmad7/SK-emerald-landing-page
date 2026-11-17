@@ -8,7 +8,7 @@ import { POSTS } from './content/posts'
 import { BUSINESS } from './data/business'
 import { SITE_URL, CONTENT_UPDATED } from './seo/site'
 
-export { routeList, lastModified } from './routes'
+export { routeList, lastModified, preloadAllPages, pageFor, PAGES } from './routes'
 export { preloadAllPosts, renderHead, POSTS, BUSINESS, SITE_URL, CONTENT_UPDATED }
 
 export function render(path) {

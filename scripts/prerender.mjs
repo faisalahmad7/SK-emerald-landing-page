@@ -11,12 +11,31 @@ import sharp from 'sharp'
 
 const DIST = resolve('dist')
 const ssr = await import(pathToFileURL(resolve('dist-ssr/entry-server.js')).href)
-const { render, routeList, lastModified, preloadAllPosts, renderHead, POSTS, BUSINESS, SITE_URL, CONTENT_UPDATED } = ssr
+const { render, routeList, lastModified, preloadAllPosts, preloadAllPages, pageFor, PAGES, renderHead, POSTS, BUSINESS, SITE_URL, CONTENT_UPDATED } = ssr
 
 const template = readFileSync(join(DIST, 'index.html'), 'utf8')
 if (!template.includes('<!--seo-head-->') || !template.includes('<div id="root"></div>')) throw new Error('index.html template markers missing')
 
-await preloadAllPosts()
+await Promise.all([preloadAllPosts(), preloadAllPages()])
+
+// Each page's own JS chunk (and its shared chunks) gets a <link rel="modulepreload">, so the browser fetches it
+// alongside the main script (same low priority) instead of after it. The chunk names come from Vite's build manifest.
+const manifestFile = join(DIST, '.vite/manifest.json')
+const manifest = JSON.parse(readFileSync(manifestFile, 'utf8'))
+function chunkFiles(key, out = new Set()) {
+  const entry = manifest[key]
+  if (!entry || entry.isEntry || out.has(entry.file)) return out
+  out.add(entry.file)
+  for (const dep of entry.imports || []) chunkFiles(dep, out)
+  return out
+}
+function pagePreloads(path) {
+  const [key, , props] = pageFor(path)
+  const files = chunkFiles(PAGES[key].file)
+  if (key === 'blog' && props) chunkFiles(`src/content/blog/${props.slug}.md`, files)
+  if (!files.size) throw new Error(`No chunk in the build manifest for ${path}`)
+  return [...files].map((f) => `<link rel="modulepreload" crossorigin fetchpriority="low" href="/${f}">`).join('\n  ')
+}
 const routes = routeList()
 const outFile = (path) => (path === '/' ? 'index.html' : path === '/404' ? '404.html' : `${path.slice(1)}.html`)
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -54,7 +73,7 @@ for (const path of [...routes, '/404']) {
     // The page is already complete HTML, so the app script can wait: let the hero image and fonts download first.
     .replace('<script type="module" crossorigin src=', '<script type="module" crossorigin fetchpriority="low" src=')
     .replace(/<title>[\s\S]*?<\/title>\s*/, '')
-    .replace('<!--seo-head-->', renderHead(meta))
+    .replace('<!--seo-head-->', `${renderHead(meta)}\n  ${pagePreloads(path)}`)
     .replace('<div id="root"></div>', `<div id="root"><!--email_off-->${html}<!--/email_off--></div>`)
   const file = join(DIST, outFile(path))
   mkdirSync(dirname(file), { recursive: true })
@@ -96,4 +115,5 @@ ${POSTS.map((p) => `- [${p.title}](${SITE_URL}${p.path}): ${p.description}`).joi
 writeFileSync(join(DIST, 'llms.txt'), llms)
 
 rmSync(resolve('dist-ssr'), { recursive: true, force: true })
+rmSync(join(DIST, '.vite'), { recursive: true, force: true })
 console.log(`Pre-rendered ${routes.length} routes + 404, ${ogDone.size} share images, sitemap with ${routes.length} URLs, llms.txt`)
