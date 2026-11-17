@@ -22,6 +22,9 @@
 .facts { padding-bottom: clamp(40px, 6vw, 72px); }
 .page-faq h2 { margin-bottom: 18px; }
 .related-guides { padding-bottom: 32px; }
+.rel-more { margin-top: 22px; }
+/* The phone/desktop <picture> wrapper must not add a box: the img keeps sizing against its .photo figure. */
+.photo picture { display: contents; }
 
 /* Gallery tabs rendered as links (/gallery, /design-ideas) */
 .gtabs a {

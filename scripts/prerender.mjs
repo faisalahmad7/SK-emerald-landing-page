@@ -48,12 +48,14 @@ for (const path of [...routes, '/404']) {
     titles.set(meta.title, path)
   }
   if (!ogDone.has(meta.ogImage)) await makeOg(meta)
+  // email_off: Cloudflare's email obfuscation would turn the mailto links into /cdn-cgi/l/email-protection, a 404 for
+  // crawlers. React skips these comments when it hydrates.
   const page = template
     // The page is already complete HTML, so the app script can wait: let the hero image and fonts download first.
     .replace('<script type="module" crossorigin src=', '<script type="module" crossorigin fetchpriority="low" src=')
     .replace(/<title>[\s\S]*?<\/title>\s*/, '')
     .replace('<!--seo-head-->', renderHead(meta))
-    .replace('<div id="root"></div>', `<div id="root">${html}</div>`)
+    .replace('<div id="root"></div>', `<div id="root"><!--email_off-->${html}<!--/email_off--></div>`)
   const file = join(DIST, outFile(path))
   mkdirSync(dirname(file), { recursive: true })
   writeFileSync(file, page)

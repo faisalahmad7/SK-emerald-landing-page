@@ -210,7 +210,7 @@ export const MORE_COLLECTIONS = [
     ],
     options: [['Size', 'Length and depth planned to your room.'], ['Desk type', 'Fixed-height, sit-stand or wall-mounted fold-down layouts.'], ['Storage', 'Drawers, pedestals and shelves where you need them.'], ['Finish', 'Laminate or wood-look finishes to match the room.'], ['Cable management', 'Cut-outs for wires and power where needed.']],
     materials: 'Top, board and hardware vary by design and are confirmed in your quotation.',
-    gallery: ['office-workstation', 'office-meeting', 'desk-corner-slatted-lit', 'desk-slatted-shelf-drawers', 'desk-computer-keyboard-tray', 'desk-corner-computer-drawers', 'desk-height-adjustable-sit-stand', 'desk-wall-mounted-fold-down'], related: ['office-spaces', 'wardrobes'] }),
+    gallery: ['office-workstation', 'office-meeting', 'desk-corner-slatted-lit', 'desk-slatted-shelf-drawers', 'desk-computer-keyboard-tray', 'desk-corner-computer-drawers', 'desk-height-adjustable-sit-stand', 'desk-wall-mounted-fold-down'], related: ['office-chairs', 'office-loungers'] }),
   piece({ slug: 'dining-tables', name: 'Dining tables', enquiry: 'a dining table', image: 'dining-glass-top-six-seater', pos: '50% 78%',
     tag: 'Dining tables made to your room and family size',
     intro: 'Dining tables made to the size of your dining area and the number of people you seat, with the top and base you choose.',
