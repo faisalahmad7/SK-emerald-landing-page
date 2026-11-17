@@ -127,7 +127,7 @@ Ask for each hidden part to be named in writing. Then the sofa you receive is th
 
 A maker who knows their sofa will not mind writing this down.
 
-To see these parts for yourself, look through our [custom sofas and sofa sets](/collections/sofas). Then visit the SK Emerald Interior showroom at Unitas Fashion Centre in Kondhwa, and call or WhatsApp first to confirm visiting times. If you would rather put your feet up, read our guide on [how to choose a recliner](/blog/how-to-choose-a-recliner) before you decide.
+To see these parts for yourself, look through our [custom sofas and sofa sets](/collections/sofas). Then visit the SK Emerald Interior showroom at Unitas Fashion Centre in Kondhwa, and it is open every day from 12 pm to 9 pm. If you would rather put your feet up, read our guide on [how to choose a recliner](/blog/how-to-choose-a-recliner) before you decide.
 
 ## Frequently asked questions
 

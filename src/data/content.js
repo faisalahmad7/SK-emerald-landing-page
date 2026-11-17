@@ -28,7 +28,7 @@ export const FAQS = [
   ['How long will my order take?', 'It depends on the piece and its finish. We confirm a timeline when the specification is agreed, and do not quote one in advance.'],
   ['Do you offer a warranty?', 'Please ask when you enquire. Any warranty is stated in your quotation.'],
   ['How do I look after gloss shutters?', 'Wipe with a dry microfibre cloth and avoid abrasive pads.'],
-  ['Can I see finishes before I decide?', 'Yes. Visit the showroom at Unitas Fashion Centre, Kondhwa. Call or WhatsApp first to confirm visiting times.'],
+  ['Can I see finishes before I decide?', 'Yes. Visit the showroom at Unitas Fashion Centre, Kondhwa. It is open every day from 12 pm to 9 pm.'],
   ['Do you make the furniture yourselves?', 'Yes. Our furniture is made at our own factory in Kondhwa Budruk (S No 105, opposite the HP petrol pump, near Zudio Mall). Our showroom is at Unitas Fashion Centre, Kondhwa.'],
   ['Can I order a single piece, or only a full room?', 'Either. We can plan the furniture and finishes for a whole room, or make one custom piece to fit the space you already have.'],
   ['How much will my furniture cost?', 'It depends on the size, the materials and the finish. Send your measurements and a photo of the space, and we will give you a written quotation that lists the specification, so you can compare like with like.'],

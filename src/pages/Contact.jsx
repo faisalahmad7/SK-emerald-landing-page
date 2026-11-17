@@ -45,7 +45,7 @@ export default function Contact() {
         <div className="cinfo">
           <h2>Showroom</h2>
           <address>{BUSINESS.showroom.lines.map((l) => <span key={l}>{l}</span>)}</address>
-          <p className="muted">Please call or message first to confirm visiting times.</p>
+          <p className="muted">Open every day, 12 pm to 9 pm.</p>
           <a className="btn small" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions</a>
           <h2>Factory</h2>
           <address className="factory-address">{BUSINESS.factory.lines.map((l) => <span key={l}>{l}</span>)}</address>
