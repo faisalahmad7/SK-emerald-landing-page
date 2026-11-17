@@ -11,14 +11,20 @@
 // then point the relevant entry in SLOTS (or a collection's `hero` / `tile` in collections.js) at it.
 // No page layout needs to change.
 // ─────────────────────────────────────────────────────────────────────────────
+import SIZES from './image-sizes.json'
 const base = import.meta.env.BASE_URL
 const NATURAL = { 0: 1500, 2: 1080, 3: 1080, 4: 1080, 5: 1080, 11: 1500, 12: 1470, 13: 1500, 19: 1125 } // originals wider than 900px also have an -800 variant
-const f = (id, alt, kind, tags, extra = {}) => ({
-  id, alt, kind, tags,
-  src: `${base}images/${id}.webp`,
-  srcSet: NATURAL[id] ? `${base}images/${id}-800.webp 800w, ${base}images/${id}.webp ${NATURAL[id]}w` : undefined,
-  ...extra,
-})
+const f = (id, alt, kind, tags, extra = {}) => {
+  const im = {
+    id, alt, kind, tags,
+    src: `${base}images/${id}.webp`,
+    srcSet: NATURAL[id] ? `${base}images/${id}-800.webp 800w, ${base}images/${id}.webp ${NATURAL[id]}w` : undefined,
+    ...extra,
+  }
+  // width/height from scripts/image-sizes.mjs; phoneSrc = the 800w file that phones get for above-the-fold photos
+  const size = SIZES[im.src.startsWith('http') ? im.id : im.src.match(/images\/(.+)\.webp$/)?.[1]]
+  return { ...im, width: size?.[0], height: size?.[1], phoneSrc: im.srcSet?.match(/(\S+-800\.webp) 800w/)?.[1] }
+}
 const list = [
   f(0, 'Cream L-shaped corner sofa on a tiled floor', 'work', ['sofas']),
   f(1, 'Cream corner sofa, side view', 'work', ['sofas']),

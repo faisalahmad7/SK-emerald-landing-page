@@ -4,9 +4,14 @@ import { waLink } from '../data/business'
 import { img } from '../data/images'
 import { COLLECTIONS, MORE_COLLECTIONS, ALSO_MADE, bySlug } from '../data/collections'
 import { COLLECTION_SEO, defaultTitle, defaultDescription } from '../data/seo-pages'
+import { ROOMS } from '../data/rooms'
+import { POSTS } from '../content/posts'
 import { Facts, FaqList } from './Sections'
 
 // Collections whose option cards show each photo whole, in one fixed card shape.
+// "A, B and C" as links.
+const linkList = (items) => items.map(([to, label], i) => <span key={to}>{i ? (i === items.length - 1 ? ' and ' : ', ') : ''}<Link to={to}>{label}</Link></span>)
+
 const FIT_VARIANTS = { 'dressing-tables': '3/4', 'shelves-and-drawers': '2/3', 'mirrors-and-wall-decor': '3/4', wardrobes: '3/4', 'crockery-units': '3/4', 'office-chairs': '2/3', recliners: '3/4' }
 
 export function Collections() {
@@ -57,6 +62,12 @@ export function Collection({ slug }) {
   const c = bySlug(slug)
   const path = `/collections/${slug}`
   const seo = COLLECTION_SEO[slug] || {}
+  // Internal links from existing data: the rooms this range is planned in (rooms.js), up to four other ranges from
+  // those rooms (the ones listed after this range, wrapping round), and guides whose front matter lists this page.
+  const rooms = ROOMS.filter((r) => r.pieces.includes(slug))
+  const near = [...new Set(rooms.flatMap((r) => { const i = r.pieces.indexOf(slug); return [...r.pieces.slice(i + 1), ...r.pieces.slice(0, i)] }))]
+    .filter((s) => !c.related.includes(s)).map(bySlug).filter(Boolean).slice(0, 4)
+  const guides = POSTS.filter((p) => p.related?.includes(path))
   return (
     <>
       <Seo path={path} title={seo.title || defaultTitle(c.name)} name={c.name} description={seo.description || defaultDescription(c.intro)}
@@ -116,6 +127,13 @@ export function Collection({ slug }) {
       <section className="wrap related">
         <h2>Related ranges</h2>
         <div className="rel">{c.related.map((r) => { const x = bySlug(r); return x ? <Link key={r} to={`/collections/${r}`}><Photo id={x.tile} pos={x.tilePos} ratio="16/10" /><span>{x.name}</span></Link> : null })}</div>
+        {(near.length > 0 || rooms.length > 0 || guides.length > 0) && (
+          <p className="muted rel-more">
+            {near.length > 0 && <>Often planned with {linkList(near.map((x) => [`/collections/${x.slug}`, x.name]))}. </>}
+            {rooms.length > 0 && <>Plan the whole room: {linkList(rooms.map((r) => [`/interiors/${r.slug}`, r.name]))}. </>}
+            {guides.length > 0 && <>Buying guides: {linkList(guides.map((g) => [g.path, g.title]))}</>}
+          </p>
+        )}
       </section>
       <Enquire message={c.wa} title={`Planning ${c.name.toLowerCase()}?`} />
     </>

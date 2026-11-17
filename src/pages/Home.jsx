@@ -55,7 +55,7 @@ export default function Home() {
     })
   return (
     <div className="homepage-ribbon-pass">
-      <Seo path="/" title="Furniture Manufacturer in Kondhwa, Pune | SK Emerald Interior" name="Home" image={SLOTS.hero}
+      <Seo path="/" title="Furniture Manufacturer in Kondhwa Pune | SK Emerald Interior" name="Home" image={SLOTS.hero} preloadSizes="(min-width: 900px) 58vw, 100vw"
         description="Custom sofas, beds, wardrobes, modular kitchens and TV units made to measure at our own factory in Kondhwa, Pune. Visit our showroom at Unitas Fashion Centre." />
 
       <section className="hero editorial-hero">

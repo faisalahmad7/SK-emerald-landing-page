@@ -13,7 +13,7 @@ export const ROOMS = [
       { name: 'Beige sectional with a round coffee table', detail: 'A warm corner sofa, a gold-tone coffee table and a floating TV unit.', image: 34 },
       { name: 'Tan sectional with a marble TV wall', detail: 'A channelled corner sofa, a marble-look TV wall with a white drawer unit and a cove-lit ceiling.', image: 'living-tan-sectional-marble-tv', pos: '50% 42%' },
     ],
-    pieces: ['sofas', 'sofa-cum-beds', 'recliners', 'tv-units', 'centre-side-and-coffee-tables', 'dining-tables', 'chairs', 'false-ceilings', 'mirrors-and-wall-decor', 'shelves-and-drawers'] },
+    pieces: ['sofas', 'sofa-cum-beds', 'recliners', 'tv-units', 'centre-side-and-coffee-tables', 'dining-tables', 'chairs', 'false-ceilings', 'mirrors-and-wall-decor', 'shelves-and-drawers', 'shoe-racks'] },
   { slug: 'bedroom', hero: 'bed-beige', heroPos: '50% 55%', name: 'Bedroom', short: 'bedroom',
     lead: 'A bed, wardrobe and matching pieces sized to the room, with lighting and finishes chosen to go together.',
     setups: [

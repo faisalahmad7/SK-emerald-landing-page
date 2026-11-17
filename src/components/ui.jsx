@@ -21,13 +21,18 @@ export function Photo({ id, ratio = '4/3', pos = 'center', eager = false, captio
     if (el?.complete) { if (el.naturalWidth) setState('ready'); else if (el.currentSrc) fail() }
   }, [])
   if (!im || state === 'error') return <Placeholder ratio={ratio} label={alt || im?.alt} className={className} />
+  const image = (
+    <img ref={ref} src={usingFallback && im.fallbackSrc ? im.fallbackSrc : im.src} srcSet={!usingFallback ? im.srcSet : undefined} sizes={!usingFallback && im.srcSet ? sizes || '(min-width: 900px) 50vw, 100vw' : undefined} alt={alt ?? im.alt}
+      width={usingFallback ? undefined : im.width} height={usingFallback ? undefined : im.height}
+      loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined}
+      decoding="async" style={{ objectPosition: pos }}
+      onLoad={() => setState('ready')}
+      onError={fail} />
+  )
   return (
     <figure className={`photo ${state} ${className}`} style={{ aspectRatio: ratio }}>
-      <img ref={ref} src={usingFallback && im.fallbackSrc ? im.fallbackSrc : im.src} srcSet={!usingFallback ? im.srcSet : undefined} sizes={!usingFallback && im.srcSet ? sizes || '(min-width: 900px) 50vw, 100vw' : undefined} alt={alt ?? im.alt}
-        loading={eager ? 'eager' : 'lazy'} fetchpriority={eager ? 'high' : undefined}
-        decoding="async" style={{ objectPosition: pos }}
-        onLoad={() => setState('ready')}
-        onError={fail} />
+      {/* Above-the-fold photos: phones get the 800w file whatever their pixel density (media must match PHONE in seo/head.js). */}
+      {eager && im.phoneSrc && !usingFallback ? <picture><source media="(max-width: 899px)" srcSet={im.phoneSrc} />{image}</picture> : image}
       {caption && <figcaption>{caption}</figcaption>}
     </figure>
   )

@@ -10,8 +10,10 @@ export function localImage(ref) {
   if (ref == null) return null
   const im = typeof ref === 'string' && ref.startsWith('/') ? { src: ref } : img(ref)
   if (!im || !im.src?.startsWith('/')) return null
-  return { src: im.src, srcSet: im.srcSet }
+  return { src: im.src, srcSet: im.srcSet, phoneSrc: im.phoneSrc }
 }
+// Phone breakpoint for the above-the-fold photo; must match the <source media> in Photo (components/ui.jsx).
+const PHONE = '(max-width: 899px)'
 
 export function buildMeta(p) {
   const title = p.title.includes('|') ? p.title : `${p.title} | ${BRAND}`
@@ -60,8 +62,12 @@ export function renderHead(m) {
     return `<${tag}${a}>`
   })
   if (m.preload) {
-    const { src, srcSet } = m.preload
-    tags.push(srcSet ? `<link rel="preload" as="image" href="${src}" imagesrcset="${esc(srcSet)}" imagesizes="(min-width: 900px) 50vw, 100vw" fetchpriority="high">` : `<link rel="preload" as="image" href="${src}" fetchpriority="high">`)
+    const { src, srcSet, phoneSrc } = m.preload
+    const sizes = esc(m.preloadSizes || '(min-width: 900px) 50vw, 100vw')
+    if (phoneSrc) {
+      tags.push(`<link rel="preload" as="image" href="${phoneSrc}" media="${PHONE}" fetchpriority="high">`)
+      tags.push(`<link rel="preload" as="image" href="${src}" imagesrcset="${esc(srcSet)}" imagesizes="${sizes}" media="(min-width: 900px)" fetchpriority="high">`)
+    } else tags.push(srcSet ? `<link rel="preload" as="image" href="${src}" imagesrcset="${esc(srcSet)}" imagesizes="${sizes}" fetchpriority="high">` : `<link rel="preload" as="image" href="${src}" fetchpriority="high">`)
   }
   return tags.join('\n  ')
 }
